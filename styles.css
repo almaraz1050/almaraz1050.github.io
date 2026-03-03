@@ -1,1 +1,11 @@
-/* Custom styles — add your own here */
+.about-contents {text-align: left;}
+.quarto-about-jolla {text-align: left;}
+.quarto-about-jolla p {text-align: left;}
+.quarto-about-jolla h2 {text-align: left;}
+
+.about-image {
+  border-radius: 70px !important;
+  width: 550px !important;
+  max-width: 100%;
+  margin-bottom: 50px !important;
+}
