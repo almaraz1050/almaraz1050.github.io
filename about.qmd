@@ -44,9 +44,35 @@ As I have grown, I have tried to give back in the same spirit they gave to us. I
 ## Where I'm Headed
 Through my MSBA program and professional experience, I have developed a growing toolkit centered on data analysis and business strategy. I am intentionally using the MSBA as a pivoting tool, deepening my expertise in advanced research methods, programming languages including R, SQL, and Python, data visualization through Tableau and Power BI, and overall business acumen. My goal is to bridge the analytical and strategic sides of a business, using data not just to report what happened, but to inform what should happen next.
 
-My target roles include Financial Analyst, Pricing Analyst, Marketing Analyst, Supply Chain Analyst, and Budget Analyst. I am particularly drawn to industries that are part of everyday life, including restaurant and food service, apparel, consumer packaged goods, automotive, higher education, and local government. What these industries share is scale and visibility, and that is exactly what excites me about contributing to them.
+```{=html}
+<style>
+.interests-wrapper {display: flex; gap: 1.5em; margin: 1em 0;}
+.interest-box {flex: 1; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.2em 1.5em; background: #f8f8f8;}
+.interest-box h4 {margin: 0 0 0.8em 0; font-size: 1em; font-weight: 600; color: #000;}
+.interest-item {display: flex; align-items: center; gap: 0.6em; padding: 0.3em 0; font-size: 0.9em; color: #333; border-bottom: 1px solid #eee;}
+.interest-item:last-child {border-bottom: none;}
+.interest-dot {width: 7px; height: 7px; border-radius: 50%; background: #2563eb; flex-shrink: 0;}
+</style>
 
-The experiences and milestones that have shaped this path are laid out in the timeline below. For a detailed breakdown of each role, please visit the Experience page.
+<div class="interests-wrapper">
+  <div class="interest-box">
+    <h4>Target Roles</h4>
+    <div class="interest-item"><span class="interest-dot"></span>Financial Analyst</div>
+    <div class="interest-item"><span class="interest-dot"></span>Budget Analyst</div>
+    <div class="interest-item"><span class="interest-dot"></span>Marketing Analyst</div>
+    <div class="interest-item"><span class="interest-dot"></span>Supply Chain Analyst</div>
+    <div class="interest-item"><span class="interest-dot"></span>Business Strategy Analyst</div>
+  </div>
+  <div class="interest-box">
+    <h4>Target Industries</h4>
+    <div class="interest-item"><span class="interest-dot"></span>Restaurant & Food Service</div>
+    <div class="interest-item"><span class="interest-dot"></span>Higher Education</div>
+    <div class="interest-item"><span class="interest-dot"></span>Local Government</div>
+    <div class="interest-item"><span class="interest-dot"></span>Consumer Packaged Goods</div>
+    <div class="interest-item"><span class="interest-dot"></span>Apparel</div>
+  </div>
+</div>
+```
 
 
 ```{=html}
@@ -77,6 +103,9 @@ The experiences and milestones that have shaped this path are laid out in the ti
 ```
 
 ## Professional Timeline
+
+This timeline captures the key roles and milestones that have shaped my professional and academic development. For more details on each experience, please visit the [Experience](experience.html) page.
+
 ::: {.timeline-wrapper}
 | Month & Year | Event | Location |
 |---|---|---|
