@@ -1,11 +1,68 @@
 ---
-title: "Welcome!"
+title: "Welcome to my Website!"
+image: Headshot1.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/allanalmaraz/
 ---
 
-This is your portfolio site. Start by editing this page and `about.qmd` to make it your own.
+Hello, my name is Allan Almaraz. I am a first-generation graduate student pursuing my Master of Science in Business Analytics (MSBA) at the University of California, Irvine (UCI), with a passion for using data to inform decisions and drive meaningful change. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on. Welcome, and please take a look around!
 
-## Next Steps
+```{=html}
+<style>
+.nav-cards {display: flex; gap: 1.2em; margin-top: 2.5em;}
+.nav-card {flex: 1; border: 1px solid #ddd; border-radius: 8px; padding: 1.4em 1.6em; text-decoration: none; color: inherit; transition: box-shadow 0.2s, border-color 0.2s;}
+.nav-card:hover {box-shadow: 0 4px 16px rgba(0,0,0,0.10); border-color: #999; text-decoration: none;}
+.nav-card h3 {margin: 0 0 0.4em 0; font-size: 1em; font-weight: 600;}
+.nav-card p {margin: 0; font-size: 0.85em; color: #666; line-height: 1.5;}
+</style>
 
-- Edit `about.qmd` with your info
-- Create a project post in `posts/`
-- Push to `main` and your site will auto-deploy
+<div class="nav-cards">
+  <a class="nav-card" href="about.html">
+    <h3>About Me →</h3>
+    <p>Explore my personal background, my values, and what drives me as a first-generation graduate student and aspiring analyst.</p>
+  </a>
+  <a class="nav-card" href="experience.html">
+    <h3>Experience →</h3>
+    <p>Learn about my professional experience, the skills I have developed, and a timeline of key milestones in my journey.</p>
+  </a>
+  <a class="nav-card" href="projects.html">
+    <h3>Projects →</h3>
+    <p>Gain access to the reports, code, and presentations from relevant projects I have worked on, along with key takeaways from each.</p>
+  </a>
+</div>
+```
+
+
+###
+## Personal Mission Statement
+
+I believe data has the power to move organizations forward. My goal is to contribute to the kinds of companies that shape everyday life, the brands and institutions that people interact with through the products they buy, the food they eat, and the places they work and learn. I find purpose in knowing that my analysis could influence how these organizations operate, and that the impact of that work would be visible in the world around me. Whether supporting a restaurant brand, an apparel company, an automotive manufacturer, or a university, I aspire to be the analyst who turns complex data into decisions that actually change how things are done. For me, that is what makes analytics meaningful.
+
+```{=html}
+<style>
+.looking-for-wrapper {display: flex; gap: 2em; align-items: flex-start; margin-top: 0;}
+.looking-for-text {flex: 1.1;}
+.looking-for-counties {flex: 0.5; background: #f8f8f8; border-radius: 8px; padding: 1.2em 1.5em; border: 1px solid #e5e5e5; margin-top: 2.2em;}
+.looking-for-counties h4 {margin: 0 0 0.8em 0; font-size: 1em; text-transform: none; letter-spacing: 0; color: #000;}.county-item {display: flex; align-items: center; gap: 0.6em; padding: 0.4em 0; font-size: 0.9em; color: #333; border-bottom: 1px solid #eee;}
+.county-item:last-child {border-bottom: none;}
+.county-dot {width: 8px; height: 8px; border-radius: 50%; background: #2563eb; flex-shrink: 0;}
+</style>
+
+<div class="looking-for-wrapper">
+  <div class="looking-for-text">
+    <h2>What I'm Looking For</h2>
+    <p>With a graduation date of June 2026, I am currently pursuing internships and full-time analyst roles in marketing, finance, business, and supply chain. I am leveraging my MSBA program as a pivot into more technical and analytical work, and I am eager to bring my skills to an organization where I can grow as an entry-level candidate.</p>
+  </div>
+  <div class="looking-for-counties">
+    <h4><strong>Target Regions</strong></h4>
+    <div class="county-item"><span class="county-dot"></span>Ventura County</div>
+    <div class="county-item"><span class="county-dot"></span>Santa Barbara County</div>
+    <div class="county-item"><span class="county-dot"></span>Sacramento County</div>
+    <div class="county-item"><span class="county-dot"></span>Orange County</div>
+  </div>
+</div>
+```

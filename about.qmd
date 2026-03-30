@@ -1,39 +1,95 @@
 ---
-title: "About Me"
+title: "About  Me"
 image: 32 copy.jpeg
 about:
   template: jolla
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: GitHub
-      href: https://github.com
+      href: https://linkedin.com/in/allanalmaraz/
+ 
 ---
 
 Hello! I'm Allan, I am a first-generation graduate student pursuing my Master of Science in Business Analytics (MSBA) at UC Irvine. Driven by a belief that data has the power to move organizations forward, my goal is to contribute to companies that shape everyday life, using analytics to inform decisions that actually change how things are done.
 
 ## Personal Background
 
+```{=html}
+<style>
+.collage {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; height: 400px; border-radius: 10px; overflow: hidden; margin: 1.5em 0;}
+.collage-main {grid-row: 1 / 3; overflow: hidden;}
+.collage-side {overflow: hidden;}
+.collage img {width: 100%; height: 100%; object-fit: cover; display: block;}
+</style>
+
+<div class="collage">
+  <div class="collage-main">
+    <img src="images/fam3.jpg" alt="Family at graduation" style="object-position: center 35%;"/>
+  </div>
+  <div class="collage-side">
+    <img src="images/SP3.jpg" alt="Santa Paula" style="object-position: center 60%;"/>
+  </div>
+  <div class="collage-side">
+    <img src="images/sp4.jpg" alt="Santa Paula" style="object-position: center center;"/>
+  </div>
+</div>
+```
+
 I was raised in Santa Paula, CA, a small agricultural city in Ventura County with a tight-knit Latino community, by two Mexican immigrant parents who worked day and night to put food on the table. From a young age, my siblings and I worked alongside them in their side ventures, including recycling, landscaping, installing water systems, welding, and painting. We were either in school or working, and while that was demanding, it was also grounding. My parents were strict, expected a great deal from us, and were deeply supportive all at once. School was always the top priority in our home, and that emphasis paid off. My siblings and I have all graduated from college and successfully entered a professional world that once excluded people like our parents.
 
 As I have grown, I have tried to give back in the same spirit they gave to us. I took over managing their finances, helped map out their long-term goals, and started teaching them practical skills like basic technology and U.S. history as they prepare for their citizenship exam. When I noticed their credit card debt was becoming a burden, I developed a plan to help them pay it off and used it as an opportunity to teach them about credit and personal finance. As I continue to grow professionally, I hope to keep finding new ways to make sure they are never left behind.
 
-## Where I'm Headed and How I Got Here
-Through my MSBA program and professional experience, I have developed a growing toolkit centered on data analysis and business strategy. I am intentionally using the MSBA as a pivoting tool, deepening my expertise in advanced research methods, programming languages including R, SQL, and Python, data visualization through Tableau, and overall business acumen. My goal is to bridge the analytical and strategic sides of a business, using data not just to report what happened, but to inform what should happen next.
+
+
+## Where I'm Headed
+Through my MSBA program and professional experience, I have developed a growing toolkit centered on data analysis and business strategy. I am intentionally using the MSBA as a pivoting tool, deepening my expertise in advanced research methods, programming languages including R, SQL, and Python, data visualization through Tableau and Power BI, and overall business acumen. My goal is to bridge the analytical and strategic sides of a business, using data not just to report what happened, but to inform what should happen next.
 
 My target roles include Financial Analyst, Pricing Analyst, Marketing Analyst, Supply Chain Analyst, and Budget Analyst. I am particularly drawn to industries that are part of everyday life, including restaurant and food service, apparel, consumer packaged goods, automotive, higher education, and local government. What these industries share is scale and visibility, and that is exactly what excites me about contributing to them.
 
-The experiences and milestones that have shaped this path are laid out in the timeline to the right. For a detailed breakdown of each role, visit the Experience page.
+The experiences and milestones that have shaped this path are laid out in the timeline below. For a detailed breakdown of each role, please visit the Experience page.
 
 
-| Year | Event |
-|------|-------|
-| October 2020 | Began Economics B.A. at UC Irvine |
-| June-August 2022 | Supply Chain Internship — Chipotle Mexican Grill (Newport Beach, CA) |
-| June-August 2023 | Summer Internship — Reagan Presidential Library, Education Dept. (Simi Valley, CA) |
-| December 2023 | Completed Economics B.A. at UC Irvine |
-| January-August 2024 | [your next entry] |
-| 2025 | Began MSBA at UC Irvine |
-| 2026 | Expected MSBA graduation |
+```{=html}
+<style>
+.timeline-wrapper {
+  margin-top: 0.5em;
+}
+.timeline-wrapper table {
+  font-size: 80%;
+  width: 100%;
+  table-layout: fixed;
+}
+.timeline-wrapper td:nth-child(1),
+.timeline-wrapper th:nth-child(1) { width: 26%; }
+.timeline-wrapper td:nth-child(2),
+.timeline-wrapper th:nth-child(2) { width: 74%; }
+.timeline-wrapper td:nth-child(3),
+.timeline-wrapper th:nth-child(3) { width: 0%; }
+.timeline-wrapper th {
+  text-align: center !important;
+}
+.timeline-wrapper td {
+  text-align: left !important;
+  vertical-align: middle !important;
+  padding: 6px 10px;
+}
+</style>
+```
+
+## Professional Timeline
+::: {.timeline-wrapper}
+| Month & Year | Event | Location |
+|---|---|---|
+| October 2020 | Began Economics B.A. at UCI | Irvine, CA |
+| March 2022–December 2023 | Basic Needs Advocate, UCI Basic Needs Center | Irvine, CA |
+| June–August 2022 | Supply Chain Internship, Chipotle Mexican Grill | Newport Beach, CA |
+| June–August 2023 | Education Department Internship, Reagan Presidential Library | Simi Valley, CA |
+| December 2023 | Completed Economics B.A. at UCI | Irvine, CA |
+| January–August 2024 | Program Coordinator, UCI Basic Needs Center | Irvine, CA |
+| September 2024 | Enrolled in Quantitative Economics M.S., Cal Poly SLO | San Luis Obispo, CA |
+| October 2024–March 2025 | Returned to Santa Paula; Short-Term Employment | Santa Paula, CA |
+| April–September 2025 | EAOP Program Coordinator, UCI Center for Educational Partnerships | Irvine, CA |
+| July 2025 | Began Business Analytics M.S. at UCI | Irvine, CA |
+| January–June 2026 | Student Business Analyst, Anaheim Ducks Hockey Club | Irvine, CA |
+| June 2026 | Completed Business Analytics M.S. at UCI | Irvine, CA |
+:::
