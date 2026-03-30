@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "my-first-project/index.html",
+    "href": "my-first-project/index.html",
+    "title": "Predicting Customer Churn with Logistic Regression",
+    "section": "",
+    "text": "Introduction\nTest test test blah blah blah.\n\n\nTest Title\nMore Test material."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
@@ -11,34 +18,34 @@
     "href": "about.html#personal-background",
     "title": "About Me",
     "section": "Personal Background",
-    "text": "Personal Background\nI was raised in Santa Paula, CA, a small agricultural city in Ventura County with a tight-knit Latino community, by two Mexican immigrant parents who worked day and night to put food on the table. From a young age, my siblings and I worked alongside them in their side ventures, including recycling, landscaping, installing water systems, welding, and painting. We were either in school or working, and while that was demanding, it was also grounding. My parents were strict, expected a great deal from us, and were deeply supportive all at once. School was always the top priority in our home, and that emphasis paid off. My siblings and I have all graduated from college and successfully entered a professional world that once excluded people like our parents.\nAs I have grown, I have tried to give back in the same spirit they gave to us. I took over managing their finances, helped map out their long-term goals, and started teaching them practical skills like basic technology and U.S. history as they prepare for their citizenship exam. When I noticed their credit card debt was becoming a burden, I developed a plan to help them pay it off and used it as an opportunity to teach them about credit and personal finance. As I continue to grow professionally, I hope to keep finding new ways to make sure they are never left behind."
+    "text": "Personal Background\n\n\n  \n    \n  \n  \n    \n  \n  \n    \n  \n\nI was raised in Santa Paula, CA, a small agricultural city in Ventura County with a tight-knit Latino community, by two Mexican immigrant parents who worked day and night to put food on the table. From a young age, my siblings and I worked alongside them in their side ventures, including recycling, landscaping, installing water systems, welding, and painting. We were either in school or working, and while that was demanding, it was also grounding. My parents were strict, expected a great deal from us, and were deeply supportive all at once. School was always the top priority in our home, and that emphasis paid off. My siblings and I have all graduated from college and successfully entered a professional world that once excluded people like our parents.\nAs I have grown, I have tried to give back in the same spirit they gave to us. I took over managing their finances, helped map out their long-term goals, and started teaching them practical skills like basic technology and U.S. history as they prepare for their citizenship exam. When I noticed their credit card debt was becoming a burden, I developed a plan to help them pay it off and used it as an opportunity to teach them about credit and personal finance. As I continue to grow professionally, I hope to keep finding new ways to make sure they are never left behind."
   },
   {
-    "objectID": "about.html#where-im-headed-and-how-i-got-here",
-    "href": "about.html#where-im-headed-and-how-i-got-here",
+    "objectID": "about.html#where-im-headed",
+    "href": "about.html#where-im-headed",
     "title": "About Me",
-    "section": "Where I’m Headed and How I Got Here",
-    "text": "Where I’m Headed and How I Got Here\nThrough my MSBA program and professional experience, I have developed a growing toolkit centered on data analysis and business strategy. I am intentionally using the MSBA as a pivoting tool, deepening my expertise in advanced research methods, programming languages including R, SQL, and Python, data visualization through Tableau, and overall business acumen. My goal is to bridge the analytical and strategic sides of a business, using data not just to report what happened, but to inform what should happen next.\nMy target roles include Financial Analyst, Pricing Analyst, Marketing Analyst, Supply Chain Analyst, and Budget Analyst. I am particularly drawn to industries that are part of everyday life, including restaurant and food service, apparel, consumer packaged goods, automotive, higher education, and local government. What these industries share is scale and visibility, and that is exactly what excites me about contributing to them.\nThe experiences and milestones that have shaped this path are laid out in the timeline to the right. For a detailed breakdown of each role, visit the Experience page.\n\n\n\n\n\n\n\nYear\nEvent\n\n\n\n\nOctober 2020\nBegan Economics B.A. at UC Irvine\n\n\nJune-August 2022\nSupply Chain Internship — Chipotle Mexican Grill (Newport Beach, CA)\n\n\nJune-August 2023\nSummer Internship — Reagan Presidential Library, Education Dept. (Simi Valley, CA)\n\n\nDecember 2023\nCompleted Economics B.A. at UC Irvine\n\n\nJanuary-August 2024\n[your next entry]\n\n\n2025\nBegan MSBA at UC Irvine\n\n\n2026\nExpected MSBA graduation"
+    "section": "Where I’m Headed",
+    "text": "Where I’m Headed\nThrough my MSBA program and professional experience, I have developed a growing toolkit centered on data analysis and business strategy. I am intentionally using the MSBA as a pivoting tool, deepening my expertise in advanced research methods, programming languages including R, SQL, and Python, data visualization through Tableau and Power BI, and overall business acumen. My goal is to bridge the analytical and strategic sides of a business, using data not just to report what happened, but to inform what should happen next.\n\n\n  \n    Target Roles\n    Financial Analyst\n    Budget Analyst\n    Marketing Analyst\n    Supply Chain Analyst\n    Business Strategy Analyst\n  \n  \n    Target Industries\n    Restaurant & Food Service\n    Higher Education\n    Local Government\n    Consumer Packaged Goods\n    Apparel"
+  },
+  {
+    "objectID": "about.html#professional-timeline",
+    "href": "about.html#professional-timeline",
+    "title": "About Me",
+    "section": "Professional Timeline",
+    "text": "Professional Timeline\nThis timeline captures the key roles and milestones that have shaped my professional and academic development. For more details on each experience, please visit the Experience page.\n\n\n\n\n\n\n\n\n\nMonth & Year\nEvent\nLocation\n\n\n\n\nOctober 2020\nBegan Economics B.A. at UCI\nIrvine, CA\n\n\nMarch 2022–December 2023\nBasic Needs Advocate, UCI Basic Needs Center\nIrvine, CA\n\n\nJune–August 2022\nSupply Chain Internship, Chipotle Mexican Grill\nNewport Beach, CA\n\n\nJune–August 2023\nEducation Department Internship, Reagan Presidential Library\nSimi Valley, CA\n\n\nDecember 2023\nCompleted Economics B.A. at UCI\nIrvine, CA\n\n\nJanuary–August 2024\nProgram Coordinator, UCI Basic Needs Center\nIrvine, CA\n\n\nSeptember 2024\nEnrolled in Quantitative Economics M.S., Cal Poly SLO\nSan Luis Obispo, CA\n\n\nOctober 2024–March 2025\nReturned to Santa Paula; Short-Term Employment\nSanta Paula, CA\n\n\nApril–September 2025\nEAOP Program Coordinator, UCI Center for Educational Partnerships\nIrvine, CA\n\n\nJuly 2025\nBegan Business Analytics M.S. at UCI\nIrvine, CA\n\n\nJanuary–June 2026\nStudent Business Analyst, Anaheim Ducks Hockey Club\nIrvine, CA\n\n\nJune 2026\nCompleted Business Analytics M.S. at UCI\nIrvine, CA"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome!",
+    "title": "Welcome to my Website!",
     "section": "",
-    "text": "This is your portfolio site. Start by editing this page and about.qmd to make it your own."
+    "text": "Hello, my name is Allan Almaraz. I am a first-generation graduate student pursuing my Master of Science in Business Analytics (MSBA) at the University of California, Irvine (UCI), with a passion for using data to inform decisions and drive meaningful change. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on. Welcome, and please take a look around!"
   },
   {
-    "objectID": "index.html#next-steps",
-    "href": "index.html#next-steps",
-    "title": "Welcome!",
-    "section": "Next Steps",
-    "text": "Next Steps\n\nEdit about.qmd with your info\nCreate a project post in posts/\nPush to main and your site will auto-deploy"
-  },
-  {
-    "objectID": "my-first-project/index.html",
-    "href": "my-first-project/index.html",
-    "title": "Predicting Customer Churn with Logistic Regression",
-    "section": "",
-    "text": "Introduction\nTest test test blah blah blah.\n\n\nTest Title\nMore Test material."
+    "objectID": "index.html#personal-mission-statement",
+    "href": "index.html#personal-mission-statement",
+    "title": "Welcome to my Website!",
+    "section": "Personal Mission Statement",
+    "text": "Personal Mission Statement\nI believe data has the power to move organizations forward. My goal is to contribute to the kinds of companies that shape everyday life, the brands and institutions that people interact with through the products they buy, the food they eat, and the places they work and learn. I find purpose in knowing that my analysis could influence how these organizations operate, and that the impact of that work would be visible in the world around me. Whether supporting a restaurant brand, an apparel company, an automotive manufacturer, or a university, I aspire to be the analyst who turns complex data into decisions that actually change how things are done. For me, that is what makes analytics meaningful.\n\n\n  \n    What I'm Looking For\n    With a graduation date of June 2026, I am currently pursuing internships and full-time analyst roles in marketing, finance, business, and supply chain. I am leveraging my MSBA program as a pivot into more technical and analytical work, and I am eager to bring my skills to an organization where I can grow as an entry-level candidate.\n  \n  \n    Target Regions\n    Ventura County\n    Santa Barbara County\n    Sacramento County\n    Orange County"
   }
 ]

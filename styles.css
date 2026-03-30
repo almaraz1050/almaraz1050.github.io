@@ -4,8 +4,13 @@
 .quarto-about-jolla h2 {text-align: left;}
 
 .about-image {
-  border-radius: 70px !important;
   width: 550px !important;
   max-width: 100%;
   margin-bottom: 50px !important;
+  border-radius: 50%;
+}
+.quarto-about-jolla .about-image {
+  object-position: center 25%;
+  width: 500px !important;
+  height: 300px !important;
 }
