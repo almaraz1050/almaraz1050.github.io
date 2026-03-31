@@ -1,11 +1,16 @@
 ---
 title: "Experience"
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/allanalmaraz/
 ---
 
-My experience spans corporate supply chain, nonprofit student services, college access outreach, and data analytics — with a consistent thread of using structure and problem-solving to make programs run better and decisions more informed. Each entry below includes a brief context of the role, what I contributed, and what I took away from it.
-
-```{=html}
 <style>
+.quarto-about-jolla main {text-align: left;}
+.quarto-about-jolla .exp-bullets {text-align: left;}
 .exp-bar {border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff;}
 .exp-header {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.3em;}
 .exp-title {font-size: 1.1em; font-weight: 700; color: #111; margin: 0;}
@@ -17,6 +22,12 @@ My experience spans corporate supply chain, nonprofit student services, college 
 .exp-skills {font-size: 0.85em; color: #555; margin-top: 0.6em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em;}
 </style>
 
+
+My experience spans corporate supply chain, nonprofit student services, college access outreach, and data analytics — with a consistent thread of using structure and problem-solving to make programs run better and decisions more informed. Each entry below includes a brief context of the role, what I contributed, and what I took away from it.
+
+
+
+```{=html}
 <!-- Anaheim Ducks -->
 <div class="exp-bar">
   <div class="exp-header">
