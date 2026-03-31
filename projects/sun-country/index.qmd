@@ -226,7 +226,7 @@ about:
   <span style="font-size:13px; font-weight:600; color:#555; align-self:center;">Deliverables:</span>
   <a class="deliverable-btn" href="report.pdf" target="_blank">📄 Full Report</a>
   <a class="deliverable-btn" href="slides.pdf" target="_blank">📊 Slides</a>
-<a class="deliverable-btn" href="https://github.com/almaraz1050/almaraz1050.github.io/blob/main/projects/sun-country/code.ipynb" target="_blank">💻 Notebook</a></div>
+  <a class="deliverable-btn" href="https://github.com/almaraz1050/almaraz1050.github.io/blob/main/projects/sun-country/code.ipynb" target="_blank">💻 Notebook</a></div>
 
 <script>
 function showTab(id, btn) {
