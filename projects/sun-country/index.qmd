@@ -1,0 +1,12 @@
+---
+title: "Sun Country Airlines: Customer Segmentation"
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/allanalmaraz/
+---
+
+
+
