@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sun Country Airlines: Customer Segmentation – Allan Almaraz</title>
+<title>Sun Country Airlines — Customer Segmentation – Allan Almaraz</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,6 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -74,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -118,30 +119,271 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sun Country Airlines: Customer Segmentation</h1>
+<h1 class="title">Sun Country Airlines — Customer Segmentation</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
+  
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://linkedin.com/in/allanalmaraz/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
+</header>
+
+
+<style>
+.project-header {margin: 0 0 2rem 0;}
+.back-link {font-size: 13px; color: #888; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 1.5rem;}
+.back-link:hover {color: #444;}
+.project-title {font-size: 1.6rem; font-weight: 700; color: #1a1a1a; margin-bottom: 6px;}
+.project-subtitle {font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;}
+.meta-row {display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem;}
+.meta-tag {font-size: 11px; padding: 3px 10px; border-radius: 20px; background: #f5f5f5; color: #555; border: 1px solid #e8e8e8;}
+.metrics-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2rem;}
+.metric-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center;}
+.metric-value {font-size: 1.6rem; font-weight: 700; color: #1a1a1a; line-height: 1.2;}
+.metric-label {font-size: 11px; color: #888; margin-top: 4px; line-height: 1.4;}
+.overview-text {font-size: 0.95rem; color: #444; line-height: 1.8; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e5e5;}
+.tabs {display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5;}
+.tab-btn {font-size: 13px; font-weight: 500; color: #888; background: none; border: none; padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s;}
+.tab-btn:hover {color: #444;}
+.tab-btn.active {color: #1a1a1a; border-bottom-color: #1a1a1a;}
+.tab-panel {display: none; padding: 2rem 0;}
+.tab-panel.active {display: block;}
+.section-heading {font-size: 1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; margin-top: 1.5rem;}
+.section-heading:first-child {margin-top: 0;}
+.prose {font-size: 0.93rem; color: #444; line-height: 1.8; margin-bottom: 1rem;}
+.segment-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-bottom: 1.5rem;}
+.segment-card {border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #e8e8e8;}
+.segment-name {font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;}
+.segment-pct {font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;}
+.segment-desc {font-size: 12px; color: #555; line-height: 1.5;}
+.seg-0 {background: #e8f1fb; border-color: #c5d9f0;} .seg-0 .segment-pct {color: #185fa5;}
+.seg-1 {background: #faece7; border-color: #f0c4b3;} .seg-1 .segment-pct {color: #993c1d;}
+.seg-2 {background: #e1f5ee; border-color: #9fe1cb;} .seg-2 .segment-pct {color: #0f6e56;}
+.seg-3 {background: #faeeda; border-color: #fac775;} .seg-3 .segment-pct {color: #854f0b;}
+.seg-4 {background: #eeedfe; border-color: #afa9ec;} .seg-4 .segment-pct {color: #534ab7;}
+.rec-card {border-left: 4px solid #e8e8e8; padding: 1rem 1.25rem; margin-bottom: 12px; background: #fafafa; border-radius: 0 8px 8px 0;}
+.rec-card.high {border-left-color: #e24b4a;}
+.rec-card.med {border-left-color: #ef9f27;}
+.rec-card.low {border-left-color: #639922;}
+.rec-priority {font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px;}
+.rec-card.high .rec-priority {color: #e24b4a;}
+.rec-card.med .rec-priority {color: #ef9f27;}
+.rec-card.low .rec-priority {color: #639922;}
+.rec-title {font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;}
+.rec-segment {font-size: 11px; color: #888; margin-bottom: 6px;}
+.rec-desc {font-size: 13px; color: #555; line-height: 1.6;}
+.method-steps {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 1.5rem;}
+.method-step {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
+.step-num {font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: #aaa; text-transform: uppercase; margin-bottom: 4px;}
+.step-title {font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;}
+.step-desc {font-size: 12px; color: #555; line-height: 1.5;}
+.skills-row {display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem;}
+.skill-tag {font-size: 12px; padding: 4px 12px; border-radius: 20px; background: #eeedfe; color: #534ab7; border: 1px solid #afa9ec;}
+.deliverables-bar {display: flex; flex-wrap: wrap; gap: 10px; padding: 1.25rem; background: #f9f9f9; border-radius: 10px; border: 1px solid #efefef; margin-top: 2rem;}
+.deliverable-btn {font-size: 13px; font-weight: 500; color: #3b82f6; text-decoration: none; padding: 6px 14px; border: 1px solid #b5d4f4; border-radius: 6px; background: #fff; transition: background 0.15s;}
+.deliverable-btn:hover {background: #e8f1fb; text-decoration: none;}
+.takeaway-list {list-style: none; padding: 0; margin: 0;}
+.takeaway-list li {font-size: 0.93rem; color: #444; line-height: 1.7; padding: 8px 0 8px 20px; border-bottom: 1px solid #f0f0f0; position: relative;}
+.takeaway-list li::before {content: '→'; position: absolute; left: 0; color: #aaa;}
+.takeaway-list li:last-child {border-bottom: none;}
+</style>
+
+<div class="project-header">
+  <a class="back-link" href="../../projects.html">← Back to Projects</a>
+  <div class="project-title">Sun Country Airlines — Customer Segmentation</div>
+  <div class="project-subtitle">BANA 200 · University of California, Irvine · Summer 2025</div>
+  <div class="meta-row">
+    <span class="meta-tag">K-Means Clustering</span>
+    <span class="meta-tag">Python</span>
+    <span class="meta-tag">pandas</span>
+    <span class="meta-tag">scikit-learn</span>
+    <span class="meta-tag">Customer analytics</span>
+    <span class="meta-tag">Predictive analytics</span>
+  </div>
 </div>
+
+<div class="metrics-grid">
+  <div class="metric-card">
+    <div class="metric-value">15,144</div>
+    <div class="metric-label">Customer records analyzed</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">5</div>
+    <div class="metric-label">Distinct segments identified</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">52.7%</div>
+    <div class="metric-label">Customers in highest-priority segments</div>
+  </div>
 </div>
- <!-- /main -->
+
+<p class="overview-text">Sun Country Airlines, a Minneapolis-based low-cost leisure carrier, had no dedicated data analyst on staff and relied entirely on anecdotal assumptions to drive marketing decisions. Acting as an analytics consultant for a BANA 200 case study, I applied K-Means clustering to 15,144 customer-trip records spanning 2013 to 2014, identifying five actionable segments and translating the findings into three targeted campaigns directly tied to leadership's stated goals around Ufly loyalty enrollment, direct channel growth, and vacation package differentiation.</p>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
+  <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
+  <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
+  <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
+</div>
+
+<div id="findings" class="tab-panel active">
+  <div class="section-heading">The 5 Customer Segments</div>
+  <p class="prose">K-Means clustering with k=5 revealed five distinct, business-interpretable customer groups. The clearest structural pattern was a near-complete booking channel split between Clusters 0 and 1, who share the same Minneapolis leisure traveler profile but differ entirely in where they book. Loyalty program participation was almost entirely absent outside of Cluster 3.</p>
+  <div class="segment-grid">
+    <div class="segment-card seg-0">
+      <div class="segment-name">C0: MSP Direct Bookers</div>
+      <div class="segment-pct">27.3%</div>
+      <div class="segment-desc">MSP locals booking on SCA.com. 74% direct channel. 99.9% non-Ufly — the single largest loyalty enrollment opportunity.</div>
+    </div>
+    <div class="segment-card seg-1">
+      <div class="segment-name">C1: MSP Deal Seekers</div>
+      <div class="segment-pct">25.4%</div>
+      <div class="segment-desc">Same traveler as C0 but 100% third-party channel (Expedia, Google Flights). A margin problem with a structural fix.</div>
+    </div>
+    <div class="segment-card seg-2">
+      <div class="segment-name">C2: Inbound Visitors</div>
+      <div class="segment-pct">16.1%</div>
+      <div class="segment-desc">95% fly INTO Minneapolis. Low spend, one-way dominant, 95% non-Ufly. Forms a cross-sell mirror with C4.</div>
+    </div>
+    <div class="segment-card seg-3">
+      <div class="segment-name">C3: Loyal Frequent Fliers</div>
+      <div class="segment-pct">15.7%</div>
+      <div class="segment-desc">99% Ufly Standard. Highest ticket spend and longest booking lead time of any segment. Peak travel in Q4.</div>
+    </div>
+    <div class="segment-card seg-4">
+      <div class="segment-name">C4: Returning Home Fliers</div>
+      <div class="segment-pct">15.5%</div>
+      <div class="segment-desc">98% flying home to MSP. 30% Ufly Standard — partial loyalty conversion already underway. Natural vacation package target.</div>
+    </div>
+  </div>
+  <div class="section-heading">Key Insight from EDA</div>
+  <p class="prose">Before any model was run, exploratory data analysis revealed that 78.5% of all customers were unenrolled in Ufly Rewards, and that booking channels split nearly evenly between direct (45.9%) and third-party (44.0%). These two findings alone defined the primary business opportunity and foreshadowed the segmentation results. The most actionable insight in the entire analysis did not require an algorithm.</p>
+</div>
+
+<div id="recommendations" class="tab-panel">
+  <p class="prose">Three campaigns were designed, each mapped directly to one of leadership's stated business objectives around Ufly enrollment, direct channel migration, and vacation package differentiation.</p>
+
+  <div class="rec-card high">
+    <div class="rec-priority">High priority</div>
+    <div class="rec-title">Launch Direct Booking and Ufly Enrollment Campaign</div>
+    <div class="rec-segment">C0 + C1 — 52.7% of all customers</div>
+    <div class="rec-desc">C0 already books direct but 99.9% are non-Ufly. A post-booking enrollment prompt with a first-flight miles bonus is low-friction and high-volume. C1 books 100% through third parties — a guaranteed 5 to 10% direct-booking discount gives them a concrete reason to switch channels, where an enrollment prompt can then be served.</div>
+  </div>
+
+  <div class="rec-card med">
+    <div class="rec-priority">Medium priority</div>
+    <div class="rec-title">Introduce a Ufly Elite Tier for Loyal Frequent Fliers</div>
+    <div class="rec-segment">C3 — 15.7% of customers</div>
+    <div class="rec-desc">C3 is 99% Ufly Standard with the highest ticket spend of any segment. There is currently no Elite tier to aspire toward. A competitor offering a status-match could rapidly erode years of built loyalty. Gating Elite perks (priority boarding, free checked bag) behind a spend threshold creates a concrete retention mechanism before a competitor acts.</div>
+  </div>
+
+  <div class="rec-card med">
+    <div class="rec-priority">Medium priority</div>
+    <div class="rec-title">Cross-Sell Outbound Vacation Packages at Checkout</div>
+    <div class="rec-segment">C4 — 15.5% of customers</div>
+    <div class="rec-desc">C4 flies home to MSP one-way and 30% already hold Ufly Standard. A customer completing a homebound trip via Sun Country is primed for an outbound vacation package offer at checkout. A "Plan your next escape" widget converts one-way buyers into round-trip vacation customers and deepens Ufly engagement in a segment with existing brand affinity.</div>
+  </div>
+
+  <div class="rec-card low">
+    <div class="rec-priority">Low priority</div>
+    <div class="rec-title">Round-Trip Bundle Offer</div>
+    <div class="rec-segment">C2 — 16.1% of customers</div>
+    <div class="rec-desc">C2 is the most transactional and lowest-spend segment. A round-trip bundle offer is worth testing but is not the core focus given limited brand attachment and low Ufly engagement.</div>
+  </div>
+</div>
+
+<div id="methodology" class="tab-panel">
+  <div class="method-steps">
+    <div class="method-step">
+      <div class="step-num">Step 1</div>
+      <div class="step-title">Data Preparation</div>
+      <div class="step-desc">15,144 records across 90 features. Removed uid and PNRLocatorID identifiers, leaving 88 usable numeric features. All values pre-normalized to 0 to 1 scale. No missing values.</div>
+    </div>
+    <div class="method-step">
+      <div class="step-num">Step 2</div>
+      <div class="step-title">Exploratory Data Analysis</div>
+      <div class="step-desc">Examined booking channel split (46% direct vs 44% third-party), Ufly enrollment rate (78.5% non-member), destination frequency, and continuous variable distributions before any modeling.</div>
+    </div>
+    <div class="method-step">
+      <div class="step-num">Step 3</div>
+      <div class="step-title">Choosing k = 5</div>
+      <div class="step-desc">Tested k=2 through k=10. Elbow method showed a clear inflection at k=5. Silhouette analysis confirmed k=5 as the optimal balance of statistical fit and business interpretability.</div>
+    </div>
+    <div class="method-step">
+      <div class="step-num">Step 4</div>
+      <div class="step-title">K-Means Clustering</div>
+      <div class="step-desc">Final model fit with k=5, random_state=42, n_init=10. Clusters reordered by size. Centroids translated directly into segment profiles with actionable business meaning.</div>
+    </div>
+  </div>
+
+  <div class="section-heading">Tools and Skills</div>
+  <div class="skills-row">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">pandas</span>
+    <span class="skill-tag">scikit-learn</span>
+    <span class="skill-tag">matplotlib</span>
+    <span class="skill-tag">seaborn</span>
+    <span class="skill-tag">K-Means clustering</span>
+    <span class="skill-tag">Elbow method</span>
+    <span class="skill-tag">Silhouette analysis</span>
+    <span class="skill-tag">EDA</span>
+    <span class="skill-tag">Business communication</span>
+  </div>
+</div>
+
+<div id="takeaways" class="tab-panel">
+  <div class="section-heading">What I took away from this project</div>
+  <ul class="takeaway-list">
+    <li>The most actionable insight in the entire analysis was visible before any model ran. EDA alone surfaced the 78.5% non-Ufly rate and the near-equal channel split, which defined the entire business opportunity. Models sharpen the answer but do not create it.</li>
+    <li>Segment interpretability matters more than model complexity. K-Means centroids translated directly into a marketing campaign brief. A more complex algorithm might have improved some internal fit metric while producing segments no business team could act on.</li>
+    <li>Framing findings for a non-technical audience is its own analytical skill. Translating cluster centroids into named personas (MSP Direct Bookers, MSP Deal Seekers) made the results immediately usable for stakeholders who would never read a confusion matrix.</li>
+    <li>Data gaps are part of the analysis. The absence of ancillary spend, post-flight satisfaction, and loyalty conversion event tracking were not just limitations to acknowledge, they became the basis for a concrete long-term data strategy recommendation.</li>
+    <li>C0 and C1 being the same traveler type differentiated only by booking channel was the single most strategically interesting finding. It meant two different interventions for what initially looked like one customer group.</li>
+  </ul>
+</div>
+
+<div class="deliverables-bar">
+  <span style="font-size:13px; font-weight:600; color:#555; align-self:center;">Deliverables:</span>
+  <a class="deliverable-btn" href="report.pdf" target="_blank">📄 Full Report</a>
+  <a class="deliverable-btn" href="slides.pdf" target="_blank">📊 Slides</a>
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
