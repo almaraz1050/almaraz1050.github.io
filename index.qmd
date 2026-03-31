@@ -1,6 +1,6 @@
 ---
 title: "Welcome to my Website!"
-image: Headshot1.jpg
+image: images/Headshot1.jpg
 about:
   template: jolla
   links:

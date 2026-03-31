@@ -1,14 +1,127 @@
 ---
 title: "Experience"
-image: 32 copy.jpeg
-about:
-  template: jolla
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: GitHub
-      href: https://github.com
 ---
 
+My experience spans corporate supply chain, nonprofit student services, college access outreach, and data analytics — with a consistent thread of using structure and problem-solving to make programs run better and decisions more informed. Each entry below includes a brief context of the role, what I contributed, and what I took away from it.
+
+```{=html}
+<style>
+.exp-bar {border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff;}
+.exp-header {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.3em;}
+.exp-title {font-size: 1.1em; font-weight: 700; color: #111; margin: 0;}
+.exp-meta {font-size: 0.85em; color: #666; margin: 0.2em 0 0.6em 0;}
+.exp-context {font-size: 0.88em; color: #555; font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em;}
+.exp-bullets {margin: 0; padding-left: 1.2em; font-size: 0.9em; color: #333; line-height: 1.7;}
+.exp-bullets li {margin-bottom: 0.2em;}
+.exp-dates {font-size: 0.85em; color: #888; white-space: nowrap;}
+.exp-skills {font-size: 0.85em; color: #555; margin-top: 0.6em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em;}
+</style>
+
+<!-- Anaheim Ducks -->
+<div class="exp-bar">
+  <div class="exp-header">
+    <div>
+      <p class="exp-title">Student Business Data Analyst</p>
+      <p class="exp-meta">Anaheim Ducks Hockey Club &nbsp;·&nbsp; Apprenticeship &nbsp;·&nbsp; Hybrid</p>
+    </div>
+    <span class="exp-dates">Jan 2026 – Present &nbsp;·&nbsp; Irvine, CA</span>
+  </div>
+  <p class="exp-context">This role is part of my UCI MSBA Capstone project, through which I was placed with the Anaheim Ducks and The Rinks — a local hockey rink operator — to analyze whether participation in The Rinks' adult Learn-to-Play program, a low-cost hockey learning initiative, translates into Anaheim Ducks ticket purchases and sustained fan engagement.</p>
+  <ul class="exp-bullets">
+    <li>Designing an end-to-end analytical framework to evaluate how The Rinks' adult Learn-to-Play program influences Anaheim Ducks ticket purchases and long-term fan engagement across disconnected programming and ticketing systems.</li>
+    <li>Writing SQL queries in SSMS to apply client-defined business logic and isolate clean, analysis-ready ticket data, including revenue calculations across primary and secondary market channels and participant filtering across multiple Ticketmaster schema tables.</li>
+    <li>Building Power BI dashboards to visualize program retention, pre/post-enrollment ticket purchasing behavior, and fan conversion metrics for Anaheim Ducks business intelligence stakeholders.</li>
+  </ul>
+  <p class="exp-skills"><strong>Skills Developed:</strong> SQL, Power BI, Data Visualization, Business Intelligence, Analytical Framework Design</p>
+</div>
+
+<!-- EAOP Program Coordinator -->
+<div class="exp-bar">
+  <div class="exp-header">
+    <div>
+      <p class="exp-title">EAOP Program Coordinator</p>
+      <p class="exp-meta">UCI Center for Educational Partnerships &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; Hybrid</p>
+    </div>
+    <span class="exp-dates">Apr 2025 – Sep 2025 &nbsp;·&nbsp; Irvine, CA</span>
+  </div>
+  <p class="exp-context">UCI's Early Academic Outreach Program (EAOP), housed within the Center for Educational Partnerships, focuses on expanding college access for underrepresented students in the Orange and Los Angeles County regions. In this role, I supported the full range of K-16 programming and outreach initiatives the program delivers throughout the academic year.</p>
+  <ul class="exp-bullets">
+    <li>Coordinated academic programming and event logistics for key K-16 initiatives such as the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; supported outreach, transportation, documentation, and day-of execution.</li>
+    <li>Developed a series of curriculum and interactive workshops on interviewing techniques and skills aimed towards high school and community college students, incorporating hands-on activities and practical training.</li>
+    <li>Produced and hosted a multi-part webinar series focused on UCI's nursing, business, and engineering pathways, guiding high school students through major requirements, career paths, and pathway structure.</li>
+  </ul>
+  <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Curriculum Development, Video Production, Event Logistics, Public Speaking</p>
+</div>
+
+<!-- UCI Basic Needs - Program Coordinator -->
+<div class="exp-bar">
+  <div class="exp-header">
+    <div>
+      <p class="exp-title">Program Coordinator</p>
+      <p class="exp-meta">UCI Basic Needs Center &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; Hybrid</p>
+    </div>
+    <span class="exp-dates">Jan 2024 – Aug 2024 &nbsp;·&nbsp; Irvine, CA</span>
+  </div>
+  <p class="exp-context">Upon graduating from UCI, I was promoted from Basic Needs Advocate to the full-time Program Coordinator role. I took on direct oversight of the Basic Needs Advocate team, all CalFresh initiatives and day-to-day operations, and the center's marketing efforts — and made it a priority to introduce data analytics into how we tracked and optimized CalFresh assistance appointment outcomes.</p>
+  <ul class="exp-bullets">
+    <li>Managed data entry and analysis for CalFresh services, implementing a new Excel system that tracked eligibility data, reporting timelines, and confidential case details, resulting in a 50% improvement in data management efficiency.</li>
+    <li>Directed and managed food security initiatives such as CalFresh Assistance Appointments, Fresh Finances, and CalFresh Enrollment Parties, overseeing logistics, resource organization, scheduling, stakeholder communication, daily operations, and targeted outreach.</li>
+    <li>Led scheduling, task delegation, and hiring/training for CalFresh and marketing student teams; optimized workflow, enhanced team efficiency by 50%, and ensured the timely completion of projects in high-pressure environments.</li>
+    <li>Directed marketing initiatives across digital and print platforms, leveraging WordPress, Mailchimp, Canva, and Meta Business Suite; led UCI's 2024 Giving Day campaign that raised record-breaking funds and increased social media engagement by 200%.</li>
+  </ul>
+  <p class="exp-skills"><strong>Skills Developed:</strong> Project Management, Data Analysis, Marketing, Team Leadership, Microsoft Excel, Canva, Mailchimp, Meta Business Suite</p>
+</div>
+
+<!-- UCI Basic Needs - Basic Needs Advocate -->
+<div class="exp-bar">
+  <div class="exp-header">
+    <div>
+      <p class="exp-title">Basic Needs Advocate</p>
+      <p class="exp-meta">UCI Basic Needs Center &nbsp;·&nbsp; Student Role &nbsp;·&nbsp; Hybrid</p>
+    </div>
+    <span class="exp-dates">Mar 2022 – Dec 2023 &nbsp;·&nbsp; Irvine, CA</span>
+  </div>
+  <p class="exp-context">A student-facing role at the UCI Basic Needs Center, focused on providing direct support to underserved students through CalFresh consultations and in-person outreach. CalFresh is California's name for the federal Supplemental Nutrition Assistance Program (SNAP), commonly known as food stamps.</p>
+  <ul class="exp-bullets">
+    <li>Provided front-desk support and confidential student consultations to help students apply for CalFresh, as well as connecting them to resources related to academics, employment, budgeting, credit and banking, financial aid, housing, loans, and transportation.</li>
+    <li>Supported day-to-day event operations including set-up, tear-down, and in-person outreach for various Basic Needs and CalFresh-related public campaigns and events.</li>
+  </ul>
+  <p class="exp-skills"><strong>Skills Developed:</strong> Community Outreach, Interpersonal Communication, Student Services, Case Management</p>
+</div>
+
+<!-- Reagan Library -->
+<div class="exp-bar">
+  <div class="exp-header">
+    <div>
+      <p class="exp-title">Education Department Intern</p>
+      <p class="exp-meta">Ronald Reagan Presidential Foundation & Institute &nbsp;·&nbsp; Internship &nbsp;·&nbsp; On-site</p>
+    </div>
+    <span class="exp-dates">Jun 2023 – Aug 2023 &nbsp;·&nbsp; Simi Valley, CA</span>
+  </div>
+  <p class="exp-context">Having participated in the Reagan Presidential Library's Summer Leadership Program (SLP) as a high school student, I returned years later to lead it as an intern. The SLP is a week-long program aimed at teaching middle and high school students the tenets of leadership and community service, and I worked alongside a team of five interns and educators to bring the 2023 cohort to life.</p>
+  <ul class="exp-bullets">
+    <li>Led SLP student sessions with 40+ students in attendance per session, delivering a full week of back-to-back programming that included an intricate curriculum of lessons, guided museum tours, and hands-on activities spanning the entire Reagan Presidential Library and Museum.</li>   
+    <li>Developed student public speaking and collaboration skills through interactive lessons, group projects, and a community action plan the students designed and presented to local community members.</li>
+    <li>Facilitated numerous Reagan-sponsored events including the GE-Reagan Foundation Scholarship Program and the Great Communicator Debate Series.</li>
+  </ul>
+  <p class="exp-skills"><strong>Skills Developed:</strong> Collaborative Problem Solving, Presentation Skills, Curriculum Design, Event Facilitation, Youth Education</p>
+</div>
+
+<!-- Chipotle -->
+<div class="exp-bar">
+  <div class="exp-header">
+    <div>
+      <p class="exp-title">Supply Chain Intern</p>
+      <p class="exp-meta">Chipotle Mexican Grill &nbsp;·&nbsp; Internship &nbsp;·&nbsp; On-site</p>
+    </div>
+    <span class="exp-dates">Jun 2022 – Aug 2022 &nbsp;·&nbsp; Newport Beach, CA</span>
+  </div>
+  <p class="exp-context">A traditional corporate internship structure that included coffee chats, team meetings, and various data tasks — with one standout responsibility: leading an ingredient mapping project that I ultimately presented to Chipotle's executive team at the end of the summer.</p>
+  <ul class="exp-bullets">
+    <li>Led a comprehensive ingredient mapping initiative, analyzing product specifications, pull cadence, and pricing data from over 40 tier-two suppliers, 150 sub-ingredients, and 6 commissaries to optimize supply chain and procurement processes.</li>
+    <li>Identified cost-saving opportunities by consolidating ingredients for cumin, salt, and black pepper, contributing to a more streamlined procurement process and potential cost reductions.</li>
+    <li>Managed the daily compilation and analysis of inventory and supply data from nationwide distribution centers, improving visibility and communication between CMG's commissaries and distribution centers.</li>
+  </ul>
+  <p class="exp-skills"><strong>Skills Developed:</strong> Supply Chain Analysis, Microsoft Excel, Data Compilation, Procurement, Inventory Management</p>
+</div>
+```
