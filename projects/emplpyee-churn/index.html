@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – Allan Almaraz</title>
+<title>Predicting Employee Churn – Allan Almaraz</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,7 +37,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,28 +118,112 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<div class="quarto-about-jolla">
+ <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Predicting Employee Churn</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header><main class="content" id="quarto-document-content">
+<style>
+  .metric-cards {display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:2rem;}
+  .metric-card {background:#f8f8f8; border:1px solid #e0e0e0; border-radius:10px; padding:1.2rem 1.8rem; text-align:center; flex:1; min-width:130px;}
+  .metric-card .number {font-size:2rem; font-weight:700; color:#1a1a1a;}
+  .metric-card .label {font-size:0.8rem; color:#666; text-transform:uppercase; letter-spacing:0.05em; margin-top:0.2rem;}
+  .tab-buttons {display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; border-bottom:2px solid #e0e0e0; padding-bottom:0.5rem;}
+  .tab-btn {background:none; border:none; padding:0.5rem 1.1rem; font-size:0.95rem; color:#666; cursor:pointer; border-radius:6px 6px 0 0; font-family:inherit;}
+  .tab-btn:hover {background:#f0f0f0; color:#333;}
+  .tab-btn.active {background:#1a1a1a; color:#fff;}
+  .tab-panel {display:none;}
+  .tab-panel.active {display:block;}
+  .deliverables-bar {display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid #e0e0e0;}
+  .deliverable-btn {display:inline-flex; align-items:center; gap:0.4rem; background:#1a1a1a; color:#fff; padding:0.5rem 1.1rem; border-radius:6px; font-size:0.88rem; text-decoration:none; font-weight:500;}
+  .deliverable-btn:hover {background:#333; color:#fff;}
+  .deliverable-btn svg {flex-shrink:0;}
+  p, li {color:#444; font-size:0.95rem;}
+</style>
+<div class="metric-cards">
+  <div class="metric-card"><div class="number">4,653</div><div class="label">Employees</div></div>
+  <div class="metric-card"><div class="number">2</div><div class="label">Models Compared</div></div>
+  <div class="metric-card"><div class="number">79%</div><div class="label">Best Recall</div></div>
+</div>
+<div class="tab-buttons">
+  <button class="tab-btn active" onclick="showTab('findings')">Findings</button>
+  <button class="tab-btn" onclick="showTab('recommendations')">Recommendations</button>
+  <button class="tab-btn" onclick="showTab('methodology')">Methodology</button>
+  <button class="tab-btn" onclick="showTab('takeaways')">Takeaways</button>
+</div>
+<div id="findings" class="tab-panel active">
+**Who is most likely to leave?**
+Churn is not randomly distributed across the workforce. The analysis found that risk is concentrated in specific groups defined by a combination of tenure, pay, education, and location.
+- Employees in the **mid pay tier** showed the highest churn, suggesting dissatisfaction is strongest when compensation feels neither entry-level nor rewarding enough to retain.
+- Employees who had been **benched** (unassigned to a project) churned at noticeably elevated rates, pointing to how periods of inactivity can signal instability or exclusion.
+- **Master's degree holders** churned at higher rates than both bachelor's and PhD employees, indicating that highly educated employees may feel underutilized or lack clear advancement paths.
+- **Pune** had the highest city-level churn among the three metros (Bangalore, Pune, New Delhi), suggesting that location-specific workplace factors play a role.
+- **Female employees** showed a higher churn proportion than male employees in the dataset.
+The tuned Decision Tree surfaced **joining year, compensation tier, and education level** as the top splits, showing that churn risk often emerges from the intersection of these factors rather than any single one acting alone.
+</div>
+<div id="recommendations" class="tab-panel">
+**Actionable strategies for retention**
+The model results translate directly into targeted interventions HR teams can act on.
+- **Target high-risk segments.** Concentrate retention outreach on long-tenured, mid-pay employees, who emerged as the most at-risk combination across both models.
+- **Review compensation structure.** A pay equity analysis focused on the mid tier could address the dissatisfaction driving elevated churn in that group.
+- **Minimize benching impact.** Reducing bench time or improving communication and engagement during unassigned periods can lower the sense of job insecurity that leads to voluntary departure.
+- **Location-specific programs.** Pune employees warrant a dedicated retention initiative, as city-level effects suggest that workplace dynamics there differ from Bangalore and New Delhi.
+- **Career development for highly educated employees.** Creating clearer advancement tracks and recognition programs for employees with graduate degrees can reduce the gap between expectation and reality that drives churn in that group.
+</div>
+<div id="methodology" class="tab-panel">
+**Dataset and problem setup**
+The project used the *Employee Future Prediction* dataset from Kaggle (N = 4,653 employees across Bangalore, Pune, and New Delhi). The outcome variable indicates whether an employee left the company within two years. The dataset has a meaningful class imbalance: 65.6% of employees stayed while only 34.4% churned, which made recall for the churn class the primary evaluation metric throughout the project.
+**Models**
+Two supervised learning approaches were compared.
+*Logistic Regression* was estimated first as a baseline, then tuned with L1 regularization (lasso), class-weight balancing, and a regularization strength of C = 0.1 using GridSearchCV. L1 regularization shrinks weaker coefficients to zero, improving interpretability. The improved logistic model achieved a churn recall of approximately 0.63.
+*Decision Tree Classifier* was first run untuned and already outperformed the logistic baseline (recall 0.64). The pre-pruned version applied class_weight="balanced", max depth of 8, minimum 10 samples per leaf, and a lowered decision threshold of 0.35 to flag borderline cases as churners. This final model reached test-set recall of 0.79.
+**Validation**
+5-fold cross-validation was used throughout to confirm that model performance generalized beyond the training split and was not sensitive to any particular partition.
+</div>
+<div id="takeaways" class="tab-panel">
+**What this project demonstrates**
+- Churn is **highly predictable** when models are built with the right evaluation framework. Accuracy alone is misleading on imbalanced datasets; recall forces the model to actually catch at-risk employees.
+- **Different algorithms offer different kinds of understanding.** Logistic regression surfaces interpretable odds ratios, while decision trees reveal how multiple attributes interact to create risk pathways neither factor creates alone.
+- **Threshold tuning matters.** Lowering the decision threshold from 0.50 to 0.35 lifted recall from 0.64 to 0.79 on the decision tree without additional feature engineering, a practical lever that is often overlooked.
+- The analysis shows how employee data can move from descriptive patterns to an actionable early-warning system that HR departments can use before turnover occurs rather than after.
+</div>
+<div class="deliverables-bar">
+  <a class="deliverable-btn" href="report.pdf" target="_blank">
+    <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+    Report
+  </a>
+  <a class="deliverable-btn" href="slides.pdf" target="_blank">
+    <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+    Slides
+  </a>
+</div>
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
 
 
-
-
-
-
-
-</main> <!-- /main -->
+</main> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="https://linkedin.com/in/allanalmaraz/" class="about-link" rel="" target="">
+    <i class="bi bi-linkedin"></i>
+     <span class="about-link-text">LinkedIn</span>
+  </a>
+</div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
