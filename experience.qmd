@@ -1,5 +1,6 @@
 ---
 title: "Experience"
+toc: true
 about:
   template: jolla
   links:
@@ -12,23 +13,22 @@ about:
 .quarto-about-jolla main {text-align: left;}
 .quarto-about-jolla .exp-bullets {text-align: left;}
 .exp-bar {border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff;}
-.exp-header {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.3em;}
-.exp-title {font-size: 1.1em; font-weight: 700; color: #111; margin: 0;}
-.exp-meta {font-size: 0.85em; color: #666; margin: 0.2em 0 0.6em 0;}
-.exp-context {font-size: 0.88em; color: #555; font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em;}
-.exp-bullets {margin: 0; padding-left: 1.2em; font-size: 0.9em; color: #333; line-height: 1.7;}
-.exp-bullets li {margin-bottom: 0.2em;}
-.exp-dates {font-size: 0.85em; color: #888; white-space: nowrap;}
-.exp-skills {font-size: 0.85em; color: #555; margin-top: 0.6em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em;}
+.exp-header {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; gap: 0.5em; margin-bottom: 0.3em;}
+.exp-title {font-size: 1.1em; font-weight: 700; color: #111; margin-bottom: 1;}
+.exp-meta {font-size: 0.85em; color: #444; margin: 0.2em 0 0.6em 0; white-space: nowrap;}
+.exp-context {font-size: 0.88em; color: #444; font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em; line-height: 1.35;}
+.exp-bullets {margin: 0; padding-left: 1.2em; font-size: 0.9em; color: #444; line-height: 1.35;}
+.exp-bullets li {margin-bottom: 0.6em;}
+.exp-dates {font-size: 0.85em; color: #444; white-space: nowrap;}
+.exp-skills {font-size: 0.85em; color: #555; margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em;}
+h3 {display: none;}
 </style>
-
 
 My experience spans corporate supply chain, nonprofit student services, college access outreach, and data analytics — with a consistent thread of using structure and problem-solving to make programs run better and decisions more informed. Each entry below includes a brief context of the role, what I contributed, and what I took away from it.
 
-
+### Student Business Data Analyst
 
 ```{=html}
-<!-- Anaheim Ducks -->
 <div class="exp-bar">
   <div class="exp-header">
     <div>
@@ -45,8 +45,11 @@ My experience spans corporate supply chain, nonprofit student services, college 
   </ul>
   <p class="exp-skills"><strong>Skills Developed:</strong> SQL, Power BI, Data Visualization, Business Intelligence, Analytical Framework Design</p>
 </div>
+```
 
-<!-- EAOP Program Coordinator -->
+### EAOP Program Coordinator
+
+```{=html}
 <div class="exp-bar">
   <div class="exp-header">
     <div>
@@ -63,8 +66,11 @@ My experience spans corporate supply chain, nonprofit student services, college 
   </ul>
   <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Curriculum Development, Video Production, Event Logistics, Public Speaking</p>
 </div>
+```
 
-<!-- UCI Basic Needs - Program Coordinator -->
+### Program Coordinator
+
+```{=html}
 <div class="exp-bar">
   <div class="exp-header">
     <div>
@@ -82,8 +88,10 @@ My experience spans corporate supply chain, nonprofit student services, college 
   </ul>
   <p class="exp-skills"><strong>Skills Developed:</strong> Project Management, Data Analysis, Marketing, Team Leadership, Microsoft Excel, Canva, Mailchimp, Meta Business Suite</p>
 </div>
+```
 
-<!-- UCI Basic Needs - Basic Needs Advocate -->
+### Basic Needs Advocate
+```{=html}
 <div class="exp-bar">
   <div class="exp-header">
     <div>
@@ -99,8 +107,11 @@ My experience spans corporate supply chain, nonprofit student services, college 
   </ul>
   <p class="exp-skills"><strong>Skills Developed:</strong> Community Outreach, Interpersonal Communication, Student Services, Case Management</p>
 </div>
+```
 
-<!-- Reagan Library -->
+### Education Department Intern
+
+```{=html}
 <div class="exp-bar">
   <div class="exp-header">
     <div>
@@ -111,14 +122,17 @@ My experience spans corporate supply chain, nonprofit student services, college 
   </div>
   <p class="exp-context">Having participated in the Reagan Presidential Library's Summer Leadership Program (SLP) as a high school student, I returned years later to lead it as an intern. The SLP is a week-long program aimed at teaching middle and high school students the tenets of leadership and community service, and I worked alongside a team of five interns and educators to bring the 2023 cohort to life.</p>
   <ul class="exp-bullets">
-    <li>Led SLP student sessions with 40+ students in attendance per session, delivering a full week of back-to-back programming that included an intricate curriculum of lessons, guided museum tours, and hands-on activities spanning the entire Reagan Presidential Library and Museum.</li>   
+    <li>Led SLP student sessions with 40+ students in attendance per session, delivering a full week of back-to-back programming that included an intricate curriculum of lessons, guided museum tours, and hands-on activities spanning the entire Reagan Presidential Library and Museum.</li>
     <li>Developed student public speaking and collaboration skills through interactive lessons, group projects, and a community action plan the students designed and presented to local community members.</li>
     <li>Facilitated numerous Reagan-sponsored events including the GE-Reagan Foundation Scholarship Program and the Great Communicator Debate Series.</li>
   </ul>
   <p class="exp-skills"><strong>Skills Developed:</strong> Collaborative Problem Solving, Presentation Skills, Curriculum Design, Event Facilitation, Youth Education</p>
 </div>
+```
 
-<!-- Chipotle -->
+### Supply Chain Intern
+
+```{=html}
 <div class="exp-bar">
   <div class="exp-header">
     <div>
