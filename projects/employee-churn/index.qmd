@@ -110,7 +110,7 @@ h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
   </div>
 </div>
 
-<p class="overview-text"><strong>Project Context:</strong> Employee turnover imposes substantial costs on organizations through lost expertise, productivity disruptions, and expenses tied to recruitment and training. For this BANA 273 machine learning project, my team analyzed a publicly available Kaggle dataset of 4,653 employees across three major Indian cities to answer a central question about which employee characteristics most strongly predict voluntary churn. The goal was not just to understand the drivers, but to build a model capable of identifying at-risk employees early enough to enable targeted intervention.</p>
+<p class="overview-text"><strong>Project Context:</strong> Employee turnover imposes substantial costs on organizations through lost expertise, productivity disruptions, and expenses tied to recruitment and training. For this BANA 273 machine learning project, my team analyzed a <a href="https://www.kaggle.com/datasets/tejashvi14/employee-future-prediction" target="_blank">publicly available Kaggle dataset</a> of 4,653 employees across three major Indian cities to answer a central question about which employee characteristics most strongly predict voluntary churn. The goal was not just to understand the drivers, but to build a model capable of identifying at-risk employees early enough to enable targeted intervention.</p>
 
 <p class="bq-block"><strong>Business Question:</strong> <em>Which employee attributes and organizational factors most strongly influence churn, and how accurately can they be used to identify at-risk employees?</em></p>
 
@@ -157,7 +157,6 @@ h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
       <div class="model-card-desc">After L1 regularization and class-weight balancing. Identified education, pay tier, city, benching, and gender as the strongest predictors. Strong interpretability through odds ratios.</div>
     </div>
     <div class="model-card winner">
-      <div class="winner-badge">Winner</div>
       <div class="model-card-title">Tuned Decision Tree</div>
       <div class="model-card-recall">79%</div>
       <div class="model-card-label">Recall (Churn Class)</div>
@@ -245,6 +244,7 @@ h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
   <ul class="tools-list">
     <li><strong>Python</strong>: primary language for the entire analysis. Used to load and preprocess the dataset, build and evaluate both models, tune hyperparameters, and generate all visualizations.</li>
     <li><strong>pandas</strong>: used for data manipulation, one-hot encoding of categorical variables, and building the summary tables used to compare model performance across configurations.</li>
+    <li><strong>Cross-Validation</strong>: used throughout to confirm that model performance generalized beyond the training split. 5-fold CV was applied to both the logistic regression and decision tree, with recall scores evaluated across each fold to verify stability before finalizing any model.</li>
     <li><strong>scikit-learn</strong>: provided LogisticRegression, DecisionTreeClassifier, GridSearchCV, and cross_val_score. Used to fit baseline and tuned versions of both models and evaluate recall across folds.</li>
     <li><strong>matplotlib and seaborn</strong>: used to produce all visualizations including the churn outcome distribution, attribute distribution charts, odds ratio bar chart, information gain rankings, and the recall comparison chart.</li>
     <li><strong>Logistic Regression</strong>: applied with L1 regularization and class-weight balancing to produce interpretable odds ratios and identify the linear predictors of churn risk.</li>

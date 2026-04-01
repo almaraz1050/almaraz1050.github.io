@@ -70,8 +70,8 @@ h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
 .step-num {font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #aaa; text-transform: uppercase; margin-bottom: 4px;}
 .step-title {font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;}
 .step-desc {font-size: 14px; color: #555; line-height: 1.5;}
-.tools-list li {font-size: 0.93rem; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0;}
-.tools-list li:last-child {border-bottom: none;}
+.tools-list {list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0;}
+.tools-list li {font-size: 0.93rem; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0;}.tools-list li:last-child {border-bottom: none;}
 .tools-list li strong {color: #1a1a1a;}
 .takeaway-list {list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter;}
 .takeaway-list li {font-size: 0.93rem; color: #444; line-height: 1.5; padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter;}
