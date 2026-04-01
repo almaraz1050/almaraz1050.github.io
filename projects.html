@@ -129,51 +129,49 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </header><main class="content" id="quarto-document-content">
 <style>
-.proj-intro {font-size: 0.95rem; color: #555; max-width: 100%; margin: 0 0 2.5rem 0; text-align: left;}
-.section-label {font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #999; margin: 2rem 0 0.75rem 0;}
+.proj-intro {font-size: 1rem; color: #444; max-width: 100%; margin: 0 0 2.5rem 0; text-align: left; line-height: 1.6;}
+.section-label {font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1a1a1a; margin: 2rem 0 0.75rem 0;}
 .proj-divider {border: none; border-top: 1px solid #e5e5e5; margin: 1.5rem 0;}
 .cards-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 1rem;}
 .proj-card {background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1.5rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, box-shadow 0.15s;}
 .proj-card:hover {border-color: #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;}
 .proj-card.muted {opacity: 0.55; cursor: default; pointer-events: none;}
-.card-top {display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px;}
-.card-icon {width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;}
+.card-top {display: flex; align-items: flex-start; justify-content: flex-start; margin-bottom: 10px;}
+.card-icon {width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; margin-bottom: 10px;}
 .icon-blue {background: #e8f1fb;} .icon-purple {background: #eeedfe;} .icon-teal {background: #e1f5ee;} .icon-amber {background: #faeeda;} .icon-coral {background: #faece7;} .icon-green {background: #eaf3de;}
-.status-badge {font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 500;}
-.status-done {background: #eaf3de; color: #3b6d11;} .status-wip {background: #faeeda; color: #854f0b;} .status-planned {background: #f1efe8; color: #888780;}
-.card-title {font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 14px; line-height: 1.3; text-align: left;}.card-question {font-size: 13px; color: #444; margin-bottom: 14px; text-align: left; line-height: 1.5;}
+.card-title {font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 15px; line-height: 1.3; text-align: left;}
+.card-question {font-size: 14px; color: #444; margin-bottom: 15px; text-align: left; line-height: 1.25;}
 .card-question strong {color: #444;}
-.card-desc {font-size: 13px; color: #444; line-height: 1.6; margin-bottom: 16px; text-align: left;}
+.card-desc {font-size: 14px; color: #444; line-height: 1.25; margin-bottom: 20px; text-align: left;}
 .tags {display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: flex-start;}
-.tag {font-size: 11px; padding: 3px 8px; border-radius: 4px; background: #f5f5f5; color: #444; border: 1px solid #e8e8e8;}
+.tag {font-size: 12px; padding: 3px 8px; border-radius: 4px; background: #f5f5f5; color: #444; border: 1px solid #e8e8e8;}
 .card-footer {border-top: 1px solid #f0f0f0; padding-top: 10px; display: flex; align-items: center; justify-content: space-between;}
 .tools-row {display: flex; gap: 10px; flex-wrap: wrap; align-items: center;}
-.tool {font-size: 11px; color: #444; display: flex; align-items: center; gap: 4px;}
+.tool {font-size: 12px; color: #444; display: flex; align-items: center; gap: 4px;}
 .tool::before {content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block;}
-.card-cta {font-size: 12px; font-weight: 600; color: #3b82f6; flex-shrink: 0;}
+.card-cta {font-size: 13px; font-weight: 600; color: #3b82f6; flex-shrink: 0;}
 .card-cta.dim {color: #bbb;}
 </style>
-<p class="proj-intro">This is where I showcase my work as an analyst. Each project below tackles a real business question, walks through the full analytical process, and delivers findings that go beyond the numbers. The work spans three tracks: <strong>Predictive Analytics</strong>, where I build and evaluate models to forecast outcomes; <strong>Data Visualization</strong>, where the goal is a dashboard or visual that makes patterns immediately clear to a stakeholder; and <strong>Live Dashboards</strong>, ongoing data products that update automatically and are designed to be used repeatedly, not just once. Every project card links to its own dedicated page covering methodology, tools, findings, and deliverables.</p>
+<p class="proj-intro">This is where I showcase my work as an analyst. Each project tackles a real business question and walks through the full analytical process, from data preparation to findings and recommendations. Projects are organized into three tracks: <strong>Predictive Analytics</strong>, <strong>Data Visualization</strong>, and <strong>Live Dashboards</strong>. Each card links to a dedicated page covering findings, recommendations, methodology, and key takeaways, with reports, slides, and code attached.</p>
 <div class="section-label">Predictive Analytics</div>
 <div class="cards-grid">
   <a class="proj-card" href="projects/sun-country/index.html">
     <div class="card-top">
       <div class="card-icon icon-blue">✈️</div>
-      <span class="status-badge status-done">Complete</span>
     </div>
-    <div class="card-title">Sun Country Airlines — Customer Segmentation</div>
+    <div class="card-title">Sun Country Airlines: Customer Segmentation</div>
     <div class="card-question"><strong>Business question:</strong> Who are Sun Country's customers, and how can the airline grow loyalty enrollment and shift bookings to its direct channel?</div>
-    <div class="card-desc">Identified 5 customer segments from booking and loyalty data to support Ufly enrollment growth and direct channel strategy.</div>
+    <div class="card-desc">Applied K-Means clustering to 15,144 customer records to identify 5 actionable segments, translating findings into three targeted campaigns tied to leadership's goals around Ufly enrollment, direct channel growth, and vacation package differentiation.</div>
     <div class="tags">
+      <span class="tag">K-Means Clustering</span>
+      <span class="tag">Customer Analytics</span>
       <span class="tag">Segmentation</span>
-      <span class="tag">Customer analytics</span>
-      <span class="tag">Business strategy</span>
     </div>
     <div class="card-footer">
       <div class="tools-row">
         <span class="tool">Python</span>
-        <span class="tool">pandas</span>
-        <span class="tool">scikit-learn</span>
+        <span class="tool">Elbow Method</span>
+        <span class="tool">EDA</span>
       </div>
       <span class="card-cta">View →</span>
     </div>
@@ -181,41 +179,38 @@ ul.task-list li input[type="checkbox"] {
   <a class="proj-card" href="projects/employee-churn/index.html">
     <div class="card-top">
       <div class="card-icon icon-purple">👥</div>
-      <span class="status-badge status-done">Complete</span>
     </div>
     <div class="card-title">Predicting Employee Churn</div>
-    <div class="card-question"><strong>Business question:</strong> Which employees are most at risk of leaving, and what factors drive that risk?</div>
-    <div class="card-desc">Built logistic regression and decision tree models to predict turnover, revealing tenure, compensation, and education as key risk drivers.</div>
+    <div class="card-question"><strong>Business question:</strong> Which employees are most at risk of churning (leaving), and what organizational factors drive that risk?</div>
+    <div class="card-desc">Built and compared logistic regression and decision tree models on 4,653 employee records, achieving 79% recall on the churn class and identifying tenure, compensation tier, and education as the primary drivers of voluntary turnover.</div>
     <div class="tags">
-      <span class="tag">Machine learning</span>
-      <span class="tag">HR analytics</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">HR Analytics</span>
       <span class="tag">Classification</span>
     </div>
     <div class="card-footer">
       <div class="tools-row">
         <span class="tool">Python</span>
-        <span class="tool">scikit-learn</span>
-        <span class="tool">Decision trees</span>
+        <span class="tool">Cross Validation</span>
+        <span class="tool">Decision Tree</span>
       </div>
       <span class="card-cta">View →</span>
     </div>
   </a>
 </div>
-<hr class="proj-divider">
 <div class="section-label">Data Visualization</div>
 <div class="cards-grid">
-  <div class="proj-card">
+  <div class="proj-card muted">
     <div class="card-top">
       <div class="card-icon icon-teal">📊</div>
-      <span class="status-badge status-wip">In progress</span>
     </div>
     <div class="card-title">UCI Basic Needs — Resource Analysis</div>
     <div class="card-question"><strong>Business question:</strong> Where are gaps in basic needs resources at UCI, and which student populations are most underserved?</div>
     <div class="card-desc">Analyzing basic needs data at UCI to surface patterns in food and housing insecurity and inform outreach strategies.</div>
     <div class="tags">
-      <span class="tag">Nonprofit analytics</span>
-      <span class="tag">Data visualization</span>
-      <span class="tag">Higher ed</span>
+      <span class="tag">Nonprofit Analytics</span>
+      <span class="tag">Data Visualization</span>
+      <span class="tag">Higher Ed</span>
     </div>
     <div class="card-footer">
       <div class="tools-row">
@@ -225,18 +220,17 @@ ul.task-list li input[type="checkbox"] {
       <span class="card-cta dim">Coming soon</span>
     </div>
   </div>
-  <div class="proj-card">
+  <div class="proj-card muted">
     <div class="card-top">
       <div class="card-icon icon-green">☕</div>
-      <span class="status-badge status-planned">Planned</span>
     </div>
     <div class="card-title">Starbucks — Customer Segmentation</div>
     <div class="card-question"><strong>Business question:</strong> How do different Starbucks customers respond to offers, and what drives their spending behavior?</div>
     <div class="card-desc">Segmenting Starbucks customers using survey and behavioral data to uncover offer responsiveness and spending patterns.</div>
     <div class="tags">
       <span class="tag">Segmentation</span>
-      <span class="tag">Retail analytics</span>
-      <span class="tag">Customer behavior</span>
+      <span class="tag">Retail Analytics</span>
+      <span class="tag">Customer Behavior</span>
     </div>
     <div class="card-footer">
       <div class="tools-row">
@@ -247,21 +241,19 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </div>
-<hr class="proj-divider">
 <div class="section-label">Live Dashboards</div>
 <div class="cards-grid">
-  <div class="proj-card">
+  <div class="proj-card muted">
     <div class="card-top">
       <div class="card-icon icon-amber">🎬</div>
-      <span class="status-badge status-planned">Planned</span>
     </div>
     <div class="card-title">Letterboxd — Movies as a Business and a Taste</div>
     <div class="card-question"><strong>Business question:</strong> What do box office trends and personal viewing data reveal about film as both a cultural and commercial product?</div>
     <div class="card-desc">A live window into film data and personal viewing habits, combining box office, ratings, and Letterboxd data that auto-updates as new films are logged.</div>
     <div class="tags">
-      <span class="tag">Live data</span>
-      <span class="tag">Entertainment analytics</span>
-      <span class="tag">Personal data</span>
+      <span class="tag">Live Data</span>
+      <span class="tag">Entertainment Analytics</span>
+      <span class="tag">Personal Data</span>
     </div>
     <div class="card-footer">
       <div class="tools-row">
@@ -270,25 +262,23 @@ ul.task-list li input[type="checkbox"] {
       <span class="card-cta dim">Planned</span>
     </div>
   </div>
-  <div class="proj-card">
+  <div class="proj-card muted">
     <div class="card-top">
       <div class="card-icon icon-coral">📈</div>
-      <span class="status-badge status-planned">Planned</span>
     </div>
     <div class="card-title">QSR Macro Pulse</div>
     <div class="card-question"><strong>Business question:</strong> How do shifts in macroeconomic conditions translate into changes in quick-service restaurant performance?</div>
     <div class="card-desc">A live business monitor tracking how macro indicators like CPI, consumer spending, and unemployment move in relation to quick-service restaurant performance.</div>
     <div class="tags">
       <span class="tag">Macroeconomics</span>
-      <span class="tag">FRED data</span>
-      <span class="tag">QSR industry</span>
-      <span class="tag">Forecasting</span>
+      <span class="tag">FRED Data</span>
+      <span class="tag">QSR Industry</span>
     </div>
     <div class="card-footer">
       <div class="tools-row">
         <span class="tool">Python</span>
         <span class="tool">FRED API</span>
-        <span class="tool">SEC filings</span>
+        <span class="tool">SEC Filings</span>
       </div>
       <span class="card-cta dim">Planned</span>
     </div>
