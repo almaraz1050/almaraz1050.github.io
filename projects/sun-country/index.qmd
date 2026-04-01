@@ -253,10 +253,10 @@ h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
 </div>
 
 <div class="deliverables-bar">
-  <span style="font-size:13px; font-weight:600; color:#555; align-self:center;">Deliverables:</span>
-  <a class="deliverable-btn" href="report.pdf" target="_blank">📄 Full Report</a>
-  <a class="deliverable-btn" href="slides.pdf" target="_blank">📊 Slides</a>
-  <a class="deliverable-btn" href="code.html" target="_blank">📓 Notebook</a>
+  <span style="font-size:14px; font-weight:600; color:#555; align-self:center;">Deliverables:</span>
+  <a class="deliverable-btn" href="report.pdf" target="_blank">📄  Full Report</a>
+  <a class="deliverable-btn" href="slides.pdf" target="_blank">📊  Slides</a>
+  <a class="deliverable-btn" href="code.html" target="_blank">💻  Code</a>
 </div>
 
 <script>
