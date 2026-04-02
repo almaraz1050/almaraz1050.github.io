@@ -103,6 +103,7 @@ about:
     <div class="card-footer">
       <div class="tools-row">
         <span class="tool">Excel</span>
+        <span class="tool">Data Cleaning</span>
         <span class="tool">Tableau</span>
       </div>
       <span class="card-cta">View →</span>
