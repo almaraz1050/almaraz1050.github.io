@@ -16,6 +16,30 @@
   height: 300px !important;
 }
 
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .nav-cards {flex-direction: column;}
+  .three-col-wrapper {flex-direction: column;}
+  .exp-header {flex-wrap: wrap;}
+  .exp-dates {white-space: normal !important;}
+  .exp-meta {white-space: normal !important;}
+}
+
+/* Fix bullet alignment in target boxes */
+.three-col-item {
+  align-items: flex-start !important;
+}
+.three-col-dot {
+  margin-top: 0.35em;
+  flex-shrink: 0;
+}
+
 .proj-card .tags .tag,
 .proj-card .tags span.tag {
   font-size: 0.75rem !important;
@@ -34,4 +58,18 @@
 .proj-card .card-cta {
   font-size: 0.75rem !important;
   font-weight: 600 !important;
+}
+
+.takeaway-list li,
+.tools-list li,
+.section-heading {
+  font-size: 1rem !important;
+}
+
+.timeline-wrapper table tbody tr {
+  background-color: transparent !important;
+}
+.timeline-wrapper table tbody tr:nth-child(odd),
+.timeline-wrapper table tbody tr:nth-child(even) {
+  background-color: transparent !important;
 }
