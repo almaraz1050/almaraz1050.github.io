@@ -142,11 +142,47 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Hello, my name is Allan Almaraz. I am a first-generation graduate student pursuing my Master of Science in Business Analytics (MSBA) at the University of California, Irvine (UCI), with a passion for using data to inform decisions and drive meaningful change. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on. Welcome, and please take a look around!</p>
 <style>
+:root {
+  --fs-title: 1rem;
+  --fs-body:  0.95rem;
+  --fs-small: 0.85rem;
+  --c-title:  #1a1a1a;
+  --c-body:   #444;
+  --lh:       1.6;
+}
 .nav-cards {display: flex; gap: 1.2em; margin-top: 2.5em;}
-.nav-card {flex: 1; border: 1px solid #ddd; border-radius: 8px; padding: 1.4em 1.6em; text-decoration: none; color: inherit; transition: box-shadow 0.2s, border-color 0.2s;}
+.nav-card {
+  flex: 1; border: 1px solid #ddd; border-radius: 8px;
+  padding: 1.4em 1.6em; text-decoration: none; color: inherit;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
 .nav-card:hover {box-shadow: 0 4px 16px rgba(0,0,0,0.10); border-color: #999; text-decoration: none;}
-.nav-card h3 {margin: 0 0 0.4em 0; font-size: 1em; font-weight: 600;}
-.nav-card p {margin: 0; font-size: 0.85em; color: #666; line-height: 1.5;}
+.nav-card h3 {
+  margin: 0 0 0.4em 0;
+  font-size: var(--fs-title); font-weight: 600;
+  color: var(--c-title); line-height: var(--lh);
+}
+.nav-card p {
+  margin: 0;
+  font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);
+}
+.three-col-wrapper {display: flex; gap: 1.5em; margin: 1em 0;}
+.three-col-box {
+  flex: 1; border: 1px solid #e5e5e5; border-radius: 8px;
+  padding: 1.2em 1.5em; background: #f8f8f8;
+}
+.three-col-box h4 {
+  margin: 0 0 0.8em 0;
+  font-size: var(--fs-title); font-weight: 600;
+  color: var(--c-title); line-height: var(--lh);
+}
+.three-col-item {
+  display: flex; align-items: center; gap: 0.6em; padding: 0.3em 0;
+  font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);
+  border-bottom: 1px solid #eee;
+}
+.three-col-item:last-child {border-bottom: none;}
+.three-col-dot {width: 7px; height: 7px; border-radius: 50%; background: #2563eb; flex-shrink: 0;}
 </style>
 <div class="nav-cards">
   <a class="nav-card" href="about.html">
@@ -174,14 +210,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Through my MSBA program and professional experience, I have developed a growing toolkit centered on data analysis and business strategy, and I am intentionally using it as a pivot into more technical, analytical work. By deepening my expertise in R, SQL, Python, Tableau, and Power BI, my goal is to bridge the analytical and strategic sides of a business: not just reporting what happened, but informing what should happen next. With a graduation date of June 2026, I am actively pursuing entry-level analyst roles in financial, marketing, and business analytics across industries like food service, higher education, and consumer goods.</p>
 <section id="section-1" class="level4">
 <h4 data-anchor-id="section-1"></h4>
-<style>
-.three-col-wrapper {display: flex; gap: 1.5em; margin: 1em 0;}
-.three-col-box {flex: 1; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.2em 1.5em; background: #f8f8f8;}
-.three-col-box h4 {margin: 0 0 0.8em 0; font-size: 1em; font-weight: 600; color: #000;}
-.three-col-item {display: flex; align-items: center; gap: 0.6em; padding: 0.3em 0; font-size: 0.9em; color: #333; border-bottom: 1px solid #eee;}
-.three-col-item:last-child {border-bottom: none;}
-.three-col-dot {width: 7px; height: 7px; border-radius: 50%; background: #2563eb; flex-shrink: 0;}
-</style>
 <div class="three-col-wrapper">
   <div class="three-col-box">
     <h4>Target Roles</h4>
