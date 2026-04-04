@@ -15,3 +15,23 @@
   width: 300px !important;
   height: 300px !important;
 }
+
+.proj-card .tags .tag,
+.proj-card .tags span.tag {
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  padding: 2px 7px !important;
+}
+
+.proj-card .tools-row .tool,
+.proj-card .tools-row span.tool {
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+.proj-card .card-cta {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
