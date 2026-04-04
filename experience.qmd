@@ -10,21 +10,29 @@ about:
 ---
 
 <style>
+:root {
+  --fs-title: 1rem;
+  --fs-base:  0.875rem;
+  --c-title:  #1a1a1a;
+  --c-body:   #444;
+  --lh:       1.6;
+}
 .quarto-about-jolla main {text-align: left;}
 .quarto-about-jolla .exp-bullets {text-align: left;}
 .exp-bar {border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff;}
 .exp-header {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; gap: 0.5em; margin-bottom: 0.3em;}
-.exp-title {font-size: 1.1em; font-weight: 700; color: #111; margin-bottom: 1;}
-.exp-meta {font-size: 0.85em; color: #444; margin: 0.2em 0 0.6em 0; white-space: nowrap;}
-.exp-context {font-size: 0.88em; color: #444; font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em; line-height: 1.35;}
-.exp-bullets {margin: 0; padding-left: 1.2em; font-size: 0.9em; color: #444; line-height: 1.35;}
-.exp-bullets li {margin-bottom: 0.6em;}
-.exp-dates {font-size: 0.85em; color: #444; white-space: nowrap;}
-.exp-skills {font-size: 0.85em; color: #555; margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em;}
+.exp-title {font-size: var(--fs-title) !important; font-weight: 700; color: var(--c-title); margin-bottom: 0; line-height: var(--lh);}
+.exp-meta {font-size: var(--fs-base) !important; color: var(--c-body); margin: 0.2em 0 0.6em 0; white-space: nowrap; line-height: var(--lh);}
+.exp-context {font-size: var(--fs-base) !important; color: var(--c-body); font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em; line-height: var(--lh);}
+.exp-bullets {margin: 0; padding-left: 1.2em; font-size: var(--fs-base) !important; color: var(--c-body); line-height: var(--lh);}
+.exp-bullets li {margin-bottom: 0.6em; font-size: var(--fs-base) !important;}
+.exp-dates {font-size: var(--fs-base) !important; color: var(--c-body); white-space: nowrap; line-height: var(--lh);}
+.exp-skills {font-size: var(--fs-base) !important; color: var(--c-body); margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em; line-height: var(--lh);}
+.exp-subheader {font-size: var(--fs-base) !important; font-weight: 600; color: var(--c-title); margin-bottom: 0.4em; margin-top: 1em; line-height: var(--lh);}
 h3 {display: none;}
 </style>
 
-My experience spans corporate supply chain, nonprofit student services, college access outreach, and data analytics — with a consistent thread of using structure and problem-solving to make programs run better and decisions more informed. Each entry below includes a brief context of the role, what I contributed, and what I took away from it.
+Welcome to my Experience page, where you can explore the roles and responsibilities that have shaped my professional background. Each entry includes a brief context of the role, what I contributed, and what I took away from it.
 
 ### Student Business Data Analyst
 
@@ -60,9 +68,9 @@ My experience spans corporate supply chain, nonprofit student services, college 
   </div>
   <p class="exp-context">UCI's Early Academic Outreach Program (EAOP), housed within the Center for Educational Partnerships, focuses on expanding college access for underrepresented students in the Orange and Los Angeles County regions. In this role, I supported the full range of K-16 programming and outreach initiatives the program delivers throughout the academic year.</p>
   <ul class="exp-bullets">
-    <li>Coordinated academic programming and event logistics for key K-16 initiatives such as the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; supported outreach, transportation, documentation, and day-of execution.</li>
-    <li>Developed a series of curriculum and interactive workshops on interviewing techniques and skills aimed towards high school and community college students, incorporating hands-on activities and practical training.</li>
-    <li>Produced and hosted a multi-part webinar series focused on UCI's nursing, business, and engineering pathways, guiding high school students through major requirements, career paths, and pathway structure.</li>
+    <li>Coordinated academic programming and event logistics for key K-16 initiatives including the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; managed outreach, transportation coordination, documentation, and day-of execution across campus and community sites.</li>
+    <li>Developed and facilitated a curriculum of interactive workshops on professional skills including interviewing techniques, college pathways, and major exploration, tailoring content to the distinct requirements of UCI's schools of Business, Engineering, and Social Sciences, among others, based on independent curriculum research for each.</li>
+    <li>Produced and hosted a multi-part webinar series on UCI's nursing, business, and engineering academic pathways, guiding high school students through major requirements, career trajectories, and program structure in a live, hosted format.</li>
   </ul>
   <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Curriculum Development, Video Production, Event Logistics, Public Speaking</p>
 </div>
@@ -80,13 +88,27 @@ My experience spans corporate supply chain, nonprofit student services, college 
     <span class="exp-dates">Jan 2024 – Aug 2024 &nbsp;·&nbsp; Irvine, CA</span>
   </div>
   <p class="exp-context">Upon graduating from UCI, I was promoted from Basic Needs Advocate to the full-time Program Coordinator role. I took on direct oversight of the Basic Needs Advocate team, all CalFresh initiatives and day-to-day operations, and the center's marketing efforts — and made it a priority to introduce data analytics into how we tracked and optimized CalFresh assistance appointment outcomes.</p>
+
+  <p class="exp-subheader">Program Coordination &amp; Student Support</p>
   <ul class="exp-bullets">
-    <li>Managed data entry and analysis for CalFresh services, implementing a new Excel system that tracked eligibility data, reporting timelines, and confidential case details, resulting in a 50% improvement in data management efficiency.</li>
-    <li>Directed and managed food security initiatives such as CalFresh Assistance Appointments, Fresh Finances, and CalFresh Enrollment Parties, overseeing logistics, resource organization, scheduling, stakeholder communication, daily operations, and targeted outreach.</li>
-    <li>Led scheduling, task delegation, and hiring/training for CalFresh and marketing student teams; optimized workflow, enhanced team efficiency by 50%, and ensured the timely completion of projects in high-pressure environments.</li>
-    <li>Directed marketing initiatives across digital and print platforms, leveraging WordPress, Mailchimp, Canva, and Meta Business Suite; led UCI's 2024 Giving Day campaign that raised record-breaking funds and increased social media engagement by 200%.</li>
+    <li>Directed food security initiatives including CalFresh Assistance Appointments, Fresh Finances, CalFresh Enrollment Parties, and large-scale events such as UCI Orientation, Celebrate UCI, and the Mobile Pantry Grand Opening; managed end-to-end logistics including venue coordination, catering, transportation, and day-of execution in partnership with UCI Student Services, UCI Transportation, and Orange County Social Services.</li>
+    <li>Scheduled and managed 100–200 monthly CalFresh Assistance Appointments using Acuity Scheduling, coordinating staff availability, adjusting for cancellations, and ensuring consistent appointment coverage; increased CalFresh Enrollment Party frequency from quarterly to monthly by streamlining logistics and deepening cross-departmental partnerships.</li>
+    <li>Provided direct, confidential support to students navigating complex CalFresh cases, including accompanying students to meetings with Orange County Social Services workers and connecting them to resources spanning financial aid, housing, employment, budgeting, banking, and transportation.</li>
+    <li>Led hiring, training, scheduling, and task delegation for a team of 15 CalFresh and marketing student employees; optimized workflow and enhanced team efficiency by 50%, ensuring timely completion of projects in high-pressure environments.</li>
+    <li>Directed marketing initiatives across digital and print platforms using WordPress, Mailchimp, Canva, and Meta Business Suite; led UCI's 2024 Giving Day campaign that raised record-breaking funds and increased social media engagement by 200%.</li>
   </ul>
-  <p class="exp-skills"><strong>Skills Developed:</strong> Project Management, Data Analysis, Marketing, Team Leadership, Microsoft Excel, Canva, Mailchimp, Meta Business Suite</p>
+
+  <p class="exp-subheader">Data Management, Reporting &amp; Administration</p>
+  <ul class="exp-bullets">
+    <li>Managed data entry and analysis for CalFresh services, implementing a new Excel system with pivot tables, advanced functions, and conditional formatting that tracked eligibility data, reporting timelines, and confidential case details, resulting in a 50% improvement in data management efficiency.</li>
+    <li>Overhauled the center's marketing strategy by shifting from content-first to a data-driven approach, using Meta Business Suite analytics to track post performance, audience engagement, and campaign reach; used those insights to refine content strategy across platforms, contributing to a 200% increase in social media engagement and a record-breaking Giving Day fundraising outcome.</li>
+    <li>Restructured the center's data reporting system to standardize how CalFresh appointment trends, program utilization, and operational KPIs were tracked and formatted, aligning outputs with CSUN grant reporting requirements and simplifying the compliance process for external partners.</li>
+    <li>Managed semi-weekly administrative communications including personalized reminder emails for approaching SAR7 and RE deadlines, segmenting outreach by applicant type to deliver targeted, relevant messaging; the structured Excel tracking system made it significantly easier to identify which students needed to be contacted and when, reducing the time spent on case management across a high volume of active cases.</li>
+    <li>Overhauled the center's Acuity scheduling form and student-facing email templates to improve clarity, reduce friction in the appointment process, and ensure communications were consistent with center branding and procedures.</li>
+    <li>Produced the center's recurring Mailchimp newsletter, managing content planning, layout, and distribution to keep students, staff, and campus partners informed of upcoming events, resources, and program updates.</li>
+  </ul>
+
+  <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Event Logistics, Cross-Departmental Collaboration, Student Services, Team Leadership, Hiring & Training, Scheduling (Staff, Appointments, Events), Data Analysis, Reporting & Grant Compliance, Administrative Communications, Microsoft Excel, Acuity Scheduling, Meta Business Suite, Canva, Mailchimp, WordPress</p>
 </div>
 ```
 
