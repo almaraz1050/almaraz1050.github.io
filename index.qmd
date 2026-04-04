@@ -78,6 +78,17 @@ Hello, my name is Allan Almaraz. I am a first-generation graduate student pursui
 
 I believe data has the power to move organizations forward. My goal is to work for the kinds of companies that show up in people's everyday lives, the brands they eat at, wear, root for, and learn from. I find purpose in knowing that my analysis could shape how these organizations make decisions, and that the results would be visible in the world around me. Whether supporting a restaurant brand, an apparel company, or a university, I want to be the analyst who turns complex data into decisions that actually change how things are done.
 
+```{=html}
+<div style="display: flex; gap: 1em; margin: 1.5em 0;">
+  <a href="files/resume_analytics.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5em; padding: 0.6em 1.2em; border: 1px solid #ddd; border-radius: 8px; color: #444; font-size: 0.85rem; font-weight: 700; text-decoration: none; background: #fff; transition: box-shadow 0.2s, border-color 0.2s;">
+    📄 Analytics Resume
+  </a>
+  <a href="files/resume_highered.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5em; padding: 0.6em 1.2em; border: 1px solid #ddd; border-radius: 8px; color: #444; font-size: 0.85rem; font-weight: 700; text-decoration: none; background: #fff; transition: box-shadow 0.2s, border-color 0.2s;">
+    📄 Higher Education Resume
+  </a>
+</div>
+```
+
 ## Goals & Target Opportunities
 
 Through my MSBA program and professional experience, I have built a growing toolkit centered on data analysis and business strategy. My goal is to bring that toolkit to companies that people interact with every day, where the work of an analyst is connected to something real and tangible. By deepening my expertise in SQL, Python, Tableau, and Power BI, I want to bridge the analytical and strategic sides of a business. With a graduation date of June 2026, I am actively pursuing internships and entry-level analyst roles in financial, marketing, and business analytics across industries like food service, apparel, higher education, and consumer goods.
