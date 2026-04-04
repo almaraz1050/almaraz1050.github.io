@@ -145,77 +145,85 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
+:root {
+  --fs-title: 1rem;
+  --fs-body:  0.95rem;
+  --fs-small: 0.85rem;
+  --c-title:  #1a1a1a;
+  --c-body:   #444;
+  --lh:       1.6;
+}
 h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
 .project-header {margin: 0 0 2rem 0;}
-.back-link {font-size: 13px; color: #888; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 1.5rem;}
-.back-link:hover {color: #444;}
-.project-subtitle {font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;}
+.back-link {font-size: var(--fs-small); color: var(--c-body); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 1.5rem; line-height: var(--lh);}
+.back-link:hover {color: var(--c-title);}
+.project-subtitle {font-size: var(--fs-body); color: var(--c-body); margin-bottom: 1.5rem; line-height: var(--lh);}
 .meta-row {display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem;}
-.meta-tag {font-size: 13px; padding: 3px 10px; border-radius: 20px; background: #f5f5f5; color: #555; border: 1px solid #e8e8e8;}
+.meta-tag {font-size: var(--fs-small); padding: 3px 10px; border-radius: 20px; background: #f5f5f5; color: var(--c-body); border: 1px solid #e8e8e8; line-height: var(--lh);}
 .metrics-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2rem;}
 .metric-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center;}
-.metric-value {font-size: 1.6rem; font-weight: 700; color: #1a1a1a; line-height: 1.2;}
-.metric-label {font-size: 12px; color: #444; margin-top: 4px; line-height: 1.4;}
-.overview-text {font-size: 0.95rem; color: #444; line-height: 1.5; margin-bottom: 1.25rem;}
-.bq-block {font-size: 0.95rem; color: #444; line-height: 1.5; margin-bottom: 1.25rem;}
+.metric-value {font-size: 1.6rem; font-weight: 700; color: var(--c-title); line-height: 1.2;}
+.metric-label {font-size: var(--fs-small); color: var(--c-body); margin-top: 4px; line-height: var(--lh);}
+.overview-text {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
+.bq-block {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
 .glossary {background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1rem;}
-.glossary-title {font-size: 12px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem;}
+.glossary-title {font-size: var(--fs-small); font-weight: 700; color: var(--c-body); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: var(--lh);}
 .glossary-entry {display: grid; grid-template-columns: 180px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0;}
 .glossary-entry:last-child {border-bottom: none; padding-bottom: 0;}
-.glossary-term {font-size: 13px; font-weight: 700; color: #333;}
-.glossary-def {font-size: 13px; color: #555; line-height: 1.5;}
+.glossary-term {font-size: var(--fs-small); font-weight: 700; color: var(--c-title); line-height: var(--lh);}
+.glossary-def {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
 .intro-divider {border: none; border-top: 1px solid #e5e5e5; margin: 0 0 2rem 0;}
 .tabs {display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5;}
-.tab-btn {font-size: 15px; font-weight: 400; color: #888; background: none; border: none; padding: 12px 24px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: inherit;}
-.tab-btn:hover {color: #444;}
-.tab-btn.active {color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 500;}
+.tab-btn {font-size: var(--fs-body); font-weight: 400; color: var(--c-body); background: none; border: none; padding: 12px 24px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: inherit; line-height: var(--lh);}
+.tab-btn:hover {color: var(--c-title);}
+.tab-btn.active {color: var(--c-title); border-bottom-color: var(--c-title); font-weight: 500;}
 .tab-panel {display: none; padding: 2rem 0;}
 .tab-panel.active {display: block;}
-.section-heading {font-size: 1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; margin-top: 1.5rem;}
+.section-heading {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: var(--lh);}
 .section-heading:first-child {margin-top: 0;}
-.prose {font-size: 0.93rem; color: #444; line-height: 1.5; margin-bottom: 1rem;}
+.prose {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1rem;}
 .findings-list {list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0;}
-.findings-list li {font-size: 0.93rem; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; border-bottom: 1px solid #f5f5f5;}
+.findings-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 7px 0 7px 18px; position: relative; border-bottom: 1px solid #f5f5f5;}
 .findings-list li:last-child {border-bottom: none;}
-.findings-list li::before {content: '•'; position: absolute; left: 0; color: #aaa; font-size: 14px;}
+.findings-list li::before {content: '•'; position: absolute; left: 0; color: var(--c-body); font-size: 14px;}
 .model-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.5rem 0;}
 .model-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
-.model-card-title {font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;}
-.model-card-recall {font-size: 1.3rem; font-weight: 700; margin-bottom: 4px;}
-.model-card-label {font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;}
-.model-card-desc {font-size: 13px; color: #555; line-height: 1.5;}
-.model-card.winner {border: 2px solid #1a1a1a; background: #fff;}
-.model-card .model-card-recall {color: #1a1a1a;}
-.winner-badge {display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; background: #1a1a1a; color: #fff; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px;}
+.model-card-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 6px; line-height: var(--lh);}
+.model-card-recall {font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; color: var(--c-title);}
+.model-card-label {font-size: var(--fs-small); color: var(--c-body); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; line-height: var(--lh);}
+.model-card-desc {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
+.model-card.winner {border: 2px solid var(--c-title); background: #fff;}
+.winner-badge {display: inline-block; font-size: var(--fs-small); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; background: var(--c-title); color: #fff; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px;}
+/* Rec cards: priority colors intentionally preserved */
 .rec-card {border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0;}
 .rec-card.high {border-left-color: #e24b4a;}
 .rec-card.med {border-left-color: #ef9f27;}
 .rec-card.low {border-left-color: #639922;}
-.rec-priority {font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px;}
+.rec-priority {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: var(--lh);}
 .rec-card.high .rec-priority {color: #e24b4a;}
 .rec-card.med .rec-priority {color: #ef9f27;}
 .rec-card.low .rec-priority {color: #639922;}
-.rec-title {font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 5px;}
-.rec-segment {font-size: 13px; font-weight: 600; margin-bottom: 8px;}
+.rec-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 5px; line-height: var(--lh);}
+.rec-segment {font-size: var(--fs-small); font-weight: 600; margin-bottom: 8px; line-height: var(--lh);}
 .rec-card.high .rec-segment {color: #e24b4a;}
 .rec-card.med .rec-segment {color: #ef9f27;}
 .rec-card.low .rec-segment {color: #639922;}
-.rec-desc {font-size: 13px; color: #444; line-height: 1.5;}
+.rec-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
 .method-row {display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem;}
 .method-step {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
-.step-num {font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #aaa; text-transform: uppercase; margin-bottom: 4px;}
-.step-title {font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;}
-.step-desc {font-size: 14px; color: #555; line-height: 1.5;}
+.step-num {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; color: var(--c-body); text-transform: uppercase; margin-bottom: 4px; line-height: var(--lh);}
+.step-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 6px; line-height: var(--lh);}
+.step-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
 .tools-list {list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0;}
-.tools-list li {font-size: 0.93rem; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0;}
+.tools-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 9px 0; border-bottom: 1px solid #f0f0f0;}
 .tools-list li:last-child {border-bottom: none;}
-.tools-list li strong {color: #1a1a1a;}
+.tools-list li strong {color: var(--c-title);}
 .takeaway-list {list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter;}
-.takeaway-list li {font-size: 0.93rem; color: #444; line-height: 1.5; padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter;}
-.takeaway-list li::before {content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: 11px; font-weight: 700; color: #aaa; background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1;}
+.takeaway-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter;}
+.takeaway-list li::before {content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: var(--fs-small); font-weight: 700; color: var(--c-body); background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1;}
 .takeaway-list li:last-child {border-bottom: none;}
 .deliverables-bar {display: flex; flex-wrap: wrap; gap: 10px; padding: 1.25rem; background: #f9f9f9; border-radius: 10px; border: 1px solid #efefef; margin-top: 2rem;}
-.deliverable-btn {font-size: 13px; font-weight: 500; color: #3b82f6; text-decoration: none; padding: 6px 14px; border: 1px solid #b5d4f4; border-radius: 6px; background: #fff; transition: background 0.15s;}
+.deliverable-btn {font-size: var(--fs-small); font-weight: 500; color: #3b82f6; text-decoration: none; padding: 6px 14px; border: 1px solid #b5d4f4; border-radius: 6px; background: #fff; transition: background 0.15s; line-height: var(--lh);}
 .deliverable-btn:hover {background: #e8f1fb; text-decoration: none;}
 @media (max-width: 600px) {.model-grid {grid-template-columns: 1fr;}}
 </style>
@@ -390,7 +398,7 @@ h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
 </div>
 
 <div class="deliverables-bar">
-  <span style="font-size:13px; font-weight:600; color:#555; align-self:center;">Deliverables:</span>
+  <span style="font-size:var(--fs-small); font-weight:600; color:var(--c-body); align-self:center;">Deliverables:</span>
   <a class="deliverable-btn" href="report.pdf" target="_blank">📄 Full Report</a>
   <a class="deliverable-btn" href="slides.pdf" target="_blank">📊 Slides</a>
   <a class="deliverable-btn" href="code.html" target="_blank">💻 Code</a>
