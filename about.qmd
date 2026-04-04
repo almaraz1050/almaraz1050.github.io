@@ -35,7 +35,7 @@ about:
 .timeline-wrapper td {text-align: left !important; vertical-align: middle !important; padding: 6px 10px; color: var(--c-body); font-size: var(--fs-small);}
 </style>
 
-Hello! I'm Allan, I am a first-generation graduate student pursuing my Master of Science in Business Analytics (MSBA) at UC Irvine. Driven by a belief that data has the power to move organizations forward, my goal is to contribute to companies that shape everyday life, using analytics to inform decisions that actually change how things are done.
+Welcome to my About Me page, where you can learn more about who I am beyond the resume. This page covers my personal background, what shaped me growing up, and a timeline of the key roles and milestones that have brought me to where I am today.
 
 ## Personal Background
 
