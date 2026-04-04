@@ -1,5 +1,5 @@
 ---
-title: "Sun Country Airlines — Customer Segmentation"
+title: "Sun Country Airlines: Customer Segmentation"
 resources:
   - report.pdf
   - slides.pdf
