@@ -113,11 +113,11 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 #quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
 
-.portfolio-shell { display: flex; min-height: 100vh; align-items: stretch; }
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
 
 .sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
 
-.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 2px solid #2a2a2a; margin-bottom: 2rem; display: block; }
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
 
 .sidebar-name { font-size: 15px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
 
@@ -147,7 +147,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .sidebar-links a:hover { color: #aaaaaa; }
 
-.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; color: #111; }
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
 
 .headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
 
@@ -155,7 +155,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .section-label { font-size: 14px !important; font-weight: 600; color: #111; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 1rem; }
 
-.body-text { font-size: 16px !important; color: #666; line-height: 1.5; margin-bottom: 1.25rem; }
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
 
 .collage { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; height: 380px; border-radius: 14px; overflow: hidden; margin: 2rem 0 2rem; }
 
@@ -163,15 +163,15 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .timeline-wrapper { margin-top: 0.5rem; }
 
-.timeline-wrapper table { font-size: 14px !important; width: 100%; table-layout: fixed; line-height: 1.5; color: #666; border-collapse: collapse; }
+.timeline-wrapper table { font-size: 14px !important; width: 100%; table-layout: fixed; line-height: 1.5; color: #444; border-collapse: collapse; }
 
 .timeline-wrapper td:nth-child(1), .timeline-wrapper th:nth-child(1) { width: 22%; }
 .timeline-wrapper td:nth-child(2), .timeline-wrapper th:nth-child(2) { width: 55%; }
 .timeline-wrapper td:nth-child(3), .timeline-wrapper th:nth-child(3) { width: 23%; }
 
-.timeline-wrapper th { text-align: left !important; color: #60a5fa; font-size: 14px !important; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 6px 10px; border-bottom: 1px solid #e8e8e8; }
+.timeline-wrapper th { text-align: left !important; color: #60a5fa; font-size: 14px !important; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 11px 8px; border-bottom: 1px solid #e8e8e8; }
 
-.timeline-wrapper td { text-align: left !important; vertical-align: middle !important; padding: 6px 10px; color: #666; font-size: 14px !important; }
+.timeline-wrapper table { font-size: 14px !important; width: 100%; table-layout: fixed; line-height: 1.5; color: #444; border-collapse: collapse; }
 
 .timeline-wrapper table tbody tr { background-color: transparent !important; }
 
