@@ -1,167 +1,278 @@
 ---
 title: "Projects"
-toc: true
-about:
-  template: jolla
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/allanalmaraz/
+format:
+  html:
+    page-layout: custom
+    toc: false
 ---
+
 ```{=html}
 <style>
-:root {
-  --fs-base:  0.875rem;
-  --c-title:  #1a1a1a;
-  --c-body:   #444;
-  --lh:       1.6;
-}
-.section-label {font-size: var(--fs-base) !important; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-title); margin: 2rem 0 0.75rem 0;}
-.cards-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 1rem;}
-.proj-card {background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1.5rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, box-shadow 0.15s; font-size: var(--fs-base) !important;}
-.proj-card:hover {border-color: #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;}
-.proj-card.muted {opacity: 0.55; cursor: default; pointer-events: none;}
-.proj-card *, .proj-card *::before, .proj-card *::after {font-size: var(--fs-base) !important; line-height: var(--lh) !important; font-weight: 400 !important; color: var(--c-body);}
-.proj-card .card-title {font-weight: 600 !important; color: var(--c-title);}
-.proj-card .card-cta {font-weight: 600 !important; color: #3b82f6;}
-.proj-card .card-cta.dim {color: var(--c-body);}
-.card-top {display: flex; align-items: flex-start; justify-content: flex-start; margin-bottom: 10px;}
-.card-icon {width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-bottom: 10px;}
-.icon-blue {background: #e8f1fb;} .icon-purple {background: #eeedfe;} .icon-teal {background: #e1f5ee;} .icon-amber {background: #faeeda;} .icon-coral {background: #faece7;} .icon-green {background: #eaf3de;}
-.card-title {color: var(--c-title); margin-bottom: 15px; text-align: left;}
-.card-question {margin-bottom: 15px; text-align: left;}
-.card-desc {margin-bottom: 20px; text-align: left;}
-.tags {display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: flex-start;}
-.tag {padding: 3px 8px !important; border-radius: 4px; background: #f5f5f5; border: 1px solid #e8e8e8;}
-.card-footer {border-top: 1px solid #f0f0f0; padding-top: 10px; display: flex; align-items: center; justify-content: space-between;}
-.tools-row {display: flex; gap: 10px; flex-wrap: wrap; align-items: center;}
-.tool {display: flex; align-items: center; gap: 4px;}
-.tool::before {content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block; flex-shrink: 0;}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+
+#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+
+#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
+
+.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
+
+.sidebar-name { font-size: 15px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+
+.sidebar-credential { font-size: 14px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+
+.sidebar-avail { font-size: 14px; color: #f5f5f5; margin-bottom: 2px; }
+
+.sidebar-grad { font-size: 14px; color: #f5f5f5; margin-bottom: 2rem; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 14px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+
+.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+
+.sidebar-nav a.active { background: #1e3a5f; }
+
+.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+
+.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+
+.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+
+.sidebar-links a { font-size: 14px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-links a:hover { color: #aaaaaa; }
+
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
+
+.rule-bold { border: none !important; border-top: 1.5px solid #111 !important; margin: 1.5rem 0 1.5rem; }
+
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.section-label { font-size: 14px !important; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1a1a1a; margin: 2rem 0 0.75rem 0; }
+
+.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1rem; }
+
+.proj-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8rem 2rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, box-shadow 0.15s; font-size: 0.875rem !important; }
+
+.proj-card:hover { border-color: #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit; }
+
+.proj-card.muted { opacity: 0.55; cursor: default; pointer-events: none; }
+
+.proj-card *, .proj-card *::before, .proj-card *::after { font-size: 0.875rem !important; line-height: 1.6 !important; font-weight: 400 !important; color: #444; }
+
+.proj-card .card-title { font-weight: 600 !important; color: #1a1a1a; }
+
+.proj-card .card-cta { font-weight: 600 !important; color: #3b82f6; }
+
+.proj-card .card-cta.dim { color: #444; }
+
+.card-top { display: flex; align-items: flex-start; justify-content: flex-start; margin-bottom: 10px; }
+
+.card-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-bottom: 10px; }
+
+.icon-blue { background: #e8f1fb; } .icon-purple { background: #eeedfe; } .icon-teal { background: #e1f5ee; } .icon-amber { background: #faeeda; } .icon-coral { background: #faece7; } .icon-green { background: #eaf3de; }
+
+.card-title { color: #1a1a1a; margin-bottom: 15px; text-align: left; }
+
+.card-question { margin-bottom: 15px; text-align: left; }
+
+.card-desc { margin-bottom: 20px; text-align: left; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: flex-start; }
+
+.tag { padding: 3px 8px !important; border-radius: 4px; background: #f5f5f5; border: 1px solid #e8e8e8; }
+
+.card-footer { border-top: 1px solid #f0f0f0; padding-top: 10px; display: flex; align-items: center; justify-content: space-between; }
+
+.tools-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+.tool { display: flex; align-items: center; gap: 4px; }
+
+.tool::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block; flex-shrink: 0; }
 </style>
 
-<p class="proj-intro">Each project on this page represents a real business question I worked through end to end, from raw data to findings and recommendations I could actually stand behind. My hope is that the work here gives a clear picture of how I think as an analyst and what I could bring to a team.</p>
+<div class="portfolio-shell">
 
-<p class="proj-intro" style="margin-top: 0.75rem;">Projects are organized into three tracks: <strong>Predictive Analytics</strong>, <strong>Data Visualization</strong>, and <strong>Forecasting</strong>. Each card links to a dedicated page with findings, recommendations, methodology, and key takeaways, with reports, slides, and code attached (if applicable).</p>
+  <aside class="sidebar">
+    <img
+      src="images/Headshot1.jpg"
+      alt="Allan Almaraz"
+      class="sidebar-photo"
+      onerror="this.style.display='none'"
+    >
+    <div class="sidebar-name">Allan Almaraz</div>
+    <div class="sidebar-credential">MSBA · UC Irvine</div>
+    <div class="sidebar-avail">Available June 2026</div>
+    <div class="sidebar-grad">Graduating August 2026</div>
 
-<div class="section-label">Predictive Analytics</div>
-<div class="cards-grid">
+    <nav class="sidebar-nav">
+      <a href="index.html">
+        <span class="nav-pip"></span>Home
+      </a>
+      <a href="about.html">
+        <span class="nav-pip"></span>About Me
+      </a>
+      <a href="experience.html">
+        <span class="nav-pip"></span>Experience
+      </a>
+      <a href="projects.html" class="active">
+        <span class="nav-pip"></span>Projects
+      </a>
+    </nav>
 
-  <a class="proj-card" href="projects/sun-country/index.html">
-    <div class="card-top">
-      <div class="card-icon icon-blue">✈️</div>
+    <hr class="sidebar-rule">
+
+    <div class="sidebar-links">
+      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
+      <a href="files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
+      <a href="files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
-    <div class="card-title">Sun Country Airlines: Customer Segmentation</div>
-    <div class="card-question"><strong>Business question:</strong> Who are Sun Country's customers, and how can the airline grow loyalty enrollment and shift bookings to its direct channel?</div>
-    <div class="card-desc">Applied K-Means clustering to 15,144 customer records to identify 5 actionable segments, translating findings into three targeted campaigns tied to leadership's goals around Ufly enrollment, direct channel growth, and vacation package differentiation.</div>
-    <div class="tags">
-      <span class="tag">Clustering</span>
-      <span class="tag">Customer Analytics</span>
-      <span class="tag">Segmentation</span>
+  </aside>
+
+  <main class="main-content">
+
+    <div class="headline">Projects</div>
+
+    <p class="body-text" style="margin-top: 1.75rem;">Each project on this page represents a real business question I worked through end to end, from raw data to findings and recommendations I could actually stand behind. My hope is that the work here gives a clear picture of how I think as an analyst and what I could bring to a team.</p>
+
+    <p class="body-text">Projects are organized into three tracks: <strong>Predictive Analytics</strong>, <strong>Data Visualization</strong>, and <strong>Forecasting</strong>. Each card links to a dedicated page with findings, recommendations, methodology, and key takeaways, with reports, slides, and code attached where applicable.</p>
+
+    <hr class="rule-bold">
+
+    <div class="section-label">Predictive Analytics</div>
+    <div class="cards-grid">
+
+      <a class="proj-card" href="projects/sun-country/index.html">
+        <div class="card-top">
+          <div class="card-icon icon-blue">✈️</div>
+        </div>
+        <div class="card-title">Sun Country Airlines: Customer Segmentation</div>
+        <div class="card-question"><strong>Business question:</strong> Who are Sun Country's customers, and how can the airline grow loyalty enrollment and shift bookings to its direct channel?</div>
+        <div class="card-desc">Applied K-Means clustering to 15,144 customer records to identify 5 actionable segments, translating findings into three targeted campaigns tied to leadership's goals around Ufly enrollment, direct channel growth, and vacation package differentiation.</div>
+        <div class="tags">
+          <span class="tag">Clustering</span>
+          <span class="tag">Customer Analytics</span>
+          <span class="tag">Segmentation</span>
+        </div>
+        <div class="card-footer">
+          <div class="tools-row">
+            <span class="tool">Python</span>
+            <span class="tool">Elbow Method</span>
+            <span class="tool">EDA</span>
+          </div>
+          <span class="card-cta">View →</span>
+        </div>
+      </a>
+
+      <a class="proj-card" href="projects/employee-churn/index.html">
+        <div class="card-top">
+          <div class="card-icon icon-purple">👥</div>
+        </div>
+        <div class="card-title">Predicting Employee Churn</div>
+        <div class="card-question"><strong>Business question:</strong> Which employees are most at risk of churning (leaving), and what organizational factors drive that risk?</div>
+        <div class="card-desc">Built and compared logistic regression and decision tree models on 4,653 employee records, achieving 79% recall on the churn class and identifying tenure, compensation tier, and education as the primary drivers of voluntary turnover.</div>
+        <div class="tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">HR Analytics</span>
+          <span class="tag">Classification</span>
+        </div>
+        <div class="card-footer">
+          <div class="tools-row">
+            <span class="tool">Python</span>
+            <span class="tool">Cross Validation</span>
+            <span class="tool">Decision Tree</span>
+          </div>
+          <span class="card-cta">View →</span>
+        </div>
+      </a>
+
     </div>
-    <div class="card-footer">
-      <div class="tools-row">
-        <span class="tool">Python</span>
-        <span class="tool">Elbow Method</span>
-        <span class="tool">EDA</span>
+
+    <div class="section-label">Data Visualization</div>
+    <div class="cards-grid">
+
+      <a class="proj-card" href="projects/uci-bn/index.html">
+        <div class="card-top">
+          <div class="card-icon icon-teal">🍎</div>
+        </div>
+        <div class="card-title">UCI Basic Needs: CalFresh Analysis</div>
+        <div class="card-question"><strong>Business question:</strong> How are UCI Basic Needs Center's CalFresh assistance services performing across four years of data, and what operational changes would most improve program efficiency and student access?</div>
+        <div class="card-desc">Built a multi-page interactive Tableau dashboard tracking 6,261 CalFresh appointment records across 4 years, surfacing trends in Enrollment Party growth, no-show patterns, student eligibility reach, and seasonality.</div>
+        <div class="tags">
+          <span class="tag">Program Evaluation</span>
+          <span class="tag">Data Visualization</span>
+          <span class="tag">Higher Ed</span>
+        </div>
+        <div class="card-footer">
+          <div class="tools-row">
+            <span class="tool">Excel</span>
+            <span class="tool">Data Cleaning</span>
+            <span class="tool">Tableau</span>
+          </div>
+          <span class="card-cta">View →</span>
+        </div>
+      </a>
+
+      <div class="proj-card muted">
+        <div class="card-top">
+          <div class="card-icon icon-amber">🎬</div>
+        </div>
+        <div class="card-title">Letterboxd: Movies as a Business and a Taste</div>
+        <div class="card-question"><strong>Business question:</strong> What do box office trends and personal viewing data reveal about film as both a cultural and commercial product?</div>
+        <div class="card-desc">A live window into film as both a personal passion and a commercial product, combining my personal ratings, watchlist, and physical media collection with box office and budget data that auto-updates over time.</div>
+        <div class="tags">
+          <span class="tag">Live Data</span>
+          <span class="tag">Entertainment Analytics</span>
+          <span class="tag">Personal Data</span>
+        </div>
+        <div class="card-footer">
+          <div class="tools-row">
+            <span class="tool">TBD</span>
+          </div>
+          <span class="card-cta dim">Planned</span>
+        </div>
       </div>
-      <span class="card-cta">View →</span>
-    </div>
-  </a>
 
-  <a class="proj-card" href="projects/employee-churn/index.html">
-    <div class="card-top">
-      <div class="card-icon icon-purple">👥</div>
     </div>
-    <div class="card-title">Predicting Employee Churn</div>
-    <div class="card-question"><strong>Business question:</strong> Which employees are most at risk of churning (leaving), and what organizational factors drive that risk?</div>
-    <div class="card-desc">Built and compared logistic regression and decision tree models on 4,653 employee records, achieving 79% recall on the churn class and identifying tenure, compensation tier, and education as the primary drivers of voluntary turnover.</div>
-    <div class="tags">
-      <span class="tag">Machine Learning</span>
-      <span class="tag">HR Analytics</span>
-      <span class="tag">Classification</span>
-    </div>
-    <div class="card-footer">
-      <div class="tools-row">
-        <span class="tool">Python</span>
-        <span class="tool">Cross Validation</span>
-        <span class="tool">Decision Tree</span>
+
+    <div class="section-label">Forecasting</div>
+    <div class="cards-grid">
+
+      <div class="proj-card muted">
+        <div class="card-top">
+          <div class="card-icon icon-coral">📈</div>
+        </div>
+        <div class="card-title">Applied Forecast Modeling</div>
+        <div class="card-question"><strong>Business question:</strong> How can forecasting techniques be applied to real business problems across industries?</div>
+        <div class="card-desc">A collection of forecasting projects from BANA 290, applying causal and time series modeling techniques to real-world datasets. Projects include linear regression, ARIMA, and logistic regression built in Alteryx and visualized in Tableau.</div>
+        <div class="tags">
+          <span class="tag">Forecasting</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">Causal Modeling</span>
+        </div>
+        <div class="card-footer">
+          <div class="tools-row">
+            <span class="tool">Alteryx</span>
+            <span class="tool">Tableau</span>
+          </div>
+          <span class="card-cta dim">In Progress</span>
+        </div>
       </div>
-      <span class="card-cta">View →</span>
-    </div>
-  </a>
 
-</div>
+    </div>
 
-<div class="section-label">Data Visualization</div>
-<div class="cards-grid">
-
-  <a class="proj-card" href="projects/uci-bn/index.html">
-    <div class="card-top">
-      <div class="card-icon icon-teal">🍎</div>
-    </div>
-    <div class="card-title">UCI Basic Needs: CalFresh Analysis</div>
-    <div class="card-question"><strong>Business question:</strong> How are UCI Basic Needs Center's CalFresh assistance services performing across four years of data, and what operational changes would most improve program efficiency and student access?</div>
-    <div class="card-desc">Built a multi-page interactive Tableau dashboard tracking 6,261 CalFresh appointment records across 4 years, surfacing trends in Enrollment Party growth, no-show patterns, student eligibility reach, and seasonality.</div>
-    <div class="tags">
-      <span class="tag">Program Evaluation</span>
-      <span class="tag">Data Visualization</span>
-      <span class="tag">Higher Ed</span>
-    </div>
-    <div class="card-footer">
-      <div class="tools-row">
-        <span class="tool">Excel</span>
-        <span class="tool">Data Cleaning</span>
-        <span class="tool">Tableau</span>
-      </div>
-      <span class="card-cta">View →</span>
-    </div>
-  </a>
-
-  <div class="proj-card muted">
-    <div class="card-top">
-      <div class="card-icon icon-amber">🎬</div>
-    </div>
-    <div class="card-title">Letterboxd: Movies as a Business and a Taste</div>
-    <div class="card-question"><strong>Business question:</strong> What do box office trends and personal viewing data reveal about film as both a cultural and commercial product?</div>
-    <div class="card-desc">A live window into film as both a personal passion and a commercial product, combining my personal ratings, watchlist, and physical media collection with box office and budget data that auto-updates over time.</div>
-    <div class="tags">
-      <span class="tag">Live Data</span>
-      <span class="tag">Entertainment Analytics</span>
-      <span class="tag">Personal Data</span>
-    </div>
-    <div class="card-footer">
-      <div class="tools-row">
-        <span class="tool">TBD</span>
-      </div>
-      <span class="card-cta dim">Planned</span>
-    </div>
-  </div>
-
-</div>
-
-<div class="section-label">Forecasting</div>
-<div class="cards-grid">
-
-  <div class="proj-card muted">
-    <div class="card-top">
-      <div class="card-icon icon-coral">📈</div>
-    </div>
-    <div class="card-title">Applied Forecast Modeling</div>
-    <div class="card-question"><strong>Business question:</strong> How can forecasting techniques be applied to real business problems across industries?</div>
-    <div class="card-desc">A collection of forecasting projects from BANA 290, applying causal and time series modeling techniques to real-world datasets. Projects include linear regression, ARIMA, and logistic regression built in Alteryx and visualized in Tableau.</div>
-    <div class="tags">
-      <span class="tag">Forecasting</span>
-      <span class="tag">Time Series</span>
-      <span class="tag">Causal Modeling</span>
-    </div>
-    <div class="card-footer">
-      <div class="tools-row">
-        <span class="tool">Alteryx</span>
-        <span class="tool">Tableau</span>
-      </div>
-      <span class="card-cta dim">In Progress</span>
-    </div>
-  </div>
-
+  </main>
 </div>
 ```
