@@ -73,3 +73,14 @@ html, body {
 .timeline-wrapper table tbody tr:nth-child(even) {
   background-color: transparent !important;
 }
+
+.sidebar-photo {
+  width: 100px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 2px solid #2a2a2a;
+  margin-bottom: 1.1rem;
+  display: block;
+}
