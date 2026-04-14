@@ -78,9 +78,3 @@ html {
   font-size: 16px !important;
 }
 
-.main-content p,
-.main-content .intro,
-.main-content .body-col {
-  font-size: 0.875rem !important;
-  line-height: 1.4 !important;
-}
