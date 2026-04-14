@@ -1,173 +1,267 @@
 ---
 title: "Experience"
-toc: true
-about:
-  template: jolla
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/allanalmaraz/
+format:
+  html:
+    page-layout: custom
+    toc: false
 ---
 
+```{=html}
 <style>
-:root {
-  --fs-title: 1rem;
-  --fs-base:  0.875rem;
-  --c-title:  #1a1a1a;
-  --c-body:   #444;
-  --lh:       1.6;
-}
-.quarto-about-jolla main {text-align: left;}
-.quarto-about-jolla .exp-bullets {text-align: left;}
-.exp-bar {border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff;}
-.exp-header {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; gap: 0.5em; margin-bottom: 0.3em;}
-.exp-title {font-size: var(--fs-title) !important; font-weight: 700; color: var(--c-title); margin-bottom: 0; line-height: var(--lh);}
-.exp-meta {font-size: var(--fs-base) !important; color: var(--c-body); margin: 0.2em 0 0.6em 0; white-space: nowrap; line-height: var(--lh);}
-.exp-context {font-size: var(--fs-base) !important; color: var(--c-body); font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em; line-height: var(--lh);}
-.exp-bullets {margin: 0; padding-left: 1.2em; font-size: var(--fs-base) !important; color: var(--c-body); line-height: var(--lh);}
-.exp-bullets li {margin-bottom: 0.6em; font-size: var(--fs-base) !important;}
-.exp-dates {font-size: var(--fs-base) !important; color: var(--c-body); white-space: nowrap; line-height: var(--lh);}
-.exp-skills {font-size: var(--fs-base) !important; color: var(--c-body); margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em; line-height: var(--lh);}
-.exp-subheader {font-size: var(--fs-base) !important; font-weight: 600; color: var(--c-title); margin-bottom: 0.4em; margin-top: 1em; line-height: var(--lh);}
-h3 {display: none;}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+
+#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+
+#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+
+
+
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
+
+
+.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
+
+.sidebar-name { font-size: 15px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+
+.sidebar-credential { font-size: 14px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+
+.sidebar-avail { font-size: 14px; color: #f5f5f5; margin-bottom: 2px; }
+
+.sidebar-grad { font-size: 14px; color: #f5f5f5; margin-bottom: 2rem; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 14px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+
+.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+
+.sidebar-nav a.active { background: #1e3a5f; }
+
+.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+
+.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+
+.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+
+.sidebar-links a { font-size: 14px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-links a:hover { color: #aaaaaa; }
+
+
+
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+
+
+.headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
+
+.rule-bold { border: none; border-top: 1.5px solid #111; margin: 0 0 1.5rem; }
+
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.jump-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
+
+.jump-btn { display: inline-flex; align-items: center; padding: 6px 14px; background: #111; border: 0.5px solid #111; border-radius: 5px; text-decoration: none !important; font-size: 14px !important; color: #fff !important; transition: background 0.15s; }
+
+.jump-btn:hover { background: #333; border-color: #333; }
+
+.exp-bar { border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff; }
+
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; gap: 0.5em; margin-bottom: 0.3em; }
+
+.exp-title { font-size: 1rem !important; font-weight: 700; color: #1a1a1a; margin-bottom: 0; line-height: 1.5; }
+
+.exp-meta { font-size: 0.875rem !important; color: #444; margin: 0.2em 0 0.6em 0; white-space: nowrap; line-height: 1.5; }
+
+.exp-context { font-size: 0.875rem !important; color: #444; font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em; line-height: 1.5; }
+
+.exp-bullets { margin: 0; padding-left: 1.2em; font-size: 0.875rem !important; color: #444; line-height: 1.5; }
+
+.exp-bullets li { margin-bottom: 0.6em; font-size: 0.875rem !important; }
+
+.exp-dates { font-size: 0.875rem !important; color: #444; white-space: nowrap; line-height: 1.5; }
+
+.exp-skills { font-size: 0.875rem !important; color: #444; margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em; line-height: 1.5; }
+
+.exp-subheader { font-size: 0.875rem !important; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75em; margin-top: 1.75em; line-height: 1.5; }
 </style>
 
-Welcome to my Experience page, where you can explore the roles and responsibilities that have shaped my professional background. Each entry includes a brief context of the role, what I contributed, and what I took away from it.
+<div class="portfolio-shell">
 
-### Student Business Data Analyst
+  <aside class="sidebar">
+    <img
+      src="images/Headshot1.jpg"
+      alt="Allan Almaraz"
+      class="sidebar-photo"
+      onerror="this.style.display='none'"
+    >
+    <div class="sidebar-name">Allan Almaraz</div>
+    <div class="sidebar-credential">MSBA · UC Irvine</div>
+    <div class="sidebar-avail">Available June 2026</div>
+    <div class="sidebar-grad">Graduating August 2026</div>
 
-```{=html}
-<div class="exp-bar">
-  <div class="exp-header">
-    <div>
-      <p class="exp-title">Student Business Data Analyst</p>
-      <p class="exp-meta">Anaheim Ducks Hockey Club &nbsp;·&nbsp; Apprenticeship &nbsp;·&nbsp; Hybrid</p>
+    <nav class="sidebar-nav">
+      <a href="index.html">
+        <span class="nav-pip"></span>Home
+      </a>
+      <a href="about.html">
+        <span class="nav-pip"></span>About Me
+      </a>
+      <a href="experience.html" class="active">
+        <span class="nav-pip"></span>Experience
+      </a>
+      <a href="projects.html">
+        <span class="nav-pip"></span>Projects
+      </a>
+    </nav>
+
+    <hr class="sidebar-rule">
+
+    <div class="sidebar-links">
+      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
+      <a href="files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
+      <a href="files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
-    <span class="exp-dates">Jan 2026 – Present &nbsp;·&nbsp; Irvine, CA</span>
-  </div>
-  <p class="exp-context">This role is part of my UCI MSBA Capstone project, through which I was placed with the Anaheim Ducks and The Rinks — a local hockey rink operator — to analyze whether participation in The Rinks' adult Learn-to-Play program, a low-cost hockey learning initiative, translates into Anaheim Ducks ticket purchases and sustained fan engagement.</p>
-  <ul class="exp-bullets">
-    <li>Designing an end-to-end analytical framework to evaluate how The Rinks' adult Learn-to-Play program influences Anaheim Ducks ticket purchases and long-term fan engagement across disconnected programming and ticketing systems.</li>
-    <li>Writing SQL queries in SSMS to apply client-defined business logic and isolate clean, analysis-ready ticket data, including revenue calculations across primary and secondary market channels and participant filtering across multiple Ticketmaster schema tables.</li>
-    <li>Building Power BI dashboards to visualize program retention, pre/post-enrollment ticket purchasing behavior, and fan conversion metrics for Anaheim Ducks business intelligence stakeholders.</li>
-  </ul>
-  <p class="exp-skills"><strong>Skills Developed:</strong> SQL, Power BI, Data Visualization, Business Intelligence, Analytical Framework Design</p>
-</div>
-```
+  </aside>
 
-### EAOP Program Coordinator
+  <main class="main-content">
 
-```{=html}
-<div class="exp-bar">
-  <div class="exp-header">
-    <div>
-      <p class="exp-title">EAOP Program Coordinator</p>
-      <p class="exp-meta">UCI Center for Educational Partnerships &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; Hybrid</p>
+    <div class="headline">Experience</div>
+
+    <p class="body-text" style="margin-top: 1.75rem;">Welcome to my Experience page, where you can explore the roles and responsibilities that have shaped my professional background. Each entry includes a brief context of the role, what I contributed, and what I took away from it. Feel free to use the shortcuts below to jump to a specific role.</p>
+
+    <div class="jump-nav">
+      <a class="jump-btn" href="#ducks">Student Business Data Analyst</a>
+      <a class="jump-btn" href="#eaop">EAOP Program Coordinator</a>
+      <a class="jump-btn" href="#bnc">Program Coordinator</a>
+      <a class="jump-btn" href="#advocate">Basic Needs Advocate</a>
+      <a class="jump-btn" href="#reagan">Education Department Intern</a>
+      <a class="jump-btn" href="#chipotle">Supply Chain Intern</a>
     </div>
-    <span class="exp-dates">Apr 2025 – Sep 2025 &nbsp;·&nbsp; Irvine, CA</span>
-  </div>
-  <p class="exp-context">UCI's Early Academic Outreach Program (EAOP), housed within the Center for Educational Partnerships, focuses on expanding college access for underrepresented students in the Orange and Los Angeles County regions. In this role, I supported the full range of K-16 programming and outreach initiatives the program delivers throughout the academic year.</p>
-  <ul class="exp-bullets">
-    <li>Coordinated academic programming and event logistics for key K-16 initiatives including the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; managed outreach, transportation coordination, documentation, and day-of execution across campus and community sites.</li>
-    <li>Developed and facilitated a curriculum of interactive workshops on professional skills including interviewing techniques, college pathways, and major exploration, tailoring content to the distinct requirements of UCI's schools of Business, Engineering, and Social Sciences, among others, based on independent curriculum research for each.</li>
-    <li>Produced and hosted a multi-part webinar series on UCI's nursing, business, and engineering academic pathways, guiding high school students through major requirements, career trajectories, and program structure in a live, hosted format.</li>
-  </ul>
-  <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Curriculum Development, Video Production, Event Logistics, Public Speaking</p>
-</div>
-```
 
-### Program Coordinator
-
-```{=html}
-<div class="exp-bar">
-  <div class="exp-header">
-    <div>
-      <p class="exp-title">Program Coordinator</p>
-      <p class="exp-meta">UCI Basic Needs Center &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; Hybrid</p>
+    <div class="exp-bar" id="ducks">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Student Business Data Analyst</p>
+          <p class="exp-meta">Anaheim Ducks Hockey Club &nbsp;·&nbsp; Apprenticeship &nbsp;·&nbsp; Hybrid</p>
+        </div>
+        <span class="exp-dates">Jan 2026 – Present &nbsp;·&nbsp; Irvine, CA</span>
+      </div>
+      <p class="exp-context">This role is part of my UCI MSBA Capstone project, through which I was placed with the Anaheim Ducks and The Rinks — a local hockey rink operator — to analyze whether participation in The Rinks' adult Learn-to-Play program, a low-cost hockey learning initiative, translates into Anaheim Ducks ticket purchases and sustained fan engagement.</p>
+      <ul class="exp-bullets">
+        <li>Designing an end-to-end analytical framework to evaluate how The Rinks' adult Learn-to-Play program influences Anaheim Ducks ticket purchases and long-term fan engagement across disconnected programming and ticketing systems.</li>
+        <li>Writing SQL queries in SSMS to apply client-defined business logic and isolate clean, analysis-ready ticket data, including revenue calculations across primary and secondary market channels and participant filtering across multiple Ticketmaster schema tables.</li>
+        <li>Building Power BI dashboards to visualize program retention, pre/post-enrollment ticket purchasing behavior, and fan conversion metrics for Anaheim Ducks business intelligence stakeholders.</li>
+      </ul>
+      <p class="exp-skills"><strong>Skills Developed:</strong> SQL, Power BI, Data Visualization, Business Intelligence, Analytical Framework Design</p>
     </div>
-    <span class="exp-dates">Jan 2024 – Aug 2024 &nbsp;·&nbsp; Irvine, CA</span>
-  </div>
-  <p class="exp-context">Upon graduating from UCI, I was promoted from Basic Needs Advocate to the full-time Program Coordinator role. I took on direct oversight of the Basic Needs Advocate team, all CalFresh initiatives and day-to-day operations, and the center's marketing efforts — and made it a priority to introduce data analytics into how we tracked and optimized CalFresh assistance appointment outcomes.</p>
 
-  <p class="exp-subheader">Program Coordination &amp; Student Support</p>
-  <ul class="exp-bullets">
-    <li>Directed food security initiatives including CalFresh Assistance Appointments, Fresh Finances, CalFresh Enrollment Parties, and large-scale events such as UCI Orientation, Celebrate UCI, and the Mobile Pantry Grand Opening; managed end-to-end logistics including venue coordination, catering, transportation, and day-of execution in partnership with UCI Student Services, UCI Transportation, and Orange County Social Services.</li>
-    <li>Scheduled and managed 100–200 monthly CalFresh Assistance Appointments using Acuity Scheduling, coordinating staff availability, adjusting for cancellations, and ensuring consistent appointment coverage; managed all CalFresh communications including the program email inbox, student-facing outreach, departmental and partner correspondence, and semi-weekly personalized SAR7 and RE deadline reminders segmented by applicant type.</li>
-    <li>Provided direct, confidential support to students navigating complex CalFresh cases, including accompanying students to meetings with Orange County Social Services workers and connecting them to resources spanning financial aid, housing, employment, budgeting, banking, and transportation.</li>
-    <li>Led hiring, training, scheduling, and task delegation for a team of 15 CalFresh and marketing student employees; optimized workflow and enhanced team efficiency by 50%, ensuring timely completion of projects in high-pressure environments.</li>
-    <li>Directed marketing initiatives across digital and print platforms using WordPress, Mailchimp, Canva, and Meta Business Suite; led UCI's 2024 Giving Day campaign that raised record-breaking funds and increased social media engagement by 200%.</li>
-  </ul>
-
-  <p class="exp-subheader">Data Management, Reporting &amp; Administration</p>
-  <ul class="exp-bullets">
-    <li>Managed data entry and analysis for CalFresh services, implementing a new Excel system with pivot tables, advanced functions, and conditional formatting that tracked eligibility data, reporting timelines, and confidential case details, resulting in a 50% improvement in data management efficiency.</li>
-    <li>Overhauled the center's marketing strategy by shifting from content-first to a data-driven approach, using Meta Business Suite analytics to track post performance, audience engagement, and campaign reach; used those insights to refine content strategy across platforms, contributing to a 200% increase in social media engagement and a record-breaking Giving Day fundraising outcome.</li>
-    <li>Restructured the center's data reporting system to standardize how CalFresh appointment trends, program utilization, and operational KPIs were tracked and formatted, aligning outputs with CSUN grant reporting requirements and simplifying the compliance process for external partners.</li>
-    <li>Overhauled the center's Acuity scheduling form and student-facing email templates to improve clarity and reduce friction in the appointment process; redesigned form fields and dropdown structures to standardize data collection, making it significantly easier to export and analyze appointment data for reporting and program evaluation.</li>
-    <li>Produced the center's recurring Mailchimp newsletter, managing content planning, layout, and distribution to keep students, staff, and campus partners informed of upcoming events, resources, and program updates.</li>
-  </ul>
-
-  <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Event Logistics, Cross-Departmental Collaboration, Student Services, Team Leadership, Hiring & Training, Scheduling (Staff, Appointments, Events), Data Analysis, Reporting & Grant Compliance, Administrative Communications, Microsoft Excel, Acuity Scheduling, Meta Business Suite, Canva, Mailchimp, WordPress</p>
-</div>
-```
-
-### Basic Needs Advocate
-```{=html}
-<div class="exp-bar">
-  <div class="exp-header">
-    <div>
-      <p class="exp-title">Basic Needs Advocate</p>
-      <p class="exp-meta">UCI Basic Needs Center &nbsp;·&nbsp; Student Role &nbsp;·&nbsp; Hybrid</p>
+    <div class="exp-bar" id="eaop">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">EAOP Program Coordinator</p>
+          <p class="exp-meta">UCI Center for Educational Partnerships &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; Hybrid</p>
+        </div>
+        <span class="exp-dates">Apr 2025 – Sep 2025 &nbsp;·&nbsp; Irvine, CA</span>
+      </div>
+      <p class="exp-context">UCI's Early Academic Outreach Program (EAOP), housed within the Center for Educational Partnerships, focuses on expanding college access for underrepresented students in the Orange and Los Angeles County regions. In this role, I supported the full range of K-16 programming and outreach initiatives the program delivers throughout the academic year.</p>
+      <ul class="exp-bullets">
+        <li>Coordinated academic programming and event logistics for key K-16 initiatives including the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; managed outreach, transportation coordination, documentation, and day-of execution across campus and community sites.</li>
+        <li>Developed and facilitated a curriculum of interactive workshops on professional skills including interviewing techniques, college pathways, and major exploration, tailoring content to the distinct requirements of UCI's schools of Business, Engineering, and Social Sciences, among others, based on independent curriculum research for each.</li>
+        <li>Produced and hosted a multi-part webinar series on UCI's nursing, business, and engineering academic pathways, guiding high school students through major requirements, career trajectories, and program structure in a live, hosted format.</li>
+      </ul>
+      <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Curriculum Development, Video Production, Event Logistics, Public Speaking</p>
     </div>
-    <span class="exp-dates">Mar 2022 – Dec 2023 &nbsp;·&nbsp; Irvine, CA</span>
-  </div>
-  <p class="exp-context">A student-facing role at the UCI Basic Needs Center, focused on providing direct support to underserved students through CalFresh consultations and in-person outreach. CalFresh is California's name for the federal Supplemental Nutrition Assistance Program (SNAP), commonly known as food stamps.</p>
-  <ul class="exp-bullets">
-    <li>Provided front-desk support and confidential student consultations to help students apply for CalFresh, as well as connecting them to resources related to academics, employment, budgeting, credit and banking, financial aid, housing, loans, and transportation.</li>
-    <li>Supported day-to-day event operations including set-up, tear-down, and in-person outreach for various Basic Needs and CalFresh-related public campaigns and events.</li>
-  </ul>
-  <p class="exp-skills"><strong>Skills Developed:</strong> Community Outreach, Interpersonal Communication, Student Services, Case Management</p>
-</div>
-```
 
-### Education Department Intern
+    <div class="exp-bar" id="bnc">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Program Coordinator</p>
+          <p class="exp-meta">UCI Basic Needs Center &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; Hybrid</p>
+        </div>
+        <span class="exp-dates">Jan 2024 – Aug 2024 &nbsp;·&nbsp; Irvine, CA</span>
+      </div>
+      <p class="exp-context">Upon graduating from UCI, I was promoted from Basic Needs Advocate to the full-time Program Coordinator role. I took on direct oversight of the Basic Needs Advocate team, all CalFresh initiatives and day-to-day operations, and the center's marketing efforts — and made it a priority to introduce data analytics into how we tracked and optimized CalFresh assistance appointment outcomes.</p>
 
-```{=html}
-<div class="exp-bar">
-  <div class="exp-header">
-    <div>
-      <p class="exp-title">Education Department Intern</p>
-      <p class="exp-meta">Ronald Reagan Presidential Foundation & Institute &nbsp;·&nbsp; Internship &nbsp;·&nbsp; On-site</p>
+      <p class="exp-subheader">Program Coordination &amp; Student Support</p>
+      <ul class="exp-bullets">
+        <li>Directed food security initiatives including CalFresh Assistance Appointments, Fresh Finances, CalFresh Enrollment Parties, and large-scale events such as UCI Orientation, Celebrate UCI, and the Mobile Pantry Grand Opening; managed end-to-end logistics including venue coordination, catering, transportation, and day-of execution in partnership with UCI Student Services, UCI Transportation, and Orange County Social Services.</li>
+        <li>Scheduled and managed 100–200 monthly CalFresh Assistance Appointments using Acuity Scheduling, coordinating staff availability, adjusting for cancellations, and ensuring consistent appointment coverage; managed all CalFresh communications including the program email inbox, student-facing outreach, departmental and partner correspondence, and semi-weekly personalized SAR7 and RE deadline reminders segmented by applicant type.</li>
+        <li>Provided direct, confidential support to students navigating complex CalFresh cases, including accompanying students to meetings with Orange County Social Services workers and connecting them to resources spanning financial aid, housing, employment, budgeting, banking, and transportation.</li>
+        <li>Led hiring, training, scheduling, and task delegation for a team of 15 CalFresh and marketing student employees; optimized workflow and enhanced team efficiency by 50%, ensuring timely completion of projects in high-pressure environments.</li>
+        <li>Directed marketing initiatives across digital and print platforms using WordPress, Mailchimp, Canva, and Meta Business Suite; led UCI's 2024 Giving Day campaign that raised record-breaking funds and increased social media engagement by 200%.</li>
+      </ul>
+
+      <p class="exp-subheader">Data Management, Reporting &amp; Administration</p>
+      <ul class="exp-bullets">
+        <li>Managed data entry and analysis for CalFresh services, implementing a new Excel system with pivot tables, advanced functions, and conditional formatting that tracked eligibility data, reporting timelines, and confidential case details, resulting in a 50% improvement in data management efficiency.</li>
+        <li>Overhauled the center's marketing strategy by shifting from content-first to a data-driven approach, using Meta Business Suite analytics to track post performance, audience engagement, and campaign reach; used those insights to refine content strategy across platforms, contributing to a 200% increase in social media engagement and a record-breaking Giving Day fundraising outcome.</li>
+        <li>Restructured the center's data reporting system to standardize how CalFresh appointment trends, program utilization, and operational KPIs were tracked and formatted, aligning outputs with CSUN grant reporting requirements and simplifying the compliance process for external partners.</li>
+        <li>Overhauled the center's Acuity scheduling form and student-facing email templates to improve clarity and reduce friction in the appointment process; redesigned form fields and dropdown structures to standardize data collection, making it significantly easier to export and analyze appointment data for reporting and program evaluation.</li>
+        <li>Produced the center's recurring Mailchimp newsletter, managing content planning, layout, and distribution to keep students, staff, and campus partners informed of upcoming events, resources, and program updates.</li>
+      </ul>
+
+      <p class="exp-skills"><strong>Skills Developed:</strong> Program Coordination, Event Logistics, Cross-Departmental Collaboration, Student Services, Team Leadership, Hiring & Training, Scheduling (Staff, Appointments, Events), Data Analysis, Reporting & Grant Compliance, Administrative Communications, Microsoft Excel, Acuity Scheduling, Meta Business Suite, Canva, Mailchimp, WordPress</p>
     </div>
-    <span class="exp-dates">Jun 2023 – Aug 2023 &nbsp;·&nbsp; Simi Valley, CA</span>
-  </div>
-  <p class="exp-context">Having participated in the Reagan Presidential Library's Summer Leadership Program (SLP) as a high school student, I returned years later to lead it as an intern. The SLP is a week-long program aimed at teaching middle and high school students the tenets of leadership and community service, and I worked alongside a team of five interns and educators to bring the 2023 cohort to life.</p>
-  <ul class="exp-bullets">
-    <li>Led SLP student sessions with 40+ students in attendance per session, delivering a full week of back-to-back programming that included an intricate curriculum of lessons, guided museum tours, and hands-on activities spanning the entire Reagan Presidential Library and Museum.</li>
-    <li>Developed student public speaking and collaboration skills through interactive lessons, group projects, and a community action plan the students designed and presented to local community members.</li>
-    <li>Facilitated numerous Reagan-sponsored events including the GE-Reagan Foundation Scholarship Program and the Great Communicator Debate Series.</li>
-  </ul>
-  <p class="exp-skills"><strong>Skills Developed:</strong> Collaborative Problem Solving, Presentation Skills, Curriculum Design, Event Facilitation, Youth Education</p>
-</div>
-```
 
-### Supply Chain Intern
-
-```{=html}
-<div class="exp-bar">
-  <div class="exp-header">
-    <div>
-      <p class="exp-title">Supply Chain Intern</p>
-      <p class="exp-meta">Chipotle Mexican Grill &nbsp;·&nbsp; Internship &nbsp;·&nbsp; On-site</p>
+    <div class="exp-bar" id="advocate">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Basic Needs Advocate</p>
+          <p class="exp-meta">UCI Basic Needs Center &nbsp;·&nbsp; Student Role &nbsp;·&nbsp; Hybrid</p>
+        </div>
+        <span class="exp-dates">Mar 2022 – Dec 2023 &nbsp;·&nbsp; Irvine, CA</span>
+      </div>
+      <p class="exp-context">A student-facing role at the UCI Basic Needs Center, focused on providing direct support to underserved students through CalFresh consultations and in-person outreach. CalFresh is California's name for the federal Supplemental Nutrition Assistance Program (SNAP), commonly known as food stamps.</p>
+      <ul class="exp-bullets">
+        <li>Provided front-desk support and confidential student consultations to help students apply for CalFresh, as well as connecting them to resources related to academics, employment, budgeting, credit and banking, financial aid, housing, loans, and transportation.</li>
+        <li>Supported day-to-day event operations including set-up, tear-down, and in-person outreach for various Basic Needs and CalFresh-related public campaigns and events.</li>
+      </ul>
+      <p class="exp-skills"><strong>Skills Developed:</strong> Community Outreach, Interpersonal Communication, Student Services, Case Management</p>
     </div>
-    <span class="exp-dates">Jun 2022 – Aug 2022 &nbsp;·&nbsp; Newport Beach, CA</span>
-  </div>
-  <p class="exp-context">A traditional corporate internship structure that included coffee chats, team meetings, and various data tasks — with one standout responsibility: leading an ingredient mapping project that I ultimately presented to Chipotle's executive team at the end of the summer.</p>
-  <ul class="exp-bullets">
-    <li>Led a comprehensive ingredient mapping initiative, analyzing product specifications, pull cadence, and pricing data from over 40 tier-two suppliers, 150 sub-ingredients, and 6 commissaries to optimize supply chain and procurement processes.</li>
-    <li>Identified cost-saving opportunities by consolidating ingredients for cumin, salt, and black pepper, contributing to a more streamlined procurement process and potential cost reductions.</li>
-    <li>Managed the daily compilation and analysis of inventory and supply data from nationwide distribution centers, improving visibility and communication between CMG's commissaries and distribution centers.</li>
-  </ul>
-  <p class="exp-skills"><strong>Skills Developed:</strong> Supply Chain Analysis, Microsoft Excel, Data Compilation, Procurement, Inventory Management</p>
+
+    <div class="exp-bar" id="reagan">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Education Department Intern</p>
+          <p class="exp-meta">Ronald Reagan Presidential Foundation & Institute &nbsp;·&nbsp; Internship &nbsp;·&nbsp; On-site</p>
+        </div>
+        <span class="exp-dates">Jun 2023 – Aug 2023 &nbsp;·&nbsp; Simi Valley, CA</span>
+      </div>
+      <p class="exp-context">Having participated in the Reagan Presidential Library's Summer Leadership Program (SLP) as a high school student, I returned years later to lead it as an intern. The SLP is a week-long program aimed at teaching middle and high school students the tenets of leadership and community service, and I worked alongside a team of five interns and educators to bring the 2023 cohort to life.</p>
+      <ul class="exp-bullets">
+        <li>Led SLP student sessions with 40+ students in attendance per session, delivering a full week of back-to-back programming that included an intricate curriculum of lessons, guided museum tours, and hands-on activities spanning the entire Reagan Presidential Library and Museum.</li>
+        <li>Developed student public speaking and collaboration skills through interactive lessons, group projects, and a community action plan the students designed and presented to local community members.</li>
+        <li>Facilitated numerous Reagan-sponsored events including the GE-Reagan Foundation Scholarship Program and the Great Communicator Debate Series.</li>
+      </ul>
+      <p class="exp-skills"><strong>Skills Developed:</strong> Collaborative Problem Solving, Presentation Skills, Curriculum Design, Event Facilitation, Youth Education</p>
+    </div>
+
+    <div class="exp-bar" id="chipotle">
+      <div class="exp-header">
+        <div>
+          <p class="exp-title">Supply Chain Intern</p>
+          <p class="exp-meta">Chipotle Mexican Grill &nbsp;·&nbsp; Internship &nbsp;·&nbsp; On-site</p>
+        </div>
+        <span class="exp-dates">Jun 2022 – Aug 2022 &nbsp;·&nbsp; Newport Beach, CA</span>
+      </div>
+      <p class="exp-context">A traditional corporate internship structure that included coffee chats, team meetings, and various data tasks — with one standout responsibility: leading an ingredient mapping project that I ultimately presented to Chipotle's executive team at the end of the summer.</p>
+      <ul class="exp-bullets">
+        <li>Led a comprehensive ingredient mapping initiative, analyzing product specifications, pull cadence, and pricing data from over 40 tier-two suppliers, 150 sub-ingredients, and 6 commissaries to optimize supply chain and procurement processes.</li>
+        <li>Identified cost-saving opportunities by consolidating ingredients for cumin, salt, and black pepper, contributing to a more streamlined procurement process and potential cost reductions.</li>
+        <li>Managed the daily compilation and analysis of inventory and supply data from nationwide distribution centers, improving visibility and communication between CMG's commissaries and distribution centers.</li>
+      </ul>
+      <p class="exp-skills"><strong>Skills Developed:</strong> Supply Chain Analysis, Microsoft Excel, Data Compilation, Procurement, Inventory Management</p>
+    </div>
+
+  </main>
 </div>
 ```
