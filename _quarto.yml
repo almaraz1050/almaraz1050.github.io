@@ -3,16 +3,10 @@ project:
 
 website:
   title: "Allan Almaraz"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - experience.qmd
-      - projects.qmd
+  navbar: false
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    toc: false
