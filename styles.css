@@ -78,3 +78,34 @@ html {
   font-size: 16px !important;
 }
 
+#quarto-header,
+.navbar,
+nav.navbar {
+  display: none !important;
+}
+
+#quarto-header {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+#title-block-header {
+  display: none !important;
+}
+
+#quarto-content > * {
+  padding-top: 0 !important;
+}
+
+#title-block-header {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}

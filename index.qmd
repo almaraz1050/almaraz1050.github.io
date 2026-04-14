@@ -58,12 +58,11 @@ main.content {
 }
 
 .sidebar-photo {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #2a2a2a;
-  margin-top: 1.75rem;
   margin-bottom: 2rem;
   display: block;
 }
