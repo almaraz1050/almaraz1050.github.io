@@ -18,7 +18,6 @@ body {
   color: #f5f5f5;
 }
 
-/* Kill all Quarto chrome */
 #quarto-header,
 .navbar,
 #quarto-sidebar,
@@ -37,14 +36,12 @@ main.content {
   gap: 0 !important;
 }
 
-/* ── SHELL ──────────────────────────────────────────────── */
 .portfolio-shell {
   display: flex;
   min-height: 100vh;
   align-items: stretch;
 }
 
-/* ── SIDEBAR ────────────────────────────────────────────── */
 .sidebar {
   width: 230px;
   min-width: 230px;
@@ -96,7 +93,6 @@ main.content {
   margin-bottom: 2rem;
 }
 
-/* Nav */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -116,13 +112,11 @@ main.content {
 }
 
 .sidebar-nav a:hover {
-  color: #f5f5f5;
   background: #1a1a1a;
   text-decoration: none !important;
 }
 
 .sidebar-nav a.active {
-  color: #f5f5f5;
   background: #1e3a5f;
 }
 
@@ -138,34 +132,28 @@ main.content {
   background: #60a5fa;
 }
 
-/* Divider */
 .sidebar-rule {
   border: none;
   border-top: 0.5px solid #2a2a2a;
   margin: 1.6rem 0 1.2rem;
 }
 
-/* Sidebar links */
 .sidebar-links {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  margin-top: 0rem;
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .sidebar-links a {
   font-size: 0.875rem;
   text-decoration: none !important;
-  transition: color 0.15s;
   color: #f5f5f5;
+  transition: color 0.15s;
 }
 
 .sidebar-links a:hover { color: #aaaaaa; }
-.sidebar-links a.accent { color: #60a5fa; }
-.sidebar-links a.accent:hover { color: #93c5fd; }
 
-/* ── MAIN ───────────────────────────────────────────────── */
 .main-content {
   flex: 1;
   background: #ffffff;
@@ -175,7 +163,7 @@ main.content {
 }
 
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #60a5fa;
   letter-spacing: 1.2px;
@@ -199,7 +187,6 @@ main.content {
   margin-bottom: 2rem;
 }
 
-/* Nav cards */
 .nav-cards {
   display: flex;
   gap: 8px;
@@ -217,35 +204,21 @@ main.content {
   transition: background 0.15s;
 }
 
-.nav-card:hover {
-  background: #333;
-}
+.nav-card:hover { background: #333; }
 
 .nav-card-title {
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #fff !important;
   margin: 0;
 }
 
-.nav-card-desc {
-  display: none;
-}
-
-/* Section rules */
 .rule-bold {
   border: none;
   border-top: 1.5px solid #111;
   margin: 0 0 1.5rem;
 }
 
-.rule-light {
-  border: none;
-  border-top: 0.5px solid #efefef;
-  margin: 0 0 1.5rem;
-}
-
-/* Label + body rows — stacked */
 .label-row {
   display: flex;
   flex-direction: column;
@@ -253,14 +226,8 @@ main.content {
   margin-bottom: 1.5rem;
 }
 
-.label-col {
-  width: auto;
-  min-width: unset;
-  padding-top: 0;
-}
-
 .label-text {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #111;
   letter-spacing: 0.8px;
@@ -275,7 +242,6 @@ main.content {
   line-height: 1.4;
 }
 
-/* Resume buttons */
 .resume-btns {
   display: flex;
   gap: 8px;
@@ -288,7 +254,7 @@ main.content {
   padding: 7px 14px;
   background: #111;
   color: #fff !important;
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   font-weight: 500;
   border-radius: 5px;
   text-decoration: none !important;
@@ -302,7 +268,7 @@ main.content {
   padding: 7px 14px;
   background: #111;
   color: #fff !important;
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   font-weight: 500;
   border-radius: 5px;
   text-decoration: none !important;
@@ -311,7 +277,6 @@ main.content {
 }
 .btn-outline:hover { background: #333; border-color: #333; }
 
-/* Target opportunities boxes */
 .targets-wrap {
   display: flex;
   gap: 12px;
@@ -327,7 +292,7 @@ main.content {
 }
 
 .target-box-head {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #60a5fa;
   letter-spacing: 0.8px;
@@ -337,7 +302,7 @@ main.content {
 }
 
 .target-item {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #666;
   padding: 0.3rem 0;
   border-bottom: 0.5px solid #f0f0f0;
