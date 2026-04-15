@@ -78,12 +78,10 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-layout-custom">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -105,228 +103,344 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-:root {
-  --fs-title: 1rem;
-  --fs-body:  0.95rem;
-  --fs-small: 0.85rem;
-  --c-title:  #1a1a1a;
-  --c-body:   #444;
-  --lh:       1.6;
-}
-h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
-.project-header {margin: 0 0 2rem 0;}
-.back-link {font-size: var(--fs-small); color: var(--c-body); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 1.5rem; line-height: var(--lh);}
-.back-link:hover {color: var(--c-title);}
-.project-subtitle {font-size: var(--fs-body); color: var(--c-body); margin-bottom: 1.5rem; line-height: var(--lh);}
-.meta-row {display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem;}
-.meta-tag {font-size: var(--fs-small); padding: 3px 10px; border-radius: 20px; background: #f5f5f5; color: var(--c-body); border: 1px solid #e8e8e8; line-height: var(--lh);}
-.metrics-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2rem;}
-.metric-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center;}
-.metric-value {font-size: 1.6rem; font-weight: 700; color: var(--c-title); line-height: 1.2;}
-.metric-label {font-size: var(--fs-small); color: var(--c-body); margin-top: 4px; line-height: var(--lh);}
-.overview-text {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
-.bq-block {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
-.intro-divider {border: none; border-top: 1px solid #e5e5e5; margin: 0 0 2rem 0;}
-.tabs {display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5;}
-.tab-btn {font-size: var(--fs-body); font-weight: 400; color: var(--c-body); background: none; border: none; padding: 12px 24px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: inherit; line-height: var(--lh);}
-.tab-btn:hover {color: var(--c-title);}
-.tab-btn.active {color: var(--c-title); border-bottom-color: var(--c-title); font-weight: 500;}
-.tab-panel {display: none; padding: 2rem 0;}
-.tab-panel.active {display: block;}
-.section-heading {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: var(--lh);}
-.section-heading:first-child {margin-top: 0;}
-.prose {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1rem;}
-.findings-list {list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0;}
-.findings-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 7px 0 7px 18px; position: relative; border-bottom: 1px solid #f5f5f5;}
-.findings-list li:last-child {border-bottom: none;}
-.findings-list li::before {content: '•'; position: absolute; left: 0; color: var(--c-body); font-size: 14px;}
-/* Rec cards: priority colors intentionally preserved */
-.rec-card {border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0;}
-.rec-card.high {border-left-color: #e24b4a;}
-.rec-card.med {border-left-color: #ef9f27;}
-.rec-card.low {border-left-color: #639922;}
-.rec-priority {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: var(--lh);}
-.rec-card.high .rec-priority {color: #e24b4a;}
-.rec-card.med .rec-priority {color: #ef9f27;}
-.rec-card.low .rec-priority {color: #639922;}
-.rec-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 5px; line-height: var(--lh);}
-.rec-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
-.method-row {display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem;}
-.method-step {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
-.step-num {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; color: var(--c-body); text-transform: uppercase; margin-bottom: 4px; line-height: var(--lh);}
-.step-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 6px; line-height: var(--lh);}
-.step-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
-.tools-list {list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0;}
-.tools-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 9px 0; border-bottom: 1px solid #f0f0f0;}
-.tools-list li:last-child {border-bottom: none;}
-.tools-list li strong {color: var(--c-title);}
-.takeaway-list {list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter;}
-.takeaway-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter;}
-.takeaway-list li::before {content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: var(--fs-small); font-weight: 700; color: var(--c-body); background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1;}
-.takeaway-list li:last-child {border-bottom: none;}
-.tableau-breakout {width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 0; display: flex; justify-content: center; margin-bottom: 2.5rem;}
-.tableau-wrap {width: 800px; border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden;}
-.tableau-note {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.5rem;}
-.glossary {background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1rem;}
-.glossary-title {font-size: var(--fs-small); font-weight: 700; color: var(--c-body); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: var(--lh);}
-.glossary-entry {display: grid; grid-template-columns: 150px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0;}
-.glossary-entry:last-child {border-bottom: none; padding-bottom: 0;}
-.glossary-term {font-size: var(--fs-small); font-weight: 700; color: var(--c-title); line-height: var(--lh);}
-.glossary-def {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
-@media (max-width: 600px) {.glossary-entry {grid-template-columns: 1fr;} .metrics-grid {grid-template-columns: 1fr 1fr;}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+
+#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+
+#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
+
+.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
+
+.sidebar-name { font-size: 18px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+
+.sidebar-credential { font-size: 16px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+
+.sidebar-avail { font-size: 16px; color: #f5f5f5; margin-bottom: 2px; }
+
+.sidebar-grad { font-size: 16px; color: #f5f5f5; margin-bottom: 2rem; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 16px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+
+.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+
+.sidebar-nav a.active { background: #1e3a5f; }
+
+.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+
+.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+
+.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+
+.sidebar-links a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-links a:hover { color: #aaaaaa; }
+
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
+
+.project-subtitle { font-size: 16px; color: #444; margin-top: 0; margin-bottom: 1rem; line-height: 1.5; }
+
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.75rem; }
+
+.meta-tag { font-size: 14px !important; padding: 6px 14px; border-radius: 5px; background: #111; color: #fff; border: 0.5px solid #111; line-height: 1.5; display: inline-flex; align-items: center; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.75rem; }
+
+.metric-card { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center; border: 1px solid #efefef; }
+
+.metric-value { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; line-height: 1.2; }
+
+.metric-label { font-size: 14px; color: #444; margin-top: 4px; line-height: 1.5; }
+
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.glossary { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; }
+
+.glossary-title { font-size: 14px; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: 1.5; }
+
+.glossary-entry { display: grid; grid-template-columns: 150px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; }
+
+.glossary-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+.glossary-term { font-size: 14px; font-weight: 400; color: #1a1a1a; line-height: 1.5; }
+
+.glossary-def { font-size: 14px; color: #444; line-height: 1.5; }
+
+.tableau-breakout { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 0; display: flex; justify-content: center; margin-bottom: 2.5rem; }
+
+.tableau-wrap { width: 800px; border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden; }
+
+.tableau-note { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.5rem; }
+
+.tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5; }
+
+.tab-btn { font-size: 16px; font-weight: 400; color: #444; background: none; border: none; padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: 'DM Sans', sans-serif; line-height: 1.5; }
+
+.tab-btn:hover { color: #111; }
+
+.tab-btn.active { color: #111; border-bottom-color: #111; font-weight: 500; }
+
+.tab-panel { display: none; padding: 2rem 0; }
+
+.tab-panel.active { display: block; }
+
+.section-heading { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: 1.5; }
+
+.section-heading:first-child { margin-top: 0; }
+
+.prose { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1rem; }
+
+.findings-list { list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0; }
+
+.findings-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; }
+
+.findings-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
+
+.findings-list li strong { color: #1a1a1a; font-weight: 600; }
+
+.rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
+
+.rec-card.high { border-left-color: #e24b4a; }
+.rec-card.med { border-left-color: #ef9f27; }
+.rec-card.low { border-left-color: #639922; }
+
+.rec-priority { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: 1.5; }
+
+.rec-card.high .rec-priority { color: #e24b4a; }
+.rec-card.med .rec-priority { color: #ef9f27; }
+.rec-card.low .rec-priority { color: #639922; }
+
+.rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
+
+.rec-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.method-row { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem; }
+
+.method-step { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef; }
+
+.step-num { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #444; text-transform: uppercase; margin-bottom: 4px; line-height: 1.5; }
+
+.step-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; line-height: 1.5; }
+
+.step-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.tools-list { list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0; }
+
+.tools-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0; }
+
+.tools-list li:last-child { border-bottom: none; }
+
+.tools-list li strong { color: #1a1a1a; }
+
+.takeaway-list { list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter; }
+
+.takeaway-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter; }
+
+.takeaway-list li::before { content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: 14px; font-weight: 700; color: #444; background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1; }
+
+.takeaway-list li:last-child { border-bottom: none; }
 </style>
 
-<div class="project-header">
-  <a class="back-link" href="../../projects.html">← Back to Projects</a>
-  <div class="project-subtitle">UCI Basic Needs Center · Data Visualization · 2025–2026</div>
-  <div class="meta-row">
-    <span class="meta-tag">Excel</span>
-    <span class="meta-tag">Tableau</span>
-    <span class="meta-tag">Program Evaluation</span>
-    <span class="meta-tag">Data Visualization</span>
-  </div>
-</div>
+<div class="portfolio-shell">
 
-<div class="metrics-grid">
-  <div class="metric-card">
-    <div class="metric-value">6,261</div>
-    <div class="metric-label">Appointment records analyzed</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">4 yrs</div>
-    <div class="metric-label">Jan 2022 – Feb 2026</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">94.3%</div>
-    <div class="metric-label">Students with at least one eligibility qualifier</div>
-  </div>
-</div>
+  <aside class="sidebar">
+    <img src="../../images/Headshot1.jpg" alt="Allan Almaraz" class="sidebar-photo" onerror="this.style.display='none'">
+    <div class="sidebar-name">Allan Almaraz</div>
+    <div class="sidebar-credential">MSBA · UC Irvine</div>
+    <div class="sidebar-avail">Available June 2026</div>
+    <div class="sidebar-grad">Graduating August 2026</div>
 
-<p class="overview-text"><strong>Project Context:</strong> I previously worked as a Program Coordinator at UCI's Basic Needs Center, where part of my role involved analyzing CalFresh assistance appointment data in Excel — looking for patterns, identifying underrepresented communities, and finding opportunities to improve communication with students. After completing coursework in the MSBA program, I reached out to my former supervisor and asked if I could revisit the data with a fresh set of tools and skills. The goal was to build an interactive dashboard that the team could actually use — something they could present, share, and maintain over time to track the performance of their CalFresh assistance services and Enrollment Party events. While the project includes KPIs and recommendations, the broader aim was to give program leadership a clearer, data-driven picture of where their CalFresh initiatives stand. <em>For more on my time at the Basic Needs Center, visit the <a href="../../experience.html">Experience</a> page.</em></p>
+    <nav class="sidebar-nav">
+      <a href="../../index.html">
+        <span class="nav-pip"></span>Home
+      </a>
+      <a href="../../about.html">
+        <span class="nav-pip"></span>About Me
+      </a>
+      <a href="../../experience.html">
+        <span class="nav-pip"></span>Experience
+      </a>
+      <a href="../../projects.html" class="active">
+        <span class="nav-pip"></span>Projects
+      </a>
+    </nav>
 
-<p class="bq-block"><strong>Business Question:</strong> <em>How is the UCI Basic Needs Center's CalFresh assistance program performing over time, and what operational changes would most improve student access and staff efficiency?</em></p>
+    <hr class="sidebar-rule">
 
-<div class="glossary">
-  <div class="glossary-title">Key Terms</div>
-  <div class="glossary-entry"><span class="glossary-term">CalFresh</span><span class="glossary-def">California's name for the federal Supplemental Nutrition Assistance Program (SNAP). The program issues monthly benefits on an EBT card — up to $298/month — that can be used at most grocery stores and farmers markets. Eligibility is determined by Orange County Social Services. The application process can be confusing and overwhelming for students, which is why the Basic Needs Center offers one-on-one assistance to guide them through it.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">EBT Card</span><span class="glossary-def">Electronic Benefits Transfer card. The physical card loaded with CalFresh benefits each month. Students apply for CalFresh and, if approved, receive an EBT card they can use like a debit card at eligible retailers.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">CalFresh Assistance Appointment</span><span class="glossary-def">A one-on-one appointment offered by the UCI Basic Needs Center where a trained advocate helps a student apply for CalFresh, complete a SAR7, or submit a recertification. Appointments can be virtual (Zoom) or in-person. <em>This is the primary unit of analysis in this project.</em></span></div>
-  <div class="glossary-entry"><span class="glossary-term">Initial Application</span><span class="glossary-def">A student's first CalFresh application. During the appointment, the advocate explains what CalFresh is, walks through the different eligibility pathways, helps gather required documents, applies alongside the student, and explains next steps in the county review process.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Enrollment Party (EP)</span><span class="glossary-def">A day-long event hosted by the Basic Needs Center where students can apply, get approved, and receive their EBT card in a single visit — bypassing the typical 30-day county processing timeline. EP events are designed to maximize throughput and reduce barriers for students who cannot navigate the standard process alone.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Semi-Annual Report (SAR7)</span><span class="glossary-def">A required county check-in submitted 6 months into a CalFresh certification period. Students must report any changes in income, household size, or other eligibility factors. Failure to submit results in benefits being discontinued.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Recertification (RE)</span><span class="glossary-def">The annual renewal of CalFresh benefits at the end of a certification period. Similar to the SAR7 but more comprehensive. The standard CalFresh lifecycle follows: Initial Application → SAR7 → RE → SAR7 → RE, repeating until the student is no longer eligible.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Student Eligibilities</span><span class="glossary-def">In addition to meeting basic income and household requirements, college students must meet at least one student-specific eligibility criterion to qualify for CalFresh. It is the role of the Basic Needs advocate during a CalFresh assistance appointment to explain the different eligibility pathways and identify which ones apply to each student.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">No-Show</span><span class="glossary-def">A student who had a scheduled CalFresh assistance appointment but did not attend and did not cancel in advance. No-shows represent wasted advocate capacity and are a key operational challenge for the program.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">LPIE</span><span class="glossary-def">Local Programs that Increase Employability. Specific majors and programs at UCI approved by the California Department of Social Services as containing an employment and training component. Students enrolled in an LPIE-approved program are automatically exempt from the standard CalFresh student eligibility rule — meaning enrollment alone qualifies them, with no additional work or income requirements. LPIE is the most common eligibility qualifier in this dataset at 73.5%.</span></div>
-</div>
-
-<hr class="intro-divider">
-
-<div class="section-heading" style="margin-bottom:0.4rem;">Interactive Dashboard</div>
-<p class="tableau-note">Please use the Overview, Program Trends, and Student Profile buttons at the top of the dashboard to switch between pages.</p>
-
-<div class="tableau-breakout">
-<div class="tableau-wrap">
-<div class="tableauPlaceholder" id="viz1775100456113" style="position: relative"><noscript><a href="#"><img alt="Overview" src="https://public.tableau.com/static/images/BN/BNVisuals/ProgramTrends/1_rss.png" style="border: none"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"><param name="embed_code_version" value="3"><param name="site_root" value=""><param name="name" value="BNVisuals/Overview"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/BN/BNVisuals/ProgramTrends/1.png"><param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="en-US"><param name="filter" value="publish=yes"></object></div><script type="text/javascript">var divElement = document.getElementById('viz1775100456113'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='977px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-</div>
-</div>
-
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
-  <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
-  <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
-  <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
-</div>
-
-<div id="findings" class="tab-panel active">
-  <div class="section-heading">What the Data Shows</div>
-  <ul class="findings-list">
-    <li><strong>October demand is 2x any other month</strong> — averaging ~194 appointments, mapping directly to Fall quarter start and financial aid renewal cycles. This is not new information for advocates, who have always experienced a heavier workload in the fall, but the data puts a concrete number to what the team already knows anecdotally.</li>
-    <li><strong>The EP program has overtaken individual appointments</strong> — students served at Enrollment Party events grew from 84 in Fall 2022 to 572 in Fall 2025, crossing over individual appointment volume for the first time. Given the trajectory, EP events are expected to continue pulling further ahead as the program scales.</li>
-    <li><strong>No-show and cancellation rates have remained flat</strong> — hovering between 11–21% per quarter despite overall program growth, representing roughly 208 missed appointments per year. This is a useful baseline, and the data now exists to measure whether any future intervention actually moves the needle.</li>
-    <li><strong>94.3% of students served have at least one eligibility qualifier</strong> — LPIE is the most common at 73.5%. This is partly a reflection of how much the LPIE list has expanded, with many programs added in 2023 and 2024. The practical implication is that eligibility is no longer the main barrier. The bigger challenge now is simply awareness — most students qualify but have no idea they do.</li>
-    <li><strong>Fall 2025 EP approval rate decreased</strong> — dipping below the 86.8% average, but this should be read in context. EP events are serving dramatically more students than in prior years, and a slight decline in approval rate is a natural byproduct of reaching a broader, less pre-screened population. Volume gains more than offset the rate dip.</li>
-    <li><strong>Zoom appointments are declining year over year</strong> — from 88.9% in 2022 to 74.3% in 2026. This likely reflects both post-COVID comfort with in-person services and the nature of the process itself. CalFresh applications involve gathering documents, reviewing eligibility, and navigating county systems, and some students may simply feel they need in-person support to get through it.</li>
-  </ul>
-</div>
-
-<div id="recommendations" class="tab-panel">
-
-  <div class="rec-card high">
-    <div class="rec-priority">High Priority</div>
-    <div class="rec-title">Overhaul the Acuity Scheduling Intake Form</div>
-    <div class="rec-desc">The current intake form was not designed with data analysis in mind, and cleaning the exports is extremely time-intensive. The most pressing issue is the student eligibility section, which spans multiple overlapping questions across undergraduate programs, graduate programs, academic programs, and professional programs — making it difficult to reliably extract which eligibility a student actually has. A redesigned form with cleaner dropdown structures, consolidated eligibility logic, and standardized field names would dramatically reduce cleaning time and improve data quality for future analyses.</div>
-  </div>
-
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Add Two Fields to the Intake Form</div>
-    <div class="rec-desc">Two small additions to the form would significantly improve the dataset over time. First, a post-appointment field capturing the final eligibility the student actually applied with — currently advocates identify eligibilities before the appointment, but there is no record of which one was ultimately used. Second, a standardized full-name field for the advocate on the case. Right now only first names are recorded, which creates a potential data integrity issue as the team grows and duplicate names become more likely.</div>
-  </div>
-
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Develop SAR7 and Recertification Outreach Campaigns</div>
-    <div class="rec-desc">The data shows strong initial application volume, but there is an opportunity to build more continuity with students through their CalFresh lifecycle. Proactive outreach campaigns timed around SAR7 and recertification deadlines could bring more students back for follow-up appointments, increasing repeat engagement and helping students maintain their benefits rather than letting them lapse.</div>
-  </div>
-
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Establish Automated Post-Appointment Communication</div>
-    <div class="rec-desc">With a redesigned intake form that captures which eligibility a student actually applied with, the center could build targeted post-appointment email workflows tailored to each student's situation. A student who applied under Work Study would receive different follow-up guidance than one who applied under an LPIE program, for example. This kind of personalized outreach would help students stay on track with their case and reduce the number who fall off simply because no one followed up in a way that was relevant to them.</div>
-  </div>
-
-  <div class="rec-card low">
-    <div class="rec-priority">Lower Priority</div>
-    <div class="rec-title">Explore New Strategies to Reduce No-Shows</div>
-    <div class="rec-desc">No-show and cancellation rates have remained flat for four years, and continued generic email reminders have shown negligible returns. Two approaches worth testing are SMS reminders, which tend to have higher open and response rates than email, and more personalized confirmation messages that include a brief introduction to the advocate the student will be meeting. A small human touch before the appointment may increase the sense of commitment and make students more likely to attend.</div>
-  </div>
-
-  <div class="rec-card low">
-    <div class="rec-priority">Lower Priority</div>
-    <div class="rec-title">Revisit Staffing Model as EP Scales</div>
-    <div class="rec-desc">As Enrollment Party events continue to grow and individual appointment volume declines, it may be worth evaluating whether the current staffing balance reflects where the program is heading. One option worth exploring is a gradual shift where some operational and tabling support at EP events is handled by members of the outreach team, who are already focused on student-facing engagement, while the Basic Needs Advocate role is preserved for the one-on-one appointment work that requires deeper program expertise.</div>
-  </div>
-</div>
-
-<div id="methodology" class="tab-panel">
-  <div class="method-row">
-    <div class="method-step">
-      <div class="step-num">Step 1</div>
-      <div class="step-title">Data Source</div>
-      <div class="step-desc">The dataset contains 6,261 CalFresh appointment records spanning January 2022 to February 2026, exported from Acuity Scheduling, which the Basic Needs Center uses to manage all CalFresh assistance appointments. While pulling the data from Acuity is straightforward, the form was not designed with analysis in mind, which made cleaning extremely intensive.</div>
+    <div class="sidebar-links">
+      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
+      <a href="../../files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
+      <a href="../../files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
-    <div class="method-step">
-      <div class="step-num">Step 2</div>
-      <div class="step-title">Data Cleaning</div>
-      <div class="step-desc">Cleaning was done entirely in Excel and required several passes. The Acuity form has been modified multiple times over the years, leaving behind deprecated columns, inconsistent dropdown values, and overlapping fields. Key cleaning tasks included text-to-columns parsing, manually creating dummy variables for student eligibilities, standardizing misspelled or inconsistently entered values, and reconciling questions that overlapped with one another in the eligibility section. Because the form structure changed over time, some columns only apply to certain date ranges, which required careful handling before any analysis could begin.</div>
-    </div>
-    <div class="method-step">
-      <div class="step-num">Step 3</div>
-      <div class="step-title">Visualization in Tableau</div>
-      <div class="step-desc">All charts were built in Tableau Desktop and published to Tableau Public. The dashboard is organized across three pages with clickable navigation buttons: Overview (KPI cards, appointment type breakdown, seasonality), Program Trends (CF vs EP over time, no-show and cancellation trends, year-over-year comparison), and Student Profile (EP approval rate, county distribution, eligibility breakdown).</div>
-    </div>
-  </div>
-</div>
+  </aside>
 
-<div id="takeaways" class="tab-panel">
-  <div class="section-heading">What I took away from this project</div>
-  <ul class="takeaway-list">
-    <li>Data cleaning is not a preliminary step — it is the work. The Acuity dataset required multiple passes across deprecated columns, inconsistent values, and overlapping eligibility fields before a single chart could be built. The quality of any analysis is determined almost entirely by how well you understand and handle the mess before you get there.</li>
-    <li>Visualization without context is just aesthetics. The EP crossover, the October spike, the flat no-show rate — none of these findings would have meant anything without knowing how the program actually operates. Understanding that advocates already know fall is busy, or that EP events are a fundamentally different service model than individual appointments, is what turned numbers on a chart into something actionable. Domain knowledge is not optional.</li>
-    <li>Coming back to a place you worked at with new tools is a different experience than building something from scratch. I already knew what questions mattered to the team, which made it easier to prioritize what to visualize and what to leave out. My time at the Basic Needs Center gave me the judgment to use my technical skills in a way that was actually useful to the people who would receive the work.</li>
-    <li>The most useful output of this project was not the dashboard itself — it was the recommendations that the dashboard made possible. Data alone does not drive change. Translating findings into specific, operationally grounded suggestions that a non-technical team can actually act on is where the real analytical work happens.</li>
-    <li>Real program data rarely behaves the way you expect. Fields change meaning over time, new questions get added mid-dataset, and some columns only apply to a subset of records. Learning to work around these constraints without compromising the integrity of the analysis is one of the harder skills to develop, and this project pushed that significantly.</li>
-  </ul>
+  <main class="main-content">
 
-  <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
-  <ul class="tools-list">
-    <li><strong>Excel</strong>: used for all data cleaning and exploratory analysis, including text-to-columns parsing, manual dummy variable creation, standardizing inconsistent dropdown values, and handling columns that only apply to certain date ranges due to form changes over time.</li>
-    <li><strong>Tableau</strong>: used to build all visualizations and the multi-page interactive dashboard with clickable navigation, published to Tableau Public so the Basic Needs Center team can access, present, and update it going forward.</li>
-    <li><strong>Program Evaluation</strong>: applied throughout to ground every finding in operational context, distinguishing between what the data shows and what it actually means for how the program runs.</li>
-    <li><strong>Data Storytelling</strong>: structured the dashboard and written analysis to communicate clearly to a non-technical program leadership audience, prioritizing clarity and actionability over technical depth.</li>
-    <li><strong>Domain Expertise</strong>: firsthand experience working at the Basic Needs Center informed every stage of the project, from knowing which questions to ask of the data to understanding why certain patterns appear and which recommendations are actually feasible to implement.</li>
-  </ul>
+    <div class="headline">UCI Basic Needs: CalFresh Analysis</div>
+
+    <div class="project-subtitle" style="margin-top: 1.75rem;">UCI Basic Needs Center · Data Visualization · 2025–2026</div>
+
+    <div class="meta-row">
+      <span class="meta-tag">Excel</span>
+      <span class="meta-tag">Tableau</span>
+      <span class="meta-tag">Program Evaluation</span>
+      <span class="meta-tag">Data Visualization</span>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">6,261</div>
+        <div class="metric-label">Appointment records analyzed</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">4 yrs</div>
+        <div class="metric-label">Jan 2022 – Feb 2026</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">94.3%</div>
+        <div class="metric-label">Students with at least one eligibility qualifier</div>
+      </div>
+    </div>
+
+    <p class="body-text"><strong>Project Context:</strong> I previously worked as a Program Coordinator at UCI's Basic Needs Center, where part of my role involved analyzing CalFresh assistance appointment data in Excel, looking for patterns, identifying underrepresented communities, and finding opportunities to improve communication with students. After completing coursework in the MSBA program, I reached out to my former supervisor and asked if I could revisit the data with a fresh set of tools and skills. The goal was to build an interactive dashboard that the team could actually use, something they could present, share, and maintain over time to track the performance of their CalFresh assistance services and Enrollment Party events. While the project includes KPIs and recommendations, the broader aim was to give program leadership a clearer, data-driven picture of where their CalFresh initiatives stand. <em>For more on my time at the Basic Needs Center, visit the <a href="../../experience.html">Experience</a> page.</em></p>
+
+    <p class="body-text"><strong>Business Question:</strong> <em>How is the UCI Basic Needs Center's CalFresh assistance program performing over time, and what operational changes would most improve student access and staff efficiency?</em></p>
+
+    <div class="glossary">
+      <div class="glossary-title">Key Terms</div>
+      <div class="glossary-entry"><span class="glossary-term">CalFresh</span><span class="glossary-def">California's name for the federal Supplemental Nutrition Assistance Program (SNAP). The program issues monthly benefits on an EBT card up to $298/month that can be used at most grocery stores and farmers markets. Eligibility is determined by Orange County Social Services. The application process can be confusing and overwhelming for students, which is why the Basic Needs Center offers one-on-one assistance to guide them through it.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">EBT Card</span><span class="glossary-def">Electronic Benefits Transfer card. The physical card loaded with CalFresh benefits each month. Students apply for CalFresh and, if approved, receive an EBT card they can use like a debit card at eligible retailers.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">CalFresh Assistance Appointment</span><span class="glossary-def">A one-on-one appointment offered by the UCI Basic Needs Center where a trained advocate helps a student apply for CalFresh, complete a SAR7, or submit a recertification. Appointments can be virtual (Zoom) or in-person. This is the primary unit of analysis in this project.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Initial Application</span><span class="glossary-def">A student's first CalFresh application. During the appointment, the advocate explains what CalFresh is, walks through the different eligibility pathways, helps gather required documents, applies alongside the student, and explains next steps in the county review process.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Enrollment Party (EP)</span><span class="glossary-def">A day-long event hosted by the Basic Needs Center where students can apply, get approved, and receive their EBT card in a single visit, bypassing the typical 30-day county processing timeline. EP events are designed to maximize throughput and reduce barriers for students who cannot navigate the standard process alone.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Semi-Annual Report (SAR7)</span><span class="glossary-def">A required county check-in submitted 6 months into a CalFresh certification period. Students must report any changes in income, household size, or other eligibility factors. Failure to submit results in benefits being discontinued.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Recertification (RE)</span><span class="glossary-def">The annual renewal of CalFresh benefits at the end of a certification period. Similar to the SAR7 but more comprehensive. The standard CalFresh lifecycle follows: Initial Application, SAR7, RE, SAR7, RE, repeating until the student is no longer eligible.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Student Eligibilities</span><span class="glossary-def">In addition to meeting basic income and household requirements, college students must meet at least one student-specific eligibility criterion to qualify for CalFresh. It is the role of the Basic Needs advocate to explain the different eligibility pathways and identify which ones apply to each student.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">No-Show</span><span class="glossary-def">A student who had a scheduled CalFresh assistance appointment but did not attend and did not cancel in advance. No-shows represent wasted advocate capacity and are a key operational challenge for the program.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">LPIE</span><span class="glossary-def">Local Programs that Increase Employability. Specific majors and programs at UCI approved by the California Department of Social Services as containing an employment and training component. Students enrolled in an LPIE-approved program are automatically exempt from the standard CalFresh student eligibility rule, meaning enrollment alone qualifies them with no additional work or income requirements. LPIE is the most common eligibility qualifier in this dataset at 73.5%.</span></div>
+    </div>
+
+    <div class="section-heading" style="margin-bottom:0.4rem;">Interactive Dashboard</div>
+    <p class="tableau-note">Please use the Overview, Program Trends, and Student Profile buttons at the top of the dashboard to switch between pages.</p>
+
+    <div class="tableau-breakout">
+      <div class="tableau-wrap">
+        <div class="tableauPlaceholder" id="viz1775100456113" style="position: relative"><noscript><a href="#"><img alt="Overview" src="https://public.tableau.com/static/images/BN/BNVisuals/ProgramTrends/1_rss.png" style="border: none"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"><param name="embed_code_version" value="3"><param name="site_root" value=""><param name="name" value="BNVisuals/Overview"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/BN/BNVisuals/ProgramTrends/1.png"><param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="en-US"><param name="filter" value="publish=yes"></object></div><script type="text/javascript">var divElement = document.getElementById('viz1775100456113'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='977px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
+      <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
+      <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
+      <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
+    </div>
+
+    <div id="findings" class="tab-panel active">
+      <div class="section-heading">What the Data Shows</div>
+      <ul class="findings-list">
+        <li><strong>October demand is 2x any other month,</strong> averaging approximately 194 appointments and mapping directly to Fall quarter start and financial aid renewal cycles. This is not new information for advocates, who have always experienced a heavier workload in the fall, but the data puts a concrete number to what the team already knows anecdotally.</li>
+        <li><strong>The EP program has overtaken individual appointments.</strong> Students served at Enrollment Party events grew from 84 in Fall 2022 to 572 in Fall 2025, crossing over individual appointment volume for the first time. Given the trajectory, EP events are expected to continue pulling further ahead as the program scales.</li>
+        <li><strong>No-show and cancellation rates have remained flat,</strong> hovering between 11 and 21% per quarter despite overall program growth and representing roughly 208 missed appointments per year. This is a useful baseline, and the data now exists to measure whether any future intervention actually moves the needle.</li>
+        <li><strong>94.3% of students served have at least one eligibility qualifier,</strong> with LPIE the most common at 73.5%. This is partly a reflection of how much the LPIE list has expanded, with many programs added in 2023 and 2024. The practical implication is that eligibility is no longer the main barrier. The bigger challenge now is simply awareness, as most students qualify but have no idea they do.</li>
+        <li><strong>Fall 2025 EP approval rate decreased</strong> below the 86.8% average, but this should be read in context. EP events are serving dramatically more students than in prior years, and a slight decline in approval rate is a natural byproduct of reaching a broader, less pre-screened population. Volume gains more than offset the rate dip.</li>
+        <li><strong>Zoom appointments are declining year over year,</strong> from 88.9% in 2022 to 74.3% in 2026. This likely reflects both post-COVID comfort with in-person services and the nature of the process itself. CalFresh applications involve gathering documents, reviewing eligibility, and navigating county systems, and some students may simply feel they need in-person support to get through it.</li>
+      </ul>
+    </div>
+
+    <div id="recommendations" class="tab-panel">
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Overhaul the Acuity Scheduling Intake Form</div>
+        <div class="rec-desc">The current intake form was not designed with data analysis in mind, and cleaning the exports is extremely time-intensive. The most pressing issue is the student eligibility section, which spans multiple overlapping questions across undergraduate programs, graduate programs, academic programs, and professional programs, making it difficult to reliably extract which eligibility a student actually has. A redesigned form with cleaner dropdown structures, consolidated eligibility logic, and standardized field names would dramatically reduce cleaning time and improve data quality for future analyses.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Add Two Fields to the Intake Form</div>
+        <div class="rec-desc">Two small additions to the form would significantly improve the dataset over time. First, a post-appointment field capturing the final eligibility the student actually applied with. Currently advocates identify eligibilities before the appointment, but there is no record of which one was ultimately used. Second, a standardized full-name field for the advocate on the case. Right now only first names are recorded, which creates a potential data integrity issue as the team grows and duplicate names become more likely.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Develop SAR7 and Recertification Outreach Campaigns</div>
+        <div class="rec-desc">The data shows strong initial application volume, but there is an opportunity to build more continuity with students through their CalFresh lifecycle. Proactive outreach campaigns timed around SAR7 and recertification deadlines could bring more students back for follow-up appointments, increasing repeat engagement and helping students maintain their benefits rather than letting them lapse.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Establish Automated Post-Appointment Communication</div>
+        <div class="rec-desc">With a redesigned intake form that captures which eligibility a student actually applied with, the center could build targeted post-appointment email workflows tailored to each student's situation. A student who applied under Work Study would receive different follow-up guidance than one who applied under an LPIE program, for example. This kind of personalized outreach would help students stay on track with their case and reduce the number who fall off simply because no one followed up in a way that was relevant to them.</div>
+      </div>
+
+      <div class="rec-card low">
+        <div class="rec-priority">Lower Priority</div>
+        <div class="rec-title">Explore New Strategies to Reduce No-Shows</div>
+        <div class="rec-desc">No-show and cancellation rates have remained flat for four years, and continued generic email reminders have shown negligible returns. Two approaches worth testing are SMS reminders, which tend to have higher open and response rates than email, and more personalized confirmation messages that include a brief introduction to the advocate the student will be meeting. A small human touch before the appointment may increase the sense of commitment and make students more likely to attend.</div>
+      </div>
+
+      <div class="rec-card low">
+        <div class="rec-priority">Lower Priority</div>
+        <div class="rec-title">Revisit Staffing Model as EP Scales</div>
+        <div class="rec-desc">As Enrollment Party events continue to grow and individual appointment volume declines, it may be worth evaluating whether the current staffing balance reflects where the program is heading. One option worth exploring is a gradual shift where some operational and tabling support at EP events is handled by members of the outreach team, who are already focused on student-facing engagement, while the Basic Needs Advocate role is preserved for the one-on-one appointment work that requires deeper program expertise.</div>
+      </div>
+    </div>
+
+    <div id="methodology" class="tab-panel">
+      <div class="method-row">
+        <div class="method-step">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Data Source</div>
+          <div class="step-desc">The dataset contains 6,261 CalFresh appointment records spanning January 2022 to February 2026, exported from Acuity Scheduling, which the Basic Needs Center uses to manage all CalFresh assistance appointments. While pulling the data from Acuity is straightforward, the form was not designed with analysis in mind, which made cleaning extremely intensive.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Data Cleaning</div>
+          <div class="step-desc">Cleaning was done entirely in Excel and required several passes. The Acuity form has been modified multiple times over the years, leaving behind deprecated columns, inconsistent dropdown values, and overlapping fields. Key cleaning tasks included text-to-columns parsing, manually creating dummy variables for student eligibilities, standardizing misspelled or inconsistently entered values, and reconciling questions that overlapped with one another in the eligibility section. Because the form structure changed over time, some columns only apply to certain date ranges, which required careful handling before any analysis could begin.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Visualization in Tableau</div>
+          <div class="step-desc">All charts were built in Tableau Desktop and published to Tableau Public. The dashboard is organized across three pages with clickable navigation buttons: Overview (KPI cards, appointment type breakdown, seasonality), Program Trends (CF vs EP over time, no-show and cancellation trends, year-over-year comparison), and Student Profile (EP approval rate, county distribution, eligibility breakdown).</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="takeaways" class="tab-panel">
+      <div class="section-heading">What I took away from this project</div>
+      <ul class="takeaway-list">
+        <li>Data cleaning is not a preliminary step, it is the work. The Acuity dataset required multiple passes across deprecated columns, inconsistent values, and overlapping eligibility fields before a single chart could be built. The quality of any analysis is determined almost entirely by how well you understand and handle the mess before you get there.</li>
+        <li>Visualization without context is just aesthetics. The EP crossover, the October spike, the flat no-show rate — none of these findings would have meant anything without knowing how the program actually operates. Understanding that advocates already know fall is busy, or that EP events are a fundamentally different service model than individual appointments, is what turned numbers on a chart into something actionable. Domain knowledge is not optional.</li>
+        <li>Coming back to a place you worked at with new tools is a different experience than building something from scratch. I already knew what questions mattered to the team, which made it easier to prioritize what to visualize and what to leave out. My time at the Basic Needs Center gave me the judgment to use my technical skills in a way that was actually useful to the people who would receive the work.</li>
+        <li>The most useful output of this project was not the dashboard itself, it was the recommendations that the dashboard made possible. Data alone does not drive change. Translating findings into specific, operationally grounded suggestions that a non-technical team can actually act on is where the real analytical work happens.</li>
+        <li>Real program data rarely behaves the way you expect. Fields change meaning over time, new questions get added mid-dataset, and some columns only apply to a subset of records. Learning to work around these constraints without compromising the integrity of the analysis is one of the harder skills to develop, and this project pushed that significantly.</li>
+      </ul>
+
+      <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
+      <ul class="tools-list">
+        <li><strong>Excel</strong>: used for all data cleaning and exploratory analysis, including text-to-columns parsing, manual dummy variable creation, standardizing inconsistent dropdown values, and handling columns that only apply to certain date ranges due to form changes over time.</li>
+        <li><strong>Tableau</strong>: used to build all visualizations and the multi-page interactive dashboard with clickable navigation, published to Tableau Public so the Basic Needs Center team can access, present, and update it going forward.</li>
+        <li><strong>Program Evaluation</strong>: applied throughout to ground every finding in operational context, distinguishing between what the data shows and what it actually means for how the program runs.</li>
+        <li><strong>Data Storytelling</strong>: structured the dashboard and written analysis to communicate clearly to a non-technical program leadership audience, prioritizing clarity and actionability over technical depth.</li>
+        <li><strong>Domain Expertise</strong>: firsthand experience working at the Basic Needs Center informed every stage of the project, from knowing which questions to ask of the data to understanding why certain patterns appear and which recommendations are actually feasible to implement.</li>
+      </ul>
+    </div>
+
+  </main>
 </div>
 
 <script>
@@ -340,7 +454,7 @@ function showTab(id, btn) {
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
