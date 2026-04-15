@@ -1,21 +1,3 @@
-.about-contents {text-align: left;}
-.quarto-about-jolla {text-align: left;}
-.quarto-about-jolla p {text-align: left;}
-.quarto-about-jolla h2 {text-align: left;}
-
-.about-image {
-  width: 300px !important;
-  max-width: 100%;
-  margin-bottom: 50px !important;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.quarto-about-jolla .about-image {
-  object-position: center 25%;
-  width: 300px !important;
-  height: 300px !important;
-}
-
 /* Prevent horizontal overflow on mobile */
 html, body {
   overflow-x: hidden;
@@ -24,11 +6,11 @@ html, body {
 
 /* Mobile responsive */
 @media (max-width: 600px) {
-  .nav-cards {flex-direction: column;}
-  .three-col-wrapper {flex-direction: column;}
-  .exp-header {flex-wrap: wrap;}
-  .exp-dates {white-space: normal !important;}
-  .exp-meta {white-space: normal !important;}
+  .nav-cards { flex-direction: column; }
+  .three-col-wrapper { flex-direction: column; }
+  .exp-header { flex-wrap: wrap; }
+  .exp-dates { white-space: normal !important; }
+  .exp-meta { white-space: normal !important; }
 }
 
 /* Fix bullet alignment in target boxes */
@@ -40,67 +22,13 @@ html, body {
   flex-shrink: 0;
 }
 
-.proj-card .tags .tag,
-.proj-card .tags span.tag {
-  font-size: 0.75rem !important;
-  font-weight: 400 !important;
-  line-height: 1.6 !important;
-  padding: 2px 7px !important;
-}
-
-.proj-card .tools-row .tool,
-.proj-card .tools-row span.tool {
-  font-size: 0.75rem !important;
-  font-weight: 400 !important;
-  line-height: 1.6 !important;
-}
-
-.proj-card .card-cta {
-  font-size: 0.75rem !important;
-  font-weight: 600 !important;
-}
-
-.takeaway-list li,
-.tools-list li,
-.section-heading {
-  font-size: 1rem !important;
-}
-
-.timeline-wrapper table tbody tr {
-  background-color: transparent !important;
-}
-.timeline-wrapper table tbody tr:nth-child(odd),
-.timeline-wrapper table tbody tr:nth-child(even) {
-  background-color: transparent !important;
-}
-
-html {
-  font-size: 16px !important;
-}
-
+/* Hide Quarto chrome */
 #quarto-header,
 .navbar,
 nav.navbar {
   display: none !important;
-}
-
-#quarto-header {
-  display: none !important;
   height: 0 !important;
   overflow: hidden !important;
-}
-
-body {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-#title-block-header {
-  display: none !important;
-}
-
-#quarto-content > * {
-  padding-top: 0 !important;
 }
 
 #title-block-header {
@@ -108,4 +36,13 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   height: 0 !important;
+}
+
+body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+#quarto-content > * {
+  padding-top: 0 !important;
 }
