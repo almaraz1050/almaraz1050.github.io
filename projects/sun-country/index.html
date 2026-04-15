@@ -78,12 +78,10 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-layout-custom">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -105,265 +103,406 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-:root {
-  --fs-title: 1rem;
-  --fs-body:  0.95rem;
-  --fs-small: 0.85rem;
-  --c-title:  #1a1a1a;
-  --c-body:   #444;
-  --lh:       1.6;
-}
-h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
-.project-header {margin: 0 0 2rem 0;}
-.back-link {font-size: var(--fs-small); color: var(--c-body); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 1.5rem; line-height: var(--lh);}
-.back-link:hover {color: var(--c-title);}
-.project-subtitle {font-size: var(--fs-body); color: var(--c-body); margin-bottom: 1.5rem; line-height: var(--lh);}
-.meta-row {display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem;}
-.meta-tag {font-size: var(--fs-small); padding: 3px 10px; border-radius: 20px; background: #f5f5f5; color: var(--c-body); border: 1px solid #e8e8e8; line-height: var(--lh);}
-.metrics-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2rem;}
-.metric-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center;}
-.metric-value {font-size: 1.6rem; font-weight: 700; color: var(--c-title); line-height: 1.2;}
-.metric-label {font-size: var(--fs-small); color: var(--c-body); margin-top: 4px; line-height: var(--lh);}
-.overview-text {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
-.bq-block {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
-.glossary {background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1rem;}
-.glossary-title {font-size: var(--fs-small); font-weight: 700; color: var(--c-body); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: var(--lh);}
-.glossary-entry {display: grid; grid-template-columns: 160px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0;}
-.glossary-entry:last-child {border-bottom: none; padding-bottom: 0;}
-.glossary-term {font-size: var(--fs-small); font-weight: 700; color: var(--c-title); line-height: var(--lh);}
-.glossary-def {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
-.intro-divider {border: none; border-top: 1px solid #e5e5e5; margin: 0 0 2rem 0;}
-.tabs {display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5;}
-.tab-btn {font-size: var(--fs-body); font-weight: 400; color: var(--c-body); background: none; border: none; padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: inherit; line-height: var(--lh);}
-.tab-btn:hover {color: var(--c-title);}
-.tab-btn.active {color: var(--c-title); border-bottom-color: var(--c-title); font-weight: 500;}
-.tab-panel {display: none; padding: 2rem 0;}
-.tab-panel.active {display: block;}
-.section-heading {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: var(--lh);}
-.section-heading:first-child {margin-top: 0;}
-.prose {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1rem;}
-.segment-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 1.5rem; margin-bottom: 1.5rem;}
-.segment-card {border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #e8e8e8;}
-.segment-name {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 4px; line-height: var(--lh);}
-.segment-pct {font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;}
-.segment-desc {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
-.seg-0 {background: #e8f1fb; border-color: #c5d9f0;} .seg-0 .segment-pct {color: #185fa5;}
-.seg-1 {background: #faece7; border-color: #f0c4b3;} .seg-1 .segment-pct {color: #993c1d;}
-.seg-2 {background: #e1f5ee; border-color: #9fe1cb;} .seg-2 .segment-pct {color: #0f6e56;}
-.seg-3 {background: #faeeda; border-color: #fac775;} .seg-3 .segment-pct {color: #854f0b;}
-.seg-4 {background: #eeedfe; border-color: #afa9ec;} .seg-4 .segment-pct {color: #534ab7;}
-.eda-list {list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0;}
-.eda-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 7px 0 7px 18px; position: relative; border-bottom: 1px solid #f5f5f5;}
-.eda-list li:last-child {border-bottom: none;}
-.eda-list li::before {content: '•'; position: absolute; left: 0; color: var(--c-body); font-size: 14px;}
-/* Rec cards: priority colors intentionally preserved */
-.rec-card {border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0;}
-.rec-card.high {border-left-color: #e24b4a;}
-.rec-card.med {border-left-color: #ef9f27;}
-.rec-card.low {border-left-color: #639922;}
-.rec-priority {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: var(--lh);}
-.rec-card.high .rec-priority {color: #e24b4a;}
-.rec-card.med .rec-priority {color: #ef9f27;}
-.rec-card.low .rec-priority {color: #639922;}
-.rec-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 5px; line-height: var(--lh);}
-.rec-segment {font-size: var(--fs-small); font-weight: 600; margin-bottom: 8px; line-height: var(--lh);}
-.rec-card.high .rec-segment {color: #e24b4a;}
-.rec-card.med .rec-segment {color: #ef9f27;}
-.rec-card.low .rec-segment {color: #639922;}
-.rec-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
-.method-row {display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem;}
-.method-step {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
-.step-num {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; color: var(--c-body); text-transform: uppercase; margin-bottom: 4px; line-height: var(--lh);}
-.step-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 6px; line-height: var(--lh);}
-.step-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
-.tools-list {list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0;}
-.tools-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 9px 0; border-bottom: 1px solid #f0f0f0;}
-.tools-list li:last-child {border-bottom: none;}
-.tools-list li strong {color: var(--c-title);}
-.takeaway-list {list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter;}
-.takeaway-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter;}
-.takeaway-list li::before {content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: var(--fs-small); font-weight: 700; color: var(--c-body); background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1;}
-.takeaway-list li:last-child {border-bottom: none;}
-.deliverables-bar {display: flex; flex-wrap: wrap; gap: 10px; padding: 1.25rem; background: #f9f9f9; border-radius: 10px; border: 1px solid #efefef; margin-top: 2rem;}
-.deliverable-btn {font-size: var(--fs-small); font-weight: 500; color: #3b82f6; text-decoration: none; padding: 6px 14px; border: 1px solid #b5d4f4; border-radius: 6px; background: #fff; transition: background 0.15s; line-height: var(--lh);}
-.deliverable-btn:hover {background: #e8f1fb; text-decoration: none;}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+
+#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+
+#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
+
+.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
+
+.sidebar-name { font-size: 18px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+
+.sidebar-credential { font-size: 16px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+
+.sidebar-avail { font-size: 16px; color: #f5f5f5; margin-bottom: 2px; }
+
+.sidebar-grad { font-size: 16px; color: #f5f5f5; margin-bottom: 2rem; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 16px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+
+.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+
+.sidebar-nav a.active { background: #1e3a5f; }
+
+.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+
+.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+
+.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+
+.sidebar-links a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-links a:hover { color: #aaaaaa; }
+
+.sidebar-deliverables-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.2rem 0 1.2rem; }
+
+.sidebar-deliverables-label { font-size: 16px; font-weight: 500; color: #60a5fa; margin-bottom: 7px; }
+
+.sidebar-deliverables { display: flex; flex-direction: column; gap: 7px; }
+
+.sidebar-deliverables a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-deliverables a:hover { color: #aaaaaa; }
+
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
+
+.project-subtitle { font-size: 16px; color: #444; margin-top: 0; margin-bottom: 1rem; line-height: 1.5; }
+
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.75rem; }
+
+.meta-tag { font-size: 14px !important; padding: 6px 14px; border-radius: 5px; background: #111; color: #fff; border: 0.5px solid #111; line-height: 1.5; display: inline-flex; align-items: center; }
+
+.rule-bold { border: none !important; border-top: 1.5px solid #111 !important; margin: 1.5rem 0 1.5rem; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.75rem; }
+
+.metric-card { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center; border: 1px solid #efefef; }
+
+.metric-value { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; line-height: 1.2; }
+
+.metric-label { font-size: 14px; color: #444; margin-top: 4px; line-height: 1.5; }
+
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.glossary { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; }
+
+.glossary-title { font-size: 14px; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: 1.5; }
+
+.glossary-entry { display: grid; grid-template-columns: 160px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; }
+
+.glossary-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+.glossary-term { font-size: 14px; font-weight: 400; color: #1a1a1a; line-height: 1.5; }
+
+.glossary-def { font-size: 14px; color: #444; line-height: 1.5; }
+
+.tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5; }
+
+.tab-btn { font-size: 16px; font-weight: 400; color: #444; background: none; border: none; padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: 'DM Sans', sans-serif; line-height: 1.5; }
+
+.tab-btn:hover { color: #111; }
+
+.tab-btn.active { color: #111; border-bottom-color: #111; font-weight: 500; }
+
+.tab-panel { display: none; padding: 2rem 0; }
+
+.tab-panel.active { display: block; }
+
+.section-heading { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: 1.5; }
+
+.section-heading:first-child { margin-top: 0; }
+
+.prose { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1rem; }
+
+.segment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 1.5rem; margin-bottom: 1.5rem; }
+
+.segment-card { border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #e8e8e8; }
+
+.segment-name { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; line-height: 1.5; }
+
+.segment-pct { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+
+.segment-desc { font-size: 14px; color: #444; line-height: 1.5; }
+
+.seg-0 { background: #e8f1fb; border-color: #c5d9f0; } .seg-0 .segment-pct { color: #185fa5; }
+.seg-1 { background: #faece7; border-color: #f0c4b3; } .seg-1 .segment-pct { color: #993c1d; }
+.seg-2 { background: #e1f5ee; border-color: #9fe1cb; } .seg-2 .segment-pct { color: #0f6e56; }
+.seg-3 { background: #faeeda; border-color: #fac775; } .seg-3 .segment-pct { color: #854f0b; }
+.seg-4 { background: #eeedfe; border-color: #afa9ec; } .seg-4 .segment-pct { color: #534ab7; }
+
+.eda-list { list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0; }
+
+.eda-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; border-bottom: 1px solid #f5f5f5; }
+
+.eda-list li:last-child { border-bottom: none; }
+
+.eda-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
+
+.rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
+
+.rec-card.high { border-left-color: #e24b4a; }
+.rec-card.med { border-left-color: #ef9f27; }
+.rec-card.low { border-left-color: #639922; }
+
+.rec-priority { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: 1.5; }
+
+.rec-card.high .rec-priority { color: #e24b4a; }
+.rec-card.med .rec-priority { color: #ef9f27; }
+.rec-card.low .rec-priority { color: #639922; }
+
+.rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
+
+.rec-segment { font-size: 14px; font-weight: 600; margin-bottom: 8px; line-height: 1.5; }
+
+.rec-card.high .rec-segment { color: #e24b4a; }
+.rec-card.med .rec-segment { color: #ef9f27; }
+.rec-card.low .rec-segment { color: #639922; }
+
+.rec-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.method-row { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem; }
+
+.method-step { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef; }
+
+.step-num { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #444; text-transform: uppercase; margin-bottom: 4px; line-height: 1.5; }
+
+.step-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; line-height: 1.5; }
+
+.step-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.tools-list { list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0; }
+
+.tools-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0; }
+
+.tools-list li:last-child { border-bottom: none; }
+
+.tools-list li strong { color: #1a1a1a; }
+
+.takeaway-list { list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter; }
+
+.takeaway-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter; }
+
+.takeaway-list li::before { content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: 14px; font-weight: 700; color: #444; background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1; }
+
+.takeaway-list li:last-child { border-bottom: none; }
+
+
+
+.intro-divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem 0; }
 </style>
 
-<div class="project-header">
-  <a class="back-link" href="../../projects.html">← Back to Projects</a>
-  <div class="project-subtitle">BANA 200 · University of California, Irvine · Summer 2025</div>
-  <div class="meta-row">
-    <span class="meta-tag">K-Means Clustering</span>
-    <span class="meta-tag">Python</span>
-    <span class="meta-tag">Customer Analytics</span>
-    <span class="meta-tag">Predictive Analytics</span>
-  </div>
-</div>
+<div class="portfolio-shell">
 
-<div class="metrics-grid">
-  <div class="metric-card">
-    <div class="metric-value">15,144</div>
-    <div class="metric-label">Customer records analyzed</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">5</div>
-    <div class="metric-label">Distinct segments identified</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">52.7%</div>
-    <div class="metric-label">Customers in highest-priority segments</div>
-  </div>
-</div>
+  <aside class="sidebar">
+    <img src="../../images/Headshot1.jpg" alt="Allan Almaraz" class="sidebar-photo" onerror="this.style.display='none'">
+    <div class="sidebar-name">Allan Almaraz</div>
+    <div class="sidebar-credential">MSBA · UC Irvine</div>
+    <div class="sidebar-avail">Available June 2026</div>
+    <div class="sidebar-grad">Graduating August 2026</div>
 
-<p class="overview-text"><strong>Project Context:</strong> Sun Country Airlines, a Minneapolis-based low-cost leisure carrier, had no dedicated data analyst on staff and relied entirely on anecdotal assumptions to drive marketing decisions. Acting as an analytics consultant for a BANA 200 case study, I applied K-Means clustering to 15,144 customer-trip records spanning 2013 to 2014, identifying five actionable segments and translating the findings into three targeted campaigns directly tied to leadership's stated goals around Ufly loyalty enrollment, direct channel growth, and vacation package differentiation.</p>
+    <nav class="sidebar-nav">
+      <a href="../../index.html">
+        <span class="nav-pip"></span>Home
+      </a>
+      <a href="../../about.html">
+        <span class="nav-pip"></span>About Me
+      </a>
+      <a href="../../experience.html">
+        <span class="nav-pip"></span>Experience
+      </a>
+      <a href="../../projects.html" class="active">
+        <span class="nav-pip"></span>Projects
+      </a>
+    </nav>
 
-<p class="bq-block"><strong>Business Question:</strong> <em>Which distinct customer segments exist within Sun Country's booking data, and what targeted strategies should the airline pursue to grow loyalty enrollment, increase direct bookings, and differentiate its vacation packages?</em></p>
+    <hr class="sidebar-rule">
 
-<div class="glossary">
-  <div class="glossary-title">Key Terms</div>
-  <div class="glossary-entry"><span class="glossary-term">MSP</span><span class="glossary-def">Minneapolis-Saint Paul International Airport. Sun Country's home base and the origin or destination for the majority of customers in this dataset.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">K-Means Clustering</span><span class="glossary-def">A machine learning algorithm that groups records into k clusters based on similarity. Each cluster represents customers who share common booking behaviors and travel patterns.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Ufly Rewards</span><span class="glossary-def">Sun Country's loyalty program. Members earn points on flights and purchases. At the time of this analysis, enrollment was extremely low across the customer base.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Elbow Method</span><span class="glossary-def">A technique for choosing the right number of clusters (k). You plot the model's error at each value of k and look for the point where adding more clusters stops producing meaningful improvement, the "elbow" in the curve.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Silhouette Score</span><span class="glossary-def">A measure of how well each customer fits its assigned cluster versus neighboring clusters. Higher scores indicate cleaner, more distinct groupings.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">EDA</span><span class="glossary-def">Exploratory Data Analysis. Examining the raw data through summary statistics and visualizations before any modeling begins.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Direct Channel</span><span class="glossary-def">A booking made through Sun Country's own website (SCA.com), which avoids third-party commissions and allows direct loyalty enrollment.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Third-Party Channel</span><span class="glossary-def">A booking made through platforms like Expedia or Google Flights. Sun Country earns less margin and has limited ability to engage the customer post-booking.</span></div>
-</div>
-
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
-  <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
-  <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
-  <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
-</div>
-
-<div id="findings" class="tab-panel active">
-  <div class="section-heading">The 5 Customer Segments</div>
-  <p class="prose">K-Means clustering with k=5 revealed five distinct, business-interpretable customer groups. The clearest structural pattern was a near-complete booking channel split between Clusters 0 and 1, who share the same Minneapolis leisure traveler profile but differ entirely in where they book. Loyalty program participation was almost entirely absent outside of Cluster 3.</p>
-  <div class="segment-grid">
-    <div class="segment-card seg-0">
-      <div class="segment-name">C0: MSP Direct Bookers</div>
-      <div class="segment-pct">27.3%</div>
-      <div class="segment-desc">MSP locals booking on SCA.com. 74% direct channel. 99.9% non-Ufly — the single largest loyalty enrollment opportunity.</div>
+    <div class="sidebar-links">
+      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
+      <a href="../../files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
+      <a href="../../files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
-    <div class="segment-card seg-1">
-      <div class="segment-name">C1: MSP Deal Seekers</div>
-      <div class="segment-pct">25.4%</div>
-      <div class="segment-desc">Same traveler as C0 but 100% third-party channel (Expedia, Google Flights). A margin problem with a structural fix.</div>
+
+    <hr class="sidebar-deliverables-rule">
+
+    <div class="sidebar-deliverables-label">Project Deliverables</div>
+    <div class="sidebar-deliverables">
+      <a href="report.pdf" target="_blank">Full Report →</a>
+      <a href="slides.pdf" target="_blank">Slides →</a>
+      <a href="code.html" target="_blank">Code →</a>
     </div>
-    <div class="segment-card seg-2">
-      <div class="segment-name">C2: Inbound Visitors</div>
-      <div class="segment-pct">16.1%</div>
-      <div class="segment-desc">95% fly INTO Minneapolis. Low spend, one-way dominant, 95% non-Ufly. Forms a cross-sell mirror with C4.</div>
+  </aside>
+
+  <main class="main-content">
+
+    <div class="headline">Sun Country Airlines: Customer Segmentation</div>
+
+    <div class="project-subtitle" style="margin-top: 1.75rem;">BANA 200 · University of California, Irvine · Summer 2025</div>
+
+    <div class="meta-row">
+      <span class="meta-tag">K-Means Clustering</span>
+      <span class="meta-tag">Python</span>
+      <span class="meta-tag">Customer Analytics</span>
+      <span class="meta-tag">Predictive Analytics</span>
     </div>
-    <div class="segment-card seg-3">
-      <div class="segment-name">C3: Loyal Frequent Fliers</div>
-      <div class="segment-pct">15.7%</div>
-      <div class="segment-desc">99% Ufly Standard. Highest ticket spend and longest booking lead time of any segment. Peak travel in Q4.</div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">15,144</div>
+        <div class="metric-label">Customer records analyzed</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">5</div>
+        <div class="metric-label">Distinct segments identified</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">52.7%</div>
+        <div class="metric-label">Customers in highest-priority segments</div>
+      </div>
     </div>
-    <div class="segment-card seg-4">
-      <div class="segment-name">C4: Returning Home Fliers</div>
-      <div class="segment-pct">15.5%</div>
-      <div class="segment-desc">98% flying home to MSP. 30% Ufly Standard — partial loyalty conversion already underway. Natural vacation package target.</div>
+
+    <p class="body-text"><strong>Project Context:</strong> Sun Country Airlines, a Minneapolis-based low-cost leisure carrier, had no dedicated data analyst on staff and relied entirely on anecdotal assumptions to drive marketing decisions. Acting as an analytics consultant for a BANA 200 case study, I applied K-Means clustering to 15,144 customer-trip records spanning 2013 to 2014, identifying five actionable segments and translating the findings into three targeted campaigns directly tied to leadership's stated goals around Ufly loyalty enrollment, direct channel growth, and vacation package differentiation.</p>
+
+    <p class="body-text"><strong>Business Question:</strong> <em>Which distinct customer segments exist within Sun Country's booking data, and what targeted strategies should the airline pursue to grow loyalty enrollment, increase direct bookings, and differentiate its vacation packages?</em></p>
+
+    <div class="glossary">
+      <div class="glossary-title">Key Terms</div>
+      <div class="glossary-entry"><span class="glossary-term">MSP</span><span class="glossary-def">Minneapolis-Saint Paul International Airport. Sun Country's home base and the origin or destination for the majority of customers in this dataset.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">K-Means Clustering</span><span class="glossary-def">A machine learning algorithm that groups records into k clusters based on similarity. Each cluster represents customers who share common booking behaviors and travel patterns.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Ufly Rewards</span><span class="glossary-def">Sun Country's loyalty program. Members earn points on flights and purchases. At the time of this analysis, enrollment was extremely low across the customer base.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Elbow Method</span><span class="glossary-def">A technique for choosing the right number of clusters (k). You plot the model's error at each value of k and look for the point where adding more clusters stops producing meaningful improvement. That inflection point in the curve is the "elbow."</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Silhouette Score</span><span class="glossary-def">A measure of how well each customer fits its assigned cluster versus neighboring clusters. Higher scores indicate cleaner, more distinct groupings.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">EDA</span><span class="glossary-def">Exploratory Data Analysis. Examining the raw data through summary statistics and visualizations before any modeling begins.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Direct Channel</span><span class="glossary-def">A booking made through Sun Country's own website (SCA.com), which avoids third-party commissions and allows direct loyalty enrollment.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Third-Party Channel</span><span class="glossary-def">A booking made through platforms like Expedia or Google Flights. Sun Country earns less margin and has limited ability to engage the customer post-booking.</span></div>
     </div>
-  </div>
 
-  <hr class="intro-divider">
-
-  <div class="section-heading">Key Insight from EDA</div>
-  <p class="prose">Before any model was run, exploratory data analysis surfaced two numbers that defined the entire business opportunity and foreshadowed what the clustering would find:</p>
-  <ul class="eda-list">
-    <li><strong>78.5% of customers were not enrolled in Ufly Rewards</strong> — the loyalty program was almost entirely untapped across the customer base.</li>
-    <li><strong>Booking channels split nearly evenly</strong> — 45.9% booked direct through SCA.com while 44.0% went through third-party platforms like Expedia and Google Flights, a structural revenue gap hiding in plain sight.</li>
-  </ul>
-  <p class="prose">These two patterns set the direction for the entire analysis. The segmentation that followed gave them shape, revealing exactly which customer groups were driving each split and what it would take to move them.</p>
-</div>
-
-<div id="recommendations" class="tab-panel">
-  <p class="prose">Three campaigns were designed, each mapped directly to one of leadership's stated business objectives around Ufly enrollment, direct channel migration, and vacation package differentiation.</p>
-
-  <div class="rec-card high">
-    <div class="rec-priority">High Priority</div>
-    <div class="rec-title">Launch Direct Booking and Ufly Enrollment Campaign</div>
-    <div class="rec-segment">C0 + C1 — 52.7% of all customers</div>
-    <div class="rec-desc">C0 already books direct but 99.9% are non-Ufly. A post-booking enrollment prompt with a first-flight miles bonus is low-friction and high-volume. C1 books 100% through third parties — a guaranteed 5 to 10% direct-booking discount gives them a concrete reason to switch channels, where an enrollment prompt can then be served.</div>
-  </div>
-
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Introduce a Ufly Elite Tier for Loyal Frequent Fliers</div>
-    <div class="rec-segment">C3 — 15.7% of customers</div>
-    <div class="rec-desc">C3 is 99% Ufly Standard with the highest ticket spend of any segment. There is currently no Elite tier to aspire toward. A competitor offering a status-match could rapidly erode years of built loyalty. Gating Elite perks (priority boarding, free checked bag) behind a spend threshold creates a concrete retention mechanism before a competitor acts.</div>
-  </div>
-
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Cross-Sell Outbound Vacation Packages at Checkout</div>
-    <div class="rec-segment">C4 — 15.5% of customers</div>
-    <div class="rec-desc">C4 flies home to MSP one-way and 30% already hold Ufly Standard. A customer completing a homebound trip via Sun Country is primed for an outbound vacation package offer at checkout. A "Plan your next escape" prompt converts one-way buyers into round-trip vacation customers and deepens Ufly engagement in a segment with existing brand affinity.</div>
-  </div>
-
-  <div class="rec-card low">
-    <div class="rec-priority">Low Priority</div>
-    <div class="rec-title">Round-Trip Bundle Offer</div>
-    <div class="rec-segment">C2 — 16.1% of customers</div>
-    <div class="rec-desc">C2 is the most transactional and lowest-spend segment. A round-trip bundle offer is worth testing but is not the core focus given limited brand attachment and low Ufly engagement.</div>
-  </div>
-</div>
-
-<div id="methodology" class="tab-panel">
-  <div class="method-row">
-    <div class="method-step">
-      <div class="step-num">Step 1</div>
-      <div class="step-title">Data Preparation</div>
-      <div class="step-desc">Started with 15,144 records across 90 features covering booking channel, loyalty status, demographics, origin and destination airports, and travel seasonality. Removed two identifier columns (uid and PNRLocatorID) that carry no analytical signal. All remaining 88 features were pre-normalized to a 0 to 1 scale. The dataset had no missing values.</div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
+      <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
+      <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
+      <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
     </div>
-    <div class="method-step">
-      <div class="step-num">Step 2</div>
-      <div class="step-title">Exploratory Data Analysis</div>
-      <div class="step-desc">Examined the distribution of key variables before any modeling. The near-even booking channel split (46% direct vs 44% third-party) and the 78.5% non-Ufly enrollment rate emerged as the two most important structural patterns. Destination frequency showed MSP dominated, confirming a locally concentrated customer base. These findings shaped the interpretation of every cluster that followed.</div>
-    </div>
-    <div class="method-step">
-      <div class="step-num">Step 3</div>
-      <div class="step-title">Choosing k = 5</div>
-      <div class="step-desc">Tested values of k from 2 through 10. The elbow method plots within-cluster sum of squares at each k — the point where the curve flattens signals diminishing returns from adding more clusters. A clear elbow appeared at k=5. Silhouette analysis confirmed k=5 as the optimal balance of statistical fit and business interpretability. See the full elbow curve in the notebook.</div>
-    </div>
-    <div class="method-step">
-      <div class="step-num">Step 4</div>
-      <div class="step-title">K-Means Clustering</div>
-      <div class="step-desc">Final model fit with k=5, random_state=42 for reproducibility, and n_init=10 to run from 10 different starting points and select the best result. Clusters were reordered by size. Each cluster's centroid was translated into a named segment profile with a clear business interpretation and a recommended action tied to leadership's stated goals.</div>
-    </div>
-  </div>
-</div>
 
-<div id="takeaways" class="tab-panel">
-  <div class="section-heading">What I took away from this project</div>
-  <ul class="takeaway-list">
-    <li>The channel split between C0 and C1 was the single most strategically interesting finding. Two customer groups with near-identical travel profiles diverged entirely on where they booked, which meant two very different interventions for what initially looked like one audience.</li>
-    <li>Naming segments matters. Translating cluster centroids into personas like MSP Direct Bookers and MSP Deal Seekers made the results immediately usable for stakeholders who would never look at a centroid table. Communication is part of the analysis.</li>
-    <li>Framing findings around business objectives, not just statistical patterns, is what makes an analysis actionable. Every segment was evaluated through the lens of leadership's three stated goals: loyalty enrollment, direct channel growth, and vacation package differentiation.</li>
-    <li>Data gaps are part of the analysis. The absence of ancillary spend data, post-flight satisfaction scores, and loyalty conversion event tracking were not just limitations to acknowledge — they became the basis for a concrete long-term data strategy recommendation.</li>
-    <li>Unsupervised learning requires more judgment than supervised learning. There is no target variable to optimize against and no accuracy score to chase. Decisions about how many clusters to use, which features matter, and what a centroid means in business terms all come down to analyst judgment. That judgment is where the real work happens.</li>
-  </ul>
+    <div id="findings" class="tab-panel active">
+      <div class="section-heading">The 5 Customer Segments</div>
+      <p class="prose">K-Means clustering with k=5 revealed five distinct, business-interpretable customer groups. The clearest structural pattern was a near-complete booking channel split between Clusters 0 and 1, who share the same Minneapolis leisure traveler profile but differ entirely in where they book. Loyalty program participation was almost entirely absent outside of Cluster 3.</p>
+      <div class="segment-grid">
+        <div class="segment-card seg-0">
+          <div class="segment-name">C0: MSP Direct Bookers</div>
+          <div class="segment-pct">27.3%</div>
+          <div class="segment-desc">MSP locals booking on SCA.com. 74% direct channel. 99.9% are not enrolled in Ufly, making this the single largest loyalty enrollment opportunity.</div>
+        </div>
+        <div class="segment-card seg-1">
+          <div class="segment-name">C1: MSP Deal Seekers</div>
+          <div class="segment-pct">25.4%</div>
+          <div class="segment-desc">Same traveler as C0 but 100% third-party channel (Expedia, Google Flights). A margin problem with a structural fix.</div>
+        </div>
+        <div class="segment-card seg-2">
+          <div class="segment-name">C2: Inbound Visitors</div>
+          <div class="segment-pct">16.1%</div>
+          <div class="segment-desc">95% fly INTO Minneapolis. Low spend, one-way dominant, 95% non-Ufly. Forms a cross-sell mirror with C4.</div>
+        </div>
+        <div class="segment-card seg-3">
+          <div class="segment-name">C3: Loyal Frequent Fliers</div>
+          <div class="segment-pct">15.7%</div>
+          <div class="segment-desc">99% Ufly Standard. Highest ticket spend and longest booking lead time of any segment. Peak travel in Q4.</div>
+        </div>
+        <div class="segment-card seg-4">
+          <div class="segment-name">C4: Returning Home Fliers</div>
+          <div class="segment-pct">15.5%</div>
+          <div class="segment-desc">98% flying home to MSP. 30% hold Ufly Standard, meaning partial loyalty conversion is already underway. Natural vacation package target.</div>
+        </div>
+      </div>
 
-  <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
-  <ul class="tools-list">
-    <li><strong>Python</strong>: primary language for the entire analysis. Used to load and inspect the dataset, run all EDA, build and evaluate clustering models, and generate every visualization.</li>
-    <li><strong>pandas</strong>: used for data manipulation throughout: filtering rows, computing group-level summary statistics, and building the centroid comparison tables used to profile each segment.</li>
-    <li><strong>scikit-learn</strong>: provided the KMeans algorithm and silhouette scoring. Used to fit models across k=2 through k=10 and select the optimal number of clusters.</li>
-    <li><strong>matplotlib and seaborn</strong>: used to produce all visualizations including the elbow curve, silhouette plot, booking channel distributions, Ufly enrollment breakdown, and per-cluster destination bar charts.</li>
-    <li><strong>K-Means Clustering</strong>: core modeling technique. Applied to 88 normalized features to identify five behaviorally distinct customer groups from the raw booking data.</li>
-    <li><strong>Elbow Method and Silhouette Analysis</strong>: used together to select k=5 as the optimal cluster count, balancing statistical fit with the requirement that segments be interpretable and actionable.</li>
-    <li><strong>Business Communication</strong>: translated cluster centroids into named personas, mapped each segment to a specific leadership goal, and structured findings into a prioritized campaign brief for a non-technical audience.</li>
-  </ul>
-</div>
+      <hr class="intro-divider">
 
-<div class="deliverables-bar">
-  <span style="font-size:var(--fs-small); font-weight:600; color:var(--c-body); align-self:center;">Deliverables:</span>
-  <a class="deliverable-btn" href="report.pdf" target="_blank">📄 Full Report</a>
-  <a class="deliverable-btn" href="slides.pdf" target="_blank">📊 Slides</a>
-  <a class="deliverable-btn" href="code.html" target="_blank">💻 Code</a>
+      <div class="section-heading" style="margin-top: 2rem;">Key Insight from EDA</div>
+      <p class="prose">Before any model was run, exploratory data analysis surfaced two numbers that defined the entire business opportunity and foreshadowed what the clustering would find:</p>
+      <ul class="eda-list">
+        <li><strong>78.5% of customers were not enrolled in Ufly Rewards.</strong> The loyalty program was almost entirely untapped across the customer base.</li>
+        <li><strong>Booking channels split nearly evenly.</strong> 45.9% booked direct through SCA.com while 44.0% went through third-party platforms like Expedia and Google Flights, a structural revenue gap hiding in plain sight.</li>
+      </ul>
+      <p class="prose">These two patterns set the direction for the entire analysis. The segmentation that followed gave them shape, revealing exactly which customer groups were driving each split and what it would take to move them.</p>
+    </div>
+
+    <div id="recommendations" class="tab-panel">
+      <p class="prose">Three campaigns were designed, each mapped directly to one of leadership's stated business objectives around Ufly enrollment, direct channel migration, and vacation package differentiation.</p>
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Launch Direct Booking and Ufly Enrollment Campaign</div>
+        <div class="rec-segment">C0 + C1 - 52.7% of all customers</div>
+        <div class="rec-desc">C0 already books direct but 99.9% are not enrolled in Ufly. A post-booking enrollment prompt with a first-flight miles bonus is low-friction and high-volume. C1 books 100% through third parties, so a guaranteed 5 to 10% direct-booking discount gives them a concrete reason to switch channels, where an enrollment prompt can then be served.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Introduce a Ufly Elite Tier for Loyal Frequent Fliers</div>
+        <div class="rec-segment">C3 - 15.7% of customers</div>
+        <div class="rec-desc">C3 is 99% Ufly Standard with the highest ticket spend of any segment. There is currently no Elite tier to aspire toward. A competitor offering a status-match could rapidly erode years of built loyalty. Gating Elite perks (priority boarding, free checked bag) behind a spend threshold creates a concrete retention mechanism before a competitor acts.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Cross-Sell Outbound Vacation Packages at Checkout</div>
+        <div class="rec-segment">C4 - 15.5% of customers</div>
+        <div class="rec-desc">C4 flies home to MSP one-way and 30% already hold Ufly Standard. A customer completing a homebound trip via Sun Country is primed for an outbound vacation package offer at checkout. A "Plan your next escape" prompt converts one-way buyers into round-trip vacation customers and deepens Ufly engagement in a segment with existing brand affinity.</div>
+      </div>
+
+      <div class="rec-card low">
+        <div class="rec-priority">Low Priority</div>
+        <div class="rec-title">Round-Trip Bundle Offer</div>
+        <div class="rec-segment">C2 - 16.1% of customers</div>
+        <div class="rec-desc">C2 is the most transactional and lowest-spend segment. A round-trip bundle offer is worth testing but is not the core focus given limited brand attachment and low Ufly engagement.</div>
+      </div>
+    </div>
+
+    <div id="methodology" class="tab-panel">
+      <div class="method-row">
+        <div class="method-step">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Data Preparation</div>
+          <div class="step-desc">Started with 15,144 records across 90 features covering booking channel, loyalty status, demographics, origin and destination airports, and travel seasonality. Removed two identifier columns (uid and PNRLocatorID) that carry no analytical signal. All remaining 88 features were pre-normalized to a 0 to 1 scale. The dataset had no missing values.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Exploratory Data Analysis</div>
+          <div class="step-desc">Examined the distribution of key variables before any modeling. The near-even booking channel split (46% direct vs 44% third-party) and the 78.5% non-Ufly enrollment rate emerged as the two most important structural patterns. Destination frequency showed MSP dominated, confirming a locally concentrated customer base. These findings shaped the interpretation of every cluster that followed.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Choosing k = 5</div>
+          <div class="step-desc">Tested values of k from 2 through 10. The elbow method plots within-cluster sum of squares at each k. The point where the curve flattens signals diminishing returns from adding more clusters. A clear elbow appeared at k=5. Silhouette analysis confirmed k=5 as the optimal balance of statistical fit and business interpretability. See the full elbow curve in the notebook.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">K-Means Clustering</div>
+          <div class="step-desc">Final model fit with k=5, random_state=42 for reproducibility, and n_init=10 to run from 10 different starting points and select the best result. Clusters were reordered by size. Each cluster's centroid was translated into a named segment profile with a clear business interpretation and a recommended action tied to leadership's stated goals.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="takeaways" class="tab-panel">
+      <div class="section-heading">What I took away from this project</div>
+      <ul class="takeaway-list">
+        <li>The channel split between C0 and C1 was the single most strategically interesting finding. Two customer groups with near-identical travel profiles diverged entirely on where they booked, which meant two very different interventions for what initially looked like one audience.</li>
+        <li>Naming segments matters. Translating cluster centroids into personas like MSP Direct Bookers and MSP Deal Seekers made the results immediately usable for stakeholders who would never look at a centroid table. Communication is part of the analysis.</li>
+        <li>Framing findings around business objectives, not just statistical patterns, is what makes an analysis actionable. Every segment was evaluated through the lens of leadership's three stated goals: loyalty enrollment, direct channel growth, and vacation package differentiation.</li>
+        <li>Data gaps are part of the analysis. The absence of ancillary spend data, post-flight satisfaction scores, and loyalty conversion event tracking were not just limitations to acknowledge. They became the basis for a concrete long-term data strategy recommendation.</li>
+        <li>Unsupervised learning requires more judgment than supervised learning. There is no target variable to optimize against and no accuracy score to chase. Decisions about how many clusters to use, which features matter, and what a centroid means in business terms all come down to analyst judgment. That judgment is where the real work happens.</li>
+      </ul>
+
+      <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
+      <ul class="tools-list">
+        <li><strong>Python</strong>: primary language for the entire analysis. Used to load and inspect the dataset, run all EDA, build and evaluate clustering models, and generate every visualization.</li>
+        <li><strong>pandas</strong>: used for data manipulation throughout: filtering rows, computing group-level summary statistics, and building the centroid comparison tables used to profile each segment.</li>
+        <li><strong>scikit-learn</strong>: provided the KMeans algorithm and silhouette scoring. Used to fit models across k=2 through k=10 and select the optimal number of clusters.</li>
+        <li><strong>matplotlib and seaborn</strong>: used to produce all visualizations including the elbow curve, silhouette plot, booking channel distributions, Ufly enrollment breakdown, and per-cluster destination bar charts.</li>
+        <li><strong>K-Means Clustering</strong>: core modeling technique. Applied to 88 normalized features to identify five behaviorally distinct customer groups from the raw booking data.</li>
+        <li><strong>Elbow Method and Silhouette Analysis</strong>: used together to select k=5 as the optimal cluster count, balancing statistical fit with the requirement that segments be interpretable and actionable.</li>
+        <li><strong>Business Communication</strong>: translated cluster centroids into named personas, mapped each segment to a specific leadership goal, and structured findings into a prioritized campaign brief for a non-technical audience.</li>
+      </ul>
+    </div>
+
+
+
+  </main>
 </div>
 
 <script>
@@ -377,7 +516,7 @@ function showTab(id, btn) {
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
