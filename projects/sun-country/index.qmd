@@ -142,6 +142,8 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .eda-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
 
+.eda-list li strong { color: #1a1a1a; font-weight: 600; }
+
 .rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
 
 .rec-card.high { border-left-color: #e24b4a; }
@@ -156,7 +158,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
 
-.rec-segment { font-size: 14px; font-weight: 600; margin-bottom: 8px; line-height: 1.5; }
+.rec-segment { font-size: 16px !important; font-weight: 400; margin-bottom: 8px; line-height: 1.5; }
 
 .rec-card.high .rec-segment { color: #e24b4a; }
 .rec-card.med .rec-segment { color: #ef9f27; }

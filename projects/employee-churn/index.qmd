@@ -1,5 +1,9 @@
 ---
 title: "Predicting Employee Churn"
+format:
+  html:
+    page-layout: custom
+    toc: false
 resources:
   - report.pdf
   - slides.pdf
@@ -8,263 +12,402 @@ resources:
 
 ```{=html}
 <style>
-:root {
-  --fs-title: 1rem;
-  --fs-body:  0.95rem;
-  --fs-small: 0.85rem;
-  --c-title:  #1a1a1a;
-  --c-body:   #444;
-  --lh:       1.6;
-}
-h1.title {font-size: 1.6rem; margin-top: 2.5rem;}
-.project-header {margin: 0 0 2rem 0;}
-.back-link {font-size: var(--fs-small); color: var(--c-body); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 1.5rem; line-height: var(--lh);}
-.back-link:hover {color: var(--c-title);}
-.project-subtitle {font-size: var(--fs-body); color: var(--c-body); margin-bottom: 1.5rem; line-height: var(--lh);}
-.meta-row {display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem;}
-.meta-tag {font-size: var(--fs-small); padding: 3px 10px; border-radius: 20px; background: #f5f5f5; color: var(--c-body); border: 1px solid #e8e8e8; line-height: var(--lh);}
-.metrics-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2rem;}
-.metric-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center;}
-.metric-value {font-size: 1.6rem; font-weight: 700; color: var(--c-title); line-height: 1.2;}
-.metric-label {font-size: var(--fs-small); color: var(--c-body); margin-top: 4px; line-height: var(--lh);}
-.overview-text {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
-.bq-block {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1.25rem;}
-.glossary {background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1rem;}
-.glossary-title {font-size: var(--fs-small); font-weight: 700; color: var(--c-body); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: var(--lh);}
-.glossary-entry {display: grid; grid-template-columns: 180px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0;}
-.glossary-entry:last-child {border-bottom: none; padding-bottom: 0;}
-.glossary-term {font-size: var(--fs-small); font-weight: 700; color: var(--c-title); line-height: var(--lh);}
-.glossary-def {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
-.intro-divider {border: none; border-top: 1px solid #e5e5e5; margin: 0 0 2rem 0;}
-.tabs {display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5;}
-.tab-btn {font-size: var(--fs-body); font-weight: 400; color: var(--c-body); background: none; border: none; padding: 12px 24px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: inherit; line-height: var(--lh);}
-.tab-btn:hover {color: var(--c-title);}
-.tab-btn.active {color: var(--c-title); border-bottom-color: var(--c-title); font-weight: 500;}
-.tab-panel {display: none; padding: 2rem 0;}
-.tab-panel.active {display: block;}
-.section-heading {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: var(--lh);}
-.section-heading:first-child {margin-top: 0;}
-.prose {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); margin-bottom: 1rem;}
-.findings-list {list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0;}
-.findings-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 7px 0 7px 18px; position: relative; border-bottom: 1px solid #f5f5f5;}
-.findings-list li:last-child {border-bottom: none;}
-.findings-list li::before {content: '•'; position: absolute; left: 0; color: var(--c-body); font-size: 14px;}
-.model-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.5rem 0;}
-.model-card {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
-.model-card-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 6px; line-height: var(--lh);}
-.model-card-recall {font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; color: var(--c-title);}
-.model-card-label {font-size: var(--fs-small); color: var(--c-body); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; line-height: var(--lh);}
-.model-card-desc {font-size: var(--fs-small); color: var(--c-body); line-height: var(--lh);}
-.model-card.winner {border: 2px solid var(--c-title); background: #fff;}
-.winner-badge {display: inline-block; font-size: var(--fs-small); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; background: var(--c-title); color: #fff; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px;}
-/* Rec cards: priority colors intentionally preserved */
-.rec-card {border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0;}
-.rec-card.high {border-left-color: #e24b4a;}
-.rec-card.med {border-left-color: #ef9f27;}
-.rec-card.low {border-left-color: #639922;}
-.rec-priority {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: var(--lh);}
-.rec-card.high .rec-priority {color: #e24b4a;}
-.rec-card.med .rec-priority {color: #ef9f27;}
-.rec-card.low .rec-priority {color: #639922;}
-.rec-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 5px; line-height: var(--lh);}
-.rec-segment {font-size: var(--fs-small); font-weight: 600; margin-bottom: 8px; line-height: var(--lh);}
-.rec-card.high .rec-segment {color: #e24b4a;}
-.rec-card.med .rec-segment {color: #ef9f27;}
-.rec-card.low .rec-segment {color: #639922;}
-.rec-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
-.method-row {display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem;}
-.method-step {background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef;}
-.step-num {font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; color: var(--c-body); text-transform: uppercase; margin-bottom: 4px; line-height: var(--lh);}
-.step-title {font-size: var(--fs-title); font-weight: 600; color: var(--c-title); margin-bottom: 6px; line-height: var(--lh);}
-.step-desc {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh);}
-.tools-list {list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0;}
-.tools-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 9px 0; border-bottom: 1px solid #f0f0f0;}
-.tools-list li:last-child {border-bottom: none;}
-.tools-list li strong {color: var(--c-title);}
-.takeaway-list {list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter;}
-.takeaway-list li {font-size: var(--fs-body); color: var(--c-body); line-height: var(--lh); padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter;}
-.takeaway-list li::before {content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: var(--fs-small); font-weight: 700; color: var(--c-body); background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1;}
-.takeaway-list li:last-child {border-bottom: none;}
-.deliverables-bar {display: flex; flex-wrap: wrap; gap: 10px; padding: 1.25rem; background: #f9f9f9; border-radius: 10px; border: 1px solid #efefef; margin-top: 2rem;}
-.deliverable-btn {font-size: var(--fs-small); font-weight: 500; color: #3b82f6; text-decoration: none; padding: 6px 14px; border: 1px solid #b5d4f4; border-radius: 6px; background: #fff; transition: background 0.15s; line-height: var(--lh);}
-.deliverable-btn:hover {background: #e8f1fb; text-decoration: none;}
-@media (max-width: 600px) {.model-grid {grid-template-columns: 1fr;}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+
+#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+
+#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
+
+.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
+
+.sidebar-name { font-size: 18px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+
+.sidebar-credential { font-size: 16px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+
+.sidebar-avail { font-size: 16px; color: #f5f5f5; margin-bottom: 2px; }
+
+.sidebar-grad { font-size: 16px; color: #f5f5f5; margin-bottom: 2rem; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 16px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+
+.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+
+.sidebar-nav a.active { background: #1e3a5f; }
+
+.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+
+.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+
+.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+
+.sidebar-links a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-links a:hover { color: #aaaaaa; }
+
+.sidebar-deliverables-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.2rem 0 1.2rem; }
+
+.sidebar-deliverables-label { font-size: 16px; font-weight: 500; color: #60a5fa; margin-bottom: 7px; }
+
+.sidebar-deliverables { display: flex; flex-direction: column; gap: 7px; }
+
+.sidebar-deliverables a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-deliverables a:hover { color: #aaaaaa; }
+
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
+
+.project-subtitle { font-size: 16px; color: #444; margin-top: 0; margin-bottom: 1rem; line-height: 1.5; }
+
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.75rem; }
+
+.meta-tag { font-size: 14px !important; padding: 6px 14px; border-radius: 5px; background: #111; color: #fff; border: 0.5px solid #111; line-height: 1.5; display: inline-flex; align-items: center; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.75rem; }
+
+.metric-card { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center; border: 1px solid #efefef; }
+
+.metric-value { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; line-height: 1.2; }
+
+.metric-label { font-size: 14px; color: #444; margin-top: 4px; line-height: 1.5; }
+
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.glossary { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; }
+
+.glossary-title { font-size: 14px; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: 1.5; }
+
+.glossary-entry { display: grid; grid-template-columns: 180px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; }
+
+.glossary-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+.glossary-term { font-size: 14px; font-weight: 400; color: #1a1a1a; line-height: 1.5; }
+
+.glossary-def { font-size: 14px; color: #444; line-height: 1.5; }
+
+.tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5; }
+
+.tab-btn { font-size: 16px; font-weight: 400; color: #444; background: none; border: none; padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: 'DM Sans', sans-serif; line-height: 1.5; }
+
+.tab-btn:hover { color: #111; }
+
+.tab-btn.active { color: #111; border-bottom-color: #111; font-weight: 500; }
+
+.tab-panel { display: none; padding: 2rem 0; }
+
+.tab-panel.active { display: block; }
+
+.section-heading { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: 1.5; }
+
+.section-heading:first-child { margin-top: 0; }
+
+.prose { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1rem; }
+
+.findings-list { list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0; }
+
+.findings-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; }
+
+.findings-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
+
+.findings-list li strong { color: #1a1a1a; font-weight: 600; }
+
+.model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.5rem 0; }
+
+.model-card { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef; }
+
+.model-card-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; line-height: 1.5; }
+
+.model-card-recall { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
+
+.model-card-label { font-size: 14px; color: #444; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; line-height: 1.5; }
+
+.model-card-desc { font-size: 14px; color: #444; line-height: 1.5; }
+
+.model-card.winner { border: 2px solid #111; background: #fff; }
+
+.winner-badge { display: inline-block; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; background: #111; color: #fff; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+
+.rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
+
+.rec-card.high { border-left-color: #e24b4a; }
+.rec-card.med { border-left-color: #ef9f27; }
+.rec-card.low { border-left-color: #639922; }
+
+.rec-priority { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: 1.5; }
+
+.rec-card.high .rec-priority { color: #e24b4a; }
+.rec-card.med .rec-priority { color: #ef9f27; }
+.rec-card.low .rec-priority { color: #639922; }
+
+.rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
+
+.rec-segment { font-size: 16px !important; font-weight: 400; margin-bottom: 8px; line-height: 1.5; }
+
+.rec-card.high .rec-segment { color: #e24b4a; }
+.rec-card.med .rec-segment { color: #ef9f27; }
+.rec-card.low .rec-segment { color: #639922; }
+
+.rec-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.method-row { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem; }
+
+.method-step { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef; }
+
+.step-num { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #444; text-transform: uppercase; margin-bottom: 4px; line-height: 1.5; }
+
+.step-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; line-height: 1.5; }
+
+.step-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.tools-list { list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0; }
+
+.tools-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0; }
+
+.tools-list li:last-child { border-bottom: none; }
+
+.tools-list li strong { color: #1a1a1a; }
+
+.takeaway-list { list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter; }
+
+.takeaway-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter; }
+
+.takeaway-list li::before { content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: 14px; font-weight: 700; color: #444; background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1; }
+
+.takeaway-list li:last-child { border-bottom: none; }
 </style>
 
-<div class="project-header">
-  <a class="back-link" href="../../projects.html">← Back to Projects</a>
-  <div class="project-subtitle">BANA 273 · University of California, Irvine · Fall 2025</div>
-  <div class="meta-row">
-    <span class="meta-tag">Logistic Regression</span>
-    <span class="meta-tag">Decision Tree</span>
-    <span class="meta-tag">Python</span>
-    <span class="meta-tag">Machine Learning</span>
-    <span class="meta-tag">Predictive Analytics</span>
-  </div>
-</div>
+<div class="portfolio-shell">
 
-<div class="metrics-grid">
-  <div class="metric-card">
-    <div class="metric-value">4,653</div>
-    <div class="metric-label">Employee records analyzed</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">2</div>
-    <div class="metric-label">Models compared</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">79%</div>
-    <div class="metric-label">Best recall achieved</div>
-  </div>
-</div>
+  <aside class="sidebar">
+    <img
+      src="../../images/Headshot1.jpg"
+      alt="Allan Almaraz"
+      class="sidebar-photo"
+      onerror="this.style.display='none'"
+    >
+    <div class="sidebar-name">Allan Almaraz</div>
+    <div class="sidebar-credential">MSBA · UC Irvine</div>
+    <div class="sidebar-avail">Available June 2026</div>
+    <div class="sidebar-grad">Graduating August 2026</div>
 
-<p class="overview-text"><strong>Project Context:</strong> Employee turnover imposes substantial costs on organizations through lost expertise, productivity disruptions, and expenses tied to recruitment and training. For this BANA 273 machine learning project, my team analyzed a <a href="https://www.kaggle.com/datasets/tejashvi14/employee-future-prediction" target="_blank">publicly available Kaggle dataset</a> of 4,653 employees across three major Indian cities to answer a central question about which employee characteristics most strongly predict voluntary churn. The goal was not just to understand the drivers, but to build a model capable of identifying at-risk employees early enough to enable targeted intervention.</p>
+    <nav class="sidebar-nav">
+      <a href="../../index.html">
+        <span class="nav-pip"></span>Home
+      </a>
+      <a href="../../about.html">
+        <span class="nav-pip"></span>About Me
+      </a>
+      <a href="../../experience.html">
+        <span class="nav-pip"></span>Experience
+      </a>
+      <a href="../../projects.html" class="active">
+        <span class="nav-pip"></span>Projects
+      </a>
+    </nav>
 
-<p class="bq-block"><strong>Business Question:</strong> <em>Which employee attributes and organizational factors most strongly influence churn, and how accurately can they be used to identify at-risk employees?</em></p>
+    <hr class="sidebar-rule">
 
-<div class="glossary">
-  <div class="glossary-title">Key Terms</div>
-  <div class="glossary-entry"><span class="glossary-term">Churn</span><span class="glossary-def">When an employee voluntarily leaves the organization. In this dataset, the outcome variable indicates whether an employee left within two years of the observation.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Recall</span><span class="glossary-def">The proportion of actual churners the model correctly identifies. A high recall means fewer at-risk employees are missed. This was the primary evaluation metric because missing a churner (a false negative) is far more costly than flagging a stable employee.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Class Imbalance</span><span class="glossary-def">When one outcome is much more common than the other. In this dataset, 65.6% of employees stay and only 34.4% churn. Without addressing this, a model can achieve decent accuracy by simply predicting everyone stays, while catching no churners at all.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Logistic Regression</span><span class="glossary-def">A supervised learning model that estimates the probability of an outcome based on a linear combination of predictors. It produces interpretable coefficients and odds ratios that show how each variable independently influences churn risk.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Decision Tree</span><span class="glossary-def">A model that recursively splits the data into groups based on input features. Unlike logistic regression, it captures nonlinear relationships and interaction effects, showing how combinations of attributes create churn risk pathways.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Odds Ratio</span><span class="glossary-def">From the logistic regression model, this measures how much more likely churn is for one group versus another. An odds ratio of 2.4 for Master's degree holders means they are 2.4 times more likely to churn than Bachelor's degree holders, holding other variables constant.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Benched</span><span class="glossary-def">An employee who has been placed on the bench, meaning they are not currently assigned to a project. The dataset tracks whether this has ever occurred, as bench time is associated with elevated churn risk.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Threshold Tuning</span><span class="glossary-def">Adjusting the probability cutoff at which a model classifies someone as a churner. Lowering the threshold from 0.50 to 0.35 causes the model to flag more borderline cases as churners, increasing recall at the cost of some false positives.</span></div>
-  <div class="glossary-entry"><span class="glossary-term">Cross-Validation</span><span class="glossary-def">A technique that tests the model on multiple different splits of the data to confirm that performance is stable and not dependent on any one particular training set.</span></div>
-</div>
-
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
-  <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
-  <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
-  <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
-</div>
-
-<div id="findings" class="tab-panel active">
-  <div class="section-heading">Who Is Most Likely to Leave?</div>
-  <p class="prose">Churn is not randomly distributed across the workforce. Both models consistently pointed to the same groups as highest risk, with risk concentrated at the intersection of tenure, pay, education, and location rather than any single factor acting alone.</p>
-  <ul class="findings-list">
-    <li><strong>Mid-pay tier employees show the highest churn</strong> — the dissatisfaction appears sharpest when compensation is neither entry-level nor high enough to feel rewarding. The logistic model found mid-pay employees have 2.2x the churn odds of low-pay employees.</li>
-    <li><strong>Master's degree holders churn at higher rates than both Bachelor's and PhD employees</strong> — likely reflecting greater external mobility and a mismatch between expectation and available advancement. Odds ratio: 2.4x versus Bachelor's.</li>
-    <li><strong>Employees who have been benched show noticeably elevated churn</strong> — periods without project assignment appear to signal instability or exclusion. Odds ratio: 1.5x versus never benched.</li>
-    <li><strong>Pune employees have the highest churn rate of the three cities</strong> — at 1.6x the odds of Bangalore employees, pointing to regional labor market dynamics or workplace conditions that differ from the other hubs.</li>
-    <li><strong>Female employees show a higher churn proportion than male employees</strong> — a pattern that emerged consistently in descriptive analysis and was confirmed in the logistic model.</li>
-  </ul>
-
-  <div class="section-heading">Model Performance Comparison</div>
-  <p class="prose">Two supervised learning models were built and compared. The tuned Decision Tree outperformed logistic regression on the primary objective of maximizing recall for churners, while logistic regression provided clearer interpretability through odds ratios.</p>
-  <div class="model-grid">
-    <div class="model-card">
-      <div class="model-card-title">Logistic Regression</div>
-      <div class="model-card-recall">63%</div>
-      <div class="model-card-label">Recall (Churn Class)</div>
-      <div class="model-card-desc">After L1 regularization and class-weight balancing. Identified education, pay tier, city, benching, and gender as the strongest predictors. Strong interpretability through odds ratios.</div>
+    <div class="sidebar-links">
+      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
+      <a href="../../files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
+      <a href="../../files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
-    <div class="model-card winner">
-      <div class="model-card-title">Tuned Decision Tree</div>
-      <div class="model-card-recall">79%</div>
-      <div class="model-card-label">Recall (Churn Class)</div>
-      <div class="model-card-desc">Pre-pruned with balanced class weights and a lowered decision threshold of 0.35. Identified joining year and payment tier as the dominant splits, capturing nonlinear interactions the logistic model cannot.</div>
+
+    <hr class="sidebar-deliverables-rule">
+
+    <div class="sidebar-deliverables-label">Project Deliverables</div>
+    <div class="sidebar-deliverables">
+      <a href="report.pdf" target="_blank">Full Report →</a>
+      <a href="slides.pdf" target="_blank">Slides →</a>
+      <a href="code.html" target="_blank">Code →</a>
     </div>
-  </div>
-  <p class="prose">The two models offer complementary perspectives. Logistic regression surfaces broad linear trends and interpretable effect sizes. The decision tree reveals how churn risk unfolds through conditional pathways, where tenure, pay, and education combine in ways that neither variable alone would predict.</p>
-</div>
+  </aside>
 
-<div id="recommendations" class="tab-panel">
-  <p class="prose">The modeling results translate directly into five retention strategies that HR teams and managers can act on, targeting the specific employee groups identified as highest risk.</p>
+  <main class="main-content">
 
-  <div class="rec-card high">
-    <div class="rec-priority">High Priority</div>
-    <div class="rec-title">Target Long-Tenured Mid-Pay Employees First</div>
-    <div class="rec-segment">Primary risk group across both models</div>
-    <div class="rec-desc">The decision tree identified joining year and payment tier as the two dominant predictors of churn. Longer-tenured employees in the mid-pay tier are the highest-risk combination in the dataset. Targeted outreach — career-development conversations, internal mobility options, or differentiated pay adjustments — should be concentrated here before turnover occurs.</div>
-  </div>
+    <div class="headline">Predicting Employee Churn</div>
 
-  <div class="rec-card high">
-    <div class="rec-priority">High Priority</div>
-    <div class="rec-title">Review Mid-Tier Compensation Structure</div>
-    <div class="rec-segment">Mid-pay tier — 19.7% of employees, 2.2x churn odds</div>
-    <div class="rec-desc">Mid-tier dissatisfaction was the most consistent finding across both models. A pay equity analysis focused on this band, with clearer promotion pathways and salary benchmarking against market rates, could address the perceived mismatch between contribution and compensation that appears to be driving elevated turnover.</div>
-  </div>
+    <div class="project-subtitle" style="margin-top: 1.75rem;">BANA 273 · University of California, Irvine · Fall 2025</div>
 
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Minimize Bench Time and Improve Communication During Gaps</div>
-    <div class="rec-segment">Ever-benched employees — 10.3% of workforce, 1.5x churn odds</div>
-    <div class="rec-desc">Employees who have been benched face meaningfully higher churn odds. Reducing unassigned periods where possible, and proactively communicating with employees when benching is unavoidable, can reduce the sense of exclusion or instability that bench time appears to create.</div>
-  </div>
-
-  <div class="rec-card med">
-    <div class="rec-priority">Medium Priority</div>
-    <div class="rec-title">Develop Location-Specific Retention Programs for Pune</div>
-    <div class="rec-segment">Pune employees — 1.6x churn odds vs Bangalore</div>
-    <div class="rec-desc">Churn rates in Pune are significantly higher than in Bangalore and New Delhi. Retention strategies should not be applied uniformly across all three cities. Local labor market conditions, compensation benchmarks, and engagement programs should be evaluated and tailored specifically for the Pune workforce.</div>
-  </div>
-
-  <div class="rec-card low">
-    <div class="rec-priority">Lower Priority</div>
-    <div class="rec-title">Create Advancement Pathways for Highly Educated Employees</div>
-    <div class="rec-segment">Master's degree holders — 18.8% of workforce, 2.4x churn odds</div>
-    <div class="rec-desc">Master's degree holders churn at more than double the rate of Bachelor's degree employees. Creating clearer recognition, advancement tracks, and career development opportunities for this group can reduce the gap between expectation and reality that likely drives their higher departure rate.</div>
-  </div>
-</div>
-
-<div id="methodology" class="tab-panel">
-  <div class="method-row">
-    <div class="method-step">
-      <div class="step-num">Step 1</div>
-      <div class="step-title">Data Preparation</div>
-      <div class="step-desc">The Employee Future Prediction dataset from Kaggle contains 4,653 employee records across 9 attributes covering education, joining year, city of employment, payment tier, age, gender, benching history, domain experience, and the churn outcome. The dataset had no missing values and required minimal preprocessing. For logistic regression, categorical variables (education, city, payment tier) were one-hot encoded to ensure appropriate estimation. The decision tree used original categorical encodings directly. A 70/30 train-test split with a fixed random state of 42 was used throughout for reproducibility.</div>
+    <div class="meta-row">
+      <span class="meta-tag">Logistic Regression</span>
+      <span class="meta-tag">Decision Tree</span>
+      <span class="meta-tag">Python</span>
+      <span class="meta-tag">Machine Learning</span>
+      <span class="meta-tag">Predictive Analytics</span>
     </div>
-    <div class="method-step">
-      <div class="step-num">Step 2</div>
-      <div class="step-title">Addressing Class Imbalance</div>
-      <div class="step-desc">65.6% of employees stay and only 34.4% churn — a meaningful imbalance that makes overall accuracy a misleading metric. A model predicting everyone stays would achieve 65.6% accuracy while catching zero actual churners. To counter this, both models used class_weight="balanced" to adjust the loss function and place greater emphasis on correctly identifying the minority churn class. Recall for the churn class became the primary evaluation metric throughout the project.</div>
-    </div>
-    <div class="method-step">
-      <div class="step-num">Step 3</div>
-      <div class="step-title">Logistic Regression Modeling</div>
-      <div class="step-desc">A baseline logistic regression was estimated first using default scikit-learn settings, achieving a churn recall of only 0.41. The model was then improved using GridSearchCV, which selected L1 regularization (lasso penalty), class-weight balancing, and a regularization strength of C=0.1. L1 regularization shrinks weaker coefficients to zero, removing uninformative predictors and improving interpretability. The improved model raised churn recall to approximately 0.63, with 5-fold cross-validation confirming stability (mean recall 0.629 across folds).</div>
-    </div>
-    <div class="method-step">
-      <div class="step-num">Step 4</div>
-      <div class="step-title">Decision Tree Modeling</div>
-      <div class="step-desc">A baseline decision tree already outperformed the logistic baseline (recall 0.64) without any tuning. The pre-pruned version applied class_weight="balanced", a maximum depth of 8, minimum 10 samples per leaf, and minimum split size of 5 to prevent overfitting. The decision threshold was then lowered from 0.50 to 0.35, allowing the model to flag borderline cases as churners. This final tuned tree achieved test-set recall of 0.79, with 5-fold cross-validation confirming stability (mean recall 0.727).</div>
-    </div>
-  </div>
-</div>
 
-<div id="takeaways" class="tab-panel">
-  <div class="section-heading">What I took away from this project</div>
-  <ul class="takeaway-list">
-    <li>Choosing the right evaluation metric matters more than choosing the right model. Once recall replaced accuracy as the primary objective, everything about how we built and compared models changed. A model that looked decent by accuracy was actually catching fewer than half of the churners it needed to find.</li>
-    <li>Threshold tuning is an underused lever. Lowering the decision threshold from 0.50 to 0.35 lifted recall from 0.64 to 0.79 on the decision tree without any additional feature engineering. It is one of the most practical tools available for imbalanced classification problems.</li>
-    <li>Different models tell different stories about the same problem. Logistic regression identified benching history as a strong predictor through its odds ratios, while the decision tree assigned it minimal importance. Neither is wrong — they are capturing different types of relationships in the data, and both perspectives are useful.</li>
-    <li>Class imbalance is not just a modeling problem, it is a framing problem. Recognizing that missing a churner is far more costly than flagging a stable employee shaped every modeling decision we made, from class weighting to threshold selection to how we reported results.</li>
-    <li>The clearest actionable output of a churn model is not the model itself, it is the ranked list of risk factors it produces. Tenure, pay tier, education, and location each point to a specific and concrete HR intervention. The model is only useful if it translates into something a manager can act on.</li>
-  </ul>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">4,653</div>
+        <div class="metric-label">Employee records analyzed</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">2</div>
+        <div class="metric-label">Models compared</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">79%</div>
+        <div class="metric-label">Best recall achieved</div>
+      </div>
+    </div>
 
-  <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
-  <ul class="tools-list">
-    <li><strong>Python</strong>: primary language for the entire analysis. Used to load and preprocess the dataset, build and evaluate both models, tune hyperparameters, and generate all visualizations.</li>
-    <li><strong>pandas</strong>: used for data manipulation, one-hot encoding of categorical variables, and building the summary tables used to compare model performance across configurations.</li>
-    <li><strong>Cross-Validation</strong>: used throughout to confirm that model performance generalized beyond the training split. 5-fold CV was applied to both the logistic regression and decision tree, with recall scores evaluated across each fold to verify stability before finalizing any model.</li>
-    <li><strong>scikit-learn</strong>: provided LogisticRegression, DecisionTreeClassifier, GridSearchCV, and cross_val_score. Used to fit baseline and tuned versions of both models and evaluate recall across folds.</li>
-    <li><strong>matplotlib and seaborn</strong>: used to produce all visualizations including the churn outcome distribution, attribute distribution charts, odds ratio bar chart, information gain rankings, and the recall comparison chart.</li>
-    <li><strong>Logistic Regression</strong>: applied with L1 regularization and class-weight balancing to produce interpretable odds ratios and identify the linear predictors of churn risk.</li>
-    <li><strong>Decision Tree Classifier</strong>: applied with pre-pruning constraints and threshold tuning to capture nonlinear interactions and achieve the highest recall of any model in the project.</li>
-    <li><strong>GridSearchCV</strong>: used to systematically search hyperparameter combinations for both models, selecting configurations that maximized recall on the training data.</li>
-    <li><strong>Business Communication</strong>: translated model coefficients and information gain rankings into five concrete HR recommendations, each tied to a specific employee group and a specific intervention strategy.</li>
-  </ul>
-</div>
+    <p class="body-text"><strong>Project Context:</strong> Employee turnover imposes substantial costs on organizations through lost expertise, productivity disruptions, and expenses tied to recruitment and training. For this BANA 273 machine learning project, my team analyzed a <a href="https://www.kaggle.com/datasets/tejashvi14/employee-future-prediction" target="_blank">publicly available Kaggle dataset</a> of 4,653 employees across three major Indian cities to answer a central question about which employee characteristics most strongly predict voluntary churn. The goal was not just to understand the drivers, but to build a model capable of identifying at-risk employees early enough to enable targeted intervention.</p>
 
-<div class="deliverables-bar">
-  <span style="font-size:var(--fs-small); font-weight:600; color:var(--c-body); align-self:center;">Deliverables:</span>
-  <a class="deliverable-btn" href="report.pdf" target="_blank">📄 Full Report</a>
-  <a class="deliverable-btn" href="slides.pdf" target="_blank">📊 Slides</a>
-  <a class="deliverable-btn" href="code.html" target="_blank">💻 Code</a>
+    <p class="body-text"><strong>Business Question:</strong> <em>Which employee attributes and organizational factors most strongly influence churn, and how accurately can they be used to identify at-risk employees?</em></p>
+
+    <div class="glossary">
+      <div class="glossary-title">Key Terms</div>
+      <div class="glossary-entry"><span class="glossary-term">Churn</span><span class="glossary-def">When an employee voluntarily leaves the organization. In this dataset, the outcome variable indicates whether an employee left within two years of the observation.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Recall</span><span class="glossary-def">The proportion of actual churners the model correctly identifies. A high recall means fewer at-risk employees are missed. This was the primary evaluation metric because missing a churner (a false negative) is far more costly than flagging a stable employee.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Class Imbalance</span><span class="glossary-def">When one outcome is much more common than the other. In this dataset, 65.6% of employees stay and only 34.4% churn. Without addressing this, a model can achieve decent accuracy by simply predicting everyone stays, while catching no churners at all.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Logistic Regression</span><span class="glossary-def">A supervised learning model that estimates the probability of an outcome based on a linear combination of predictors. It produces interpretable coefficients and odds ratios that show how each variable independently influences churn risk.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Decision Tree</span><span class="glossary-def">A model that recursively splits the data into groups based on input features. Unlike logistic regression, it captures nonlinear relationships and interaction effects, showing how combinations of attributes create churn risk pathways.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Odds Ratio</span><span class="glossary-def">From the logistic regression model, this measures how much more likely churn is for one group versus another. An odds ratio of 2.4 for Master's degree holders means they are 2.4 times more likely to churn than Bachelor's degree holders, holding other variables constant.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Benched</span><span class="glossary-def">An employee who has been placed on the bench, meaning they are not currently assigned to a project. The dataset tracks whether this has ever occurred, as bench time is associated with elevated churn risk.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Threshold Tuning</span><span class="glossary-def">Adjusting the probability cutoff at which a model classifies someone as a churner. Lowering the threshold from 0.50 to 0.35 causes the model to flag more borderline cases as churners, increasing recall at the cost of some false positives.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Cross-Validation</span><span class="glossary-def">A technique that tests the model on multiple different splits of the data to confirm that performance is stable and not dependent on any one particular training set.</span></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
+      <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
+      <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
+      <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
+    </div>
+
+    <div id="findings" class="tab-panel active">
+      <div class="section-heading">Who Is Most Likely to Leave?</div>
+      <p class="prose">Churn is not randomly distributed across the workforce. Both models consistently pointed to the same groups as highest risk, with risk concentrated at the intersection of tenure, pay, education, and location rather than any single factor acting alone.</p>
+      <ul class="findings-list">
+        <li><strong>Mid-pay tier employees show the highest churn.</strong> The dissatisfaction appears sharpest when compensation is neither entry-level nor high enough to feel rewarding. The logistic model found mid-pay employees have 2.2x the churn odds of low-pay employees.</li>
+        <li><strong>Master's degree holders churn at higher rates than both Bachelor's and PhD employees.</strong> This likely reflects greater external mobility and a mismatch between expectation and available advancement. Odds ratio: 2.4x versus Bachelor's.</li>
+        <li><strong>Employees who have been benched show noticeably elevated churn.</strong> Periods without project assignment appear to signal instability or exclusion. Odds ratio: 1.5x versus never benched.</li>
+        <li><strong>Pune employees have the highest churn rate of the three cities</strong> at 1.6x the odds of Bangalore employees, pointing to regional labor market dynamics or workplace conditions that differ from the other hubs.</li>
+        <li><strong>Female employees show a higher churn proportion than male employees,</strong> a pattern that emerged consistently in descriptive analysis and was confirmed in the logistic model.</li>
+      </ul>
+
+      <div class="section-heading" style="margin-top: 2rem;">Model Performance Comparison</div>
+      <p class="prose">Two supervised learning models were built and compared. The tuned Decision Tree outperformed logistic regression on the primary objective of maximizing recall for churners, while logistic regression provided clearer interpretability through odds ratios.</p>
+      <div class="model-grid">
+        <div class="model-card">
+          <div class="model-card-title">Logistic Regression</div>
+          <div class="model-card-recall">63%</div>
+          <div class="model-card-label">Recall (Churn Class)</div>
+          <div class="model-card-desc">After L1 regularization and class-weight balancing. Identified education, pay tier, city, benching, and gender as the strongest predictors. Strong interpretability through odds ratios.</div>
+        </div>
+        <div class="model-card winner">
+          <div class="model-card-title">Tuned Decision Tree</div>
+          <div class="model-card-recall">79%</div>
+          <div class="model-card-label">Recall (Churn Class)</div>
+          <div class="model-card-desc">Pre-pruned with balanced class weights and a lowered decision threshold of 0.35. Identified joining year and payment tier as the dominant splits, capturing nonlinear interactions the logistic model cannot.</div>
+        </div>
+      </div>
+      <p class="prose">The two models offer complementary perspectives. Logistic regression surfaces broad linear trends and interpretable effect sizes. The decision tree reveals how churn risk unfolds through conditional pathways, where tenure, pay, and education combine in ways that neither variable alone would predict.</p>
+    </div>
+
+    <div id="recommendations" class="tab-panel">
+      <p class="prose">The modeling results translate directly into five retention strategies that HR teams and managers can act on, targeting the specific employee groups identified as highest risk.</p>
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Target Long-Tenured Mid-Pay Employees First</div>
+        <div class="rec-segment">Primary risk group across both models</div>
+        <div class="rec-desc">The decision tree identified joining year and payment tier as the two dominant predictors of churn. Longer-tenured employees in the mid-pay tier are the highest-risk combination in the dataset. Targeted outreach, career-development conversations, internal mobility options, or differentiated pay adjustments should be concentrated here before turnover occurs.</div>
+      </div>
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Review Mid-Tier Compensation Structure</div>
+        <div class="rec-segment">Mid-pay tier - 19.7% of employees, 2.2x churn odds</div>
+        <div class="rec-desc">Mid-tier dissatisfaction was the most consistent finding across both models. A pay equity analysis focused on this band, with clearer promotion pathways and salary benchmarking against market rates, could address the perceived mismatch between contribution and compensation that appears to be driving elevated turnover.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Minimize Bench Time and Improve Communication During Gaps</div>
+        <div class="rec-segment">Ever-benched employees - 10.3% of workforce, 1.5x churn odds</div>
+        <div class="rec-desc">Employees who have been benched face meaningfully higher churn odds. Reducing unassigned periods where possible, and proactively communicating with employees when benching is unavoidable, can reduce the sense of exclusion or instability that bench time appears to create.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Develop Location-Specific Retention Programs for Pune</div>
+        <div class="rec-segment">Pune employees - 1.6x churn odds vs Bangalore</div>
+        <div class="rec-desc">Churn rates in Pune are significantly higher than in Bangalore and New Delhi. Retention strategies should not be applied uniformly across all three cities. Local labor market conditions, compensation benchmarks, and engagement programs should be evaluated and tailored specifically for the Pune workforce.</div>
+      </div>
+
+      <div class="rec-card low">
+        <div class="rec-priority">Lower Priority</div>
+        <div class="rec-title">Create Advancement Pathways for Highly Educated Employees</div>
+        <div class="rec-segment">Master's degree holders - 18.8% of workforce, 2.4x churn odds</div>
+        <div class="rec-desc">Master's degree holders churn at more than double the rate of Bachelor's degree employees. Creating clearer recognition, advancement tracks, and career development opportunities for this group can reduce the gap between expectation and reality that likely drives their higher departure rate.</div>
+      </div>
+    </div>
+
+    <div id="methodology" class="tab-panel">
+      <div class="method-row">
+        <div class="method-step">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Data Preparation</div>
+          <div class="step-desc">The Employee Future Prediction dataset from Kaggle contains 4,653 employee records across 9 attributes covering education, joining year, city of employment, payment tier, age, gender, benching history, domain experience, and the churn outcome. The dataset had no missing values and required minimal preprocessing. For logistic regression, categorical variables (education, city, payment tier) were one-hot encoded to ensure appropriate estimation. The decision tree used original categorical encodings directly. A 70/30 train-test split with a fixed random state of 42 was used throughout for reproducibility.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Addressing Class Imbalance</div>
+          <div class="step-desc">65.6% of employees stay and only 34.4% churn, a meaningful imbalance that makes overall accuracy a misleading metric. A model predicting everyone stays would achieve 65.6% accuracy while catching zero actual churners. To counter this, both models used class_weight="balanced" to adjust the loss function and place greater emphasis on correctly identifying the minority churn class. Recall for the churn class became the primary evaluation metric throughout the project.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Logistic Regression Modeling</div>
+          <div class="step-desc">A baseline logistic regression was estimated first using default scikit-learn settings, achieving a churn recall of only 0.41. The model was then improved using GridSearchCV, which selected L1 regularization (lasso penalty), class-weight balancing, and a regularization strength of C=0.1. L1 regularization shrinks weaker coefficients to zero, removing uninformative predictors and improving interpretability. The improved model raised churn recall to approximately 0.63, with 5-fold cross-validation confirming stability (mean recall 0.629 across folds).</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Decision Tree Modeling</div>
+          <div class="step-desc">A baseline decision tree already outperformed the logistic baseline (recall 0.64) without any tuning. The pre-pruned version applied class_weight="balanced", a maximum depth of 8, minimum 10 samples per leaf, and minimum split size of 5 to prevent overfitting. The decision threshold was then lowered from 0.50 to 0.35, allowing the model to flag borderline cases as churners. This final tuned tree achieved test-set recall of 0.79, with 5-fold cross-validation confirming stability (mean recall 0.727).</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="takeaways" class="tab-panel">
+      <div class="section-heading">What I took away from this project</div>
+      <ul class="takeaway-list">
+        <li>Choosing the right evaluation metric matters more than choosing the right model. Once recall replaced accuracy as the primary objective, everything about how we built and compared models changed. A model that looked decent by accuracy was actually catching fewer than half of the churners it needed to find.</li>
+        <li>Threshold tuning is an underused lever. Lowering the decision threshold from 0.50 to 0.35 lifted recall from 0.64 to 0.79 on the decision tree without any additional feature engineering. It is one of the most practical tools available for imbalanced classification problems.</li>
+        <li>Different models tell different stories about the same problem. Logistic regression identified benching history as a strong predictor through its odds ratios, while the decision tree assigned it minimal importance. Neither is wrong. They are capturing different types of relationships in the data, and both perspectives are useful.</li>
+        <li>Class imbalance is not just a modeling problem, it is a framing problem. Recognizing that missing a churner is far more costly than flagging a stable employee shaped every modeling decision we made, from class weighting to threshold selection to how we reported results.</li>
+        <li>The clearest actionable output of a churn model is not the model itself, it is the ranked list of risk factors it produces. Tenure, pay tier, education, and location each point to a specific and concrete HR intervention. The model is only useful if it translates into something a manager can act on.</li>
+      </ul>
+
+      <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
+      <ul class="tools-list">
+        <li><strong>Python</strong>: primary language for the entire analysis. Used to load and preprocess the dataset, build and evaluate both models, tune hyperparameters, and generate all visualizations.</li>
+        <li><strong>pandas</strong>: used for data manipulation, one-hot encoding of categorical variables, and building the summary tables used to compare model performance across configurations.</li>
+        <li><strong>Cross-Validation</strong>: used throughout to confirm that model performance generalized beyond the training split. 5-fold CV was applied to both the logistic regression and decision tree, with recall scores evaluated across each fold to verify stability before finalizing any model.</li>
+        <li><strong>scikit-learn</strong>: provided LogisticRegression, DecisionTreeClassifier, GridSearchCV, and cross_val_score. Used to fit baseline and tuned versions of both models and evaluate recall across folds.</li>
+        <li><strong>matplotlib and seaborn</strong>: used to produce all visualizations including the churn outcome distribution, attribute distribution charts, odds ratio bar chart, information gain rankings, and the recall comparison chart.</li>
+        <li><strong>Logistic Regression</strong>: applied with L1 regularization and class-weight balancing to produce interpretable odds ratios and identify the linear predictors of churn risk.</li>
+        <li><strong>Decision Tree Classifier</strong>: applied with pre-pruning constraints and threshold tuning to capture nonlinear interactions and achieve the highest recall of any model in the project.</li>
+        <li><strong>GridSearchCV</strong>: used to systematically search hyperparameter combinations for both models, selecting configurations that maximized recall on the training data.</li>
+        <li><strong>Business Communication</strong>: translated model coefficients and information gain rankings into five concrete HR recommendations, each tied to a specific employee group and a specific intervention strategy.</li>
+      </ul>
+    </div>
+
+  </main>
 </div>
 
 <script>
