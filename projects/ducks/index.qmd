@@ -1,0 +1,351 @@
+---
+title: "Adult Learn-to-Play Analysis"
+format:
+  html:
+    page-layout: custom
+    toc: false
+---
+
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+
+#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+
+#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+
+.portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
+
+.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
+
+.sidebar-name { font-size: 18px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+
+.sidebar-credential { font-size: 16px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+
+.sidebar-avail { font-size: 16px; color: #f5f5f5; margin-bottom: 2px; }
+
+.sidebar-grad { font-size: 16px; color: #f5f5f5; margin-bottom: 2rem; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 16px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+
+.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+
+.sidebar-nav a.active { background: #1e3a5f; }
+
+.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+
+.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+
+.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+
+.sidebar-links a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-links a:hover { color: #aaaaaa; }
+
+.sidebar-deliverables-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.2rem 0 1.2rem; }
+
+.sidebar-deliverables-label { font-size: 16px; font-weight: 500; color: #60a5fa; margin-bottom: 7px; }
+
+.sidebar-deliverables { display: flex; flex-direction: column; gap: 7px; }
+
+.sidebar-deliverables a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-deliverables a:hover { color: #aaaaaa; }
+
+.main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
+
+.project-subtitle { font-size: 16px; color: #444; margin-top: 0; margin-bottom: 1rem; line-height: 1.5; }
+
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.75rem; }
+
+.meta-tag { font-size: 14px !important; padding: 6px 14px; border-radius: 5px; background: #111; color: #fff; border: 0.5px solid #111; line-height: 1.5; display: inline-flex; align-items: center; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.75rem; }
+
+.metric-card { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; text-align: center; border: 1px solid #efefef; }
+
+.metric-value { font-size: 1.6rem; font-weight: 700; color: #1a1a1a; line-height: 1.2; }
+
+.metric-label { font-size: 14px; color: #444; margin-top: 4px; line-height: 1.5; }
+
+.body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.glossary { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; }
+
+.glossary-title { font-size: 14px; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: 1.5; }
+
+.glossary-entry { display: grid; grid-template-columns: 175px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; }
+
+.glossary-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+.glossary-term { font-size: 14px; font-weight: 400; color: #1a1a1a; line-height: 1.5; }
+
+.glossary-def { font-size: 14px; color: #444; line-height: 1.5; }
+
+.tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5; }
+
+.tab-btn { font-size: 16px; font-weight: 400; color: #444; background: none; border: none; padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color 0.15s; font-family: 'DM Sans', sans-serif; line-height: 1.5; }
+
+.tab-btn:hover { color: #111; }
+
+.tab-btn.active { color: #111; border-bottom-color: #111; font-weight: 500; }
+
+.tab-panel { display: none; padding: 2rem 0; }
+
+.tab-panel.active { display: block; }
+
+.section-heading { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; margin-top: 1.5rem; line-height: 1.5; }
+
+.section-heading:first-child { margin-top: 0; }
+
+.findings-list { list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0; }
+
+.findings-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; }
+
+.findings-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
+
+.findings-list li strong { color: #1a1a1a; font-weight: 600; }
+
+.rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
+
+.rec-card.high { border-left-color: #e24b4a; }
+.rec-card.med { border-left-color: #ef9f27; }
+.rec-card.low { border-left-color: #639922; }
+
+.rec-priority { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; line-height: 1.5; }
+
+.rec-card.high .rec-priority { color: #e24b4a; }
+.rec-card.med .rec-priority { color: #ef9f27; }
+.rec-card.low .rec-priority { color: #639922; }
+
+.rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
+
+.rec-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.method-row { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 1.5rem; }
+
+.method-step { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef; }
+
+.step-num { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #444; text-transform: uppercase; margin-bottom: 4px; line-height: 1.5; }
+
+.step-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; line-height: 1.5; }
+
+.step-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.tools-list { list-style: none; padding: 0; margin: 0.5rem 0 1.5rem 0; }
+
+.tools-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 9px 0; border-bottom: 1px solid #f0f0f0; }
+
+.tools-list li:last-child { border-bottom: none; }
+
+.tools-list li strong { color: #1a1a1a; }
+
+.takeaway-list { list-style: none; padding: 0; margin: 0; counter-reset: takeaway-counter; }
+
+.takeaway-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 10px 0 10px 28px; border-bottom: 1px solid #f0f0f0; position: relative; counter-increment: takeaway-counter; }
+
+.takeaway-list li::before { content: counter(takeaway-counter); position: absolute; left: 0; top: 12px; font-size: 14px; font-weight: 700; color: #444; background: #f0f0f0; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; line-height: 1; }
+
+.takeaway-list li:last-child { border-bottom: none; }
+</style>
+
+<div class="portfolio-shell">
+
+  <aside class="sidebar">
+    <img
+      src="../../images/Headshot1.jpg"
+      alt="Allan Almaraz"
+      class="sidebar-photo"
+      onerror="this.style.display='none'"
+    >
+    <div class="sidebar-name">Allan Almaraz</div>
+    <div class="sidebar-credential">MSBA · UC Irvine</div>
+    <div class="sidebar-grad">Available August 2026</div>
+
+    <nav class="sidebar-nav">
+      <a href="../../index.html"><span class="nav-pip"></span>Home</a>
+      <a href="../../about.html"><span class="nav-pip"></span>About Me</a>
+      <a href="../../experience.html"><span class="nav-pip"></span>Experience</a>
+      <a href="../../projects.html" class="active"><span class="nav-pip"></span>Projects</a>
+    </nav>
+
+    <hr class="sidebar-rule">
+
+    <div class="sidebar-links">
+      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
+      <a href="../../files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
+      <a href="../../files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
+    </div>
+
+    <hr class="sidebar-deliverables-rule">
+
+    <div class="sidebar-deliverables-label">Project Deliverables</div>
+    <div class="sidebar-deliverables">
+      <a href="report.pdf" target="_blank">Full Report →</a>
+      <a href="slides.pdf" target="_blank">Slides →</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <div class="headline">Adult Learn-to-Play Analysis</div>
+
+    <div class="project-subtitle" style="margin-top: 1.75rem;">Anaheim Ducks and The Rinks &nbsp;·&nbsp; UCI MSBA Capstone &nbsp;·&nbsp; Spring 2026</div>
+
+    <div class="meta-row">
+      <span class="meta-tag">SQL</span>
+      <span class="meta-tag">Power BI</span>
+      <span class="meta-tag">DAX</span>
+      <span class="meta-tag">SSMS</span>
+      <span class="meta-tag">Retention Analysis</span>
+      <span class="meta-tag">Sports Analytics</span>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">1,285</div>
+        <div class="metric-label">Unique Adult LTP participants analyzed</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">19,257</div>
+        <div class="metric-label">Total adult Rinks customers in dataset</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">685</div>
+        <div class="metric-label">LTP participants matched to a Ducks ticket account</div>
+      </div>
+    </div>
+
+    <p class="body-text"><strong>Project Context:</strong> As part of my UCI MSBA Capstone, I was placed with the Anaheim Ducks and The Rinks to assess the health of the Adult Learn-to-Play program and build the analytical infrastructure the organization needs to measure the success of future retention and marketing initiatives. I served as the analytics lead, responsible for connecting disconnected registration and ticketing data across two enterprise systems and delivering four maintainable Power BI dashboards to the Ducks business intelligence team.</p>
+
+    <p class="body-text"><strong>Business Question:</strong> <em>Does Adult Learn-to-Play participation drive sustained Rinks program retention and Anaheim Ducks ticket purchasing behavior, and where are the highest-leverage opportunities to deepen participant engagement?</em></p>
+
+    <div class="glossary">
+      <div class="glossary-title">Key Terms</div>
+      <div class="glossary-entry"><span class="glossary-term">LTP (Learn-to-Play)</span><span class="glossary-def">The Rinks' adult beginner hockey program. Designed for participants with no prior hockey experience, it serves as the entry point into the Rinks ecosystem and the starting point for all analysis in this project.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">The Rinks / DASH</span><span class="glossary-def">The Rinks is a network of eight Southern California ice rinks operated by H&amp;S Ventures / OCSE, including Lakewood ICE and Great Park Ice. DASH is their internal registration database, which served as the primary data source for enrollment and retention analysis.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Archtics</span><span class="glossary-def">Ticketmaster's enterprise ticketing platform used by the Anaheim Ducks. LTP participants were matched to Ducks ticket accounts via email address to enable the ticket purchasing crossover analysis.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Hockey League</span><span class="glossary-def">Competitive adult league play at The Rinks. The most common program choice after LTP and the strongest indicator of sustained engagement in the Rinks ecosystem.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Stick Time</span><span class="glossary-def">Open-ice practice sessions at The Rinks. The second most common post-LTP program, representing a lower-commitment way for participants to continue skating after completing LTP.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">12-Month Cohort Retention</span><span class="glossary-def">The share of participants from a given enrollment year who return to any Rinks program within 12 months of their first registration. The primary metric used to compare LTP participants against the broader adult Rinks customer base year over year.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Post-LTP Program Sequence</span><span class="glossary-def">The ordered series of programs a participant enrolls in after completing LTP. Analyzing the first five program choices revealed which programs participants gravitate toward and how engagement evolves over time.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Crossover Match</span><span class="glossary-def">Of 1,285 LTP participants, 685 were successfully linked to a Ducks Archtics account, enabling analysis of how LTP participation relates to Ducks ticket purchasing behavior before and after enrollment.</span></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('findings', this)">Findings</button>
+      <button class="tab-btn" onclick="showTab('recommendations', this)">Recommendations</button>
+      <button class="tab-btn" onclick="showTab('methodology', this)">Methodology</button>
+      <button class="tab-btn" onclick="showTab('takeaways', this)">Takeaways</button>
+    </div>
+
+    <!-- FINDINGS -->
+    <div id="findings" class="tab-panel active">
+      <div class="section-heading">What the Data Shows</div>
+      <ul class="findings-list">
+        <li><strong>Nearly half of LTP participants never come back.</strong> 46% of participants drop off after their first session, compared to 34% for all adult Rinks customers. The gap is meaningful. LTP brings in new-to-hockey participants who need more than a single session to commit, and the program currently provides no structured bridge to what comes next.</li>
+        <li><strong>Among those who do return, most eventually find their way to Hockey League.</strong> 40% of all LTP participants go on to enroll in Hockey League and 30% in Stick Time. Hockey League participation more than doubled after LTP, rising from 16% pre-enrollment to 40% post-enrollment, which is clear evidence that LTP is functioning as an effective entry point into the Rinks ecosystem.</li>
+        <li><strong>Retention has been declining year over year.</strong> 12-month cohort retention peaked in 2022 and has trended down since, consistently trailing the all-adults benchmark by 10 to 15 percentage points. The gap has not closed, which suggests the drop-off is structural rather than seasonal.</li>
+        <li><strong>Ticket purchasing increases after LTP, but the signal varies by segment.</strong> Among the 685 participants matched to Ducks accounts, men show a larger jump in ticket purchases after completing LTP while women show stronger baseline buying. Participants aged 25 and under generate the highest post-LTP ticket revenue of any age group.</li>
+      </ul>
+    </div>
+
+    <!-- RECOMMENDATIONS -->
+    <div id="recommendations" class="tab-panel">
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Formalize the LTP Off-Ramp Experience</div>
+        <div class="rec-desc">40% of LTP participants eventually find their way to Hockey League, but 46% never return at all. The pathway exists; it is just not being activated at program completion. A structured touchpoint at the end of LTP, whether a follow-up email, an in-person handoff, or a simple printed next-steps guide, could close a meaningful share of that drop-off. The retention dashboard is now in place to measure whether any such initiative actually works.</div>
+      </div>
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Deploy a Post-LTP Participant Survey</div>
+        <div class="rec-desc">The data shows who drops off but not why. A short survey sent to participants at program completion via the existing registration email list would surface whether the barrier is cost, scheduling, skill confidence, or something else entirely, and give the team the insight needed to design a retention response that actually addresses the real reason. A draft survey template was delivered as a project deliverable and is available for download in the sidebar.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Segment Ticket Marketing by Demographics</div>
+        <div class="rec-desc">Men and women respond differently to LTP when it comes to ticket purchasing, and participants under 25 generate disproportionately high post-LTP ticket revenue. Rather than one broad campaign, targeted outreach to these groups using the crossover dashboard as the measurement tool would give the marketing team a more precise lever and a clearer way to track what is working.</div>
+      </div>
+
+      <div class="rec-card low">
+        <div class="rec-priority">Lower Priority</div>
+        <div class="rec-title">Re-Engage Lapsed Ticket Buyers</div>
+        <div class="rec-desc">A subset of matched participants previously purchased Ducks tickets but have since stopped. This group has already demonstrated interest in both Rinks programming and live games, making them a natural re-engagement target. Lower priority given the smaller population size, but the commercial upside per contact is high relative to cold outreach.</div>
+      </div>
+
+    </div>
+
+    <!-- METHODOLOGY -->
+    <div id="methodology" class="tab-panel">
+      <div class="method-row">
+        <div class="method-step">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Data Extraction</div>
+          <div class="step-desc">Registration and ticketing data were pulled from two separate enterprise systems using SQL in SSMS: the Rinks' internal DASH database and the Ducks' Archtics ticketing platform. Five analysis-ready datasets were built to cover enrollment trends, cohort retention, program participation before and after LTP, post-LTP program sequencing, and ticket purchasing crossover. All data was accessed in a client environment with read-only permissions.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Data Preparation</div>
+          <div class="step-desc">Raw program descriptions from the Rinks database were inconsistent and required consolidation into four meaningful categories before any analysis could be run: Hockey League, Stick Time, Hockey Initiation, and Learn To Skate. Additional calculated fields were built in Power BI to support seasonality views, age group breakdowns, and both calendar and fiscal year reporting aligned to the Ducks' June 30 fiscal year end.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Dashboard Development</div>
+          <div class="step-desc">Four Power BI dashboards were built and delivered to the Ducks business intelligence team: LTP Registration (calendar year), LTP Registration (fiscal year), Adult LTP Participant Retention, and Ticket Sales Crossover. Each was designed to be maintained and refreshed by the client team independently after handover, with dynamic KPI cards, cohort retention charts, program sequence visuals, and demographic breakdowns across all four views.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Crossover Analysis</div>
+          <div class="step-desc">To connect Rinks participation to Ducks ticket purchasing, LTP participants were matched to Ducks Archtics accounts using email address as the join key. 685 of 1,285 participants were successfully matched, enabling a before-and-after comparison of ticket purchasing behavior by gender, age group, and purchase frequency. The match rate itself is a finding. Improving email capture at LTP registration would expand the scope of this analysis in future seasons.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAKEAWAYS -->
+    <div id="takeaways" class="tab-panel">
+      <div class="section-heading">What I took away from this project</div>
+      <ul class="takeaway-list">
+        <li>Scoping the analysis honestly was the most important decision we made. Pre-2025 data had collection inconsistencies that would have distorted any multi-year trend analysis, so we treated 2025 as the primary year and were upfront about it with the client. That constraint is what made the findings trustworthy.</li>
+        <li>The 46% drop-off rate is not just a number. It is a program design signal. The fact that 40% of all participants eventually reach Hockey League tells you the interest is there. The problem is that nothing is guiding them toward it at the moment they finish LTP. That insight came from looking at the sequence data, not just the retention rate.</li>
+        <li>Connecting two enterprise systems that were never designed to talk to each other is a real technical challenge. Matching participants across DASH and Archtics using email address as the only shared key required careful logic and produced an imperfect but usable result. Knowing where the data falls short is part of delivering a credible analysis.</li>
+        <li>Dashboards are only as useful as the decisions they enable. The goal was never to hand over a visual. It was to give the Ducks BI team something they could use season after season to measure whether their retention and marketing initiatives were actually working. Design for the person who inherits the work, not just the person receiving it at presentation.</li>
+      </ul>
+
+      <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
+      <ul class="tools-list">
+        <li><strong>SQL / SSMS:</strong> queried two enterprise schemas to extract and join registration and ticketing data, applying client-defined business logic and building analysis-ready datasets for all four dashboard views.</li>
+        <li><strong>Power BI:</strong> built four interactive dashboards with dynamic KPI cards, cohort retention charts, program sequence analysis, and demographic breakdowns, designed for long-term maintainability by the client BI team.</li>
+        <li><strong>DAX and Power Query:</strong> created calculated measures and custom columns to support fiscal year views, age group segmentation, and dynamic year-over-year comparisons across all dashboards.</li>
+        <li><strong>Retention and Cohort Analysis:</strong> measured 12-month cohort retention by enrollment year, compared LTP participants against the broader adult Rinks customer base, and tracked how engagement evolves across sequential program choices after LTP.</li>
+        <li><strong>Sports Analytics / Business Intelligence:</strong> framed all findings around actionable next steps for the Ducks marketing and BI teams, with the dashboards designed as the ongoing measurement infrastructure for future initiative success.</li>
+      </ul>
+    </div>
+
+  </main>
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+```
