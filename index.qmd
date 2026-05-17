@@ -361,7 +361,7 @@ main.content {
     <div class="label-row">
       <div class="label-col"><div class="label-text">Goals</div></div>
       <div class="body-col">
-        Through my MSBA program and professional experience, I have built a growing toolkit centered on data analysis and business strategy. My goal is to bring that toolkit to companies that people interact with every day, where the work of an analyst is connected to something real and tangible. By deepening my expertise in SQL, Python, Tableau, and Power BI, I want to bridge the analytical and strategic sides of a business. The MSBA program is structured to allow me to begin full-time work in June 2026 while completing my degree in August, and I am actively pursuing entry-level analyst roles in financial, marketing, and business analytics. The specific roles, industries, and regions I am targeting are below.
+        Through my MSBA program and professional experience, I have built a growing toolkit centered on data analysis, business intelligence, and strategic problem solving. Starting June 2026, I will be completing my final two MSBA courses while working full-time as an Operations Performance Shared Services intern at Hyundai Capital America, wrapping up both commitments in August 2026. Upon completing my degree and internship, I am actively pursuing full-time entry-level analyst roles in financial, marketing, and business analytics across the industries and regions that matter most to me. The specific roles, industries, and regions I am targeting are below.
       </div>
     </div>
 

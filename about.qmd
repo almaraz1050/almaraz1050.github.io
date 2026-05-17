@@ -166,7 +166,8 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
             <tr><td>10/2024-03/2025</td><td>Returned to Santa Paula; Short-Term Employment</td><td>Santa Paula, CA</td></tr>
             <tr><td>04/2025-09/2025</td><td>EAOP Program Coordinator, UCI Center for Educational Partnerships</td><td>Irvine, CA</td></tr>
             <tr><td>07/2025</td><td>Began Business Analytics M.S. at UCI</td><td>Irvine, CA</td></tr>
-            <tr><td>01/2026-06/2026</td><td>Student Business Analyst, Anaheim Ducks Hockey Club</td><td>Irvine, CA</td></tr>
+            <tr><td>01/2026-06/2026</td><td>Student Business Analyst, Anaheim Ducks & The Rinks</td><td>Irvine, CA</td></tr>
+            <tr><td>06/2026-08/2026</td><td>OPSS Summer Intern, Hyundai Capital America</td><td>Irvine, CA</td></tr>            
             <tr><td>08/2026</td><td>Completed Business Analytics M.S. at UCI</td><td>Irvine, CA</td></tr>
           </tbody>
         </table>
