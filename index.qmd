@@ -296,8 +296,7 @@ main.content {
     >
     <div class="sidebar-name">Allan Almaraz</div>
     <div class="sidebar-credential">MSBA · UC Irvine</div>
-    <div class="sidebar-avail">Available June 2026</div>
-    <div class="sidebar-grad">Graduating August 2026</div>
+    <div class="sidebar-grad">Available August 2026</div>
 
     <nav class="sidebar-nav">
       <a href="index.html" class="active">
