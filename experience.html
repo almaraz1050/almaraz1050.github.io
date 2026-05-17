@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3e7735b7b22659e5fa437aca0bb49075.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -170,7 +170,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .exp-bar { border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff; }
 
-.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; gap: 0.5em; margin-bottom: 0.3em; }
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.3em 1em; margin-bottom: 0.3em; }
 
 .exp-title { font-size: 16px !important; font-weight: 700; color: #1a1a1a; margin-bottom: 0; line-height: 1.5; }
 
@@ -182,7 +182,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .exp-bullets li { margin-bottom: 0.6em; font-size: 14px !important; }
 
-.exp-dates { font-size: 14px !important; color: #444; white-space: nowrap; line-height: 1.5; }
+.exp-dates { font-size: 14px !important; color: #444; white-space: nowrap; line-height: 1.5; flex-shrink: 0; }
 
 .exp-skills { font-size: 14px !important; color: #444; margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em; line-height: 1.5; }
 
@@ -195,8 +195,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
     <img src="images/Headshot1.jpg" alt="Allan Almaraz" class="sidebar-photo" onerror="this.style.display='none'">
     <div class="sidebar-name">Allan Almaraz</div>
     <div class="sidebar-credential">MSBA · UC Irvine</div>
-    <div class="sidebar-avail">Available June 2026</div>
-    <div class="sidebar-grad">Graduating August 2026</div>
+    <div class="sidebar-grad">Available August 2026</div>
 
     <nav class="sidebar-nav">
       <a href="index.html">
@@ -245,13 +244,13 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
         </div>
         <span class="exp-dates">Jan 2026 – Present &nbsp;·&nbsp; Irvine, CA</span>
       </div>
-      <p class="exp-context">This role is part of my UCI MSBA Capstone project, through which I was placed with the Anaheim Ducks and The Rinks — a local hockey rink operator — to analyze whether participation in The Rinks' adult Learn-to-Play program, a low-cost hockey learning initiative, translates into Anaheim Ducks ticket purchases and sustained fan engagement.</p>
+      <p class="exp-context">This role is part of my UCI MSBA Capstone project, through which I was placed with the Anaheim Ducks and The Rinks (H&amp;S Ventures / OCSE) to assess the health of the Adult Learn-to-Play program and build the analytical infrastructure needed to measure the success of future marketing and retention initiatives. The project required joining disconnected registration and ticketing systems across two database schemas and delivering four maintainable Power BI dashboards to the Ducks business intelligence team.</p>
       <ul class="exp-bullets">
-        <li>Designing an end-to-end analytical framework to evaluate how The Rinks' adult Learn-to-Play program influences Anaheim Ducks ticket purchases and long-term fan engagement across disconnected programming and ticketing systems.</li>
-        <li>Writing SQL queries in SSMS to apply client-defined business logic and isolate clean, analysis-ready ticket data, including revenue calculations across primary and secondary market channels and participant filtering across multiple Ticketmaster schema tables.</li>
-        <li>Building Power BI dashboards to visualize program retention, pre/post-enrollment ticket purchasing behavior, and fan conversion metrics for Anaheim Ducks business intelligence stakeholders.</li>
+        <li>Designed and executed SQL queries in SSMS against the DASH (Rinks) and Archtics (Ticketmaster) schemas to build five analysis-ready datasets covering LTP registration records, 12-month cohort retention, pre/post-enrollment program participation, post-LTP program sequencing, and ticket sales crossover, applying client-defined business logic including revenue calculations across primary and secondary market channels.</li>
+        <li>Built two interactive Power BI dashboards tracking 1,285 unique LTP participants across enrollment trends, demographic breakdowns, retention depth, and post-LTP program progression, including dynamic year-over-year KPI cards, cohort retention line charts, a ranked post-LTP program sequence analysis, and both calendar and fiscal year views to align with the Ducks' June 30 fiscal year end.</li>
+        <li>Surfaced that 46% of LTP participants never re-enroll after their first session while 40% eventually progress to Hockey League, leading to recommendations to formalize a structured post-LTP off-ramp experience, deploy a post-completion participant survey to identify drop-off drivers, and implement demographic-targeted ticket marketing with the dashboards serving as the ongoing measurement tool for initiative success.</li>
       </ul>
-      <p class="exp-skills"><strong>Skills Developed:</strong> SQL, Power BI, Data Visualization, Business Intelligence, Analytical Framework Design</p>
+      <p class="exp-skills"><strong>Skills Developed:</strong> SQL, SSMS, Power BI, DAX, Power Query, Data Modeling, Cohort Analysis, Retention Analysis, Descriptive Analytics, Marketing Analytics</p>
     </div>
 
     <div class="exp-bar" id="eaop">
