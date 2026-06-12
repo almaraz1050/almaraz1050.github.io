@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3e7735b7b22659e5fa437aca0bb49075.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,8 +123,6 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .sidebar-credential { font-size: 16px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
 
-.sidebar-avail { font-size: 16px; color: #f5f5f5; margin-bottom: 2px; }
-
 .sidebar-grad { font-size: 16px; color: #f5f5f5; margin-bottom: 2rem; }
 
 .sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
@@ -176,6 +174,12 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 .metric-label { font-size: 14px; color: #444; margin-top: 4px; line-height: 1.5; }
 
 .body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
+
+.dashboard-note { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.5rem; }
+
+.dashboard-breakout { width: 100%; margin-bottom: 2.5rem; display: flex; justify-content: center; }
+
+.dashboard-wrap { width: 800px; border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden; }
 
 .glossary { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 1.5rem; }
 
@@ -279,13 +283,6 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
       <a href="../../files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
 
-    <hr class="sidebar-deliverables-rule">
-
-    <div class="sidebar-deliverables-label">Project Deliverables</div>
-    <div class="sidebar-deliverables">
-      <a href="report.pdf" target="_blank">Full Report →</a>
-      <a href="slides.pdf" target="_blank">Slides →</a>
-    </div>
   </aside>
 
   <main class="main-content">
@@ -325,13 +322,22 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
     <div class="glossary">
       <div class="glossary-title">Key Terms</div>
       <div class="glossary-entry"><span class="glossary-term">LTP (Learn-to-Play)</span><span class="glossary-def">The Rinks' adult beginner hockey program. Designed for participants with no prior hockey experience, it serves as the entry point into the Rinks ecosystem and the starting point for all analysis in this project.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">The Rinks / DASH</span><span class="glossary-def">The Rinks is a network of eight Southern California ice rinks operated by H&amp;S Ventures / OCSE, including Lakewood ICE and Great Park Ice. DASH is their internal registration database, which served as the primary data source for enrollment and retention analysis.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">The Rinks / DASH</span><span class="glossary-def">The Rinks is a network of ice rinks in Southern California operated by H&amp;S Ventures / OCSE, including Lakewood ICE and Great Park Ice. DASH is their internal registration database, which served as the primary data source for enrollment and retention analysis.</span></div>
       <div class="glossary-entry"><span class="glossary-term">Archtics</span><span class="glossary-def">Ticketmaster's enterprise ticketing platform used by the Anaheim Ducks. LTP participants were matched to Ducks ticket accounts via email address to enable the ticket purchasing crossover analysis.</span></div>
       <div class="glossary-entry"><span class="glossary-term">Hockey League</span><span class="glossary-def">Competitive adult league play at The Rinks. The most common program choice after LTP and the strongest indicator of sustained engagement in the Rinks ecosystem.</span></div>
       <div class="glossary-entry"><span class="glossary-term">Stick Time</span><span class="glossary-def">Open-ice practice sessions at The Rinks. The second most common post-LTP program, representing a lower-commitment way for participants to continue skating after completing LTP.</span></div>
       <div class="glossary-entry"><span class="glossary-term">12-Month Cohort Retention</span><span class="glossary-def">The share of participants from a given enrollment year who return to any Rinks program within 12 months of their first registration. The primary metric used to compare LTP participants against the broader adult Rinks customer base year over year.</span></div>
       <div class="glossary-entry"><span class="glossary-term">Post-LTP Program Sequence</span><span class="glossary-def">The ordered series of programs a participant enrolls in after completing LTP. Analyzing the first five program choices revealed which programs participants gravitate toward and how engagement evolves over time.</span></div>
       <div class="glossary-entry"><span class="glossary-term">Crossover Match</span><span class="glossary-def">Of 1,285 LTP participants, 685 were successfully linked to a Ducks Archtics account, enabling analysis of how LTP participation relates to Ducks ticket purchasing behavior before and after enrollment.</span></div>
+    </div>
+
+    <div class="section-heading" style="margin-bottom:0.4rem;">Interactive Dashboard</div>
+    <p class="dashboard-note">Use the page navigation panel on the left side of the dashboard to move between Registration, Retention, and Ticket Sales Crossover views.</p>
+
+    <div class="dashboard-breakout">
+      <div class="dashboard-wrap">
+        <iframe title="Ducks Group A" width="800" height="636" src="https://app.powerbi.com/view?r=eyJrIjoiMDhkZGI3ZmYtNzY4My00NTAwLTkwYWEtZWUyYzE2YjliMzhiIiwidCI6IjY4ZDQ1MzNjLWVhZTYtNDgzMy05OWNjLTdhOTcwNGFjODcwYiIsImMiOjZ9&amp;pageName=7c316e9bc41036bb8e69" frameborder="0" allowfullscreen="true"></iframe>
+      </div>
     </div>
 
     <div class="tabs">
@@ -343,12 +349,28 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
     <!-- FINDINGS -->
     <div id="findings" class="tab-panel active">
-      <div class="section-heading">What the Data Shows</div>
+
+      <div class="section-heading" style="margin-top:0.25rem;">Registration</div>
       <ul class="findings-list">
-        <li><strong>Nearly half of LTP participants never come back.</strong> 46% of participants drop off after their first session, compared to 34% for all adult Rinks customers. The gap is meaningful. LTP brings in new-to-hockey participants who need more than a single session to commit, and the program currently provides no structured bridge to what comes next.</li>
-        <li><strong>Among those who do return, most eventually find their way to Hockey League.</strong> 40% of all LTP participants go on to enroll in Hockey League and 30% in Stick Time. Hockey League participation more than doubled after LTP, rising from 16% pre-enrollment to 40% post-enrollment, which is clear evidence that LTP is functioning as an effective entry point into the Rinks ecosystem.</li>
-        <li><strong>Retention has been declining year over year.</strong> 12-month cohort retention peaked in 2022 and has trended down since, consistently trailing the all-adults benchmark by 10 to 15 percentage points. The gap has not closed, which suggests the drop-off is structural rather than seasonal.</li>
-        <li><strong>Ticket purchasing increases after LTP, but the signal varies by segment.</strong> Among the 685 participants matched to Ducks accounts, men show a larger jump in ticket purchases after completing LTP while women show stronger baseline buying. Participants aged 25 and under generate the highest post-LTP ticket revenue of any age group.</li>
+        <li><strong>Registration peaked in 2022 and has since recovered.</strong> Annual registrations hit 474 in 2022, dropped sharply in 2023 (67), and rebounded to 400 in 2025. The 2026 partial year (120 through March) is tracking close to the same seasonal pace as 2025. May and September are consistently the highest-volume registration months across all years, driven by the start of spring and fall program seasons.</li>
+        <li><strong>The 36-45 age group is the largest participant segment.</strong> With 495 registrations all time, adults in their late thirties and early forties represent the core LTP audience, followed closely by 26-35 (460). Lakewood ICE leads by facility at 32.5% of registrations, with Great Park Ice second at 28.3%.</li>
+      </ul>
+
+      <div class="section-heading">Retention</div>
+      <ul class="findings-list">
+        <li><strong>Nearly half of LTP participants never come back.</strong> 45.7% of participants drop off after their first registration, compared to 34% for all adult Rinks customers. The gap is structural. LTP brings in new-to-hockey adults who need more than a single session to commit, and the program currently provides no structured bridge to what comes next.</li>
+        <li><strong>Among those who return, Hockey League is the clear destination.</strong> Hockey League participation jumps from 16% pre-LTP to 40% post-LTP, and Stick Time from 9.7% to 30.4%. LTP is functioning as an effective entry point. The issue is that nearly half of participants never reach that next step.</li>
+        <li><strong>The steepest Hockey League drop-off happens after the second program, not the first.</strong> In the post-LTP sequence data, Hockey League participation falls most sharply between sequence position 1 (24.1%) and position 2 (20.8%), then drops again to 13.9% by position 3. The second engagement is the vulnerable moment. Participants who survive the first return tend to plateau, but the window between the first and second post-LTP program is where the most attrition occurs. This is the most actionable signal in the retention data for designing outreach timing.</li>
+        <li><strong>12-month cohort retention has trended downward since 2022.</strong> LTP retention consistently trails the all-adults benchmark by 10 to 15 percentage points across every cohort year. The gap has not closed, which suggests the drop-off is structural rather than seasonal.</li>
+      </ul>
+
+      <div class="section-heading">Ticket Sales Crossover</div>
+      <ul class="findings-list">
+        <li><strong>About half of matched participants have never bought a Ducks ticket.</strong> Of the 685 participants linked to Archtics accounts, 51.2% are Never a Buyer, 19.5% are Continued Buyers, 15.1% are New Converts, and 14.2% are Lapsed. The 15.1% new conversion rate represents real fan development impact, and the 14.2% lapsed group is a natural re-engagement target.</li>
+        <li><strong>Men drive more total ticket volume; women buy more tickets per person.</strong> Male participants generated 1,798 post-LTP ticket sales compared to 1,215 for female participants, reflecting that men make up a larger share of the LTP population overall. But on a per-person basis, female participants averaged 3.7 tickets in the pre-LTP window and 3.0 post-LTP, while men averaged 2.0 and 2.1. Female participants who convert are higher-frequency buyers. The client's strategic focus on growing female participation aligns directly with this profile.</li>
+        <li><strong>The 25-34 age group drives the most post-LTP ticket revenue.</strong> With 192 post-LTP ticket buyers generating $209,949 all time, the 25-34 segment is the highest-value age group by total revenue. The 55+ group has the highest average tickets per buyer post-LTP (5.0), suggesting older participants who convert become highly committed fans.</li>
+        <li><strong>January and May are the peak months for post-LTP ticket purchases.</strong> January accounts for 1,960 post-LTP ticket sales all time, followed by May at 1,128. These peaks mirror the program registration calendar, pointing to a natural alignment between when participants are most engaged with hockey and when they are most likely to buy Ducks tickets.</li>
+        <li><strong>Full Season tickets dominate revenue.</strong> All-time post-LTP Full Season revenue totals approximately $950,000, dwarfing Single Game ($108K) and Group ($57K). ALTP participants who become Ducks fans tend to become committed, season-long fans rather than one-time buyers.</li>
       </ul>
     </div>
 
@@ -358,7 +380,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
       <div class="rec-card high">
         <div class="rec-priority">High Priority</div>
         <div class="rec-title">Formalize the LTP Off-Ramp Experience</div>
-        <div class="rec-desc">40% of LTP participants eventually find their way to Hockey League, but 46% never return at all. The pathway exists; it is just not being activated at program completion. A structured touchpoint at the end of LTP, whether a follow-up email, an in-person handoff, or a simple printed next-steps guide, could close a meaningful share of that drop-off. The retention dashboard is now in place to measure whether any such initiative actually works.</div>
+        <div class="rec-desc">40% of LTP participants eventually reach Hockey League, but 46% never return at all. The pathway exists; it is just not being activated at program completion. A structured touchpoint at the end of LTP, whether a follow-up email, an in-person next-steps conversation, or a printed guide, could close a meaningful share of that drop-off. The sequence data points to the second program engagement as the most vulnerable moment, which means outreach should not stop at the final LTP session but continue through that first return visit. The retention dashboard is now in place to measure whether any such initiative actually works.</div>
       </div>
 
       <div class="rec-card high">
@@ -369,14 +391,20 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
       <div class="rec-card med">
         <div class="rec-priority">Medium Priority</div>
-        <div class="rec-title">Segment Ticket Marketing by Demographics</div>
-        <div class="rec-desc">Men and women respond differently to LTP when it comes to ticket purchasing, and participants under 25 generate disproportionately high post-LTP ticket revenue. Rather than one broad campaign, targeted outreach to these groups using the crossover dashboard as the measurement tool would give the marketing team a more precise lever and a clearer way to track what is working.</div>
+        <div class="rec-title">Build Outreach Around the Female Participant Segment</div>
+        <div class="rec-desc">Female participants who convert to Ducks ticket buyers average more tickets per person than their male counterparts. Combined with the broader growth in women's hockey interest nationally and the client's stated strategic focus on this segment, there is a clear case for targeted outreach campaigns built specifically around female LTP participants. The crossover dashboard's gender filter provides the measurement infrastructure to track whether female conversion rates respond to targeted initiatives over time.</div>
+      </div>
+
+      <div class="rec-card med">
+        <div class="rec-priority">Medium Priority</div>
+        <div class="rec-title">Time Marketing Activity Around the Seasonal Peaks</div>
+        <div class="rec-desc">LTP registrations peak in May and September, and post-LTP Ducks ticket purchases peak in January and May. These are not coincidences. They reflect when participants are most actively engaged with hockey. Aligning retention outreach and ticket marketing campaigns to these windows, rather than distributing effort evenly across the year, gives every initiative a better starting position. The dashboards make it straightforward to monitor whether engagement during these periods improves after any campaign is launched.</div>
       </div>
 
       <div class="rec-card low">
         <div class="rec-priority">Lower Priority</div>
         <div class="rec-title">Re-Engage Lapsed Ticket Buyers</div>
-        <div class="rec-desc">A subset of matched participants previously purchased Ducks tickets but have since stopped. This group has already demonstrated interest in both Rinks programming and live games, making them a natural re-engagement target. Lower priority given the smaller population size, but the commercial upside per contact is high relative to cold outreach.</div>
+        <div class="rec-desc">14.2% of matched participants previously purchased Ducks tickets but have since stopped. This group has already demonstrated interest in both Rinks programming and live games, making them a natural re-engagement target. Lower priority given the smaller population size, but the commercial upside per contact is high relative to cold outreach.</div>
       </div>
 
     </div>
@@ -392,7 +420,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
         <div class="method-step">
           <div class="step-num">Step 2</div>
           <div class="step-title">Data Preparation</div>
-          <div class="step-desc">Raw program descriptions from the Rinks database were inconsistent and required consolidation into four meaningful categories before any analysis could be run: Hockey League, Stick Time, Hockey Initiation, and Learn To Skate. Additional calculated fields were built in Power BI to support seasonality views, age group breakdowns, and both calendar and fiscal year reporting aligned to the Ducks' June 30 fiscal year end.</div>
+          <div class="step-desc">Raw program descriptions from the Rinks database were inconsistent and required consolidation into four meaningful categories before any analysis could run: Hockey League, Stick Time, Hockey Initiation, and Learn To Skate. Additional calculated fields were built in Power BI using DAX to support seasonality views, age group breakdowns, and both calendar and fiscal year reporting aligned to the Ducks' June 30 fiscal year end.</div>
         </div>
         <div class="method-step">
           <div class="step-num">Step 3</div>
@@ -411,9 +439,9 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
     <div id="takeaways" class="tab-panel">
       <div class="section-heading">What I took away from this project</div>
       <ul class="takeaway-list">
-        <li>Scoping the analysis honestly was the most important decision we made. Pre-2025 data had collection inconsistencies that would have distorted any multi-year trend analysis, so we treated 2025 as the primary year and were upfront about it with the client. That constraint is what made the findings trustworthy.</li>
-        <li>The 46% drop-off rate is not just a number. It is a program design signal. The fact that 40% of all participants eventually reach Hockey League tells you the interest is there. The problem is that nothing is guiding them toward it at the moment they finish LTP. That insight came from looking at the sequence data, not just the retention rate.</li>
-        <li>Connecting two enterprise systems that were never designed to talk to each other is a real technical challenge. Matching participants across DASH and Archtics using email address as the only shared key required careful logic and produced an imperfect but usable result. Knowing where the data falls short is part of delivering a credible analysis.</li>
+        <li>The most important thing we built was not a chart. It was the connection between two systems that had never talked to each other. Matching DASH registrations to Archtics ticket accounts using email as the only shared key required careful logic and produced an imperfect but usable result. Without that link, none of the ticket sales crossover analysis exists. The infrastructure is the deliverable.</li>
+        <li>The 46% drop-off rate is not just a number. It is a program design signal. The fact that 40% of all participants eventually reach Hockey League tells you the interest is there. The problem is that nothing is guiding them toward it at the moment they finish LTP. That insight came from the sequence data, not just the retention rate. The steepest fall-off in Hockey League participation happens between the first and second post-LTP program, not at the very start, which changes where you target the intervention.</li>
+        <li>The gender finding required reading two numbers together. Men buy more tickets in total. Women buy more tickets per person. Neither number alone tells the full story, and presenting only the volume figure would have pointed the client in the wrong direction for their stated strategic goal of growing female engagement.</li>
         <li>Dashboards are only as useful as the decisions they enable. The goal was never to hand over a visual. It was to give the Ducks BI team something they could use season after season to measure whether their retention and marketing initiatives were actually working. Design for the person who inherits the work, not just the person receiving it at presentation.</li>
       </ul>
 
