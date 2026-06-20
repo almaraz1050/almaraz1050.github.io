@@ -163,7 +163,7 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
         <li>Designed an automated Excel workflow in which new training requests from Jira and participant performance data from individual department workbooks would populate the standardized tracker with minimal manual entry, replacing a fully manual, copy-paste-driven process.</li>
         <li>Architected a suite of Tableau dashboards on top of the standardized tracker to give leadership real-time visibility into training completion, participation, and performance trends by department, replacing the static, manually compiled summaries previously in use.</li>
         <li>Built a rollout plan to onboard my manager and department staff onto the new system, including a summary report, a quick-reference cheat sheet, a webinar series, and hands-on workshops.</li>
-        <li>Presented and demoed the standardized tracker and Tableau dashboards to HCA executives, department heads, managers, and the intern cohort as the capstone deliverable of the summer internship program.</li>
+        <li>Presented and demonstrated the standardized tracker and Tableau dashboards to HCA executives, department heads, managers, and the intern cohort as the capstone deliverable of the summer internship program.</li>
       </ul>
       <p class="exp-skills"><strong>Skills Developed:</strong> Microsoft Excel, Data Modeling, Process Improvement, Jira, Data Auditing, Workflow Automation, Tableau, Stakeholder Communication</p>
     </div>
