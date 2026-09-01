@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e3adbaa939bcd423dddc8c8a834270b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -154,7 +154,7 @@ main.content {
 .sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
 
 .sidebar-name {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   color: #f5f5f5;
   margin-bottom: 3px;
@@ -162,8 +162,8 @@ main.content {
 }
 
 .sidebar-credential {
-  font-size: 16px;
-  color: #60a5fa;
+  font-size: 17px;
+  color: #f5f5f5;
   letter-spacing: 0.2px;
   margin-bottom: 2px;
 }
@@ -225,11 +225,31 @@ main.content {
   margin: 1.6rem 0 1.2rem;
 }
 
+.sidebar-links-label {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sidebar-nav-label {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 8px;
+}
+
 .sidebar-links {
   display: flex;
   flex-direction: column;
   gap: 7px;
   margin-top: 0;
+  padding-left: 22px;
 }
 
 .sidebar-links a {
@@ -242,6 +262,8 @@ main.content {
 .sidebar-links a:hover { color: #aaaaaa; }
 
 .main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.content-inner { max-width: 900px; }
 
 .main-content * {
   font-size: 16px !important;
@@ -316,6 +338,7 @@ main.content {
 }
 
 .body-col { flex: 1; font-size: 16px !important; color: #444; line-height: 1.4; }
+.body-col + .body-col { margin-top: 1rem; }
 
 .resume-btns {
   display: flex;
@@ -381,6 +404,68 @@ main.content {
 .target-item:last-child {
   border-bottom: none;
 }
+
+.timeline-wrapper { margin-top: 0.5rem; }
+
+.timeline-wrapper table { font-size: 14px !important; width: 100%; table-layout: fixed; line-height: 1.5; color: #444; border-collapse: collapse; }
+
+.timeline-wrapper td:nth-child(1), .timeline-wrapper th:nth-child(1) { width: 72%; }
+.timeline-wrapper td:nth-child(2), .timeline-wrapper th:nth-child(2) { width: 28%; }
+
+.timeline-wrapper th { text-align: left !important; color: #111; font-size: 14px !important; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 11px 8px; border-bottom: 1px solid #e8e8e8; }
+
+.timeline-wrapper table tbody tr { background-color: transparent !important; }
+
+.timeline-wrapper table tbody tr:nth-child(odd), .timeline-wrapper table tbody tr:nth-child(even) { background-color: transparent !important; }
+
+.menu-toggle { display: none; }
+.mobile-footer { display: none; }
+
+@media (max-width: 768px) {
+  .portfolio-shell { flex-direction: column; height: auto; }
+
+  .sidebar {
+    width: 100%; min-width: 0; height: auto;
+    position: relative; top: 0;
+    flex-direction: row; align-items: center; justify-content: space-between;
+    padding: 10px 16px; overflow: visible;
+  }
+
+  .sidebar-photo { width: 44px; height: 44px; margin: 0 12px 0 0; border-width: 1px; }
+  .sidebar-credential, .sidebar-avail, .sidebar-grad { display: none; }
+  .sidebar-name { font-size: 17px; line-height: 1; margin-bottom: 0; }
+
+  .menu-toggle {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; background: none; border: none;
+    color: #f5f5f5; font-size: 20px; line-height: 1; padding: 0; cursor: pointer;
+  }
+
+  .mobile-dropdown {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #111; padding: 6px 16px 14px; z-index: 50;
+    border-top: 0.5px solid #1f1f1f;
+  }
+
+  .sidebar.menu-open .mobile-dropdown { display: flex; }
+
+  .sidebar-rule { border-top: 0.5px solid #2a2a2a; margin: 24px 0 2px; }
+  .sidebar-links-label { margin-bottom: 8px; }
+  .sidebar-links { display: flex; flex-direction: column; gap: 10px; margin-top: 0; }
+
+  .main-content { height: auto; max-height: none; padding: 1.5rem 1.25rem 2rem; }
+  .headline { font-size: 24px !important; }
+  .targets-wrap, .resume-btns, .nav-cards { flex-direction: column; }
+
+  .mobile-footer {
+    display: block; margin-top: 2.5rem; padding-top: 1.25rem;
+    border-top: 0.5px solid #e8e8e8; text-align: center;
+  }
+  .mobile-footer .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 8px; }
+  .mobile-footer .footer-links a { font-size: 15px !important; color: #111; text-decoration: none !important; }
+  .mobile-footer .footer-copyright { font-size: 12px !important; color: #888; }
+}
 </style>
 
 <div class="portfolio-shell">
@@ -388,39 +473,44 @@ main.content {
   <aside class="sidebar">
     <img src="images/Headshot1.jpg" alt="Allan Almaraz" class="sidebar-photo" onerror="this.style.display='none'">
     <div class="sidebar-name">Allan Almaraz</div>
-    <div class="sidebar-credential">MSBA · UC Irvine</div>
-    <div class="sidebar-grad">Available August 2026</div>
+    <div class="sidebar-credential">Business Analytics M.S.</div>
 
-    <nav class="sidebar-nav">
-      <a href="index.html" class="active">
-        <span class="nav-pip"></span>Home
-      </a>
-      <a href="about.html">
-        <span class="nav-pip"></span>About Me
-      </a>
-      <a href="experience.html">
-        <span class="nav-pip"></span>Experience
-      </a>
-      <a href="projects.html">
-        <span class="nav-pip"></span>Projects
-      </a>
-    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.sidebar').classList.toggle('menu-open')">☰</button>
 
-    <hr class="sidebar-rule">
+    <div class="mobile-dropdown">
+      <div class="sidebar-nav-label">Page Navigation</div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="active">
+          <span class="nav-pip"></span>Home
+        </a>
+        <a href="about.html">
+          <span class="nav-pip"></span>About Me
+        </a>
+        <a href="experience.html">
+          <span class="nav-pip"></span>Experience
+        </a>
+        <a href="projects.html">
+          <span class="nav-pip"></span>Projects
+        </a>
+      </nav>
 
-    <div class="sidebar-links">
-      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
-      <a href="files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
-      <a href="files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
+      <hr class="sidebar-rule">
+
+      <div class="sidebar-links-label">Helpful Links</div>
+      <div class="sidebar-links">
+        <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn</a>
+        <a href="files/resume.pdf" target="_blank">Resume</a>
+      </div>
     </div>
   </aside>
 
   <main class="main-content">
+    <div class="content-inner">
 
     <div class="eyebrow">Welcome!</div>
     <div class="headline">Hello, I'm Allan.</div>
     <div class="intro">
-      I am a first-generation graduate student pursuing my Master of Science in Business Analytics (MSBA) at the University of California, Irvine (UCI), with a passion for using data to inform decisions and drive meaningful change. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on.
+      As a UC Irvine alumnus with a bachelor's in Economics and a master's in Business Analytics (MSBA), I am now working in higher education finance as a Financial Analyst with UCI's Basic Needs Center. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on.
     </div>
 
     <div class="nav-cards">
@@ -438,52 +528,72 @@ main.content {
     <hr class="rule-bold">
 
     <div class="label-row">
-      <div class="label-col"><div class="label-text">Mission</div></div>
+      <div class="label-col"><div class="label-text">Mission &amp; Goals</div></div>
       <div class="body-col">
-        I believe data has the power to move organizations forward. My goal is to work for the kinds of companies that show up in people's everyday lives, the brands they eat at, wear, root for, and learn from. I find purpose in knowing that my analysis could shape how these organizations make decisions, and that the results would be visible in the world around me. Whether supporting a restaurant brand, an apparel company, or a university, I want to be the analyst who turns complex data into decisions that actually change how things are done.
+        I am passionate about higher education and the difference data can make in how it operates. My goal is to bring analytical rigor and clear data visualization to the departments and teams I work with, whether that is within the UC, CSU, or community college systems. I want to be the analyst who strengthens how these teams understand their own operations, so that the improvements ripple outward and change the institution their students experience.
       </div>
-    </div>
-
-    <div class="resume-btns">
-      <a href="files/resume_analytics.pdf" target="_blank" class="btn-dark">Analytics Resume</a>
-      <a href="files/resume_highered.pdf" target="_blank" class="btn-outline">Higher Ed Resume</a>
+      <div class="body-col">
+        For now, my focus is building deep expertise in the internal systems and finance practices that keep a UC department running, from the Kuali Financial System (KFS) and UCPath to general ledger reconciliation and budget reporting. Looking ahead, I hope to grow into a Senior Financial or Budget Analyst role within a higher education institution, and further down the road, I am open to either continuing on toward a Finance Director role or pivoting into local government.
+      </div>
     </div>
 
     <hr class="rule-bold">
 
     <div class="label-row">
-      <div class="label-col"><div class="label-text">Goals</div></div>
+      <div class="label-col"><div class="label-text">Professional Timeline</div></div>
       <div class="body-col">
-        Through my MSBA program and professional experience, I have built a growing toolkit centered on data analysis, business intelligence, and strategic problem solving. Starting June 2026, I will be completing my final two MSBA courses while working full-time as an Operations Performance Shared Services intern at Hyundai Capital America, wrapping up both commitments in August 2026. Upon completing my degree and internship, I am actively pursuing full-time entry-level analyst roles in financial, marketing, and business analytics across the industries and regions that matter most to me. The specific roles, industries, and regions I am targeting are below.
+        This timeline captures the key roles and milestones that have shaped my professional and academic development. For more details on each experience, visit the <a href="experience.html" style="color: #60a5fa; text-decoration: none; font-weight: 700;">Experience</a> page.
+      </div>
+
+      <div class="timeline-wrapper">
+        
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Event</th>
+<th data-quarto-table-cell-role="th">Month &amp; Year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Economics BA, UC Irvine</td>
+<td>2020-2023</td>
+</tr>
+<tr class="even">
+<td>Program Coordinator, UCI Basic Needs Center</td>
+<td>01/2024-08/2024</td>
+</tr>
+<tr class="odd">
+<td>EAOP Program Coordinator, UCI CFEP</td>
+<td>04/2025-09/2025</td>
+</tr>
+<tr class="even">
+<td>Business Analytics MS, UC Irvine</td>
+<td>2025-2026</td>
+</tr>
+<tr class="odd">
+<td>Analytics Intern, Hyundai Capital America</td>
+<td>06/2026-08/2026</td>
+</tr>
+<tr class="even">
+<td>Financial Analyst, UCI Basic Needs Center</td>
+<td>08/2026-Present</td>
+</tr>
+</tbody>
+</table>
+
       </div>
     </div>
 
-    <div class="targets-wrap">
-      <div class="target-box">
-        <div class="target-box-head">Target Roles</div>
-        <div class="target-item">Financial Analyst</div>
-        <div class="target-item">Budget Analyst</div>
-        <div class="target-item">Marketing Analyst</div>
-        <div class="target-item">Supply Chain Analyst</div>
-        <div class="target-item">Business Strategy Analyst</div>
+    <footer class="mobile-footer">
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn</a>
+        <a href="mailto:almaraz1050@gmail.com">Email</a>
       </div>
-      <div class="target-box">
-        <div class="target-box-head">Target Industries</div>
-        <div class="target-item">Restaurant &amp; Food Service</div>
-        <div class="target-item">Higher Education</div>
-        <div class="target-item">Local Government</div>
-        <div class="target-item">Consumer Packaged Goods</div>
-        <div class="target-item">Apparel</div>
-      </div>
-      <div class="target-box">
-        <div class="target-box-head">Target Regions</div>
-        <div class="target-item">Ventura County</div>
-        <div class="target-item">Santa Barbara County</div>
-        <div class="target-item">Sacramento County</div>
-        <div class="target-item">Orange County</div>
-      </div>
-    </div>
+      <div class="footer-copyright">© 2026 Allan Almaraz</div>
+    </footer>
 
+    </div>
   </main>
 </div>
 
