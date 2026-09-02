@@ -114,6 +114,34 @@ main.content {
   background: #1e3a5f;
 }
 
+.sidebar-nav-item { display: flex; align-items: center; gap: 2px; }
+
+.sidebar-nav-item a { flex: 1; }
+
+.nav-caret {
+  background: none; border: none; color: #f5f5f5; cursor: pointer;
+  padding: 7px 8px; font-size: 11px; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; transition: background 0.15s, transform 0.15s;
+}
+
+.nav-caret:hover { background: #1a1a1a; }
+
+.nav-caret.open { transform: rotate(180deg); }
+
+.nav-submenu {
+  display: none; flex-direction: column; gap: 2px;
+  padding-left: 22px; margin: 2px 0 4px;
+}
+
+.nav-submenu.open { display: flex; }
+
+.nav-submenu a {
+  font-size: 14px; color: #ccc; padding: 5px 10px; border-radius: 6px;
+  text-decoration: none !important; transition: color 0.15s, background 0.15s;
+}
+
+.nav-submenu a:hover { background: #1a1a1a; color: #fff; }
+
 .nav-pip {
   width: 3px;
   min-width: 3px;
@@ -403,9 +431,21 @@ main.content {
         <a href="experience.html">
           <span class="nav-pip"></span>Experience
         </a>
-        <a href="projects.html">
-          <span class="nav-pip"></span>Projects
-        </a>
+        <div class="sidebar-nav-item">
+          <a href="projects.html">
+            <span class="nav-pip"></span>Projects
+          </a>
+          <button class="nav-caret" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">&#9662;</button>
+        </div>
+        <div class="nav-submenu" id="projects-submenu">
+          <a href="projects/hyundai/index.html">Hyundai STP Dashboard</a>
+          <a href="projects/ducks/index.html">Adult Learn-to-Play</a>
+          <a href="projects/lafc/index.html">LAFC Fan Experience</a>
+          <a href="projects/uci-bn/index.html">UCI Basic Needs</a>
+          <a href="projects.html#proj-letterboxd">Letterboxd</a>
+          <a href="projects/sun-country/index.html">Sun Country Airlines</a>
+          <a href="projects/employee-churn/index.html">Employee Churn</a>
+        </div>
       </nav>
 
       <hr class="sidebar-rule">
@@ -462,7 +502,7 @@ main.content {
       <div class="timeline-wrapper">
         <table>
           <thead>
-            <tr><th>Event</th><th>Month &amp; Year</th></tr>
+            <tr><th>Event</th><th>Period</th></tr>
           </thead>
           <tbody>
             <tr><td>Economics BA, UC Irvine</td><td>2020-2023</td></tr>
