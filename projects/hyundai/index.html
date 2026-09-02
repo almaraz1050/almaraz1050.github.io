@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UCI Basic Needs: CalFresh Analysis – Allan Almaraz</title>
+<title>HCA Training &amp; Content Design STP Tracker &amp; Dashboard – Allan Almaraz</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UCI Basic Needs: CalFresh Analysis</h1>
+<h1 class="title">HCA Training &amp; Content Design STP Tracker &amp; Dashboard</h1>
 </div>
 
 
@@ -150,6 +150,16 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .sidebar-links a:hover { color: #aaaaaa; }
 
+.sidebar-deliverables-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.2rem 0 1.2rem; }
+
+.sidebar-deliverables-label { font-size: 16px; font-weight: 500; color: #60a5fa; margin-bottom: 7px; }
+
+.sidebar-deliverables { display: flex; flex-direction: column; gap: 7px; }
+
+.sidebar-deliverables a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+
+.sidebar-deliverables a:hover { color: #aaaaaa; }
+
 .main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
 
 .headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
@@ -174,19 +184,13 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .glossary-title { font-size: 14px; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; line-height: 1.5; }
 
-.glossary-entry { display: grid; grid-template-columns: 150px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; }
+.glossary-entry { display: grid; grid-template-columns: 180px 1fr; gap: 8px 20px; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; }
 
 .glossary-entry:last-child { border-bottom: none; padding-bottom: 0; }
 
 .glossary-term { font-size: 14px; font-weight: 400; color: #1a1a1a; line-height: 1.5; }
 
 .glossary-def { font-size: 14px; color: #444; line-height: 1.5; }
-
-.tableau-breakout { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 0; display: flex; justify-content: center; margin-bottom: 2.5rem; }
-
-.tableau-wrap { width: 800px; border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden; }
-
-.tableau-note { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.5rem; }
 
 .tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5; }
 
@@ -214,6 +218,22 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .findings-list li strong { color: #1a1a1a; font-weight: 600; }
 
+.model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.5rem 0; }
+
+.model-card { background: #f9f9f9; border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #efefef; }
+
+.model-card-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; line-height: 1.5; }
+
+.model-card-recall { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
+
+.model-card-label { font-size: 14px; color: #444; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; line-height: 1.5; }
+
+.model-card-desc { font-size: 14px; color: #444; line-height: 1.5; }
+
+.model-card.winner { border: 2px solid #111; background: #fff; }
+
+.winner-badge { display: inline-block; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; background: #111; color: #fff; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+
 .rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
 
 .rec-card.high { border-left-color: #e24b4a; }
@@ -227,6 +247,12 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 .rec-card.low .rec-priority { color: #639922; }
 
 .rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
+
+.rec-segment { font-size: 16px !important; font-weight: 400; margin-bottom: 8px; line-height: 1.5; }
+
+.rec-card.high .rec-segment { color: #e24b4a; }
+.rec-card.med .rec-segment { color: #ef9f27; }
+.rec-card.low .rec-segment { color: #639922; }
 
 .rec-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
 
@@ -287,61 +313,61 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
       <a href="../../files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
       <a href="../../files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
     </div>
+
+    <hr class="sidebar-deliverables-rule">
+
+    <div class="sidebar-deliverables-label">Project Deliverables</div>
+    <div class="sidebar-deliverables">
+      <a href="report.pdf" target="_blank">Full Report →</a>
+      <a href="slides.pdf" target="_blank">Slides →</a>
+      <a href="code.html" target="_blank">Code →</a>
+    </div>
   </aside>
 
   <main class="main-content">
 
-    <div class="headline">UCI Basic Needs: CalFresh Analysis</div>
+    <div class="headline">Predicting Employee Churn</div>
 
-    <div class="project-subtitle" style="margin-top: 1.75rem;">UCI Basic Needs Center · Data Visualization · 2025–2026</div>
+    <div class="project-subtitle" style="margin-top: 1.75rem;">BANA 273 · University of California, Irvine · Fall 2025</div>
 
     <div class="meta-row">
-      <span class="meta-tag">Excel</span>
-      <span class="meta-tag">Tableau</span>
-      <span class="meta-tag">Program Evaluation</span>
-      <span class="meta-tag">Data Visualization</span>
+      <span class="meta-tag">Logistic Regression</span>
+      <span class="meta-tag">Decision Tree</span>
+      <span class="meta-tag">Python</span>
+      <span class="meta-tag">Machine Learning</span>
+      <span class="meta-tag">Predictive Analytics</span>
     </div>
 
     <div class="metrics-grid">
       <div class="metric-card">
-        <div class="metric-value">6,261</div>
-        <div class="metric-label">Appointment records analyzed</div>
+        <div class="metric-value">4,653</div>
+        <div class="metric-label">Employee records analyzed</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value">4 yrs</div>
-        <div class="metric-label">Jan 2022 – Feb 2026</div>
+        <div class="metric-value">2</div>
+        <div class="metric-label">Models compared</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value">94.3%</div>
-        <div class="metric-label">Students with at least one eligibility qualifier</div>
+        <div class="metric-value">79%</div>
+        <div class="metric-label">Best recall achieved</div>
       </div>
     </div>
 
-    <p class="body-text"><strong>Project Context:</strong> I previously worked as a Program Coordinator at UCI's Basic Needs Center, where part of my role involved analyzing CalFresh assistance appointment data in Excel, looking for patterns, identifying underrepresented communities, and finding opportunities to improve communication with students. After completing coursework in the MSBA program, I reached out to my former supervisor and asked if I could revisit the data with a fresh set of tools and skills. The goal was to build an interactive dashboard that the team could actually use, something they could present, share, and maintain over time to track the performance of their CalFresh assistance services and Enrollment Party events. While the project includes KPIs and recommendations, the broader aim was to give program leadership a clearer, data-driven picture of where their CalFresh initiatives stand. <em>For more on my time at the Basic Needs Center, visit the <a href="../../experience.html">Experience</a> page.</em></p>
+    <p class="body-text"><strong>Project Context:</strong> Employee turnover imposes substantial costs on organizations through lost expertise, productivity disruptions, and expenses tied to recruitment and training. For this BANA 273 machine learning project, my team analyzed a <a href="https://www.kaggle.com/datasets/tejashvi14/employee-future-prediction" target="_blank">publicly available Kaggle dataset</a> of 4,653 employees across three major Indian cities to answer a central question about which employee characteristics most strongly predict voluntary churn. The goal was not just to understand the drivers, but to build a model capable of identifying at-risk employees early enough to enable targeted intervention.</p>
 
-    <p class="body-text"><strong>Business Question:</strong> <em>How is the UCI Basic Needs Center's CalFresh assistance program performing over time, and what operational changes would most improve student access and staff efficiency?</em></p>
+    <p class="body-text"><strong>Business Question:</strong> <em>Which employee attributes and organizational factors most strongly influence churn, and how accurately can they be used to identify at-risk employees?</em></p>
 
     <div class="glossary">
       <div class="glossary-title">Key Terms</div>
-      <div class="glossary-entry"><span class="glossary-term">CalFresh</span><span class="glossary-def">California's name for the federal Supplemental Nutrition Assistance Program (SNAP). The program issues monthly benefits on an EBT card up to $298/month that can be used at most grocery stores and farmers markets. Eligibility is determined by Orange County Social Services. The application process can be confusing and overwhelming for students, which is why the Basic Needs Center offers one-on-one assistance to guide them through it.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">EBT Card</span><span class="glossary-def">Electronic Benefits Transfer card. The physical card loaded with CalFresh benefits each month. Students apply for CalFresh and, if approved, receive an EBT card they can use like a debit card at eligible retailers.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">CalFresh Assistance Appointment</span><span class="glossary-def">A one-on-one appointment offered by the UCI Basic Needs Center where a trained advocate helps a student apply for CalFresh, complete a SAR7, or submit a recertification. Appointments can be virtual (Zoom) or in-person. This is the primary unit of analysis in this project.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">Initial Application</span><span class="glossary-def">A student's first CalFresh application. During the appointment, the advocate explains what CalFresh is, walks through the different eligibility pathways, helps gather required documents, applies alongside the student, and explains next steps in the county review process.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">Enrollment Party (EP)</span><span class="glossary-def">A day-long event hosted by the Basic Needs Center where students can apply, get approved, and receive their EBT card in a single visit, bypassing the typical 30-day county processing timeline. EP events are designed to maximize throughput and reduce barriers for students who cannot navigate the standard process alone.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">Semi-Annual Report (SAR7)</span><span class="glossary-def">A required county check-in submitted 6 months into a CalFresh certification period. Students must report any changes in income, household size, or other eligibility factors. Failure to submit results in benefits being discontinued.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">Recertification (RE)</span><span class="glossary-def">The annual renewal of CalFresh benefits at the end of a certification period. Similar to the SAR7 but more comprehensive. The standard CalFresh lifecycle follows: Initial Application, SAR7, RE, SAR7, RE, repeating until the student is no longer eligible.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">Student Eligibilities</span><span class="glossary-def">In addition to meeting basic income and household requirements, college students must meet at least one student-specific eligibility criterion to qualify for CalFresh. It is the role of the Basic Needs advocate to explain the different eligibility pathways and identify which ones apply to each student.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">No-Show</span><span class="glossary-def">A student who had a scheduled CalFresh assistance appointment but did not attend and did not cancel in advance. No-shows represent wasted advocate capacity and are a key operational challenge for the program.</span></div>
-      <div class="glossary-entry"><span class="glossary-term">LPIE</span><span class="glossary-def">Local Programs that Increase Employability. Specific majors and programs at UCI approved by the California Department of Social Services as containing an employment and training component. Students enrolled in an LPIE-approved program are automatically exempt from the standard CalFresh student eligibility rule, meaning enrollment alone qualifies them with no additional work or income requirements. LPIE is the most common eligibility qualifier in this dataset at 73.5%.</span></div>
-    </div>
-
-    <div class="section-heading" style="margin-bottom:0.4rem;">Interactive Dashboard</div>
-    <p class="tableau-note">Please use the Overview, Program Trends, and Student Profile buttons at the top of the dashboard to switch between pages.</p>
-
-    <div class="tableau-breakout">
-      <div class="tableau-wrap">
-        <div class="tableauPlaceholder" id="viz1775100456113" style="position: relative"><noscript><a href="#"><img alt="Overview" src="https://public.tableau.com/static/images/BN/BNVisuals/ProgramTrends/1_rss.png" style="border: none"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"><param name="embed_code_version" value="3"><param name="site_root" value=""><param name="name" value="BNVisuals/Overview"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/BN/BNVisuals/ProgramTrends/1.png"><param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="en-US"><param name="filter" value="publish=yes"></object></div><script type="text/javascript">var divElement = document.getElementById('viz1775100456113'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='977px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-      </div>
+      <div class="glossary-entry"><span class="glossary-term">Churn</span><span class="glossary-def">When an employee voluntarily leaves the organization. In this dataset, the outcome variable indicates whether an employee left within two years of the observation.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Recall</span><span class="glossary-def">The proportion of actual churners the model correctly identifies. A high recall means fewer at-risk employees are missed. This was the primary evaluation metric because missing a churner (a false negative) is far more costly than flagging a stable employee.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Class Imbalance</span><span class="glossary-def">When one outcome is much more common than the other. In this dataset, 65.6% of employees stay and only 34.4% churn. Without addressing this, a model can achieve decent accuracy by simply predicting everyone stays, while catching no churners at all.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Logistic Regression</span><span class="glossary-def">A supervised learning model that estimates the probability of an outcome based on a linear combination of predictors. It produces interpretable coefficients and odds ratios that show how each variable independently influences churn risk.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Decision Tree</span><span class="glossary-def">A model that recursively splits the data into groups based on input features. Unlike logistic regression, it captures nonlinear relationships and interaction effects, showing how combinations of attributes create churn risk pathways.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Odds Ratio</span><span class="glossary-def">From the logistic regression model, this measures how much more likely churn is for one group versus another. An odds ratio of 2.4 for Master's degree holders means they are 2.4 times more likely to churn than Bachelor's degree holders, holding other variables constant.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Benched</span><span class="glossary-def">An employee who has been placed on the bench, meaning they are not currently assigned to a project. The dataset tracks whether this has ever occurred, as bench time is associated with elevated churn risk.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Threshold Tuning</span><span class="glossary-def">Adjusting the probability cutoff at which a model classifies someone as a churner. Lowering the threshold from 0.50 to 0.35 causes the model to flag more borderline cases as churners, increasing recall at the cost of some false positives.</span></div>
+      <div class="glossary-entry"><span class="glossary-term">Cross-Validation</span><span class="glossary-def">A technique that tests the model on multiple different splits of the data to confirm that performance is stable and not dependent on any one particular training set.</span></div>
     </div>
 
     <div class="tabs">
@@ -352,53 +378,71 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
     </div>
 
     <div id="findings" class="tab-panel active">
-      <div class="section-heading">What the Data Shows</div>
+      <div class="section-heading">Who Is Most Likely to Leave?</div>
+      <p class="prose">Churn is not randomly distributed across the workforce. Both models consistently pointed to the same groups as highest risk, with risk concentrated at the intersection of tenure, pay, education, and location rather than any single factor acting alone.</p>
       <ul class="findings-list">
-        <li><strong>October demand is 2x any other month,</strong> averaging approximately 194 appointments and mapping directly to Fall quarter start and financial aid renewal cycles. This is not new information for advocates, who have always experienced a heavier workload in the fall, but the data puts a concrete number to what the team already knows anecdotally.</li>
-        <li><strong>The EP program has overtaken individual appointments.</strong> Students served at Enrollment Party events grew from 84 in Fall 2022 to 572 in Fall 2025, crossing over individual appointment volume for the first time. Given the trajectory, EP events are expected to continue pulling further ahead as the program scales.</li>
-        <li><strong>No-show and cancellation rates have remained flat,</strong> hovering between 11 and 21% per quarter despite overall program growth and representing roughly 208 missed appointments per year. This is a useful baseline, and the data now exists to measure whether any future intervention actually moves the needle.</li>
-        <li><strong>94.3% of students served have at least one eligibility qualifier,</strong> with LPIE the most common at 73.5%. This is partly a reflection of how much the LPIE list has expanded, with many programs added in 2023 and 2024. The practical implication is that eligibility is no longer the main barrier. The bigger challenge now is simply awareness, as most students qualify but have no idea they do.</li>
-        <li><strong>Fall 2025 EP approval rate decreased</strong> below the 86.8% average, but this should be read in context. EP events are serving dramatically more students than in prior years, and a slight decline in approval rate is a natural byproduct of reaching a broader, less pre-screened population. Volume gains more than offset the rate dip.</li>
-        <li><strong>Zoom appointments are declining year over year,</strong> from 88.9% in 2022 to 74.3% in 2026. This likely reflects both post-COVID comfort with in-person services and the nature of the process itself. CalFresh applications involve gathering documents, reviewing eligibility, and navigating county systems, and some students may simply feel they need in-person support to get through it.</li>
+        <li><strong>Mid-pay tier employees show the highest churn.</strong> The dissatisfaction appears sharpest when compensation is neither entry-level nor high enough to feel rewarding. The logistic model found mid-pay employees have 2.2x the churn odds of low-pay employees.</li>
+        <li><strong>Master's degree holders churn at higher rates than both Bachelor's and PhD employees.</strong> This likely reflects greater external mobility and a mismatch between expectation and available advancement. Odds ratio: 2.4x versus Bachelor's.</li>
+        <li><strong>Employees who have been benched show noticeably elevated churn.</strong> Periods without project assignment appear to signal instability or exclusion. Odds ratio: 1.5x versus never benched.</li>
+        <li><strong>Pune employees have the highest churn rate of the three cities</strong> at 1.6x the odds of Bangalore employees, pointing to regional labor market dynamics or workplace conditions that differ from the other hubs.</li>
+        <li><strong>Female employees show a higher churn proportion than male employees,</strong> a pattern that emerged consistently in descriptive analysis and was confirmed in the logistic model.</li>
       </ul>
+
+      <div class="section-heading" style="margin-top: 2rem;">Model Performance Comparison</div>
+      <p class="prose">Two supervised learning models were built and compared. The tuned Decision Tree outperformed logistic regression on the primary objective of maximizing recall for churners, while logistic regression provided clearer interpretability through odds ratios.</p>
+      <div class="model-grid">
+        <div class="model-card">
+          <div class="model-card-title">Logistic Regression</div>
+          <div class="model-card-recall">63%</div>
+          <div class="model-card-label">Recall (Churn Class)</div>
+          <div class="model-card-desc">After L1 regularization and class-weight balancing. Identified education, pay tier, city, benching, and gender as the strongest predictors. Strong interpretability through odds ratios.</div>
+        </div>
+        <div class="model-card winner">
+          <div class="model-card-title">Tuned Decision Tree</div>
+          <div class="model-card-recall">79%</div>
+          <div class="model-card-label">Recall (Churn Class)</div>
+          <div class="model-card-desc">Pre-pruned with balanced class weights and a lowered decision threshold of 0.35. Identified joining year and payment tier as the dominant splits, capturing nonlinear interactions the logistic model cannot.</div>
+        </div>
+      </div>
+      <p class="prose">The two models offer complementary perspectives. Logistic regression surfaces broad linear trends and interpretable effect sizes. The decision tree reveals how churn risk unfolds through conditional pathways, where tenure, pay, and education combine in ways that neither variable alone would predict.</p>
     </div>
 
     <div id="recommendations" class="tab-panel">
+      <p class="prose">The modeling results translate directly into five retention strategies that HR teams and managers can act on, targeting the specific employee groups identified as highest risk.</p>
 
       <div class="rec-card high">
         <div class="rec-priority">High Priority</div>
-        <div class="rec-title">Overhaul the Acuity Scheduling Intake Form</div>
-        <div class="rec-desc">The current intake form was not designed with data analysis in mind, and cleaning the exports is extremely time-intensive. The most pressing issue is the student eligibility section, which spans multiple overlapping questions across undergraduate programs, graduate programs, academic programs, and professional programs, making it difficult to reliably extract which eligibility a student actually has. A redesigned form with cleaner dropdown structures, consolidated eligibility logic, and standardized field names would dramatically reduce cleaning time and improve data quality for future analyses.</div>
+        <div class="rec-title">Target Long-Tenured Mid-Pay Employees First</div>
+        <div class="rec-segment">Primary risk group across both models</div>
+        <div class="rec-desc">The decision tree identified joining year and payment tier as the two dominant predictors of churn. Longer-tenured employees in the mid-pay tier are the highest-risk combination in the dataset. Targeted outreach, career-development conversations, internal mobility options, or differentiated pay adjustments should be concentrated here before turnover occurs.</div>
+      </div>
+
+      <div class="rec-card high">
+        <div class="rec-priority">High Priority</div>
+        <div class="rec-title">Review Mid-Tier Compensation Structure</div>
+        <div class="rec-segment">Mid-pay tier - 19.7% of employees, 2.2x churn odds</div>
+        <div class="rec-desc">Mid-tier dissatisfaction was the most consistent finding across both models. A pay equity analysis focused on this band, with clearer promotion pathways and salary benchmarking against market rates, could address the perceived mismatch between contribution and compensation that appears to be driving elevated turnover.</div>
       </div>
 
       <div class="rec-card med">
         <div class="rec-priority">Medium Priority</div>
-        <div class="rec-title">Add Two Fields to the Intake Form</div>
-        <div class="rec-desc">Two small additions to the form would significantly improve the dataset over time. First, a post-appointment field capturing the final eligibility the student actually applied with. Currently advocates identify eligibilities before the appointment, but there is no record of which one was ultimately used. Second, a standardized full-name field for the advocate on the case. Right now only first names are recorded, which creates a potential data integrity issue as the team grows and duplicate names become more likely.</div>
+        <div class="rec-title">Minimize Bench Time and Improve Communication During Gaps</div>
+        <div class="rec-segment">Ever-benched employees - 10.3% of workforce, 1.5x churn odds</div>
+        <div class="rec-desc">Employees who have been benched face meaningfully higher churn odds. Reducing unassigned periods where possible, and proactively communicating with employees when benching is unavoidable, can reduce the sense of exclusion or instability that bench time appears to create.</div>
       </div>
 
       <div class="rec-card med">
         <div class="rec-priority">Medium Priority</div>
-        <div class="rec-title">Develop SAR7 and Recertification Outreach Campaigns</div>
-        <div class="rec-desc">The data shows strong initial application volume, but there is an opportunity to build more continuity with students through their CalFresh lifecycle. Proactive outreach campaigns timed around SAR7 and recertification deadlines could bring more students back for follow-up appointments, increasing repeat engagement and helping students maintain their benefits rather than letting them lapse.</div>
-      </div>
-
-      <div class="rec-card med">
-        <div class="rec-priority">Medium Priority</div>
-        <div class="rec-title">Establish Automated Post-Appointment Communication</div>
-        <div class="rec-desc">With a redesigned intake form that captures which eligibility a student actually applied with, the center could build targeted post-appointment email workflows tailored to each student's situation. A student who applied under Work Study would receive different follow-up guidance than one who applied under an LPIE program, for example. This kind of personalized outreach would help students stay on track with their case and reduce the number who fall off simply because no one followed up in a way that was relevant to them.</div>
+        <div class="rec-title">Develop Location-Specific Retention Programs for Pune</div>
+        <div class="rec-segment">Pune employees - 1.6x churn odds vs Bangalore</div>
+        <div class="rec-desc">Churn rates in Pune are significantly higher than in Bangalore and New Delhi. Retention strategies should not be applied uniformly across all three cities. Local labor market conditions, compensation benchmarks, and engagement programs should be evaluated and tailored specifically for the Pune workforce.</div>
       </div>
 
       <div class="rec-card low">
         <div class="rec-priority">Lower Priority</div>
-        <div class="rec-title">Explore New Strategies to Reduce No-Shows</div>
-        <div class="rec-desc">No-show and cancellation rates have remained flat for four years, and continued generic email reminders have shown negligible returns. Two approaches worth testing are SMS reminders, which tend to have higher open and response rates than email, and more personalized confirmation messages that include a brief introduction to the advocate the student will be meeting. A small human touch before the appointment may increase the sense of commitment and make students more likely to attend.</div>
-      </div>
-
-      <div class="rec-card low">
-        <div class="rec-priority">Lower Priority</div>
-        <div class="rec-title">Revisit Staffing Model as EP Scales</div>
-        <div class="rec-desc">As Enrollment Party events continue to grow and individual appointment volume declines, it may be worth evaluating whether the current staffing balance reflects where the program is heading. One option worth exploring is a gradual shift where some operational and tabling support at EP events is handled by members of the outreach team, who are already focused on student-facing engagement, while the Basic Needs Advocate role is preserved for the one-on-one appointment work that requires deeper program expertise.</div>
+        <div class="rec-title">Create Advancement Pathways for Highly Educated Employees</div>
+        <div class="rec-segment">Master's degree holders - 18.8% of workforce, 2.4x churn odds</div>
+        <div class="rec-desc">Master's degree holders churn at more than double the rate of Bachelor's degree employees. Creating clearer recognition, advancement tracks, and career development opportunities for this group can reduce the gap between expectation and reality that likely drives their higher departure rate.</div>
       </div>
     </div>
 
@@ -406,18 +450,23 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
       <div class="method-row">
         <div class="method-step">
           <div class="step-num">Step 1</div>
-          <div class="step-title">Data Source</div>
-          <div class="step-desc">The dataset contains 6,261 CalFresh appointment records spanning January 2022 to February 2026, exported from Acuity Scheduling, which the Basic Needs Center uses to manage all CalFresh assistance appointments. While pulling the data from Acuity is straightforward, the form was not designed with analysis in mind, which made cleaning extremely intensive.</div>
+          <div class="step-title">Data Preparation</div>
+          <div class="step-desc">The Employee Future Prediction dataset from Kaggle contains 4,653 employee records across 9 attributes covering education, joining year, city of employment, payment tier, age, gender, benching history, domain experience, and the churn outcome. The dataset had no missing values and required minimal preprocessing. For logistic regression, categorical variables (education, city, payment tier) were one-hot encoded to ensure appropriate estimation. The decision tree used original categorical encodings directly. A 70/30 train-test split with a fixed random state of 42 was used throughout for reproducibility.</div>
         </div>
         <div class="method-step">
           <div class="step-num">Step 2</div>
-          <div class="step-title">Data Cleaning</div>
-          <div class="step-desc">Cleaning was done entirely in Excel and required several passes. The Acuity form has been modified multiple times over the years, leaving behind deprecated columns, inconsistent dropdown values, and overlapping fields. Key cleaning tasks included text-to-columns parsing, manually creating dummy variables for student eligibilities, standardizing misspelled or inconsistently entered values, and reconciling questions that overlapped with one another in the eligibility section. Because the form structure changed over time, some columns only apply to certain date ranges, which required careful handling before any analysis could begin.</div>
+          <div class="step-title">Addressing Class Imbalance</div>
+          <div class="step-desc">65.6% of employees stay and only 34.4% churn, a meaningful imbalance that makes overall accuracy a misleading metric. A model predicting everyone stays would achieve 65.6% accuracy while catching zero actual churners. To counter this, both models used class_weight="balanced" to adjust the loss function and place greater emphasis on correctly identifying the minority churn class. Recall for the churn class became the primary evaluation metric throughout the project.</div>
         </div>
         <div class="method-step">
           <div class="step-num">Step 3</div>
-          <div class="step-title">Visualization in Tableau</div>
-          <div class="step-desc">All charts were built in Tableau Desktop and published to Tableau Public. The dashboard is organized across three pages with clickable navigation buttons: Overview (KPI cards, appointment type breakdown, seasonality), Program Trends (CF vs EP over time, no-show and cancellation trends, year-over-year comparison), and Student Profile (EP approval rate, county distribution, eligibility breakdown).</div>
+          <div class="step-title">Logistic Regression Modeling</div>
+          <div class="step-desc">A baseline logistic regression was estimated first using default scikit-learn settings, achieving a churn recall of only 0.41. The model was then improved using GridSearchCV, which selected L1 regularization (lasso penalty), class-weight balancing, and a regularization strength of C=0.1. L1 regularization shrinks weaker coefficients to zero, removing uninformative predictors and improving interpretability. The improved model raised churn recall to approximately 0.63, with 5-fold cross-validation confirming stability (mean recall 0.629 across folds).</div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Decision Tree Modeling</div>
+          <div class="step-desc">A baseline decision tree already outperformed the logistic baseline (recall 0.64) without any tuning. The pre-pruned version applied class_weight="balanced", a maximum depth of 8, minimum 10 samples per leaf, and minimum split size of 5 to prevent overfitting. The decision threshold was then lowered from 0.50 to 0.35, allowing the model to flag borderline cases as churners. This final tuned tree achieved test-set recall of 0.79, with 5-fold cross-validation confirming stability (mean recall 0.727).</div>
         </div>
       </div>
     </div>
@@ -425,20 +474,24 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
     <div id="takeaways" class="tab-panel">
       <div class="section-heading">What I took away from this project</div>
       <ul class="takeaway-list">
-        <li>Data cleaning is not a preliminary step, it is the work. The Acuity dataset required multiple passes across deprecated columns, inconsistent values, and overlapping eligibility fields before a single chart could be built. The quality of any analysis is determined almost entirely by how well you understand and handle the mess before you get there.</li>
-        <li>Visualization without context is just aesthetics. The EP crossover, the October spike, the flat no-show rate — none of these findings would have meant anything without knowing how the program actually operates. Understanding that advocates already know fall is busy, or that EP events are a fundamentally different service model than individual appointments, is what turned numbers on a chart into something actionable. Domain knowledge is not optional.</li>
-        <li>Coming back to a place you worked at with new tools is a different experience than building something from scratch. I already knew what questions mattered to the team, which made it easier to prioritize what to visualize and what to leave out. My time at the Basic Needs Center gave me the judgment to use my technical skills in a way that was actually useful to the people who would receive the work.</li>
-        <li>The most useful output of this project was not the dashboard itself, it was the recommendations that the dashboard made possible. Data alone does not drive change. Translating findings into specific, operationally grounded suggestions that a non-technical team can actually act on is where the real analytical work happens.</li>
-        <li>Real program data rarely behaves the way you expect. Fields change meaning over time, new questions get added mid-dataset, and some columns only apply to a subset of records. Learning to work around these constraints without compromising the integrity of the analysis is one of the harder skills to develop, and this project pushed that significantly.</li>
+        <li>Choosing the right evaluation metric matters more than choosing the right model. Once recall replaced accuracy as the primary objective, everything about how we built and compared models changed. A model that looked decent by accuracy was actually catching fewer than half of the churners it needed to find.</li>
+        <li>Threshold tuning is an underused lever. Lowering the decision threshold from 0.50 to 0.35 lifted recall from 0.64 to 0.79 on the decision tree without any additional feature engineering. It is one of the most practical tools available for imbalanced classification problems.</li>
+        <li>Different models tell different stories about the same problem. Logistic regression identified benching history as a strong predictor through its odds ratios, while the decision tree assigned it minimal importance. Neither is wrong. They are capturing different types of relationships in the data, and both perspectives are useful.</li>
+        <li>Class imbalance is not just a modeling problem, it is a framing problem. Recognizing that missing a churner is far more costly than flagging a stable employee shaped every modeling decision we made, from class weighting to threshold selection to how we reported results.</li>
+        <li>The clearest actionable output of a churn model is not the model itself, it is the ranked list of risk factors it produces. Tenure, pay tier, education, and location each point to a specific and concrete HR intervention. The model is only useful if it translates into something a manager can act on.</li>
       </ul>
 
       <div class="section-heading" style="margin-top:2rem;">Tools and Skills</div>
       <ul class="tools-list">
-        <li><strong>Excel</strong>: used for all data cleaning and exploratory analysis, including text-to-columns parsing, manual dummy variable creation, standardizing inconsistent dropdown values, and handling columns that only apply to certain date ranges due to form changes over time.</li>
-        <li><strong>Tableau</strong>: used to build all visualizations and the multi-page interactive dashboard with clickable navigation, published to Tableau Public so the Basic Needs Center team can access, present, and update it going forward.</li>
-        <li><strong>Program Evaluation</strong>: applied throughout to ground every finding in operational context, distinguishing between what the data shows and what it actually means for how the program runs.</li>
-        <li><strong>Data Storytelling</strong>: structured the dashboard and written analysis to communicate clearly to a non-technical program leadership audience, prioritizing clarity and actionability over technical depth.</li>
-        <li><strong>Domain Expertise</strong>: firsthand experience working at the Basic Needs Center informed every stage of the project, from knowing which questions to ask of the data to understanding why certain patterns appear and which recommendations are actually feasible to implement.</li>
+        <li><strong>Python</strong>: primary language for the entire analysis. Used to load and preprocess the dataset, build and evaluate both models, tune hyperparameters, and generate all visualizations.</li>
+        <li><strong>pandas</strong>: used for data manipulation, one-hot encoding of categorical variables, and building the summary tables used to compare model performance across configurations.</li>
+        <li><strong>Cross-Validation</strong>: used throughout to confirm that model performance generalized beyond the training split. 5-fold CV was applied to both the logistic regression and decision tree, with recall scores evaluated across each fold to verify stability before finalizing any model.</li>
+        <li><strong>scikit-learn</strong>: provided LogisticRegression, DecisionTreeClassifier, GridSearchCV, and cross_val_score. Used to fit baseline and tuned versions of both models and evaluate recall across folds.</li>
+        <li><strong>matplotlib and seaborn</strong>: used to produce all visualizations including the churn outcome distribution, attribute distribution charts, odds ratio bar chart, information gain rankings, and the recall comparison chart.</li>
+        <li><strong>Logistic Regression</strong>: applied with L1 regularization and class-weight balancing to produce interpretable odds ratios and identify the linear predictors of churn risk.</li>
+        <li><strong>Decision Tree Classifier</strong>: applied with pre-pruning constraints and threshold tuning to capture nonlinear interactions and achieve the highest recall of any model in the project.</li>
+        <li><strong>GridSearchCV</strong>: used to systematically search hyperparameter combinations for both models, selecting configurations that maximized recall on the training data.</li>
+        <li><strong>Business Communication</strong>: translated model coefficients and information gain rankings into five concrete HR recommendations, each tied to a specific employee group and a specific intervention strategy.</li>
       </ul>
     </div>
 

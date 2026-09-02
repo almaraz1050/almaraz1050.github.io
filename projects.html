@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e3adbaa939bcd423dddc8c8a834270b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3e9b1289f5f353c49b617ce48ad2bc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -110,47 +111,178 @@ ul.task-list li input[type="checkbox"] {
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-body { font-family: 'DM Sans', sans-serif !important; background: #111 !important; color: #f5f5f5; font-size: 16px !important; }
+body {
+  font-family: 'DM Sans', sans-serif !important;
+  background: #111 !important;
+  color: #f5f5f5;
+  font-size: 16px !important;
+}
 
-#quarto-header, .navbar, #quarto-sidebar, #quarto-toc-toggle, #quarto-margin-sidebar, footer.footer { display: none !important; }
+#quarto-header,
+.navbar,
+#quarto-sidebar,
+#quarto-toc-toggle,
+#quarto-margin-sidebar,
+footer.footer {
+  display: none !important;
+}
 
-#quarto-content, .page-layout-custom, main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; gap: 0 !important; }
+#quarto-content,
+.page-layout-custom,
+main.content {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  gap: 0 !important;
+}
 
 .portfolio-shell { display: flex; height: 100vh; overflow: hidden; align-items: stretch; }
 
-.sidebar { width: 250px; min-width: 250px; background: #111; border-right: 0.5px solid #1f1f1f; display: flex; flex-direction: column; padding: 3rem 1.6rem 1.75rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; overflow-x: hidden; }
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background: #111;
+  border-right: 0.5px solid #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.6rem 1.75rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
 
 .sidebar-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid #2a2a2a; margin: 0 auto 2rem; display: block; }
 
-.sidebar-name { font-size: 18px; font-weight: 500; color: #f5f5f5; margin-bottom: 3px; line-height: 1.3; }
+.sidebar-name {
+  font-size: 17px;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
 
-.sidebar-credential { font-size: 16px; color: #60a5fa; letter-spacing: 0.2px; margin-bottom: 2px; }
+.mobile-page-title { display: none; }
 
-.sidebar-avail { font-size: 16px; color: #f5f5f5; margin-bottom: 2px; }
+.sidebar-credential {
+  font-size: 17px;
+  color: #f5f5f5;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
 
-.sidebar-grad { font-size: 16px; color: #f5f5f5; margin-bottom: 2rem; }
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
-.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-size: 16px;
+  color: #f5f5f5;
+  transition: color 0.15s, background 0.15s;
+}
 
-.sidebar-nav a { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 6px; text-decoration: none !important; font-size: 16px; color: #f5f5f5; transition: color 0.15s, background 0.15s; }
+.sidebar-nav a:hover {
+  background: #1a1a1a;
+  text-decoration: none !important;
+}
 
-.sidebar-nav a:hover { background: #1a1a1a; text-decoration: none !important; }
+.sidebar-nav a.active {
+  background: #1e3a5f;
+}
 
-.sidebar-nav a.active { background: #1e3a5f; }
+.sidebar-nav-item { display: flex; align-items: center; gap: 2px; }
 
-.nav-pip { width: 3px; min-width: 3px; height: 14px; border-radius: 2px; background: transparent; }
+.sidebar-nav-item a { flex: 1; }
 
-.sidebar-nav a.active .nav-pip { background: #60a5fa; }
+.nav-caret {
+  background: none; border: none; color: #f5f5f5; cursor: pointer;
+  padding: 7px 8px; font-size: 11px; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; transition: background 0.15s, transform 0.15s;
+}
 
-.sidebar-rule { border: none; border-top: 0.5px solid #2a2a2a; margin: 1.6rem 0 1.2rem; }
+.nav-caret:hover { background: #1a1a1a; }
 
-.sidebar-links { display: flex; flex-direction: column; gap: 7px; margin-top: 0; }
+.nav-caret.open { transform: rotate(180deg); }
 
-.sidebar-links a { font-size: 16px; text-decoration: none !important; color: #f5f5f5; transition: color 0.15s; }
+.nav-submenu {
+  display: none; flex-direction: column; gap: 2px;
+  padding-left: 22px; margin: 2px 0 4px;
+}
+
+.nav-submenu.open { display: flex; }
+
+.nav-submenu a {
+  font-size: 14px; color: #ccc; padding: 5px 10px; border-radius: 6px;
+  text-decoration: none !important; transition: color 0.15s, background 0.15s;
+}
+
+.nav-submenu a:hover { background: #1a1a1a; color: #fff; }
+
+.nav-pip {
+  width: 3px;
+  min-width: 3px;
+  height: 14px;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.sidebar-nav a.active .nav-pip {
+  background: #60a5fa;
+}
+
+.sidebar-rule {
+  border: none;
+  border-top: 0.5px solid #2a2a2a;
+  margin: 1.6rem 0 1.2rem;
+}
+
+.sidebar-links-label {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sidebar-nav-label {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 0;
+  padding-left: 22px;
+}
+
+.sidebar-links a {
+  font-size: 16px;
+  text-decoration: none !important;
+  color: #f5f5f5;
+  transition: color 0.15s;
+}
 
 .sidebar-links a:hover { color: #aaaaaa; }
 
 .main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
+
+.content-inner { max-width: 900px; }
 
 .headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
 
@@ -158,47 +290,96 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
 
 .body-text { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1.25rem; }
 
-.section-label { font-size: 16px !important; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1a1a1a; margin: 2rem 0 0.75rem 0; }
+.proj-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #111;
+  border-radius: 10px;
+  padding: 1.8em 2em 1.8em 2em;
+  margin-bottom: 1.5em;
+  text-decoration: none !important;
+  color: inherit;
+  transition: box-shadow 0.15s;
+}
 
-.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1rem; }
+.proj-card.alt { background: #fafafa; }
 
-.proj-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8rem 2rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, box-shadow 0.15s; font-size: 16px !important; }
-
-.proj-card:hover { border-color: #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit; }
+.proj-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none !important; color: inherit; }
 
 .proj-card.muted { opacity: 0.55; cursor: default; pointer-events: none; }
 
-.proj-card *, .proj-card *::before, .proj-card *::after { font-size: 16px; line-height: 1.6; font-weight: 400; color: #444; }
+.proj-header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.35em; margin-bottom: 1.5em; }
 
-.proj-card .card-title { font-weight: 600 !important; color: #1a1a1a; font-size: 16px !important; }
+.proj-title { font-size: 14px !important; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.5; }
 
-.proj-card .card-cta { font-weight: 600 !important; color: #3b82f6; font-size: 15px !important; }
+.proj-meta { font-size: 14px !important; color: #444; margin: 0; line-height: 1.5; }
 
-.proj-card .card-cta.dim { color: #444; }
+.proj-dates { font-size: 14px !important; color: #444; margin: 0; line-height: 1.5; }
 
-.card-top { display: flex; align-items: flex-start; justify-content: flex-start; margin-bottom: 10px; }
+.proj-desc { font-size: 14px !important; color: #444; line-height: 1.5; margin-bottom: 1.5em; }
 
-.card-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-bottom: 10px; }
+.section-label { font-size: 16px !important; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #1a1a1a; margin: 2rem 0 0.75rem 0; }
 
-.icon-blue { background: #e8f1fb; } .icon-purple { background: #eeedfe; } .icon-teal { background: #e1f5ee; } .icon-amber { background: #faeeda; } .icon-coral { background: #faece7; } .icon-green { background: #eaf3de; } .icon-gold { background: #f5f0e8; }
+.proj-skills { font-size: 14px !important; color: #444; margin-top: 1.25em; margin-bottom: 0; line-height: 1.5; }
 
-.card-title { font-size: 16px !important; color: #1a1a1a; margin-bottom: 16px; text-align: left; }
+.proj-skills + .proj-skills { margin-top: 0.3em; }
 
-.card-question { font-size: 16px !important; margin-bottom: 16px; text-align: left; }
+.card-footer { display: flex; justify-content: flex-end; margin-top: 1.25em; }
 
-.card-desc { font-size: 16px !important; margin-bottom: 20px; text-align: left; }
+.card-cta { font-weight: 600 !important; color: #3b82f6; font-size: 13px !important; }
 
-.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: flex-start; }
+.card-cta.dim { color: #444; }
 
-.tag { padding: 3px 8px !important; border-radius: 4px; background: #f5f5f5; border: 1px solid #e8e8e8; font-size: 15px !important; }
+.menu-toggle { display: none; }
+.mobile-footer { display: none; }
 
-.card-footer { border-top: 1px solid #f0f0f0; padding-top: 10px; display: flex; align-items: center; justify-content: space-between; }
+@media (max-width: 768px) {
+  .portfolio-shell { flex-direction: column; height: auto; }
 
-.tools-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .sidebar {
+    width: 100%; min-width: 0; height: auto;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    flex-direction: row; align-items: center; justify-content: space-between;
+    padding: 10px 16px; overflow: visible;
+  }
 
-.tool { display: flex; align-items: center; gap: 4px; font-size: 15px !important; }
+  .sidebar-photo { width: 44px; height: 44px; margin: 0 12px 0 0; border-width: 1px; }
+  .sidebar-credential { display: none; }
+  .sidebar-name { display: none; }
+  .mobile-page-title { display: block; font-size: 17px; font-weight: 500; color: #f5f5f5; line-height: 1; }
 
-.tool::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block; flex-shrink: 0; }
+  .menu-toggle {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; background: none; border: none;
+    color: #f5f5f5; font-size: 20px; line-height: 1; padding: 0; cursor: pointer;
+  }
+
+  .mobile-dropdown {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #111; padding: 6px 16px 14px; z-index: 50;
+    border-top: 0.5px solid #1f1f1f;
+  }
+
+  .sidebar.menu-open .mobile-dropdown { display: flex; }
+
+  .sidebar-rule { border-top: 0.5px solid #2a2a2a; margin: 24px 0 2px; }
+  .sidebar-links-label { margin-bottom: 8px; }
+  .sidebar-links { display: flex; flex-direction: column; gap: 10px; margin-top: 0; }
+
+  .main-content { height: auto; max-height: none; padding: 76px 1.25rem 2rem; }
+  .headline { font-size: 24px !important; }
+
+  .proj-card { padding: 1.4em 1.25em 1.4em 1.25em; }
+
+  .mobile-footer {
+    display: block; margin-top: 2.5rem; padding-top: 1.25rem;
+    border-top: 0.5px solid #e8e8e8; text-align: center;
+  }
+  .mobile-footer .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 8px; }
+  .mobile-footer .footer-links a { font-size: 15px !important; color: #111; text-decoration: none !important; }
+  .mobile-footer .footer-copyright { font-size: 12px !important; color: #888; }
+}
 </style>
 
 <div class="portfolio-shell">
@@ -206,209 +387,151 @@ body { font-family: 'DM Sans', sans-serif !important; background: #111 !importan
   <aside class="sidebar">
     <img src="images/Headshot1.jpg" alt="Allan Almaraz" class="sidebar-photo" onerror="this.style.display='none'">
     <div class="sidebar-name">Allan Almaraz</div>
-    <div class="sidebar-credential">MSBA · UC Irvine</div>
-    <div class="sidebar-grad">Available August 2026</div>
+    <div class="mobile-page-title">Projects</div>
+    <div class="sidebar-credential">Business Analytics M.S.</div>
 
-    <nav class="sidebar-nav">
-      <a href="index.html">
-        <span class="nav-pip"></span>Home
-      </a>
-      <a href="about.html">
-        <span class="nav-pip"></span>About Me
-      </a>
-      <a href="experience.html">
-        <span class="nav-pip"></span>Experience
-      </a>
-      <a href="projects.html" class="active">
-        <span class="nav-pip"></span>Projects
-      </a>
-    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.sidebar').classList.toggle('menu-open')">☰</button>
 
-    <hr class="sidebar-rule">
+    <div class="mobile-dropdown">
+      <div class="sidebar-nav-label">Page Navigation</div>
+      <nav class="sidebar-nav">
+        <a href="index.html">
+          <span class="nav-pip"></span>Home
+        </a>
+        <a href="about.html">
+          <span class="nav-pip"></span>About Me
+        </a>
+        <a href="experience.html">
+          <span class="nav-pip"></span>Experience
+        </a>
+        <div class="sidebar-nav-item">
+          <a href="projects.html" class="active">
+            <span class="nav-pip"></span>Projects
+          </a>
+          <button class="nav-caret" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">▾</button>
+        </div>
+        <div class="nav-submenu" id="projects-submenu">
+          <a href="projects/hyundai/index.html">Hyundai STP Dashboard</a>
+          <a href="projects/ducks/index.html">Adult Learn-to-Play</a>
+          <a href="projects/lafc/index.html">LAFC Fan Experience</a>
+          <a href="projects/uci-bn/index.html">UCI Basic Needs</a>
+          <a href="projects.html#proj-letterboxd">Letterboxd</a>
+          <a href="projects/sun-country/index.html">Sun Country Airlines</a>
+          <a href="projects/employee-churn/index.html">Employee Churn</a>
+        </div>
+      </nav>
 
-    <div class="sidebar-links">
-      <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn →</a>
-      <a href="files/resume_analytics.pdf" target="_blank">Analytics Resume →</a>
-      <a href="files/resume_highered.pdf" target="_blank">Higher Ed Resume →</a>
+      <hr class="sidebar-rule">
+
+      <div class="sidebar-links-label">Helpful Links</div>
+      <div class="sidebar-links">
+        <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn</a>
+        <a href="files/resume.pdf" target="_blank">Resume</a>
+      </div>
     </div>
   </aside>
 
   <main class="main-content">
+    <div class="content-inner">
 
     <div class="headline">Projects</div>
 
-    <p class="body-text" style="margin-top: 1.75rem;">Each project on this page represents a real business question I worked through end to end, from raw data to findings and recommendations I could actually stand behind. My hope is that the work here gives a clear picture of how I think as an analyst and what I could bring to a team.</p>
+    <p class="body-text" style="margin-top: 1.75rem;">Each project on this page represents a real business question I worked through end to end, from raw data to findings and recommendations I could actually stand behind. My hope is that the work here gives a clear picture of how I think as an analyst and what I could bring to a team. Click any card below to visit its dedicated project page.</p>
 
-    <p class="body-text">Projects are organized into three tracks: <strong>Predictive Analytics</strong>, <strong>Data Visualization</strong>, and <strong>Forecasting</strong>. Each card links to a dedicated page with findings, recommendations, methodology, and key takeaways, with reports, slides, and code attached where applicable.</p>
+    <p class="body-text">Projects span two tracks, <strong>Data Visualization</strong> and <strong>Predictive Analytics</strong>. Each card links to a dedicated page with findings, recommendations, methodology, and key takeaways, with reports, slides, and code attached where applicable.</p>
 
-    <hr class="rule-bold">
+    <div class="section-label" style="margin-top: 2rem;">Data Visualization</div>
 
-    <div class="section-label">Predictive Analytics</div>
-    <div class="cards-grid">
-
-      <a class="proj-card" href="projects/sun-country/index.html">
-        <div class="card-top">
-          <div class="card-icon icon-blue">✈️</div>
-        </div>
-        <div class="card-title">Sun Country Airlines: Customer Segmentation</div>
-        <div class="card-question"><strong>Business Question:</strong> Who are Sun Country's customers, and how can the airline grow loyalty enrollment and shift bookings to its direct channel?</div>
-        <div class="card-desc">Applied K-Means clustering to 15,144 customer records to identify 5 actionable segments, translating findings into three targeted campaigns tied to leadership's goals around Ufly enrollment, direct channel growth, and vacation package differentiation.</div>
-        <div class="tags">
-          <span class="tag">Clustering</span>
-          <span class="tag">Customer Analytics</span>
-          <span class="tag">Segmentation</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">Python</span>
-            <span class="tool">Elbow Method</span>
-            <span class="tool">EDA</span>
-          </div>
-          <span class="card-cta">View →</span>
-        </div>
-      </a>
-
-      <a class="proj-card" href="projects/employee-churn/index.html">
-        <div class="card-top">
-          <div class="card-icon icon-purple">👥</div>
-        </div>
-        <div class="card-title">Predicting Employee Churn</div>
-        <div class="card-question"><strong>Business Question:</strong> Which employees are most at risk of churning (leaving), and what organizational factors drive that risk?</div>
-        <div class="card-desc">Built and compared logistic regression and decision tree models on 4,653 employee records, achieving 79% recall on the churn class and identifying tenure, compensation tier, and education as the primary drivers of voluntary turnover.</div>
-        <div class="tags">
-          <span class="tag">Machine Learning</span>
-          <span class="tag">HR Analytics</span>
-          <span class="tag">Classification</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">Python</span>
-            <span class="tool">Cross Validation</span>
-            <span class="tool">Decision Tree</span>
-          </div>
-          <span class="card-cta">View →</span>
-        </div>
-      </a>
-
-    </div>
-
-    <div class="section-label">Data Visualization</div>
-    <div class="cards-grid">
-
-      <a class="proj-card" href="projects/ducks/index.html">
-        <div class="card-top">
-          <div class="card-icon icon-amber">🏒</div>
-        </div>
-        <div class="card-title">Adult Learn-to-Play Analysis</div>
-        <div class="card-question"><strong>Business Question:</strong> Does participation in the Adult Learn-to-Play program drive sustained Rinks retention and Anaheim Ducks ticket purchasing, and where are the highest-leverage opportunities to deepen participant engagement?</div>
-        <div class="card-desc">Led SQL querying and Power BI dashboard development for a UCI MSBA Capstone engagement with the Anaheim Ducks and The Rinks, analyzing 1,285 unique LTP participants across registration trends, cohort retention, post-LTP program progression, and Ducks ticket sales crossover.</div>
-        <div class="tags">
-          <span class="tag">Sports Analytics</span>
-          <span class="tag">Retention Analysis</span>
-          <span class="tag">Business Intelligence</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">SQL</span>
-            <span class="tool">Power BI</span>
-            <span class="tool">DAX</span>
-          </div>
-          <span class="card-cta">View →</span>
-        </div>
-      </a>
-
-      <a class="proj-card" href="projects/lafc/index.html">
-        <div class="card-top">
-          <div class="card-icon icon-gold">⚽</div>
-        </div>
-        <div class="card-title">LAFC &amp; BMO Stadium: Fan Experience Analysis</div>
-        <div class="card-question"><strong>Business Question:</strong> What do five years of fan feedback tell us about where LAFC and BMO Stadium should focus to grow revenue and improve the fan experience from 2026 to 2030?</div>
-        <div class="card-desc">Analyzed 9,246 fan survey responses across LAFC matches, concerts, and ACFC events at BMO Stadium using Python-based sentiment analysis and theme classification, then built a multi-page Tableau dashboard and business plan to inform the club's 2026–2030 strategy.</div>
-        <div class="tags">
-          <span class="tag">NLP / Sentiment Analysis</span>
-          <span class="tag">Business Strategy</span>
-          <span class="tag">Fan Revenue</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">Python</span>
-            <span class="tool">Tableau</span>
-            <span class="tool">TextBlob</span>
-          </div>
-          <span class="card-cta">View →</span>
-        </div>
-      </a>
-
-      <a class="proj-card" href="projects/uci-bn/index.html">
-        <div class="card-top">
-          <div class="card-icon icon-teal">🍎</div>
-        </div>
-        <div class="card-title">UCI Basic Needs: CalFresh Analysis</div>
-        <div class="card-question"><strong>Business Question:</strong> How are UCI Basic Needs Center's CalFresh assistance services performing across four years of data, and what operational changes would most improve program efficiency and student access?</div>
-        <div class="card-desc">Built a multi-page interactive Tableau dashboard tracking 6,261 CalFresh appointment records across 4 years, surfacing trends in Enrollment Party growth, no-show patterns, student eligibility reach, and seasonality.</div>
-        <div class="tags">
-          <span class="tag">Program Evaluation</span>
-          <span class="tag">Data Visualization</span>
-          <span class="tag">Higher Ed</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">Excel</span>
-            <span class="tool">Data Cleaning</span>
-            <span class="tool">Tableau</span>
-          </div>
-          <span class="card-cta">View →</span>
-        </div>
-      </a>
-
-      <div class="proj-card muted">
-        <div class="card-top">
-          <div class="card-icon icon-amber">🎬</div>
-        </div>
-        <div class="card-title">Letterboxd: Movies as a Business and a Taste</div>
-        <div class="card-question"><strong>Business Question:</strong> What do box office trends and personal viewing data reveal about film as both a cultural and commercial product?</div>
-        <div class="card-desc">A live window into film as both a personal passion and a commercial product, combining my personal ratings, watchlist, and physical media collection with box office and budget data that auto-updates over time.</div>
-        <div class="tags">
-          <span class="tag">Live Data</span>
-          <span class="tag">Entertainment Analytics</span>
-          <span class="tag">Personal Data</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">TBD</span>
-          </div>
-          <span class="card-cta dim">Planned</span>
-        </div>
+    <div class="proj-card" id="proj-letterboxd">
+      <div class="proj-header">
+        <p class="proj-title">Letterboxd: Movies as a Business and a Taste</p>
+        <p class="proj-meta">Independent Project</p>
+        <p class="proj-dates">Planned</p>
       </div>
-
+      <p class="proj-desc">A live, auto-updating window into film as both a personal passion and a commercial product, pairing my own ratings, watchlist, and physical media collection with box office and budget data to explore what they reveal about film as culture and commerce.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> Power BI Dashboards</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> TBD</p>
     </div>
 
-    <div class="section-label">Forecasting</div>
-    <div class="cards-grid">
-
-      <div class="proj-card muted">
-        <div class="card-top">
-          <div class="card-icon icon-coral">📈</div>
-        </div>
-        <div class="card-title">Applied Forecast Modeling</div>
-        <div class="card-question"><strong>Business Question:</strong> How can forecasting techniques be applied to real business problems across industries?</div>
-        <div class="card-desc">A collection of forecasting projects from BANA 290, applying causal and time series modeling techniques to real-world datasets. Projects include linear regression, ARIMA, and logistic regression built in Alteryx and visualized in Tableau.</div>
-        <div class="tags">
-          <span class="tag">Forecasting</span>
-          <span class="tag">Time Series</span>
-          <span class="tag">Causal Modeling</span>
-        </div>
-        <div class="card-footer">
-          <div class="tools-row">
-            <span class="tool">Alteryx</span>
-            <span class="tool">Tableau</span>
-          </div>
-          <span class="card-cta dim">In Progress</span>
-        </div>
+    <a class="proj-card alt" id="proj-hyundai" href="projects/hyundai/index.html">
+      <div class="proj-header">
+        <p class="proj-title">Streamlining STP Data Collection &amp; Dashboard Development</p>
+        <p class="proj-meta">Hyundai Capital America (HCA) Internship</p>
+        <p class="proj-dates">06/2026-08/2026</p>
       </div>
+      <p class="proj-desc">Restructured HCA's manual STP (Speed-to-Proficiency) Tracker around a relational, class-level data model built on Jira-linked primary and foreign keys, then automated the pipeline with Power Query and delivered five interactive Tableau dashboards giving leadership self-service visibility into training performance, cutting monthly reporting effort by 60%.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> PowerPoint Presentation, Tableau Dashboards, Written and Recorded Guides/Tutorials</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> Excel, Tableau, Power Query, Jira, Enterprise Data Restructuring, Workflow Automation</p>
+    </a>
+
+    <a class="proj-card" id="proj-ducks" href="projects/ducks/index.html">
+      <div class="proj-header">
+        <p class="proj-title">Adult Learn-to-Play Analysis</p>
+        <p class="proj-meta">UC Irvine · MSBA Capstone (Anaheim Ducks &amp; The Rinks)</p>
+        <p class="proj-dates">01/2026-06/2026</p>
+      </div>
+      <p class="proj-desc">Led SQL and Power BI development for a UCI MSBA Capstone with the Anaheim Ducks and The Rinks, analyzing 1,285 Adult Learn-to-Play participants to determine whether the program drives lasting retention and ticket purchasing, and where engagement could be deepened.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> Written Report, PowerPoint Presentation, Power BI Dashboards</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> SQL, Power BI, Retention Analysis, Marketing Analytics</p>
+    </a>
+
+    <a class="proj-card alt" id="proj-lafc" href="projects/lafc/index.html">
+      <div class="proj-header">
+        <p class="proj-title">LAFC &amp; BMO Stadium: Fan Experience Analysis</p>
+        <p class="proj-meta">LAFC Interview Project</p>
+        <p class="proj-dates">04/2026</p>
+      </div>
+      <p class="proj-desc">Analyzed 9,246 fan survey responses across five years of LAFC matches, concerts, and ACFC events using Python-based sentiment analysis, then built a multi-page Tableau dashboard and business plan identifying where LAFC and BMO Stadium should focus to grow revenue and improve the fan experience through 2030.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> PowerPoint Presentation, Tableau Dashboards</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> Python, Tableau, TextBlob, NLP/Sentiment Analysis, Business Strategy</p>
+    </a>
+
+    <a class="proj-card" id="proj-uci-bn" href="projects/uci-bn/index.html">
+      <div class="proj-header">
+        <p class="proj-title">UCI Basic Needs: CalFresh Analysis</p>
+        <p class="proj-meta">Independent Project</p>
+        <p class="proj-dates">01/2026-03/2026</p>
+      </div>
+      <p class="proj-desc">Built a multi-page interactive Tableau dashboard on four years of CalFresh appointment data (6,261 records) for UCI's Basic Needs Center, surfacing Enrollment Party growth, no-show patterns, and eligibility trends to identify where program efficiency and student access could improve.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> Tableau Dashboards</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> Excel, Data Cleaning, Tableau, Program Evaluation</p>
+    </a>
+
+    <hr class="rule-bold" style="margin-top: 2rem;">
+
+    <div class="section-label" style="margin-top: 0;">Predictive Analytics</div>
+
+    <a class="proj-card alt" id="proj-sun-country" href="projects/sun-country/index.html">
+      <div class="proj-header">
+        <p class="proj-title">Sun Country Airlines: Customer Segmentation</p>
+        <p class="proj-meta">UC Irvine · MSBA Coursework</p>
+        <p class="proj-dates">06/2026-07/2026</p>
+      </div>
+      <p class="proj-desc">Applied K-Means clustering to 15,144 Sun Country Airlines customer records to identify 5 actionable segments, translating findings into three targeted campaigns tied to Ufly loyalty enrollment, direct channel growth, and vacation package differentiation.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> Report, Slides, Code</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> Python, Elbow Method, EDA, Clustering, Customer Analytics, Segmentation</p>
+    </a>
+
+    <a class="proj-card" id="proj-employee-churn" href="projects/employee-churn/index.html">
+      <div class="proj-header">
+        <p class="proj-title">Predicting Employee Churn</p>
+        <p class="proj-meta">UC Irvine · MSBA Coursework</p>
+        <p class="proj-dates">09/2025-12/2025</p>
+      </div>
+      <p class="proj-desc">Built and compared logistic regression and decision tree models on 4,653 employee records to identify which employees were most at risk of voluntary turnover, achieving 79% recall on the churn class and surfacing tenure, compensation tier, and education as the primary drivers.</p>
+      <p class="proj-skills"><strong>Deliverables:</strong> Report, Slides, Code</p>
+      <p class="proj-skills"><strong>Technical Skills:</strong> Python, Cross Validation, Decision Tree, Machine Learning, HR Analytics, Classification</p>
+    </a>
+
+    <footer class="mobile-footer">
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/allanalmaraz/" target="_blank">LinkedIn</a>
+        <a href="mailto:almaraz1050@gmail.com">Email</a>
+      </div>
+      <div class="footer-copyright">© 2026 Allan Almaraz</div>
+    </footer>
 
     </div>
-
   </main>
 </div>
 
