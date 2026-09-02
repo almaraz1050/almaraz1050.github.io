@@ -172,13 +172,13 @@ main.content {
 
 .jump-btn:hover { background: #333; border-color: #333; }
 
-.exp-bar { border: 1px solid #e5e5e5; border-radius: 10px; padding: 1.8em 2em 0.5em 2em; margin-bottom: 1.5em; background: #fff; }
+.exp-bar { border: 1px solid #111; border-radius: 10px; padding: 1.8em 2em 1.8em 2em; margin-bottom: 1.5em; background: #fff; }
 
-.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.3em 1em; margin-bottom: 0.3em; }
+.exp-header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.35em; margin-bottom: 1.5em; }
 
-.exp-title { font-size: 16px !important; font-weight: 700; color: #1a1a1a; margin-bottom: 0; line-height: 1.5; }
+.exp-title { font-size: 14px !important; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.5; }
 
-.exp-meta { font-size: 14px !important; color: #444; margin: 0.2em 0 0.6em 0; white-space: nowrap; line-height: 1.5; }
+.exp-meta { font-size: 14px !important; color: #444; margin: 0; line-height: 1.5; }
 
 .exp-context { font-size: 14px !important; color: #444; font-style: italic; margin-bottom: 0.8em; border-left: 3px solid #2563eb; padding-left: 0.8em; line-height: 1.5; }
 
@@ -186,9 +186,9 @@ main.content {
 
 .exp-bullets li { margin-bottom: 0.6em; font-size: 14px !important; }
 
-.exp-dates { font-size: 14px !important; color: #444; line-height: 1.5; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.exp-dates { font-size: 14px !important; color: #444; line-height: 1.5; margin: 0; }
 
-.exp-skills { font-size: 14px !important; color: #444; margin-top: 1em; border-top: 1px solid #eee; padding-top: 0.6em; margin-bottom: 0.6em; line-height: 1.5; }
+.exp-skills { font-size: 14px !important; color: #444; margin-top: 1.75em; border-top: 1px solid #eee; padding-top: 1.75em; margin-bottom: 0; line-height: 1.5; }
 
 .exp-skills + .exp-skills { border-top: none; padding-top: 0; margin-top: 0.3em; }
 
@@ -234,9 +234,7 @@ main.content {
   .main-content { height: auto; max-height: none; padding: 76px 1.25rem 2rem; }
   .headline { font-size: 24px !important; }
 
-  .exp-bar { padding: 1.4em 1.25em 0.5em 1.25em; }
-  .exp-header { flex-direction: column; align-items: flex-start; gap: 0.2em; }
-  .exp-dates { align-items: flex-start; text-align: left; }
+  .exp-bar { padding: 1.4em 1.25em 1.4em 1.25em; }
 
   .mobile-footer {
     display: block; margin-top: 2.5rem; padding-top: 1.25rem;
@@ -295,10 +293,10 @@ main.content {
 
     <div class="headline">Experience</div>
 
-    <p class="body-text" style="margin-top: 1.75rem;">Welcome to my Experience page, where you can explore the roles and responsibilities that have shaped my professional background. Each entry includes a brief context of the role, what I contributed, and what I took away from it. Feel free to use the shortcuts below to jump to a specific role.</p>
+    <p class="body-text" style="margin-top: 1.75rem;">Welcome to my Experience page, where you can explore the roles and responsibilities that have shaped my professional background. Feel free to use the shortcuts below to jump to a specific role.</p>
 
     <div class="jump-nav">
-      <a class="jump-btn" href="#hyundai">Training & Content Design Intern</a>
+      <a class="jump-btn" href="#hyundai">Analytics Intern, Training &amp; Content Design</a>
       <a class="jump-btn" href="#ducks">Student Business Data Analyst</a>
       <a class="jump-btn" href="#eaop">EAOP Program Coordinator</a>
       <a class="jump-btn" href="#bnc">Program Coordinator</a>
@@ -306,31 +304,28 @@ main.content {
 
     <div class="exp-bar" id="hyundai">
       <div class="exp-header">
-        <div>
-          <p class="exp-title">Training & Content Design Analytics Intern</p>
-          <p class="exp-meta">Hyundai Capital America</p>
-        </div>
-        <span class="exp-dates"><span>06/2026-08/2026</span><span>Irvine, CA</span></span>
+        <p class="exp-title">Analytics Intern, Training &amp; Content Design</p>
+        <p class="exp-meta">Hyundai Capital America</p>
+        <p class="exp-dates">06/2026-08/2026</p>
+        <p class="exp-dates">Irvine, CA</p>
       </div>
 <ul class="exp-bullets">
-        <li>Audited the department's master STP Tracker for 2026, the central system used to log every training delivered across the company, identifying duplicate entries, structural errors, and inconsistent performance benchmarks across hundreds of logged trainings spanning eLearning and Instructor-Led Training (ILT) formats.</li>
-        <li>Mapped the relationship between Jira, where new trainings are logged at the request stage, and the master tracker, where training details were re-entered by hand, to establish standardized naming conventions and primary/foreign key relationships between the two systems.</li>
-        <li>Designed an automated Excel workflow in which new training requests from Jira and participant performance data from individual department workbooks would populate the standardized tracker with minimal manual entry, replacing a fully manual, copy-paste-driven process.</li>
-        <li>Architected a suite of Tableau dashboards on top of the standardized tracker to give leadership real-time visibility into training completion, participation, and performance trends by department, replacing the static, manually compiled summaries previously in use.</li>
-        <li>Built a rollout plan to onboard my manager and department staff onto the new system, including a summary report, a quick-reference cheat sheet, a webinar series, and hands-on workshops.</li>
-        <li>Presented and demonstrated the standardized tracker and Tableau dashboards to HCA executives, department heads, managers, and the intern cohort as the capstone deliverable of the summer internship program.</li>
+        <li>Audited the Training &amp; Content Design team's master STP (Speed-to-Proficiency) Tracker, identifying duplicate entries and structural errors caused by a fully manual, retype-based process with no keys linking the underlying data sources.</li>
+        <li>Diagnosed a fragmented pipeline across Jira, individual training workbooks, and a separate trainer hours log, none of which shared a common identifier; restructured the tracker around a new class-level layer, tied to each training's Jira ID through primary and foreign keys, that fed the existing participant-level data instead of requiring it to be rebuilt from scratch.</li>
+        <li>Built an automated Power Query workflow to clean and standardize Jira exports, feeding a redesigned tracker where trainings, performance, and trainer hours auto-populate through formulas instead of manual retyping, cutting monthly reporting effort by 60%.</li>
+        <li>Designed and delivered five interactive, future-proofed Tableau dashboards, built with year-over-year and quarter-over-quarter comparisons, giving leadership self-service visibility into assessment performance, trainer utilization, and class trends, complete with filters, parameters, and toggles that let them independently explore KPIs and course initiatives without routing requests through my manager, who owned and maintained the tracker.</li>
+        <li>Presented the finished tracker and dashboards to HCA executives and department leadership as the capstone deliverable of the internship.</li>
       </ul>
-      <p class="exp-skills"><strong>Soft Skills Developed:</strong> Enterprise Data Restructuring, Workflow Automation, Training Program Design, Data Visualization, Executive Presentations</p>
-      <p class="exp-skills"><strong>Software Used:</strong> Excel, Jira, Tableau, SharePoint</p>
+      <p class="exp-skills"><strong>Soft Skills Developed:</strong> Enterprise Data Restructuring, Data Modeling, Workflow Automation, Data Visualization, Executive Presentations</p>
+      <p class="exp-skills"><strong>Software Used:</strong> Excel, Power Query, Jira, Tableau, SharePoint</p>
     </div>
 
     <div class="exp-bar" id="ducks">
       <div class="exp-header">
-        <div>
-          <p class="exp-title">Student Business Data Analyst</p>
-          <p class="exp-meta">Anaheim Ducks Hockey Club</p>
-        </div>
-        <span class="exp-dates"><span>01/2026-06/2026</span><span>Irvine, CA</span></span>
+        <p class="exp-title">Student Business Data Analyst</p>
+        <p class="exp-meta">Anaheim Ducks Hockey Club</p>
+        <p class="exp-dates">01/2026-06/2026</p>
+        <p class="exp-dates">Irvine, CA</p>
       </div>
       <ul class="exp-bullets">
         <li>Served as analysis lead for a five-person team, owning the project end-to-end from data extraction and dashboard development through final reporting and executive presentation, while coordinating biweekly meetings with Ducks and Rinks client stakeholders and our UCI faculty advisors.</li>
@@ -344,11 +339,10 @@ main.content {
 
     <div class="exp-bar" id="eaop">
       <div class="exp-header">
-        <div>
-          <p class="exp-title">EAOP Program Coordinator</p>
-          <p class="exp-meta">UCI Center for Educational Partnerships</p>
-        </div>
-        <span class="exp-dates"><span>04/2025-09/2025</span><span>Irvine, CA</span></span>
+        <p class="exp-title">EAOP Program Coordinator</p>
+        <p class="exp-meta">UCI Center for Educational Partnerships</p>
+        <p class="exp-dates">04/2025-09/2025</p>
+        <p class="exp-dates">Irvine, CA</p>
       </div>
       <ul class="exp-bullets">
         <li>Coordinated academic programming and event logistics for key K-16 initiatives including the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; managed outreach, transportation coordination, documentation, and day-of execution across campus and community sites.</li>
@@ -361,11 +355,10 @@ main.content {
 
     <div class="exp-bar" id="bnc">
       <div class="exp-header">
-        <div>
-          <p class="exp-title">Program Coordinator</p>
-          <p class="exp-meta">UCI Basic Needs Center</p>
-        </div>
-        <span class="exp-dates"><span>01/2024-08/2024</span><span>Irvine, CA</span></span>
+        <p class="exp-title">Program Coordinator</p>
+        <p class="exp-meta">UCI Basic Needs Center</p>
+        <p class="exp-dates">01/2024-08/2024</p>
+        <p class="exp-dates">Irvine, CA</p>
       </div>
       <ul class="exp-bullets">
         <li>Directed food security initiatives including CalFresh Assistance Appointments, Fresh Finances, CalFresh Enrollment Parties, and large-scale events such as UCI Orientation, Celebrate UCI, and the Mobile Pantry Grand Opening; managed end-to-end logistics including venue coordination, catering, transportation, and day-of execution in partnership with UCI Student Services, UCI Transportation, and Orange County Social Services.</li>
