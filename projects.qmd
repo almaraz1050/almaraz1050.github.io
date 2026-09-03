@@ -364,7 +364,7 @@ main.content {
 
     <a class="proj-card alt" id="proj-hyundai" href="projects/hyundai/index.html">
       <div class="proj-header">
-        <p class="proj-title">Streamlining STP Data Collection &amp; Dashboard Development</p>
+        <p class="proj-title">STP Dashboard</p>
         <p class="proj-meta">Hyundai Capital America (HCA) Internship</p>
         <p class="proj-dates">06/2026-08/2026</p>
       </div>
