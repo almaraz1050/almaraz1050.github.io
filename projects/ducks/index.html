@@ -226,6 +226,8 @@ main.content {
 
 .nav-submenu a:hover { background: #1a1a1a; color: #fff; }
 
+.nav-submenu a.active { background: #1e3a5f; color: #fff; }
+
 .nav-pip {
   width: 3px;
   min-width: 3px;
@@ -450,14 +452,14 @@ main.content {
           <span class="nav-pip"></span>Experience
         </a>
         <div class="sidebar-nav-item">
-          <a href="../../projects.html" class="active">
+          <a href="../../projects.html">
             <span class="nav-pip"></span>Projects
           </a>
-          <button class="nav-caret" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">▾</button>
+          <button class="nav-caret open" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">▾</button>
         </div>
-        <div class="nav-submenu" id="projects-submenu">
+        <div class="nav-submenu open" id="projects-submenu">
           <a href="../hyundai/index.html">Hyundai STP Dashboard</a>
-          <a href="../ducks/index.html">Adult Learn-to-Play</a>
+          <a href="../ducks/index.html" class="active">Adult Learn-to-Play</a>
           <a href="../lafc/index.html">LAFC Fan Experience</a>
           <a href="../uci-bn/index.html">UCI Basic Needs</a>
           <a href="../../projects.html#proj-letterboxd">Letterboxd</a>
