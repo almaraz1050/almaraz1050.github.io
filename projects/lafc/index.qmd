@@ -190,7 +190,7 @@ main.content {
 
 .main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
 
-.content-inner { max-width: 900px; }
+.content-inner { max-width: 1000px; }
 
 .headline { font-size: 31px !important; font-weight: 500; color: #111; line-height: 1.2; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
 
