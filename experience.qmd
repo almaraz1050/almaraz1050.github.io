@@ -130,6 +130,8 @@ main.content {
 
 .nav-submenu a:hover { background: #1a1a1a; color: #fff; }
 
+.nav-submenu a.active { background: #1e3a5f; color: #fff; }
+
 .nav-pip {
   width: 3px;
   min-width: 3px;
@@ -307,9 +309,9 @@ main.content {
           <a href="projects.html">
             <span class="nav-pip"></span>Projects
           </a>
-          <button class="nav-caret" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">&#9662;</button>
+          <button class="nav-caret open" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">&#9662;</button>
         </div>
-        <div class="nav-submenu" id="projects-submenu">
+        <div class="nav-submenu open" id="projects-submenu">
           <a href="projects/hyundai/index.html">Hyundai STP Dashboard</a>
           <a href="projects/ducks/index.html">Adult Learn-to-Play</a>
           <a href="projects/lafc/index.html">LAFC Fan Experience</a>
