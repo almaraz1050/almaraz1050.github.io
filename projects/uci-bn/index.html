@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UCI Basic Needs: CalFresh Analysis – Allan Almaraz</title>
+<title>Sun Country Airlines: Customer Segmentation – Allan Almaraz</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e3adbaa939bcd423dddc8c8a834270b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e9b1289f5f353c49b617ce48ad2bc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UCI Basic Needs: CalFresh Analysis</h1>
+<h1 class="title">Sun Country Airlines: Customer Segmentation</h1>
 </div>
 
 
@@ -282,6 +282,8 @@ main.content {
 
 .sidebar-links a:hover { color: #aaaaaa; }
 
+.sidebar-deliverables-block { margin-top: 0; }
+
 .main-content { flex: 1; background: #ffffff; padding: 2.75rem 2.75rem 3rem; min-height: 100vh; max-height: 100vh; overflow-y: auto; color: #111; }
 
 .content-inner { max-width: 1000px; }
@@ -296,11 +298,7 @@ main.content {
 
 .body-text strong { color: #1a1a1a; }
 
-.tableau-breakout { width: 100%; padding: 0; display: flex; justify-content: flex-start; margin-bottom: 2.5rem; }
-
-.tableau-wrap { width: 1100px; max-width: 100%; border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden; }
-
-.dashboard-mobile-link { display: none; }
+.mobile-deliverables { display: none; }
 
 .tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #e5e5e5; }
 
@@ -318,13 +316,23 @@ main.content {
 
 .section-heading:first-child { margin-top: 0; }
 
-.findings-list { list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0; }
+.prose { font-size: 16px !important; color: #444; line-height: 1.5; margin-bottom: 1rem; }
 
-.findings-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; }
+.segment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 1.5rem; margin-bottom: 1.5rem; }
 
-.findings-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
+.segment-card { border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #e8e8e8; }
 
-.findings-list li strong { color: #1a1a1a; font-weight: 600; }
+.segment-name { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; line-height: 1.5; }
+
+.segment-pct { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+
+.segment-desc { font-size: 14px; color: #444; line-height: 1.5; }
+
+.seg-0 { background: #e8f1fb; border-color: #c5d9f0; } .seg-0 .segment-pct { color: #185fa5; }
+.seg-1 { background: #faece7; border-color: #f0c4b3; } .seg-1 .segment-pct { color: #993c1d; }
+.seg-2 { background: #e1f5ee; border-color: #9fe1cb; } .seg-2 .segment-pct { color: #0f6e56; }
+.seg-3 { background: #faeeda; border-color: #fac775; } .seg-3 .segment-pct { color: #854f0b; }
+.seg-4 { background: #eeedfe; border-color: #afa9ec; } .seg-4 .segment-pct { color: #534ab7; }
 
 .rec-card { border-left: 4px solid #e8e8e8; padding: 1.1rem 1.25rem; margin-bottom: 16px; background: #fafafa; border-radius: 0 8px 8px 0; }
 
@@ -340,7 +348,21 @@ main.content {
 
 .rec-title { font-size: 16px !important; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.5; }
 
+.rec-segment { font-size: 14px !important; font-weight: 400; margin-bottom: 8px; line-height: 1.5; }
+
+.rec-card.high .rec-segment { color: #e24b4a; }
+.rec-card.med .rec-segment { color: #ef9f27; }
+.rec-card.low .rec-segment { color: #639922; }
+
 .rec-desc { font-size: 16px !important; color: #444; line-height: 1.5; }
+
+.findings-list { list-style: none; padding: 0; margin: 0.5rem 0 1.25rem 0; }
+
+.findings-list li { font-size: 16px !important; color: #444; line-height: 1.5; padding: 7px 0 7px 18px; position: relative; }
+
+.findings-list li::before { content: '•'; position: absolute; left: 0; color: #444; font-size: 14px; }
+
+.findings-list li strong { color: #1a1a1a; font-weight: 600; }
 
 .menu-toggle { display: none; }
 .mobile-footer { display: none; }
@@ -376,19 +398,24 @@ main.content {
   .sidebar.menu-open .mobile-dropdown { display: flex; }
 
   .sidebar-rule { border-top: 0.5px solid #2a2a2a; margin: 24px 0 2px; }
+
+  .nav-submenu { display: flex !important; }
+  .nav-caret { transform: rotate(180deg); }
   .sidebar-links-label { margin-bottom: 8px; }
   .sidebar-links { display: flex; flex-direction: column; gap: 10px; margin-top: 0; }
+
+  .sidebar-deliverables-block { display: none; }
 
   .main-content { height: auto; max-height: none; padding: 76px 1.25rem 2rem; }
   .headline { font-size: 24px !important; }
 
-  .tableau-breakout { display: none; }
+  .mobile-deliverables { display: flex; flex-direction: column; gap: 10px; margin-bottom: 2.5rem; }
 
-  .dashboard-mobile-link {
+  .mobile-deliverable-btn {
     display: inline-flex; align-items: center; justify-content: center;
     padding: 10px 18px; background: #111; color: #fff !important;
     font-size: 16px; font-weight: 500; border-radius: 6px;
-    text-decoration: none !important; margin-bottom: 2.5rem;
+    text-decoration: none !important;
   }
 
   .mobile-footer {
@@ -406,7 +433,7 @@ main.content {
   <aside class="sidebar">
     <img src="../../images/Headshot1.jpg" alt="Allan Almaraz" class="sidebar-photo" onerror="this.style.display='none'">
     <div class="sidebar-name">Allan Almaraz</div>
-    <div class="mobile-page-title">CalFresh Analysis</div>
+    <div class="mobile-page-title">Sun Country</div>
     <div class="sidebar-credential">Business Analytics M.S.</div>
 
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.sidebar').classList.toggle('menu-open')">☰</button>
@@ -427,15 +454,15 @@ main.content {
           <a href="../../projects.html">
             <span class="nav-pip"></span>Projects
           </a>
-          <button class="nav-caret open" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">▾</button>
+          <button class="nav-caret" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">▾</button>
         </div>
-        <div class="nav-submenu open" id="projects-submenu">
+        <div class="nav-submenu" id="projects-submenu">
           <a href="../hyundai/index.html">Hyundai STP Dashboard</a>
           <a href="../ducks/index.html">Adult Learn-to-Play</a>
           <a href="../lafc/index.html">LAFC Fan Experience</a>
-          <a href="../uci-bn/index.html" class="active">UCI Basic Needs</a>
+          <a href="../uci-bn/index.html">UCI Basic Needs</a>
           <a href="../../projects.html#proj-letterboxd">Letterboxd</a>
-          <a href="../sun-country/index.html">Sun Country Airlines</a>
+          <a href="../sun-country/index.html" class="active">Sun Country Airlines</a>
           <a href="../employee-churn/index.html">Employee Churn</a>
         </div>
       </nav>
@@ -448,78 +475,109 @@ main.content {
         <a href="../../files/resume.pdf" target="_blank">Resume</a>
       </div>
     </div>
+
+    <div class="sidebar-deliverables-block">
+      <hr class="sidebar-rule">
+      <div class="sidebar-links-label">Deliverables</div>
+      <div class="sidebar-links">
+        <a href="report.pdf" target="_blank">Full Report</a>
+        <a href="slides.pdf" target="_blank">Slides</a>
+        <a href="code.html" target="_blank">Code</a>
+      </div>
+    </div>
   </aside>
 
   <main class="main-content">
     <div class="content-inner">
 
-    <div class="headline">UCI Basic Needs: CalFresh Analysis</div>
+    <div class="headline">Sun Country Airlines: Customer Segmentation</div>
 
     <div class="project-meta-block">
-      <p class="project-meta-line">Independent Project</p>
-      <p class="project-meta-line">01/2026-03/2026</p>
+      <p class="project-meta-line">UC Irvine · MSBA Coursework</p>
+      <p class="project-meta-line">06/2026-07/2026</p>
     </div>
 
-    <p class="body-text"><strong>Project Context:</strong> I previously worked as a Program Coordinator at UCI's Basic Needs Center, where I helped manage the center's CalFresh Assistance Appointment and CalFresh Enrollment Party data. During my MSBA program, I came back to that same data and rebuilt it as an interactive dashboard the team could actually use to track performance over time.</p>
+    <p class="body-text"><strong>Project Context:</strong> Sun Country Airlines, a Minneapolis-based low-cost leisure carrier operating out of MSP (Minneapolis-Saint Paul International Airport), had no dedicated data analyst on staff and relied entirely on anecdotal assumptions to drive marketing decisions. Acting as an analytics consultant for a BANA 200 case study, I applied K-Means clustering, a machine learning technique that groups similar customers together, to 15,144 customer-trip records spanning 2013 to 2014, identifying five actionable segments and translating the findings into three targeted campaigns tied to leadership's stated goals around Ufly loyalty enrollment, direct channel growth, and vacation package differentiation.</p>
 
-    <p class="body-text"><strong>Business Question:</strong> <em>How is the UCI Basic Needs Center's CalFresh assistance program performing over time, and what operational changes would most improve student access and staff efficiency?</em></p>
+    <p class="body-text"><strong>Business Question:</strong> <em>Which distinct customer segments exist within Sun Country's booking data, and what targeted strategies should the airline pursue to grow loyalty enrollment, increase direct bookings, and differentiate its vacation packages?</em></p>
 
-    <a class="dashboard-mobile-link" href="https://public.tableau.com/views/CFAssistanceOverview-UCIBasicNeedsCenter/Overview2" target="_blank">Open Interactive Dashboard →</a>
-
+    <div class="mobile-deliverables">
+      <a class="mobile-deliverable-btn" href="report.pdf" target="_blank">Full Report →</a>
+      <a class="mobile-deliverable-btn" href="slides.pdf" target="_blank">Slides →</a>
+      <a class="mobile-deliverable-btn" href="code.html" target="_blank">Code →</a>
     </div>
-
-    <div class="tableau-breakout">
-      <div class="tableau-wrap">
-        <div class="tableauPlaceholder" id="viz1788383797706" style="position: relative"><noscript><a href="#"><img alt=" " src="https://public.tableau.com/static/images/CF/CFAssistanceOverview-UCIBasicNeedsCenter/Overview2/1_rss.png" style="border: none"></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"><param name="embed_code_version" value="3"><param name="site_root" value=""><param name="name" value="CFAssistanceOverview-UCIBasicNeedsCenter/Overview2"><param name="tabs" value="yes"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/CF/CFAssistanceOverview-UCIBasicNeedsCenter/Overview2/1.png"><param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="en-US"></object></div>
-        <script type="text/javascript">
-          var divElement = document.getElementById('viz1788383797706');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='1250px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='1250px';} else { vizElement.style.width='100%';vizElement.style.height='2000px';}
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </div>
-    </div>
-
-    <div class="content-inner">
 
     <div class="tabs">
-      <button class="tab-btn active" onclick="showTab('findings-recs', this)">Findings &amp; Recommendations</button>
+      <button class="tab-btn active" onclick="showTab('segments', this)">The 5 Customer Segments</button>
+      <button class="tab-btn" onclick="showTab('findings-recs', this)">Findings &amp; Recommendations</button>
       <button class="tab-btn" onclick="showTab('methodology-takeaways', this)">Methodology &amp; Takeaways</button>
     </div>
 
+    <!-- THE 5 CUSTOMER SEGMENTS -->
+    <div id="segments" class="tab-panel active">
+
+      <p class="prose" style="margin-top:0.25rem;">K-Means with k=5 revealed five distinct, business-interpretable groups. The clearest pattern: Clusters 0 and 1 share the same Minneapolis leisure traveler profile but split entirely on where they book, direct versus third-party platforms like Expedia. Loyalty enrollment was almost entirely absent outside Cluster 3.</p>
+      <div class="segment-grid">
+        <div class="segment-card seg-0">
+          <div class="segment-name">C0: MSP Direct Bookers</div>
+          <div class="segment-pct">27.3%</div>
+          <div class="segment-desc">MSP locals booking on SCA.com. 74% direct channel. 99.9% not enrolled in Ufly, the single largest loyalty opportunity.</div>
+        </div>
+        <div class="segment-card seg-1">
+          <div class="segment-name">C1: MSP Deal Seekers</div>
+          <div class="segment-pct">25.4%</div>
+          <div class="segment-desc">Same traveler as C0 but 100% third-party channel. A margin problem with a structural fix.</div>
+        </div>
+        <div class="segment-card seg-2">
+          <div class="segment-name">C2: Inbound Visitors</div>
+          <div class="segment-pct">16.1%</div>
+          <div class="segment-desc">95% fly into Minneapolis. Low spend, one-way dominant, 95% non-Ufly.</div>
+        </div>
+        <div class="segment-card seg-3">
+          <div class="segment-name">C3: Loyal Frequent Fliers</div>
+          <div class="segment-pct">15.7%</div>
+          <div class="segment-desc">99% Ufly Standard. Highest ticket spend and longest booking lead time of any segment.</div>
+        </div>
+        <div class="segment-card seg-4">
+          <div class="segment-name">C4: Returning Home Fliers</div>
+          <div class="segment-pct">15.5%</div>
+          <div class="segment-desc">98% flying home to MSP. 30% already hold Ufly Standard, a natural vacation package target.</div>
+        </div>
+      </div>
+
+      <p class="prose">Two numbers from the initial exploratory analysis (EDA) foreshadowed everything the clustering later confirmed: 78.5% of customers weren't enrolled in Ufly Rewards, Sun Country's loyalty program, and bookings split almost evenly between direct (45.9%, via SCA.com) and third-party channels (44.0%, Expedia and similar).</p>
+
+    </div>
+
     <!-- FINDINGS & RECOMMENDATIONS -->
-    <div id="findings-recs" class="tab-panel active">
+    <div id="findings-recs" class="tab-panel">
 
       <div class="rec-card high">
         <div class="rec-priority">High Priority</div>
-        <div class="rec-title">Overhaul the Intake Form</div>
-        <div class="rec-desc">The Acuity intake form wasn't built for analysis, especially its overlapping student eligibility questions, which made every export painful to clean. A redesigned form with cleaner dropdowns, plus one added field capturing which eligibility a student actually used, would fix this at the source instead of in Excel every time.</div>
+        <div class="rec-title">Launch Direct Booking + Ufly Enrollment Campaign</div>
+        <div class="rec-segment">C0 + C1 · 52.7% of customers</div>
+        <div class="rec-desc">C0 already books direct but isn't enrolled, a post-booking miles bonus fixes that cheaply. C1 books entirely through third parties, so a 5-10% direct-booking discount gives them a reason to switch before the enrollment prompt.</div>
       </div>
 
       <div class="rec-card med">
         <div class="rec-priority">Medium Priority</div>
-        <div class="rec-title">Build SAR7 and Recertification Outreach</div>
-        <div class="rec-desc">CalFresh requires a SAR7 check-in at 6 months and a full Recertification (RE) at 12, and students who miss either lose their benefits. Proactive reminders tied to these deadlines, personalized once the form captures which eligibility a student actually applied under, would help more students stay enrolled instead of lapsing.</div>
+        <div class="rec-title">Introduce a Ufly Elite Tier</div>
+        <div class="rec-segment">C3 · 15.7% of customers</div>
+        <div class="rec-desc">C3 is 99% Ufly Standard with the highest spend and no status tier to aspire toward. Gating perks like priority boarding behind a spend threshold protects this loyalty before a competitor's status-match does.</div>
       </div>
 
       <div class="rec-card med">
         <div class="rec-priority">Medium Priority</div>
-        <div class="rec-title">Lean Into Enrollment Party's Growth</div>
-        <div class="rec-desc">EP events have grown from 84 to 572 students a year and now outpace individual appointments. As EP keeps scaling, shifting some of its operational and tabling support to the outreach team would free advocates to focus on the one-on-one casework only they can do.</div>
+        <div class="rec-title">Cross-Sell Vacation Packages at Checkout</div>
+        <div class="rec-segment">C4 · 15.5% of customers</div>
+        <div class="rec-desc">C4 flies home one-way with existing Ufly affinity. An outbound "plan your next escape" prompt at checkout converts one-way buyers into round-trip vacation customers.</div>
       </div>
 
       <div class="rec-card low">
         <div class="rec-priority">Lower Priority</div>
-        <div class="rec-title">Reframe Eligibility as an Awareness Problem</div>
-        <div class="rec-desc">94% of students served already qualify for CalFresh, most through LPIE, UCI majors and programs pre-approved for automatic eligibility. Eligibility isn't the barrier anymore, awareness is, so outreach should focus on telling more students they already qualify rather than convincing them they might.</div>
-      </div>
-
-      <div class="rec-card low">
-        <div class="rec-priority">Lower Priority</div>
-        <div class="rec-title">Test Better No-Show Reminders</div>
-        <div class="rec-desc">No-show rates have stayed flat for years despite generic email reminders. SMS reminders and a short personal note introducing the advocate a student will meet are both worth testing before assuming the problem can't move.</div>
+        <div class="rec-title">Test a Round-Trip Bundle Offer</div>
+        <div class="rec-segment">C2 · 16.1% of customers</div>
+        <div class="rec-desc">The most transactional, lowest-spend segment. Worth testing, but not a core focus given limited brand attachment.</div>
       </div>
 
     </div>
@@ -529,16 +587,16 @@ main.content {
 
       <div class="section-heading" style="margin-top:0.25rem;">Methodology</div>
       <ul class="findings-list">
-        <li><strong>Data source:</strong> 6,261 CalFresh Assistance Appointment records (Jan 2022-Feb 2026) exported from Acuity Scheduling, the system the Basic Needs Center uses to book these one-on-one sessions.</li>
-        <li><strong>Data cleaning:</strong> done entirely in Excel, including text-to-columns parsing, manual dummy variables for eligibility, and reconciling a form that changed structure multiple times over the years.</li>
-        <li><strong>Dashboard build:</strong> built in Tableau Desktop and published to Tableau Public, covering completed appointments, eligibility rates, advocate workload, and SAR7/RE trends over time.</li>
+        <li><strong>Data prep:</strong> started with 15,144 records across 90 features, removed two identifier columns with no analytical signal, worked with pre-normalized data and no missing values.</li>
+        <li><strong>EDA:</strong> surfaced the near-even booking channel split and the 78.5% non-Ufly rate before any model ran, both of which shaped how every cluster was later interpreted.</li>
+        <li><strong>Choosing k=5:</strong> tested k=2 through 10 using the Elbow Method (plotting error against cluster count and looking for where more clusters stop helping) and Silhouette Score (how cleanly each customer fits its cluster), both pointed to k=5 as the best balance of statistical fit and business interpretability.</li>
       </ul>
 
       <div class="section-heading">Takeaways</div>
       <ul class="findings-list">
-        <li>Data cleaning wasn't a preliminary step, it was most of the work. A form that changed shape year over year meant almost every column needed a second look before a chart could go up.</li>
-        <li>Coming back with new tools to a place I already knew changed what I built. I already knew which questions mattered to the team, so the dashboard could skip straight to what they'd actually use.</li>
-        <li>The dashboard mattered less than the recommendations it made possible. The real value was translating patterns into specific, doable changes for a non-technical team.</li>
+        <li>The channel split between C0 and C1 was the most strategically interesting finding, two nearly identical traveler profiles that needed two completely different interventions.</li>
+        <li>Naming segments mattered. Personas like "MSP Direct Bookers" made the results usable for stakeholders who'd never read a centroid table.</li>
+        <li>Unsupervised learning runs on judgment, not accuracy scores. Deciding how many clusters to use and what a centroid means in business terms is where the real analytical work happens.</li>
       </ul>
 
     </div>
