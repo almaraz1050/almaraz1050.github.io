@@ -298,6 +298,9 @@ main.content {
   .sidebar.menu-open .mobile-dropdown { display: flex; }
 
   .sidebar-rule { border-top: 0.5px solid #2a2a2a; margin: 24px 0 2px; }
+
+  .nav-submenu { display: flex !important; }
+  .nav-caret { transform: rotate(180deg); }
   .sidebar-links-label { margin-bottom: 8px; }
   .sidebar-links { display: flex; flex-direction: column; gap: 10px; margin-top: 0; }
 
@@ -360,9 +363,9 @@ main.content {
           <a href="../../projects.html">
             <span class="nav-pip"></span>Projects
           </a>
-          <button class="nav-caret open" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">&#9662;</button>
+          <button class="nav-caret" type="button" aria-label="Toggle projects list" onclick="event.preventDefault(); document.getElementById('projects-submenu').classList.toggle('open'); this.classList.toggle('open');">&#9662;</button>
         </div>
-        <div class="nav-submenu open" id="projects-submenu">
+        <div class="nav-submenu" id="projects-submenu">
           <a href="../hyundai/index.html">Hyundai STP Dashboard</a>
           <a href="../ducks/index.html">Adult Learn-to-Play</a>
           <a href="../lafc/index.html" class="active">LAFC Fan Experience</a>
