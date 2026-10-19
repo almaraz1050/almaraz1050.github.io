@@ -354,7 +354,7 @@ main.content {
         <p class="exp-title">Analytics Intern, Training &amp; Content Design</p>
         <p class="exp-meta">Hyundai Capital America</p>
         <p class="exp-dates">06/2026-08/2026</p>
-        <p class="exp-dates">Irvine, CA</p>
+        <p class="exp-dates">3161 Michelson Dr #1900, Irvine, CA 92612</p>
       </div>
 <ul class="exp-bullets">
         <li>Audited the Training &amp; Content Design team's master STP (Speed-to-Proficiency) Tracker, identifying duplicate entries and structural errors caused by a fully manual, retype-based process with no keys linking the underlying data sources.</li>
@@ -372,7 +372,7 @@ main.content {
         <p class="exp-title">Student Business Data Analyst</p>
         <p class="exp-meta">Anaheim Ducks Hockey Club</p>
         <p class="exp-dates">01/2026-06/2026</p>
-        <p class="exp-dates">Irvine, CA</p>
+        <p class="exp-dates">2695 E Katella Ave, Anaheim, CA 92806</p>
       </div>
       <ul class="exp-bullets">
         <li>Served as analysis lead for a five-person team, owning the project end-to-end from data extraction and dashboard development through final reporting and executive presentation, while coordinating biweekly meetings with Ducks and Rinks client stakeholders and our UCI faculty advisors.</li>
@@ -389,7 +389,7 @@ main.content {
         <p class="exp-title">EAOP Program Coordinator</p>
         <p class="exp-meta">UCI Center for Educational Partnerships</p>
         <p class="exp-dates">04/2025-09/2025</p>
-        <p class="exp-dates">Irvine, CA</p>
+        <p class="exp-dates">653 E Peltason Dr #2080, Irvine, CA 92617</p>
       </div>
       <ul class="exp-bullets">
         <li>Coordinated academic programming and event logistics for key K-16 initiatives including the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; managed outreach, transportation coordination, documentation, and day-of execution across campus and community sites.</li>
@@ -405,7 +405,7 @@ main.content {
         <p class="exp-title">Program Coordinator</p>
         <p class="exp-meta">UCI Basic Needs Center</p>
         <p class="exp-dates">01/2024-08/2024</p>
-        <p class="exp-dates">Irvine, CA</p>
+        <p class="exp-dates">800 W Peltason Dr, Irvine, CA 92617</p>
       </div>
       <ul class="exp-bullets">
         <li>Directed food security initiatives including CalFresh Assistance Appointments, Fresh Finances, CalFresh Enrollment Parties, and large-scale events such as UCI Orientation, Celebrate UCI, and the Mobile Pantry Grand Opening; managed end-to-end logistics including venue coordination, catering, transportation, and day-of execution in partnership with UCI Student Services, UCI Transportation, and Orange County Social Services.</li>
