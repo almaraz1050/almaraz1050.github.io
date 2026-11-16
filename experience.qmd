@@ -343,13 +343,28 @@ main.content {
     <p class="body-text" style="margin-top: 1.75rem;">Welcome to my Experience page, where you can explore the roles and responsibilities that have shaped my professional background. Each entry includes a brief context of the role, what I contributed, and what I took away from it. Feel free to use the shortcuts below to jump to a specific role.</p>
 
     <div class="jump-nav">
+      <a class="jump-btn" href="#fa-bnc">Financial Analyst</a>
       <a class="jump-btn" href="#hyundai">Analytics Intern, Training &amp; Content Design</a>
       <a class="jump-btn" href="#ducks">Student Business Data Analyst</a>
       <a class="jump-btn" href="#eaop">EAOP Program Coordinator</a>
       <a class="jump-btn" href="#bnc">Program Coordinator</a>
     </div>
 
-    <div class="exp-bar" id="hyundai">
+    <div class="exp-bar" id="fa-bnc">
+      <div class="exp-header">
+        <p class="exp-title">Financial Analyst</p>
+        <p class="exp-meta">UCI Basic Needs Center</p>
+        <p class="exp-dates">11/2026-Present</p>
+        <p class="exp-dates">800 W Peltason Dr, Irvine, CA 92617</p>
+      </div>
+      <ul class="exp-bullets">
+        <li>Recently started this role; formal responsibilities and contributions will be added here as they take shape.</li>
+      </ul>
+      <p class="exp-skills"><strong>Soft Skills Developed:</strong> Departmental Budgeting, Forecasting, Administrative Finance, Financial Reporting, Cross-Departmental Collaboration</p>
+      <p class="exp-skills"><strong>Software Used:</strong> Kuali Financial System (KFS), UCIBuy+, Excel, Microsoft Office</p>
+    </div>
+
+    <div class="exp-bar alt" id="hyundai">
       <div class="exp-header">
         <p class="exp-title">Analytics Intern, Training &amp; Content Design</p>
         <p class="exp-meta">Hyundai Capital America</p>
@@ -367,7 +382,7 @@ main.content {
       <p class="exp-skills"><strong>Software Used:</strong> Excel, Power Query, Jira, Tableau, SharePoint</p>
     </div>
 
-    <div class="exp-bar alt" id="ducks">
+    <div class="exp-bar" id="ducks">
       <div class="exp-header">
         <p class="exp-title">Student Business Data Analyst</p>
         <p class="exp-meta">Anaheim Ducks Hockey Club</p>
@@ -384,12 +399,12 @@ main.content {
       <p class="exp-skills"><strong>Software Used:</strong> SQL, SSMS, Power BI, DAX, Power Query</p>
     </div>
 
-    <div class="exp-bar" id="eaop">
+    <div class="exp-bar alt" id="eaop">
       <div class="exp-header">
         <p class="exp-title">EAOP Program Coordinator</p>
         <p class="exp-meta">UCI Center for Educational Partnerships</p>
         <p class="exp-dates">04/2025-09/2025</p>
-        <p class="exp-dates">653 E Peltason Dr #2080, Irvine, CA 92617</p>
+        <p class="exp-dates">653 E Peltason Dr Ste 2080, Irvine, CA 92617</p>
       </div>
       <ul class="exp-bullets">
         <li>Coordinated academic programming and event logistics for key K-16 initiatives including the Choosing a Major Conference, Southern California UC Tours, Nursing Camp in Summer, and UC Bootcamp; managed outreach, transportation coordination, documentation, and day-of execution across campus and community sites.</li>
@@ -400,7 +415,7 @@ main.content {
       <p class="exp-skills"><strong>Software Used:</strong> Powtoon, Canva, Microsoft Office, SharePoint</p>
     </div>
 
-    <div class="exp-bar alt" id="bnc">
+    <div class="exp-bar" id="bnc">
       <div class="exp-header">
         <p class="exp-title">Program Coordinator</p>
         <p class="exp-meta">UCI Basic Needs Center</p>
