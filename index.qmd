@@ -469,7 +469,7 @@ main.content {
     <div class="eyebrow">Welcome!</div>
     <div class="headline">Hello, I'm Allan.</div>
     <div class="intro">
-      As a UC Irvine alumnus with a bachelor’s in Economics and a master’s in Business Analytics (MSBA), I am actively seeking roles such as Financial Analyst, Administrative Analyst, and Budget Analyst. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on.
+      As a UC Irvine alumnus with a bachelor's in Economics and a master's in Business Analytics (MSBA), I currently work as a Financial Analyst at UCI's Basic Needs Center, where I bring analytical rigor to higher education finance and administration. This is my professional portfolio, where you can explore who I am, my experience, and the projects I have worked on.
     </div>
 
     <div class="nav-cards">
@@ -489,10 +489,7 @@ main.content {
     <div class="label-row">
       <div class="label-col"><div class="label-text">Mission &amp; Goals</div></div>
       <div class="body-col">
-        I am passionate about higher education and the difference data can make in how it operates. My goal is to bring analytical rigor and clear data visualization to the departments and teams I work with, whether that is within higher education, local government, or a corporate team. 
-      </div>
-      <div class="body-col">
-        I bring SQL, dashboarding in Tableau and Power BI, and advanced Excel skills to every role I take on, and I want to be the analyst who strengthens how a team understands its own operations. My goal is to land a role where I can learn an employer’s internal systems from the ground up. Once I am in a role, boosting my finance skills will be my top priority, and from there I hope to grow into a Senior Analyst position.
+        I am passionate about higher education and the difference data can make in how it operates. I bring SQL, dashboarding in Tableau and Power BI, and advanced Excel skills to every role I take on, and I want to be the analyst who strengthens how a team understands its own operations. In my current role, my goal is to master UCI's internal fiscal systems, policies, and processes from the ground up. From there, I hope to grow into a Senior Analyst position.
       </div>
     </div>
 
@@ -510,11 +507,12 @@ main.content {
             <tr><th>Event</th><th>Period</th></tr>
           </thead>
           <tbody>
-            <tr><td>Economics BA, UC Irvine</td><td>2020-2023</td></tr>
-            <tr><td>Program Coordinator, UCI Basic Needs Center</td><td>01/2024-08/2024</td></tr>
-            <tr><td>EAOP Program Coordinator, UCI CFEP</td><td>04/2025-09/2025</td></tr>
-            <tr><td>Business Analytics MS, UC Irvine</td><td>2025-2026</td></tr>
+            <tr><td>Financial Analyst, UCI Basic Needs Center</td><td>11/2026-Present</td></tr>
             <tr><td>Analytics Intern, Hyundai Capital America</td><td>06/2026-08/2026</td></tr>
+            <tr><td>Business Analytics MS, UC Irvine</td><td>2025-2026</td></tr>
+            <tr><td>EAOP Program Coordinator, UCI CFEP</td><td>04/2025-09/2025</td></tr>
+            <tr><td>Program Coordinator, UCI Basic Needs Center</td><td>01/2024-08/2024</td></tr>
+            <tr><td>Economics BA, UC Irvine</td><td>2020-2023</td></tr>
           </tbody>
         </table>
       </div>
